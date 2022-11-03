@@ -47,6 +47,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
+          npm install postcss-cli@10.0.0
           hugo \
             --minify
 
