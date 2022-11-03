@@ -10,7 +10,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -48,8 +48,7 @@ jobs:
           HUGO_ENV: production
         run: |
           npm install postcss-cli@10.0.0
-          hugo \
-            --minify
+          hugo
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
