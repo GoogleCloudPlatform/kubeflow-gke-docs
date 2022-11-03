@@ -59,11 +59,18 @@ jobs:
   # Deployment job
   deploy:
     runs-on: ubuntu-22.04
+    needs: build
     steps:
+      - name: Prepare GitHub Pages
+        shell: bash
+        run: |
+          echo "##[set-output name=branch_name;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: prepare_gh_pages
+        
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          destination_dir: ${{ steps.prepare_gh_pages.outputs.branch_name }}
           keep_files: true
