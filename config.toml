@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://gkcalat.github.io/kubeflow-docs"
 title = "Goldydocs"
 
 # Language settings
