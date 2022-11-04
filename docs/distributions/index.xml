@@ -1,0 +1,175 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubeflow on Google Cloud Platform – Distributions</title>
+    <link>https://gkcalat.github.io/kubeflow-docs/docs/distributions/</link>
+    <description>Recent content in Distributions on Kubeflow on Google Cloud Platform</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://gkcalat.github.io/kubeflow-docs/docs/distributions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Kubeflow on AWS</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/distributions/aws/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/distributions/aws/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;https://awslabs.github.io/kubeflow-manifests/&#34;&gt;Kubeflow on AWS&lt;/a&gt; is an open source distribution of Kubeflow that allows customers to build machine learning systems with ready-made AWS service integrations. Use Kubeflow on AWS to streamline data science tasks and build highly reliable, secure, and scalable machine learning systems with reduced operational overheads.&lt;/p&gt;
+&lt;p&gt;For more information, see the &lt;a href=&#34;https://awslabs.github.io/kubeflow-manifests/docs/&#34;&gt;Kubeflow on AWS documentation&lt;/a&gt;.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Kubeflow on Azure</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/distributions/azure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/distributions/azure/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Kubeflow on Google Cloud</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/distributions/gke/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/distributions/gke/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Kubeflow on IBM Cloud</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/distributions/ibm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/distributions/ibm/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Kubeflow on Nutanix Karbon</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/distributions/nutanix/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/distributions/nutanix/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Arrikto Enterprise Kubeflow</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/distributions/ekf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/distributions/ekf/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The &lt;a href=&#34;https://www.arrikto.com/enterprise-kubeflow/&#34; target=&#34;_blank&#34;&gt;Arrikto Enterprise Kubeflow (EKF)&lt;/a&gt; distribution extends the capabilities of the Kubeflow platform with additional automation, reproducibility, portability, and security features.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Automation&lt;/em&gt;: Orchestrate your end-to-end ML workflow with a click of a button. Start by tagging cells in Jupyter Notebooks to define pipeline steps, hyperparameter tuning, GPU usage, and metrics tracking. Click a button to create pipeline components and KFP DSL, resolve dependencies, inject data objects into each step, deploy the data science pipeline, and serve the best model. Or use the Kale SDK to do all the above with your preferred IDE.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Reproducibility&lt;/em&gt;: Snapshot pipeline code, libraries, and data for every step with Arrikto’s Rok data management platform. Roll back to any machine learning pipeline step at it’s exact execution state for easy debugging. Collaborate with other data scientists through a Git-style publish/subscribe versioning workflow.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Portability&lt;/em&gt;: Deploy and upgrade your Kubeflow environment with a proven GitOps process across all major public clouds, and on-prem infrastructure. Move ML workflows seamlessly across with Rok Registry.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Security&lt;/em&gt;: Manage teams and user access via GitLab or any ID provider via Istio/OIDC. Isolate user ML data access within their own namespace while enabling notebook and pipeline collaboration in shared namespaces. Manage secrets and credentials securely, and efficiently.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Arrikto Kubeflow as a Service</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/distributions/kfaas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/distributions/kfaas/</guid>
+      <description>
+        
+        
+        &lt;p&gt;To get started go to &lt;a href=&#34;https://kubeflow.arrikto.com/&#34;&gt;https://kubeflow.arrikto.com/&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Charmed Kubeflow from Canonical</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/distributions/charmed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/distributions/charmed/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;https://charmed-kubeflow.io/&#34;&gt;Charmed Kubeflow&lt;/a&gt; from &lt;a href=&#34;https://www.canonical.com/&#34;&gt;Canonical&lt;/a&gt; delivers a powerful, sophisticated end-to-end MLOps platform which you can deploy using any conformant Kubernetes distribution. The solution enables optimised AI training and modelling, in a robust and automated way, allowing data scientists to focus on AI/ML projects, instead of underlying infrastructure. The enterprise-ready platform is available backed with 24/7 support, expert set-up services, and managed services with a service level agreement (SLA). With a growing ecosystem of powerful extensions and integrations including MLFlow and Seldon, the Charmed Kubeflow solution amplifies productivity levels for data scientists and machine learning engineers working with advanced analytics and AI.&lt;/p&gt;
+&lt;p&gt;Charmed Kubeflow is Canonical’s version of the upstream Kubeflow project. It uses charms, allowing components to easily connect and work effectively for different use cases. Main features include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Free to use&lt;/em&gt;: Charmed Kubeflow is offered as free, open-source software. You don’t need a support agreement or license to deploy Charmed Kubeflow.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Integrated&lt;/em&gt;: A growing ecosystem of extensions and integrations, such as &lt;a href=&#34;https://mlflow.org/&#34;&gt;MLFlow&lt;/a&gt; to help scale up your data science initiatives.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Available&lt;/em&gt;: Charmed Kubeflow is a fully portable solution for any cloud, including on-premise Kubernetes. Train your teams once to work anywhere.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Supported&lt;/em&gt;: &lt;a href=&#34;https://ubuntu.com/support&#34;&gt;24/7 support&lt;/a&gt;, &lt;a href=&#34;https://ubuntu.com/ai/services&#34;&gt;professional services&lt;/a&gt; and &lt;a href=&#34;https://ubuntu.com/managed/apps&#34;&gt;managed services&lt;/a&gt; with guaranteed SLA are available.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Community-driven:&lt;/em&gt; Charmed Kubeflow is an &lt;a href=&#34;htt://github.com/canonical/bundle-kubeflow&#34;&gt;open-source product&lt;/a&gt; driven by the community’s &lt;a href=&#34;https://discourse.charmhub.io/tag/kubeflow&#34;&gt;feedback&lt;/a&gt;. You can always contribute or get our team’s support.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&#34;https://charmed-kubeflow.io/docs/quickstart&#34;&gt;Charmed Kubeflow deployment guide&lt;/a&gt;
+Instructions for Kubeflow deployment with Kubeflow Charmed Operators&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://charmed-kubeflow.io/docs/upgrade&#34;&gt;Charmed Kubeflow upgrade guide&lt;/a&gt;
+Instructions to update to the latest version of Charmed Kubeflow.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://charmed-kubeflow.io/tutorials&#34;&gt;Charmed Kubeflow tutorials&lt;/a&gt;
+A collection of fun tutorials once you get started with Kubeflow&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://charmed-kubeflow.io/docs&#34;&gt;Charmed Kubeflow documentation&lt;/a&gt;
+Official documentation of Charmed Kubeflow&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Kubeflow Operator</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/distributions/operator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/distributions/operator/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Kubeflow on OpenShift</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/distributions/openshift/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/distributions/openshift/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

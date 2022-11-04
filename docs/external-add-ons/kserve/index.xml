@@ -1,0 +1,567 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubeflow on Google Cloud Platform – KServe</title>
+    <link>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/kserve/</link>
+    <description>Recent content in KServe on Kubeflow on Google Cloud Platform</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/kserve/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: KServe</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/kserve/kserve/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/kserve/kserve/</guid>
+      <description>
+        
+        
+        &lt;img src=&#34;https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/kserve/pics/kserve.png&#34; alt=&#34;KServe&#34; width=&#34;640px&#34;&gt;
+&lt;p&gt;KServe enables serverless inferencing on Kubernetes and provides performant, high abstraction interfaces for common machine learning (ML) frameworks like TensorFlow, XGBoost, scikit-learn, PyTorch, and ONNX to solve production model serving use cases.&lt;/p&gt;
+&lt;h3 id=&#34;kfserving-is-now-kservehttpskservegithubiowebsite07blogarticles2021-09-27-kfserving-transition&#34;&gt;&lt;a href=&#34;https://kserve.github.io/website/0.7/blog/articles/2021-09-27-kfserving-transition/&#34;&gt;KFServing is now KServe&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The KFServing GitHub repository has been transferred to an independent KServe GitHub organization under the stewardship of the Kubeflow Serving Working Group leads.&lt;/p&gt;
+&lt;h3 id=&#34;kserve-docshttpskservegithubiowebsite07&#34;&gt;&lt;a href=&#34;https://kserve.github.io/website/0.7/&#34;&gt;KServe Docs&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The majority of KServe docs will be available on the new docs website and it is recommended to refer to the docs on the KServe website rather than this website&lt;/p&gt;
+&lt;p&gt;You can use KServe to do the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Provide a Kubernetes &lt;a href=&#34;https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/&#34;&gt;Custom Resource Definition&lt;/a&gt; for serving ML models on arbitrary frameworks.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Encapsulate the complexity of autoscaling, networking, health checking, and server configuration to bring cutting edge serving features like GPU autoscaling, scale to zero, and canary rollouts to your ML deployments.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enable a simple, pluggable, and complete story for your production ML inference server by providing prediction, pre-processing, post-processing and explainability out of the box.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Our strong community contributions help KServe to grow. We have a Technical Steering Committee driven by Bloomberg, IBM Cloud, Seldon, Amazon Web Services (AWS) and NVIDIA.  Please browse the &lt;a href=&#34;https://github.com/KServe/KServe&#34;&gt;KServe GitHub repo&lt;/a&gt; and &lt;a href=&#34;https://github.com/KServe/KServe/issues&#34;&gt;raise issues&lt;/a&gt; to give us feedback!&lt;/p&gt;
+&lt;h2 id=&#34;install-with-kubeflow&#34;&gt;Install with Kubeflow&lt;/h2&gt;
+&lt;p&gt;KServe works with Kubeflow 1.5. Kustomize installation files are &lt;a href=&#34;https://github.com/kubeflow/manifests/tree/master/contrib/kserve&#34;&gt;located in the manifests repo&lt;/a&gt;.
+Check the examples running KServe on Istio/Dex in the &lt;a href=&#34;https://github.com/KServe/KServe/tree/master/docs/samples/istio-dex&#34;&gt;&lt;code&gt;KServe/KServe&lt;/code&gt;&lt;/a&gt; repository. For installation on major cloud providers with Kubeflow, follow their installation docs.&lt;/p&gt;
+&lt;p&gt;Kubeflow 1.5 includes KServe v0.7 which promoted the core InferenceService API from v1alpha2 to v1beta1 stable and added ModelMesh component to the release. Additionally, LFAI Trusted AI Projects on AI Fairness, AI Explainability and Adversarial Robustness have been integrated with KServe, and we have made KServe available on OpenShift as well. To know more, please read the &lt;a href=&#34;https://kserve.github.io/website/blog/articles/2021-10-11-KServe-0.7-release/&#34;&gt;release blog&lt;/a&gt; and follow the &lt;a href=&#34;https://github.com/KServe/KServe/releases/tag/v0.7.0&#34;&gt;release notes&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;standalone-kserve&#34;&gt;Standalone KServe&lt;/h2&gt;
+&lt;h3 id=&#34;quickstart-installhttpskservegithubiowebsite07get_started&#34;&gt;&lt;a href=&#34;https://kserve.github.io/website/0.7/get_started/&#34;&gt;Quickstart Install&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;KServe Quickstart Environments are for experimentation use only. For production installation, see our &lt;a href=&#34;https://kserve.github.io/website/0.7/admin/serverless/&#34;&gt;Administrator&amp;rsquo;s Guide&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;learn-more&#34;&gt;Learn more&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=lj_X2ND2BBI&#34;&gt;Kubeflow 101: What is KFserving?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/16oqz6dhY5BR0u74pi9mDThU97Np__AFb/view&#34;&gt;KFServing 101 slides&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kccncna19.sched.com/event/UaZo/introducing-kfserving-serverless-model-serving-on-kubernetes-ellis-bigelow-google-dan-sun-bloomberg&#34;&gt;Kubecon Introducing KFServing&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=sE_A54T2n6k&#34;&gt;Serving Machine Learning Models at Scale Using KServe - Yuzhui Liu, Bloomberg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=0YmM_h7PvpI&#34;&gt;KServe (Kubeflow KFServing) Live Coding Session&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=0H-HvK8zIUI&#34;&gt;TFiR: Let’s Talk About IBM’s ModelMesh, KServe And Other Open Source AI/ML Technologies&lt;/a&gt; | Animesh Singh |&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=la3Y0lXuKRM&#34;&gt;KubeCon 2021: Serving Machine Learning Models at Scale Using KServe&lt;/a&gt; | Animesh Singh |&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;kserve-key-links&#34;&gt;&lt;strong&gt;KServe Key Links&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://kserve.github.io/website/&#34;&gt;&lt;u&gt;Website&lt;/u&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/kserve/kserve/&#34;&gt;&lt;u&gt;Github&lt;/u&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kubeflow.slack.com/join/shared_invite/zt-n73pfj05-l206djXlXk5qdQKs4o1Zkg#/&#34;&gt;&lt;u&gt;Slack(#kubeflow-kfserving)&lt;/u&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Migration</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/kserve/migration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/kserve/migration/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The migration job will by default delete the leftover KFServing installation after migrating the InferenceServices from
+&lt;code&gt;serving.kubeflow.org&lt;/code&gt; to &lt;code&gt;serving.kserve.io&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;migrating-from-kubeflow-based-kfserving&#34;&gt;Migrating from Kubeflow-based KFServing&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Install Kubeflow-based KServe 0.7 using the &lt;a href=&#34;https://github.com/kserve/kserve/blob/master/install/v0.7.0/kserve_kubeflow.yaml&#34;&gt;install YAML&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This will not affect existing services yet.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl apply -f https://raw.githubusercontent.com/kserve/kserve/master/install/v0.7.0/kserve_kubeflow.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run the &lt;a href=&#34;https://github.com/kserve/kserve/blob/master/hack/kserve_migration/kserve_migration_job_kubeflow.yaml&#34;&gt;KServe Migration YAML&lt;/a&gt; for Kubeflow-based installations&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;This will begin the migration. Any errors here may affect your existing services.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you do not want to delete the KFServing resources after migrating, download and edit the env &lt;code&gt;REMOVE_KFSERVING&lt;/code&gt;
+in the YAML before applying it&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl apply -f https://raw.githubusercontent.com/kserve/kserve/master/hack/kserve_migration/kserve_migration_job_kubeflow.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Clean up the migration resources&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl delete ClusterRoleBinding cluster-migration-rolebinding
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl delete ClusterRole cluster-migration-role
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl delete ServiceAccount cluster-migration-svcaccount -n kubeflow
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Update the models web app to use the new InferenceService API group &lt;code&gt;serving.kserve.io&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Change the deployment image to &lt;code&gt;kserve/models-web-app:v0.7.0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl edit deployment kfserving-models-web-app -n kubeflow
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Update the cluster role to be able to access the new InferenceService API group &lt;code&gt;serving.kserve.io&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Edit the &lt;code&gt;apiGroups&lt;/code&gt; from &lt;code&gt;serving.kubeflow.org&lt;/code&gt; to &lt;code&gt;serving.kserve.io&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;This is a temporary fix until the next Kubeflow release includes these changes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl edit clusterrole kfserving-models-web-app-cluster-role
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Models UI</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/kserve/webapp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/kserve/webapp/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The Models web app is responsible for allowing the user to manipulate the Model Servers in their Kubeflow cluster. To achieve this it provides a user friendly way to handle the lifecycle of &lt;code&gt;InferenceService&lt;/code&gt; CRs.&lt;/p&gt;
+&lt;p&gt;The web app currently works with &lt;code&gt;v1beta1&lt;/code&gt; versions of &lt;code&gt;InferenceService&lt;/code&gt; objects.&lt;/p&gt;
+&lt;p&gt;The web app is also exposing information from the underlying Knative resources,
+like Conditions from the Knative Configurations, Route and Revisions as well as
+live logs from the Model server pod.&lt;/p&gt;
+&lt;h2 id=&#34;installation-and-access&#34;&gt;Installation and Access&lt;/h2&gt;
+&lt;p&gt;Refer &lt;a href=&#34;https://github.com/kserve/models-web-app/#development&#34;&gt;https://github.com/kserve/models-web-app/#development&lt;/a&gt; for installation&lt;/p&gt;
+&lt;p&gt;The web app includes the following resources:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A &lt;code&gt;Deployment&lt;/code&gt; for running the backend server, and serving the static frontend files&lt;/li&gt;
+&lt;li&gt;A &lt;code&gt;Service&lt;/code&gt; for configuring the incluster network traffic&lt;/li&gt;
+&lt;li&gt;A &lt;code&gt;ServiceAccount&lt;/code&gt; and &lt;code&gt;ClusterRole{Binding}&lt;/code&gt; to give the necessary
+permissions to the web app&amp;rsquo;s Pod&lt;/li&gt;
+&lt;li&gt;A &lt;code&gt;VirtualService&lt;/code&gt; for exposing the app via the cluster&amp;rsquo;s Istio Ingress
+Gateway&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;kubeflow&#34;&gt;Kubeflow&lt;/h3&gt;
+&lt;p&gt;The web app is included as a part of the Kubeflow &lt;a href=&#34;https://github.com/kubeflow/manifests/tree/v1.5-branch/contrib/kserve/models-web-app&#34;&gt;1.5
+release&lt;/a&gt; manifests.
+It is &lt;a href=&#34;https://github.com/kubeflow/manifests/blob/v1.5-branch/apps/centraldashboard/upstream/base/configmap.yaml#L30&#34;&gt;exposed&lt;/a&gt; via the
+Central Dashboard, out of the box.&lt;/p&gt;
+&lt;h3 id=&#34;standalone&#34;&gt;Standalone&lt;/h3&gt;
+&lt;p&gt;In this case all the resources of the web app will be installed in the
+&lt;code&gt;kserve&lt;/code&gt; namespace. Users can access the web app either via the
+&lt;code&gt;knative-ingress-gateway.knative-serving&lt;/code&gt; Istio Ingress Gateway or by
+port-forwarding the backend.&lt;/p&gt;
+&lt;h4 id=&#34;port-forwarding&#34;&gt;Port forwarding&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# set the following ENV vars in the app&amp;#39;s Deployment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl edit -n kserve deployments.apps kserve-models-web-app
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# APP_PREFIX: /&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# APP_DISABLE_AUTH: &amp;#34;True&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# APP_SECURE_COOKIES: &amp;#34;False&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# expose the app under localhost:5000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl port-forward -n kserve svc/kserve-models-web-app 5000:80
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;authorization&#34;&gt;Authorization&lt;/h2&gt;
+&lt;h3 id=&#34;subjectaccessreviews&#34;&gt;SubjectAccessReviews&lt;/h3&gt;
+&lt;p&gt;The web app has a mechanism for performing authentication and authorization
+checks, to ensure that user actions are compliant with the cluster&amp;rsquo;s RBAC,
+which is only enabled in the &lt;em&gt;kubeflow&lt;/em&gt; manifests of the app. This mechanism
+can be toggled by leveraging the &lt;code&gt;APP_DISABLE_AUTH: &amp;quot;True&amp;quot; | &amp;quot;False&amp;quot;&lt;/code&gt; ENV Var.&lt;/p&gt;
+&lt;p&gt;This mechanism is only enabled in the &lt;em&gt;kubeflow&lt;/em&gt; manifests since in a Kubeflow
+installation all requests that end up in the web app&amp;rsquo;s Pod will also contain a custom
+header that denotes the user. In a Kubeflow installation there&amp;rsquo;s an authentication
+component in front of the cluster that ensures only logged in users can
+access the cluster&amp;rsquo;s services. In the standalone mode such a
+component might not always be deployed.&lt;/p&gt;
+&lt;p&gt;The web app will be using the value from this custom header to extract the name
+of the &lt;a href=&#34;https://kubernetes.io/docs/reference/access-authn-authz/authentication/&#34;&gt;K8s
+user&lt;/a&gt;
+that made the request. Then it will create a
+&lt;a href=&#34;https://kubernetes.io/docs/reference/access-authn-authz/authorization/#determine-whether-a-request-is-allowed-or-denied&#34;&gt;SubjectAccessReview&lt;/a&gt;
+to check if the user has permissions to perform the specific action, for
+example deleting an InferenceService in a namespace.&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-info&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Tip&lt;/h4&gt;
+
+    If you are port-forwarding the app via &lt;strong&gt;kubectl port-forward&lt;/strong&gt; then you will
+need to set &lt;strong&gt;APP_DISABLE_AUTH=&amp;ldquo;True&amp;rdquo;&lt;/strong&gt; in the web app&amp;rsquo;s Deployment. When
+port-forwarding the authentication header will not be set, which will result in the
+web app raising &lt;strong&gt;401&lt;/strong&gt; errors.
+
+&lt;/div&gt;
+
+&lt;h3 id=&#34;namespace-selection&#34;&gt;Namespace selection&lt;/h3&gt;
+&lt;p&gt;Both in &lt;em&gt;standalone&lt;/em&gt; and in &lt;em&gt;kubeflow&lt;/em&gt; setups the user needs to be able to
+select a Namespace in order to interact with the InferenceServices in it.&lt;/p&gt;
+&lt;p&gt;In &lt;em&gt;standalone&lt;/em&gt; mode the web app will show a dropdown that will show all the
+namespaces to the user and allow them to select any of them. The backend will
+make a LIST request to the API Server to get all the namespaces. In this case
+the only authorization check that takes place is in the K8s API Server that
+ensures the &lt;a href=&#34;https://github.com/kserve/models-web-app/blob/release-0.7/config/base/rbac.yaml&#34;&gt;web app Pod&amp;rsquo;s
+ServiceAccount&lt;/a&gt;
+has permissions to list namespaces.&lt;/p&gt;
+&lt;p&gt;In &lt;em&gt;kubeflow&lt;/em&gt; mode the &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/components/central-dash/overview/&#34;&gt;Central
+Dashboard&lt;/a&gt; is responsible for the
+Namespace selection. Once the user selects a namespace then the Dashboard will
+inform the iframed Models web app about the newly selected namespace. The
+Models web app itself won&amp;rsquo;t expose a dropdown namespace selector in this mode.&lt;/p&gt;
+&lt;h2 id=&#34;use-cases&#34;&gt;Use Cases&lt;/h2&gt;
+&lt;p&gt;Currently users can do the following workflows via this web app:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;See a list of the existing InferenceService CRs in a Namespace&lt;/li&gt;
+&lt;li&gt;Create a new InferenceService by providing a YAML&lt;/li&gt;
+&lt;li&gt;Inspect an InferenceService
+&lt;ul&gt;
+&lt;li&gt;View the live status of the InferenceService&lt;/li&gt;
+&lt;li&gt;Inspect the K8s Conditions of the underlying Knative resources&lt;/li&gt;
+&lt;li&gt;View the logs of the created Model server Pod, for that InferenceService&lt;/li&gt;
+&lt;li&gt;Inspect the YAML contents as they are stored in the K8s API Server&lt;/li&gt;
+&lt;li&gt;View some basic metrics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;listing&#34;&gt;Listing&lt;/h3&gt;
+&lt;p&gt;The main page of the app provides a list of all the InferenceServices that are
+deployed in the selected Namespace. The frontend periodically polls the backend
+for the latest state of InferenceServices.&lt;/p&gt;
+&lt;img src=&#34;https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/kserve/pics/webapp-list.png&#34; alt=&#34;Models web app main page&#34;&gt;
+&lt;h3 id=&#34;creating&#34;&gt;Creating&lt;/h3&gt;
+&lt;p&gt;The page for creating a new InferenceService. The user can paste the YAML
+object of the InferenceService they wish to create.&lt;/p&gt;
+&lt;p&gt;Note that the backend will override the provided &lt;code&gt;.metadata.namespace&lt;/code&gt; field of
+the submitted object, to prevent users from trying to create InferenceServices
+in other namespaces.&lt;/p&gt;
+&lt;img src=&#34;https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/kserve/pics/webapp-new.png&#34; alt=&#34;Models web app create page&#34;&gt;
+&lt;h3 id=&#34;deleting&#34;&gt;Deleting&lt;/h3&gt;
+&lt;p&gt;Users can delete an existing InferenceService by clicking on the
+&lt;i class=&#34;fas fa-trash&#34;&gt;&lt;/i&gt; icon next to an InferenceService, in the main page
+that lists all the namespaced resources.&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-info&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Note&lt;/h4&gt;
+
+    The backend is using &lt;a href=&#34;https://kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/#foreground-cascading-deletion&#34;&gt;foreground cascading
+deletion&lt;/a&gt;
+when deleting an InferenceService. This means that the InferenceService CR will
+be deleted from the K8s API Server only once the underlying resources have been
+deleted.
+
+&lt;/div&gt;
+
+&lt;h3 id=&#34;inspecting&#34;&gt;Inspecting&lt;/h3&gt;
+&lt;p&gt;Users can click on the name of an InferenceService, from the main page, and
+view a more detailed summary of the CR&amp;rsquo;s state. In this page users can inspect:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The overview of the InferenceService&amp;rsquo;s status (OVERVIEW)&lt;/li&gt;
+&lt;li&gt;A user friendly representation of the CR&amp;rsquo;s spec (DETAILS)&lt;/li&gt;
+&lt;li&gt;Metrics from the underlying resources (METRICS)&lt;/li&gt;
+&lt;li&gt;Logs from the created Pods (LOGS)&lt;/li&gt;
+&lt;li&gt;The YAML file as is in the K8s API Server (YAML)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img src=&#34;https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/kserve/pics/webapp-overview.png&#34; alt=&#34;Models web app overview page&#34;&gt;
+
+
+&lt;div class=&#34;alert alert-info&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Note&lt;/h4&gt;
+
+    &lt;p&gt;To gather the logs the backend will:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Filter all the pods that have a &lt;code&gt;serving.knative.dev/revision&lt;/code&gt; label&lt;/li&gt;
+&lt;li&gt;Get the logs from the &lt;code&gt;kserve-container&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;metrics&#34;&gt;Metrics&lt;/h2&gt;
+&lt;p&gt;As mentioned in the above sections the web app allows users to inspect the
+metrics from the InferenceService. This tab will &lt;strong&gt;not&lt;/strong&gt; be enable by default.
+In order to expose it the users will need to install Grafana and Prometheus.&lt;/p&gt;
+&lt;p&gt;Currently the frontend is expecting to find a Grafana exposed in the &lt;code&gt;/grafana&lt;/code&gt;
+prefix. This Grafana instance will need to have specific dashboards in order
+for the app to embed them in iframes. We are working on making this more
+generic to allow people to expose their own graphs.&lt;/p&gt;
+&lt;p&gt;You can install Grafana and Prometheus, for the web app to consume, by
+installing&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;the &lt;code&gt;monitoring-core.yaml&lt;/code&gt; and
+&lt;code&gt;monitoring-metrics-prometheus.yaml&lt;/code&gt; files from the &lt;a href=&#34;https://github.com/knative/serving/releases/tag/v0.18.0&#34;&gt;Knative 0.18
+release&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;the following yaml files for exposing Grafana outside the cluster, by
+allowing &lt;strong&gt;anonymous access&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul class=&#34;nav nav-tabs&#34; id=&#34;grafana-installation-yamls&#34; role=&#34;tablist&#34;&gt;&lt;li class=&#34;nav-item&#34;&gt;&lt;a data-toggle=&#34;tab&#34; class=&#34;nav-link active&#34; href=&#34;#grafana-installation-yamls-0&#34; role=&#34;tab&#34; aria-controls=&#34;grafana-installation-yamls-0&#34; aria-selected=&#34;true&#34;&gt;ConfigMap&lt;/a&gt;&lt;/li&gt;
+	  
+		&lt;li class=&#34;nav-item&#34;&gt;&lt;a data-toggle=&#34;tab&#34; class=&#34;nav-link&#34; href=&#34;#grafana-installation-yamls-1&#34; role=&#34;tab&#34; aria-controls=&#34;grafana-installation-yamls-1&#34;&gt;VirtualService&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&#34;nav-item&#34;&gt;&lt;a data-toggle=&#34;tab&#34; class=&#34;nav-link&#34; href=&#34;#grafana-installation-yamls-2&#34; role=&#34;tab&#34; aria-controls=&#34;grafana-installation-yamls-2&#34;&gt;AuthorizationPolicy&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;div class=&#34;tab-content&#34; id=&#34;grafana-installation-yamls&#34;&gt;&lt;div id=&#34;grafana-installation-yamls-0&#34; class=&#34;tab-pane show active&#34; role=&#34;tabpanel&#34; aria-labelledby=&#34;grafana-installation-yamls-0&#34;&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;apiVersion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;v1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;kind&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ConfigMap&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;metadata&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;grafana-custom-config&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;namespace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;knative-monitoring&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;labels&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;serving.knative.dev/release&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;v0.11.0&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;custom.ini&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;sd&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;    # You can customize Grafana via changing the context of this field.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;    [auth.anonymous]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;    # enable anonymous access
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;    enabled = true
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;    [security]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;    allow_embedding = true
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;    [server]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;    root_url = &amp;#34;/grafana&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;    serve_from_sub_path = true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div id=&#34;grafana-installation-yamls-1&#34; class=&#34;tab-pane&#34; role=&#34;tabpanel&#34; aria-labelledby=&#34;grafana-installation-yamls-1&#34;&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;apiVersion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;networking.istio.io/v1alpha3&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;kind&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;VirtualService&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;metadata&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;grafana&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;namespace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;knative-monitoring&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;spec&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;gateways&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;kubeflow/kubeflow-gateway&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;hosts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;s1&#34;&gt;&amp;#39;*&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;http&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;match&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;uri&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;prefix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;/grafana/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;route&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;destination&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;grafana.knative-monitoring.svc.cluster.local&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;number&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30802&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div id=&#34;grafana-installation-yamls-2&#34; class=&#34;tab-pane&#34; role=&#34;tabpanel&#34; aria-labelledby=&#34;grafana-installation-yamls-2&#34;&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;apiVersion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;security.istio.io/v1beta1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;kind&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;AuthorizationPolicy&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;metadata&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;models-web-app&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;namespace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;kubeflow&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;spec&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;action&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ALLOW&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;rules&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;principals&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;cluster.local/ns/istio-system/sa/istio-ingressgateway-service-account&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;selector&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;matchLabels&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;kustomize.component&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;kserve-models-web-app&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;app.kubernetes.io/component&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;kserve-models-web-app&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+
+
+
+&lt;div class=&#34;alert alert-info&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Note&lt;/h4&gt;
+
+    If you installed the app in the &lt;em&gt;standalone&lt;/em&gt; mode then you will need to instead
+use the &lt;strong&gt;knative-serving/knative-ingress-gateway&lt;/strong&gt; Ingress Gateway and deploy
+the AuthorizationPolicy in the &lt;strong&gt;kserve&lt;/strong&gt; namespace instead.
+
+&lt;/div&gt;
+
+&lt;p&gt;After applying these YAMLs, based on your installation mode, and ensuring the
+Grafana instance is exposed under &lt;code&gt;/grafana&lt;/code&gt; the web app will show the
+&lt;code&gt;METRICS&lt;/code&gt; tab.&lt;/p&gt;
+&lt;img src=&#34;https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/kserve/pics/webapp-metrics.png&#34; alt=&#34;Models web app metrics page&#34;&gt;
+&lt;h2 id=&#34;configurations&#34;&gt;Configurations&lt;/h2&gt;
+&lt;p&gt;The following is a list of ENV var that can configure different aspects of the
+application.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;ENV Var&lt;/th&gt;
+&lt;th&gt;Default value&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;APP_PREFIX&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;/models&amp;rdquo;&lt;/td&gt;
+&lt;td&gt;Controls the app&amp;rsquo;s prefix, by setting the &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base&#34;&gt;base-url&lt;/a&gt; element&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;APP_DISABLE_AUTH&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;False&amp;rdquo;&lt;/td&gt;
+&lt;td&gt;Controls whether the app should use SubjectAccessReviews to ensure the user is authorized to perform an action&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;APP_SECURE_COOKIES&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;True&amp;rdquo;&lt;/td&gt;
+&lt;td&gt;Controls whether the app should use &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#Secure&#34;&gt;Secure&lt;/a&gt; CSRF cookies. By default the app expects to be exposed with https&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CSRF_SAMESITE&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;Strict&amp;rdquo;&lt;/td&gt;
+&lt;td&gt;Controls the &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#SameSite&#34;&gt;SameSite value&lt;/a&gt; of the CSRF cookie&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;USERID_HEADER&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;kubeflow-userid&amp;rdquo;&lt;/td&gt;
+&lt;td&gt;Header in each request that will contain the username of the logged in user&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;USERID_PREFIX&lt;/td&gt;
+&lt;td&gt;&amp;quot;&amp;quot;&lt;/td&gt;
+&lt;td&gt;Prefix to remove from the &lt;code&gt;USERID_HEADER&lt;/code&gt; value to extract the logged in user name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Run your first InferenceService</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/kserve/first_isvc_kserve/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/kserve/first_isvc_kserve/</guid>
+      <description>
+        
+        
+        &lt;!--
+AUTOGENERATED FROM content/en/docs/external-add-ons/kserve/first_isvc_kserve.ipynb
+PLEASE UPDATE THE JUPYTER NOTEBOOK AND REGENERATE THIS FILE USING scripts/nb_to_md.py.--&gt;
+&lt;style&gt;
+.notebook-links {display: flex; margin: 1em 0;}
+.notebook-links a {padding: .75em; margin-right: .75em; font-weight: bold;}
+a.colab-link {
+padding-left: 3.25em;
+background-image: url(/docs/images/logos/colab.ico);
+background-repeat: no-repeat;
+background-size: contain;
+}
+a.github-link {
+padding-left: 2.75em;
+background-image: url(/docs/images/logos/github.png);
+background-repeat: no-repeat;
+background-size: auto 75%;
+background-position: left center;
+}
+&lt;/style&gt;
+&lt;div class=&#34;notebook-links&#34;&gt;
+&lt;a class=&#34;colab-link&#34; href=&#34;https://colab.research.google.com/github/kubeflow/website/blob/master/content/en/docs/external-add-ons/kserve/first_isvc_kserve.ipynb&#34;&gt;Run in Google Colab&lt;/a&gt;
+&lt;a class=&#34;github-link&#34; href=&#34;https://github.com/kubeflow/website/blob/master/content/en/docs/external-add-ons/kserve/first_isvc_kserve.ipynb&#34;&gt;View source on GitHub&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;The InferenceService custom resource is the primary interface that is used for deploying models on KServe. Inside an InferenceService, users can specify multiple
+components that are used for handling inference requests. These components are the predictor, transformer, and explainer. Learn more &lt;a href=&#34;https://kserve.github.io/website/0.7/modelserving/data_plane/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In this tutorial, you will deploy an InferenceService with a predictor that will load a scikit-learn model trained with the &lt;a href=&#34;https://archive.ics.uci.edu/ml/datasets/iris&#34;&gt;iris&lt;/a&gt; dataset.
+This dataset has three output class: Iris Setosa, Iris Versicolour, and Iris Virginica.&lt;/p&gt;
+&lt;p&gt;You will then send an inference request to your deployed model in order to get a prediction for the class of iris plant your request corresponds to.&lt;/p&gt;
+&lt;h2 id=&#34;before-you-begin&#34;&gt;Before you begin&lt;/h2&gt;
+&lt;p&gt;First, install the KServe SDK using the following command. If you run this command in a Jupyter notebook, restart the kernel after installing the SDK.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;kserve&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.7.0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;import-kubernetesclient-and-kserve-packages&#34;&gt;Import &lt;code&gt;kubernetes.client&lt;/code&gt; and &lt;code&gt;kserve&lt;/code&gt; packages&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;kubernetes&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;client&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;kserve&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;KServeClient&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;kserve&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;constants&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;kserve&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;utils&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;kserve&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;V1beta1InferenceService&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;kserve&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;V1beta1InferenceServiceSpec&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;kserve&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;V1beta1PredictorSpec&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;kserve&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;V1beta1SKLearnSpec&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;declare-namespace&#34;&gt;Declare Namespace&lt;/h2&gt;
+&lt;p&gt;This will retrieve the current namespace of your Kubernetes context. The InferenceService will be deployed in this namespace.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;utils&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get_default_target_namespace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;define-inferenceservice&#34;&gt;Define InferenceService&lt;/h2&gt;
+&lt;p&gt;Next, define the InferenceService based on several key parameters. In the &lt;code&gt;predictor&lt;/code&gt; parameter, a &lt;code&gt;V1beta1PredictorSpec&lt;/code&gt; object with an embedded &lt;code&gt;V1beta1SKLearnSpec&lt;/code&gt; object is created.
+Inside the &lt;code&gt;V1beta1SKLearnSpec&lt;/code&gt; object, a storage URI is provided, pointing to the location of the trained iris model in cloud storage.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;sklearn-iris&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;kserve_version&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;v1beta1&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;api_version&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;constants&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;KSERVE_GROUP&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;kserve_version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;isvc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;V1beta1InferenceService&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;api_version&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;api_version&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                               &lt;span class=&#34;n&#34;&gt;kind&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;constants&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;KSERVE_KIND&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                               &lt;span class=&#34;n&#34;&gt;metadata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;client&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;V1ObjectMeta&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                   &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;namespace&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;namespace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;annotations&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;sidecar.istio.io/inject&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;false&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                               &lt;span class=&#34;n&#34;&gt;spec&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;V1beta1InferenceServiceSpec&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                               &lt;span class=&#34;n&#34;&gt;predictor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;V1beta1PredictorSpec&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                               &lt;span class=&#34;n&#34;&gt;sklearn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;V1beta1SKLearnSpec&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                   &lt;span class=&#34;n&#34;&gt;storage_uri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;gs://kfserving-samples/models/sklearn/iris&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;create-inferenceservice&#34;&gt;Create InferenceService&lt;/h2&gt;
+&lt;p&gt;Now, with the InferenceService defined, you can now create it by calling the &lt;code&gt;create&lt;/code&gt; method of the &lt;code&gt;KServeClient&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;KServe&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;KServeClient&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;KServe&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;create&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;isvc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;check-the-inferenceservice&#34;&gt;Check the InferenceService&lt;/h2&gt;
+&lt;p&gt;Run the following command to watch the InferenceService until it is ready (or times out).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;KServe&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;namespace&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;namespace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;watch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;timeout_seconds&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;120&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;perform-inference&#34;&gt;Perform Inference&lt;/h2&gt;
+&lt;p&gt;Next, you can try sending an inference request to the deployed model in order to get predictions. This notebook assumes that you running
+it in your Kubeflow cluster and will use the internal URL of the InferenceService.&lt;/p&gt;
+&lt;p&gt;The Python &lt;code&gt;requests&lt;/code&gt; library will be used to send a POST request containing your payload.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;requests&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;isvc_resp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;KServe&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;namespace&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;namespace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;isvc_url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;isvc_resp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;status&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;address&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;url&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;isvc_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;inference_input&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s1&#34;&gt;&amp;#39;instances&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;6.8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;mf&#34;&gt;2.8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;mf&#34;&gt;4.8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;mf&#34;&gt;1.4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;6.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;mf&#34;&gt;3.4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;mf&#34;&gt;4.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;mf&#34;&gt;1.6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requests&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;isvc_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;json&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;inference_input&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You should see two predictions returned (i.e. &lt;code&gt;{&amp;quot;predictions&amp;quot;: [1, 1]}&lt;/code&gt;). Both sets of data points sent for inference correspond to the flower with index &lt;code&gt;1&lt;/code&gt;.
+In this case, the model predicts that both flowers are &amp;ldquo;Iris Versicolour&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;To learn more about sending inference requests, please check out the &lt;a href=&#34;https://kserve.github.io/website/0.7/get_started/first_isvc/#3-determine-the-ingress-ip-and-ports&#34;&gt;KServe guide&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;run-performance-test-optional&#34;&gt;Run Performance Test (Optional)&lt;/h2&gt;
+&lt;p&gt;If you want to load test the deployed model, try deploying the Kubernetes Job to drive load to the InferenceService.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;kubectl&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;create&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;raw&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;githubusercontent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;kserve&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;kserve&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;release&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.7&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;docs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;samples&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v1beta1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sklearn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;perf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;yaml&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;kubeflow&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;example&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;get-job-name&#34;&gt;Get Job Name&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;kubectl&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;get&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pods&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;namespace&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;kubeflow&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;example&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;com&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;grep&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;check-the-job-logs&#34;&gt;Check the Job Logs&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;kubectl&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;logs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;job&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;kubeflow&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;example&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The output should look like similar to the following:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Requests      [total, rate, throughput]         30000, 500.02, 499.99
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Duration      [total, attack, wait]             1m0s, 59.998s, 3.336ms
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Latencies     [min, mean, 50, 90, 95, 99, max]  1.743ms, 2.748ms, 2.494ms, 3.363ms, 4.091ms, 7.749ms, 46.354ms
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Bytes In      [total, mean]                     690000, 23.00
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Bytes Out     [total, mean]                     2460000, 82.00
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Success       [ratio]                           100.00%
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Status Codes  [code:count]                      200:30000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Error Set:
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;delete-inferenceservice&#34;&gt;Delete InferenceService&lt;/h2&gt;
+&lt;p&gt;When you are done with your InferenceService, you can delete it by running the following.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;KServe&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;delete&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;namespace&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;namespace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;next-steps&#34;&gt;Next Steps&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kubeflow/pipelines/blob/sdk/release-1.8/samples/contrib/kubeflow-e2e-mnist/kubeflow-e2e-mnist.ipynb&#34;&gt;&lt;strong&gt;Kubeflow Pipelines E2E MNIST Tutorial&lt;/strong&gt;&lt;/a&gt; - provides an end-to-end test sequence (i.e. start a notebook, run a pipeline, execute training, hyperparameter tuning, and model serving with KServe).&lt;/p&gt;
+&lt;div class=&#34;notebook-links&#34;&gt;
+&lt;a class=&#34;colab-link&#34; href=&#34;https://colab.research.google.com/github/kubeflow/website/blob/master/content/en/docs/external-add-ons/kserve/first_isvc_kserve.ipynb&#34;&gt;Run in Google Colab&lt;/a&gt;
+&lt;a class=&#34;github-link&#34; href=&#34;https://github.com/kubeflow/website/blob/master/content/en/docs/external-add-ons/kserve/first_isvc_kserve.ipynb&#34;&gt;View source on GitHub&lt;/a&gt;
+&lt;/div&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>
