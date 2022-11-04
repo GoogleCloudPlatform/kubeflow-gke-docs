@@ -10,7 +10,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -50,22 +50,12 @@ jobs:
           npm install postcss-cli@10.0.0
           hugo
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: ./public
-
-  # Deployment job
-  deploy:
-    runs-on: ubuntu-22.04
-    needs: build
-    steps:
       - name: Prepare GitHub Pages
         shell: bash
         run: |
           echo "##[set-output name=branch_name;]$(echo ${GITHUB_REF#refs/heads/})"
         id: prepare_gh_pages
-        
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
