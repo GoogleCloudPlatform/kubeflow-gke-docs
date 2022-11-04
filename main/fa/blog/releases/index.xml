@@ -1,0 +1,17 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>اسناد گلدی – نسخه های منتشر شده</title>
+    <link>https://gkcalat.github.io/kubeflow-docs/fa/blog/releases/</link>
+    <description>Recent content in نسخه های منتشر شده on اسناد گلدی</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://gkcalat.github.io/kubeflow-docs/fa/blog/releases/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>
