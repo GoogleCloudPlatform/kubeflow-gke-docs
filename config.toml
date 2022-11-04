@@ -254,8 +254,8 @@ pygmentsStyle = "tango"
       url = "https://www.kubeflow.org/docs/about/community/#kubeflow-slack"
       icon = "fab fa-slack"
       desc = "Chat with Kubeflow developers"
-    [[params.links.calendars]]
+    [[params.links.developer]]
       name = "Kubeflow community calendar"
       url = "https://www.kubeflow.org/docs/about/community/#kubeflow-community-calendars"
       icon = "fa fa-calendar"
-      desc = "Discuss development issues around the project"
+      desc = "Upcoming community calls"
