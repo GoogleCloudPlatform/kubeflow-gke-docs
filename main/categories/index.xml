@@ -1,10 +1,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Goldydocs – Categories</title>
+    <title>Kubeflow on Google Cloud Platform – Categories</title>
     <link>https://gkcalat.github.io/kubeflow-docs/categories/</link>
-    <description>Recent content in Categories on Goldydocs</description>
+    <description>Recent content in Categories on Kubeflow on Google Cloud Platform</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 05 Jan 2017 00:00:00 +0000</lastBuildDate>
     
 	  <atom:link href="https://gkcalat.github.io/kubeflow-docs/categories/index.xml" rel="self" type="application/rss+xml" />
     
