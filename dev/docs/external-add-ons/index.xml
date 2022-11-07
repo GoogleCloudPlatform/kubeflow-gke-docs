@@ -1,0 +1,119 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubeflow on Google Cloud Platform – External Add-Ons</title>
+    <link>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/</link>
+    <description>Recent content in External Add-Ons on Kubeflow on Google Cloud Platform</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Elyra</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/elyra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/elyra/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Elyra aims to help data scientists, machine learning engineers and AI developers
+through the model development life cycle complexities. Elyra integrates with JupyterLab
+providing a Pipeline visual editor that enables low code/no code creation of Pipelines
+that can be executed in a Kubeflow environment.&lt;/p&gt;
+&lt;p&gt;Below is an example of a Piepline created with Elyra, you can identify the components/tasks
+and related properties that are all managed in the visual editor.&lt;/p&gt;
+&lt;img src=&#34;https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/elyra/elyra-pipeline-covid-scenario.png&#34; alt=&#34;A pipeline example created using Elyra Pipeline Visual Editor&#34; class=&#34;mt-3 mb-3 p-3 border border-info rounded&#34; /&gt;
+&lt;p&gt;To learn more about Elyra, visit &lt;a href=&#34;https://github.com/elyra-ai/elyra&#34; target=&#34;_blank&#34;&gt;Elyra GitHub project&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To enable Elyra in your Kubeflow Environment, visit &lt;a href=&#34;https://elyra.readthedocs.io/en/stable/recipes/using-elyra-with-kubeflow-notebook-server.html&#34; target=&#34;_blank&#34;&gt;Using Elyra with the Kubeflow Notebook Server&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Istio</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/istio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/istio/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Kale</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/kale/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/kale/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Kale simplifies the use of Kubeflow, giving data scientists the tool they need to orchestrate end-to-end ML workflows. Kale provides a UI in the form of a JupyterLab extension. You can annotate cells in Jupyter Notebooks to define: pipeline steps, hyperparameter tuning, GPU usage, and metrics tracking. Click a button to create pipeline components and KFP DSL, resolve dependencies, inject data objects into each step, deploy the data science pipeline, and serve the best model.&lt;/p&gt;
+&lt;p&gt;See &lt;a href=&#34;https://codelabs.arrikto.com/codelabs/minikf-kale-katib-kfserving/#0&#34; target=&#34;_blank&#34;&gt;From Notebook to Kubeflow Pipelines to KFServing&lt;/a&gt; for a tutorial overview of Kale.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: KServe</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/kserve/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/kserve/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Fairing</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/fairing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/fairing/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Feature Store</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/feature-store/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/feature-store/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Tools for Serving</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/serving/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/external-add-ons/serving/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

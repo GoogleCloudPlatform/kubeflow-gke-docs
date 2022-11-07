@@ -1,0 +1,934 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubeflow on Google Cloud Platform – About</title>
+    <link>https://gkcalat.github.io/kubeflow-docs/docs/about/</link>
+    <description>Recent content in About on Kubeflow on Google Cloud Platform</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://gkcalat.github.io/kubeflow-docs/docs/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Community</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/about/community/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/about/community/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;kubeflow-slack&#34;&gt;Kubeflow Slack&lt;/h2&gt;
+&lt;p&gt;The Official Kubeflow Slack is used for informal discussions among users and contributors.&lt;/p&gt;
+&lt;a href=&#34;https://invite.playplay.io/invite?team_id=T7QLHSH6U&#34;&gt;
+  &lt;button class=&#34;btn btn-primary py-2 px-5 mb-3&#34;&gt;Click to join:&lt;br&gt;Kubeflow Slack&lt;/button&gt;
+&lt;/a&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Popular Kubeflow Slack Channels&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;General Discussion&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://kubeflow.slack.com/archives/C7REE0ETX&#34;&gt;#general&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Feature Requests&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://kubeflow.slack.com/archives/C01A7RYEYMB&#34;&gt;#feature-requests&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Job Postings&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://kubeflow.slack.com/archives/CJ9PJE5FS&#34;&gt;#job-postings&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubeflow - Pipelines&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://kubeflow.slack.com/archives/CE10KS9M4&#34;&gt;#kubeflow-pipelines&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubeflow - Notebooks&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://kubeflow.slack.com/archives/CESP7FCQ7&#34;&gt;#kubeflow-notebooks&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubeflow - KFServing&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://kubeflow.slack.com/archives/CH6E58LNP&#34;&gt;#kubeflow-kfserving&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Platform - AWS&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://kubeflow.slack.com/archives/CKBA5D0MU&#34;&gt;#platform-aws&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Platform - Azure&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://kubeflow.slack.com/archives/CUW6SLCPR&#34;&gt;#platform-azure&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Platform - GCP&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://kubeflow.slack.com/archives/CKH7V1M7F&#34;&gt;#platform-gcp&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Users - China&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://kubeflow.slack.com/archives/C93HYNM9C&#34;&gt;#users-china&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Users - Korea&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://kubeflow.slack.com/archives/CKPCJB9AP&#34;&gt;#users-korea&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Users - Oceania&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://kubeflow.slack.com/archives/C023ZN1R9FC&#34;&gt;#users-oceania&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;kubeflow-mailing-list&#34;&gt;Kubeflow Mailing List&lt;/h2&gt;
+&lt;p&gt;The official Kubeflow mailing list is a Google Group called &lt;a href=&#34;https://groups.google.com/g/kubeflow-discuss&#34;&gt;kubeflow-discuss&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://groups.google.com/g/kubeflow-discuss&#34;&gt;
+  &lt;button class=&#34;btn btn-primary py-2 px-5&#34;&gt;Click to join:&lt;br&gt;Kubeflow Mailing List&lt;/button&gt;
+&lt;/a&gt;
+&lt;h2 id=&#34;kubeflow-community-call&#34;&gt;Kubeflow Community Call&lt;/h2&gt;
+&lt;p&gt;The Kubeflow community holds weekly Zoom calls for all users and contributors to discuss issues/proposals and present demos/products.
+Kubeflow community calls are held each Tuesday and alternate between &lt;code&gt;8:00am San Francisco&lt;/code&gt; time and &lt;code&gt;8:00am London&lt;/code&gt; time.&lt;/p&gt;
+&lt;p&gt;Joining the &lt;a href=&#34;#kubeflow-mailing-list&#34;&gt;mailing list&lt;/a&gt; should automatically add these events to your Google Calendar.
+Alternatively, you can manually subscribe to the &lt;a href=&#34;#kubeflow-community-calendars&#34;&gt;&amp;ldquo;Kubeflow Community&amp;rdquo; calendar&lt;/a&gt;.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Useful Links&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubeflow Community Call - Notes&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://bit.ly/kf-meeting-notes&#34;&gt;Google Doc&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubeflow Community Call - Recordings&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLmzRWLV1CK_ypvsQu10SGRmhf2S7mbYL5&#34;&gt;YouTube Playlist&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;kubeflow-community-calendars&#34;&gt;Kubeflow Community Calendars&lt;/h2&gt;
+&lt;p&gt;The following calendars are maintained by &lt;a href=&#34;#kubeflow-working-groups&#34;&gt;Kubeflow Working Groups&lt;/a&gt; and contain meetings that you may wish to attend.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Calendar&lt;/th&gt;
+&lt;th&gt;Link&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubeflow Community&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://calendar.google.com/calendar/embed?src=kubeflow.org_7l5vnbn8suj2se10sen81d9428%40group.calendar.google.com&#34;&gt;Google Calendar&lt;/a&gt; (&lt;a href=&#34;https://calendar.google.com/calendar/ical/kubeflow.org_7l5vnbn8suj2se10sen81d9428%40group.calendar.google.com/public/basic.ics&#34;&gt;iCal&lt;/a&gt;, &lt;a href=&#34;https://github.com/kubeflow/community/tree/master/calendar&#34;&gt;Git Repo&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubeflow Release Team&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://calendar.google.com/calendar/embed?src=c_c5i4tlc61oq2kehbhv9h3gveuo%40group.calendar.google.com&#34;&gt;Google Calendar&lt;/a&gt; (&lt;a href=&#34;https://calendar.google.com/calendar/ical/c_c5i4tlc61oq2kehbhv9h3gveuo%40group.calendar.google.com/public/basic.ics&#34;&gt;iCal&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubeflow AutoML WG&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://calendar.google.com/calendar/embed?src=d49nsiefsnfgkf91o0u8h2jhk4%40group.calendar.google.com&#34;&gt;Google Calendar&lt;/a&gt; (&lt;a href=&#34;https://calendar.google.com/calendar/ical/d49nsiefsnfgkf91o0u8h2jhk4%40group.calendar.google.com/public/basic.ics&#34;&gt;iCal&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubeflow Manifests WG&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://calendar.google.com/calendar/embed?src=c_mhv1kfv9na0pdile4qju6o5v60%40group.calendar.google.com&#34;&gt;Google Calendar&lt;/a&gt; (&lt;a href=&#34;https://calendar.google.com/calendar/ical/c_mhv1kfv9na0pdile4qju6o5v60%40group.calendar.google.com/public/basic.ics&#34;&gt;iCal&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubeflow Notebooks WG&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://calendar.google.com/calendar/embed?src=c_ptktc8ulh50db8bqvr9fd4ubqs%40group.calendar.google.com&#34;&gt;Google Calendar&lt;/a&gt; (&lt;a href=&#34;https://calendar.google.com/calendar/ical/c_ptktc8ulh50db8bqvr9fd4ubqs%40group.calendar.google.com/public/basic.ics&#34;&gt;iCal&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;KServe Community&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://calendar.google.com/calendar/u/0/embed?src=4fqdmu5fp4l0bgdlf4lm1atnsl2j4612@import.calendar.google.com&#34;&gt;Google Calendar&lt;/a&gt; (&lt;a href=&#34;https://wiki.lfaidata.foundation/rest/calendar-services/1.0/calendar/export/subcalendar/private/079ecdf0bfab77646c9e00df7b1c28f34f67f852.ics&#34;&gt;iCal&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;This is an aggregated view of the community calendars and should be displayed in your device&amp;rsquo;s timezone.&lt;/p&gt;
+&lt;div id=&#34;calendar-container&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34;&gt;
+const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+const html = `&lt;iframe src=&#34;https://calendar.google.com/calendar/embed?ctz=${timezone}&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Australia%2FSydney&amp;showPrint=0&amp;showDate=1&amp;mode=AGENDA&amp;showTitle=0&amp;src=NGZxZG11NWZwNGwwYmdkbGY0bG0xYXRuc2wyajQ2MTJAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=ZDQ5bnNpZWZzbmZna2Y5MW8wdThoMmpoazRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=a3ViZWZsb3cub3JnXzdsNXZuYm44c3VqMnNlMTBzZW44MWQ5NDI4QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=Y19taHYxa2Z2OW5hMHBkaWxlNHFqdTZvNXY2MEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;src=Y19wdGt0Yzh1bGg1MGRiOGJxdnI5ZmQ0dWJxc0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;src=Y19jNWk0dGxjNjFvcTJrZWhiaHY5aDNndmV1b0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23A79B8E&amp;color=%23A79B8E&amp;color=%23A79B8E&amp;color=%23A79B8E&amp;color=%23A79B8E&amp;color=%23A79B8E&#34; style=&#34;border:solid 1px #777&#34; width=&#34;800&#34; height=&#34;600&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34;&gt;&lt;/iframe&gt;`;
+document.getElementById(&#39;calendar-container&#39;).innerHTML = html;
+&lt;/script&gt;
+&lt;h2 id=&#34;kubeflow-blog&#34;&gt;Kubeflow Blog&lt;/h2&gt;
+&lt;p&gt;The Kubeflow project maintains an official blog that can be &lt;a href=&#34;https://blog.kubeflow.org&#34;&gt;found here&lt;/a&gt;.&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-info&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Tip&lt;/h4&gt;
+
+    To contribute an article for the blog, please raise an issue on the &lt;a href=&#34;https://github.com/kubeflow/community&#34;&gt;kubeflow/community&lt;/a&gt; GitHub repo or create a thread on the &lt;a href=&#34;#kubeflow-mailing-list&#34;&gt;mailing list&lt;/a&gt;.
+Note, articles are published using the &lt;a href=&#34;https://github.com/kubeflow/blog&#34;&gt;kubeflow/blog&lt;/a&gt; GitHub repo.
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;kubeflow-trademark&#34;&gt;Kubeflow Trademark&lt;/h2&gt;
+&lt;p&gt;The Kubeflow trademark and logos are registered trademarks of Google, please review the &lt;a href=&#34;https://github.com/kubeflow/community/blob/master/KUBEFLOW_BRAND_GUIDELINES.pdf&#34;&gt;Kubeflow Brand Guidelines&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;h2 id=&#34;kubeflow-working-groups&#34;&gt;Kubeflow Working Groups&lt;/h2&gt;
+&lt;p&gt;The Kubeflow project has a number of Working Groups (WGs) who each maintain some aspect of the Kubeflow project.
+The following table outlines which components are maintained by each Working Group.&lt;/p&gt;
+&lt;div class=&#34;table-responsive&#34;&gt;
+&lt;table class=&#34;table table-bordered&#34;&gt;
+    &lt;thead class=&#34;thead-light&#34;&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Working Group&lt;/th&gt;
+        &lt;th&gt;Maintained Components&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;!-- ======================= --&gt;
+      &lt;!-- AutoML Working Group --&gt;
+      &lt;!-- ======================= --&gt;
+      &lt;tr&gt;
+        &lt;td rowspan=&#34;1&#34; class=&#34;align-middle&#34;&gt;
+          &lt;a href=&#34;https://github.com/kubeflow/community/tree/master/wg-automl&#34;&gt;AutoML&lt;/a&gt; 
+        &lt;/td&gt;
+        &lt;td&gt;
+          &lt;a href=&#34;https://github.com/kubeflow/katib&#34;&gt;Katib&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;!-- ======================= --&gt;
+      &lt;!-- Deployment Working Group --&gt;
+      &lt;!-- ======================= --&gt;
+      &lt;tr&gt;
+        &lt;td rowspan=&#34;1&#34; class=&#34;align-middle&#34;&gt;
+          &lt;a href=&#34;https://github.com/kubeflow/community/tree/master/wg-deployment&#34;&gt;Deployment&lt;/a&gt;
+        &lt;/td&gt;
+        &lt;td&gt;
+          &lt;a href=&#34;https://github.com/kubeflow/kfctl&#34;&gt;kfctl&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;!-- ======================= --&gt;
+      &lt;!-- Manifests Working Group --&gt;
+      &lt;!-- ======================= --&gt;
+      &lt;tr&gt;
+        &lt;td rowspan=&#34;1&#34; class=&#34;align-middle&#34;&gt;
+          &lt;a href=&#34;https://github.com/kubeflow/community/tree/master/wg-manifests&#34;&gt;Manifests&lt;/a&gt;
+        &lt;/td&gt;
+        &lt;td&gt;
+          &lt;a href=&#34;https://github.com/kubeflow/manifests&#34;&gt;Manifests Repository&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;!-- ======================= --&gt;
+      &lt;!-- Notebooks Working Group --&gt;
+      &lt;!-- ======================= --&gt;
+      &lt;tr&gt;
+        &lt;td rowspan=&#34;9&#34; class=&#34;align-middle&#34;&gt;
+          &lt;a href=&#34;https://github.com/kubeflow/community/tree/master/wg-notebooks&#34;&gt;Notebooks&lt;/a&gt;
+        &lt;/td&gt;
+        &lt;td&gt;
+          &lt;a href=&#34;https://github.com/kubeflow/kubeflow/tree/master/components/admission-webhook&#34;&gt;Admission Webhook (PodDefaults)&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;a href=&#34;https://github.com/kubeflow/kubeflow/tree/master/components/centraldashboard&#34;&gt;Central Dashboard&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;a href=&#34;https://github.com/kubeflow/kubeflow/tree/master/components/crud-web-apps/jupyter&#34;&gt;Jupyter Web App&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;a href=&#34;https://github.com/kubeflow/kubeflow/tree/master/components/access-management&#34;&gt;Kubeflow Access Management API (KFAM)&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;a href=&#34;https://github.com/kubeflow/kubeflow/tree/master/components/notebook-controller&#34;&gt;Notebook Controller&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;a href=&#34;https://github.com/kubeflow/kubeflow/tree/master/components/profile-controller&#34;&gt;Profile Controller&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;a href=&#34;https://github.com/kubeflow/kubeflow/tree/master/components/tensorboard-controller&#34;&gt;Tensorboard Controller&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;a href=&#34;https://github.com/kubeflow/kubeflow/tree/master/components/crud-web-apps/tensorboards&#34;&gt;Tensorboard Web App&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;a href=&#34;https://github.com/kubeflow/kubeflow/tree/master/components/crud-web-apps/volumes&#34;&gt;Volumes Web App&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;!-- ======================= --&gt;
+      &lt;!-- Pipelines Working Group --&gt;
+      &lt;!-- ======================= --&gt;
+      &lt;tr&gt;
+        &lt;td rowspan=&#34;2&#34; class=&#34;align-middle&#34;&gt;
+          &lt;a href=&#34;https://github.com/kubeflow/community/tree/master/wg-pipelines&#34;&gt;Pipelines&lt;/a&gt;
+        &lt;/td&gt;
+        &lt;td&gt;
+          &lt;a href=&#34;https://github.com/kubeflow/pipelines&#34;&gt;Kubeflow Pipelines&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;a href=&#34;https://github.com/kubeflow/kfp-tekton&#34;&gt;Kubeflow Pipelines on Tekton&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;!-- ======================= --&gt;
+      &lt;!-- Serving Working Group --&gt;
+      &lt;!-- ======================= --&gt;
+      &lt;tr&gt;
+        &lt;td rowspan=&#34;1&#34; class=&#34;align-middle&#34;&gt;
+          &lt;a href=&#34;https://github.com/kubeflow/community/tree/master/wg-serving&#34;&gt;Serving&lt;/a&gt;
+        &lt;/td&gt;
+        &lt;td&gt;
+          &lt;a href=&#34;https://github.com/kserve/kserve&#34;&gt;KServe (formerly KFServing)&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;!-- ======================= --&gt;
+      &lt;!-- Training Working Group --&gt;
+      &lt;!-- ======================= --&gt;
+      &lt;tr&gt;
+        &lt;td rowspan=&#34;1&#34; class=&#34;align-middle&#34;&gt;
+          &lt;a href=&#34;https://github.com/kubeflow/community/tree/master/wg-training&#34;&gt;Training&lt;/a&gt;
+        &lt;/td&gt;
+        &lt;td&gt;
+          &lt;a href=&#34;https://github.com/kubeflow/training-operator&#34;&gt;Kubeflow Training Operator&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt; 
+&lt;/table&gt;
+&lt;/div&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Contributing</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/about/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/about/contributing/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This document is the single source of truth for how to contribute to the code base.
+We&amp;rsquo;d love to accept your patches and contributions to this project.
+There are just a few small guidelines you need to follow.&lt;/p&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+&lt;h3 id=&#34;sign-the-cla&#34;&gt;Sign the CLA&lt;/h3&gt;
+&lt;p&gt;Contributions to this project must be accompanied by a Contributor License Agreement (CLA).
+You (or your employer) retain the copyright to your contribution.
+This gives us permission to use and redistribute your contributions as part of the project.
+Head over to &lt;a href=&#34;https://cla.developers.google.com/&#34;&gt;https://cla.developers.google.com/&lt;/a&gt; to see your current agreements on file or to sign a new one.&lt;/p&gt;
+&lt;p&gt;You generally only need to submit a CLA once, so if you&amp;rsquo;ve already submitted one (even if it was for a different project),
+you probably don&amp;rsquo;t need to do it again.&lt;/p&gt;
+&lt;h3 id=&#34;follow-the-code-of-conduct&#34;&gt;Follow the code of conduct&lt;/h3&gt;
+&lt;p&gt;Please make sure to read and observe our &lt;a href=&#34;https://github.com/kubeflow/community/blob/master/CODE_OF_CONDUCT.md&#34;&gt;Code of Conduct&lt;/a&gt;
+and &lt;a href=&#34;https://github.com/kubeflow/community/blob/master/INCLUSIVITY.md&#34;&gt;inclusivity document&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;joining-the-community&#34;&gt;Joining the community&lt;/h2&gt;
+&lt;p&gt;Follow these instructions if you want to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Become a member of the Kubeflow GitHub org (see below)&lt;/li&gt;
+&lt;li&gt;Become part of the Kubeflow build cop or release teams&lt;/li&gt;
+&lt;li&gt;Be recognized as an individual or organization contributing to Kubeflow&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;joining-the-kubeflow-github-org&#34;&gt;Joining the Kubeflow GitHub Org&lt;/h3&gt;
+&lt;p&gt;Before asking to join the community, we ask that you first make a small number of contributions
+to demonstrate your intent to continue contributing to Kubeflow.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Note&lt;/strong&gt;: Anyone can contribute to Kubeflow, adding yourself as a member in &lt;a href=&#34;https://github.com/kubeflow/internal-acls/blob/master/github-orgs/kubeflow/org.yaml&#34;&gt;org.yaml&lt;/a&gt;
+is not a mandatory step.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are a number of ways to contribute to Kubeflow:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Submit PRs&lt;/li&gt;
+&lt;li&gt;File issues reporting bugs or providing feedback&lt;/li&gt;
+&lt;li&gt;Answer questions on Slack or GitHub issues&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can use this &lt;a href=&#34;http://devstats.kubeflow.org/d/9/developers-summary&#34;&gt;table&lt;/a&gt; to see how many contributions you&amp;rsquo;ve made.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Note&lt;/strong&gt;: This only counts GitHub related ways of contributing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When you are ready to join&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Send a PR adding yourself as a member in &lt;a href=&#34;https://github.com/kubeflow/internal-acls/blob/master/github-orgs/kubeflow/org.yaml#L19&#34;&gt;org.yaml&lt;/a&gt;.
+Follow the instructions in &lt;a href=&#34;https://github.com/kubeflow/internal-acls#joining-kubeflow-github-organization&#34;&gt;Joining the Kubeflow GitHub organization&lt;/a&gt;
+for more information about artifacts to include with your PR and how to test your PR.&lt;/li&gt;
+&lt;li&gt;After the PR is merged an admin will send you an invitation
+&lt;ul&gt;
+&lt;li&gt;This is a manual process that&amp;rsquo;s generally run a couple of times a week&lt;/li&gt;
+&lt;li&gt;If a week passes without receiving an invitation reach out on &lt;a href=&#34;https://kubeflow.slack.com/messages/C8Q0QJYNB/convo/CABQ2BWHW-1544147308.002500/&#34;&gt;kubeflow#community&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;companiesorganizations&#34;&gt;Companies/organizations&lt;/h3&gt;
+&lt;p&gt;If you would like your company or organization to be acknowledged for contributing to Kubeflow,
+or participating in the community (being a user counts),
+please send a PR adding the relevant info to &lt;a href=&#34;https://github.com/kubeflow/community/blob/master/member_organizations.yaml&#34;&gt;member_organizations.yaml&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you want your employee&amp;rsquo;s GitHub contributions to be attributed to your company,
+please ask them to set the company field in their GitHub profile.&lt;/p&gt;
+&lt;h2 id=&#34;your-first-contribution&#34;&gt;Your first contribution&lt;/h2&gt;
+&lt;h3 id=&#34;find-something-to-work-on&#34;&gt;Find something to work on&lt;/h3&gt;
+&lt;p&gt;Help is always welcome!
+For example, documentation (like the text you are reading now) can always use improvement.
+There&amp;rsquo;s always code that can be clarified and variables or functions that can be renamed or commented.
+There&amp;rsquo;s always a need for more test coverage.
+You get the idea - if you ever see something you think should be fixed, you should own it.
+Here is how you get started.&lt;/p&gt;
+&lt;h3 id=&#34;starter-issues&#34;&gt;Starter issues&lt;/h3&gt;
+&lt;p&gt;To find Kubeflow issues that make good entry points:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Start with issues labeled &lt;strong&gt;good first issue&lt;/strong&gt;.
+For example, see the good first issues in the &lt;a href=&#34;https://github.com/kubeflow/website/issues?utf8=%E2%9C%93&amp;amp;q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22&#34;&gt;kubeflow/website repository&lt;/a&gt;
+for doc updates, and in the &lt;a href=&#34;https://github.com/kubeflow/kubeflow/issues?utf8=%E2%9C%93&amp;amp;q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22&#34;&gt;kubeflow/kubeflow repository&lt;/a&gt;
+for updates to the core Kubeflow code.&lt;/li&gt;
+&lt;li&gt;For issues that require deeper knowledge of one or more technical aspects, look at issues labeled &lt;strong&gt;help wanted&lt;/strong&gt;.
+For example, see these issues in the &lt;a href=&#34;https://github.com/kubeflow/kubeflow/issues?utf8=%E2%9C%93&amp;amp;q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22&#34;&gt;kubeflow/kubeflow repository&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Examine the issues in any of the &lt;a href=&#34;https://github.com/kubeflow&#34;&gt;Kubeflow repositories&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;owners-files-and-pr-workflow&#34;&gt;Owners files and PR workflow&lt;/h2&gt;
+&lt;p&gt;Our PR workflow is nearly identical to Kubernetes&amp;rsquo;.
+Most of these instructions are a modified version of Kubernetes&amp;rsquo; &lt;a href=&#34;https://github.com/kubernetes/community/blob/master/contributors/guide/README.md&#34;&gt;contributors&lt;/a&gt;
+and &lt;a href=&#34;https://github.com/kubernetes/community/blob/master/contributors/guide/owners.md#code-review-using-owners-files&#34;&gt;owners&lt;/a&gt; guides.&lt;/p&gt;
+&lt;h3 id=&#34;overview-of-owners-files&#34;&gt;Overview of OWNERS files&lt;/h3&gt;
+&lt;p&gt;OWNERS files are used to designate responsibility over different parts of the Kubeflow codebase.
+Today, we use them to assign the &lt;strong&gt;reviewer&lt;/strong&gt; and &lt;strong&gt;approver&lt;/strong&gt; roles used in our two-phase code review process.
+Our OWNERS files were inspired by &lt;a href=&#34;https://chromium.googlesource.com/chromium/src/+/master/docs/code_reviews.md&#34;&gt;Chromium OWNERS files&lt;/a&gt;,
+which in turn inspired &lt;a href=&#34;https://help.github.com/articles/about-codeowners/&#34;&gt;GitHub&amp;rsquo;s CODEOWNERS files&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The velocity of a project that uses code review is limited by the number of people capable of reviewing code.
+The quality of a person&amp;rsquo;s code review is limited by their familiarity with the code under review.
+Our goal is to address both of these concerns through the prudent use and maintenance of OWNERS files&lt;/p&gt;
+&lt;p&gt;&lt;a name=&#34;owners-1&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;owners&#34;&gt;OWNERS&lt;/h3&gt;
+&lt;p&gt;Each directory that contains a unit of independent code or content may also contain an OWNERS file.
+This file applies to everything within the directory, including the OWNERS file itself, sibling files, and child directories.&lt;/p&gt;
+&lt;p&gt;OWNERS files are in YAML format and support the following keys:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;approvers&lt;/code&gt;: a list of GitHub usernames or aliases that can &lt;code&gt;/approve&lt;/code&gt; a PR&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;labels&lt;/code&gt;: a list of GitHub labels to automatically apply to a PR&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;options&lt;/code&gt;: a map of options for how to interpret this OWNERS file, currently only one:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;no_parent_owners&lt;/code&gt;: defaults to &lt;code&gt;false&lt;/code&gt; if not present; if &lt;code&gt;true&lt;/code&gt;, exclude parent OWNERS files.
+Allows the use case where &lt;code&gt;a/deep/nested/OWNERS&lt;/code&gt; file prevents &lt;code&gt;a/OWNERS&lt;/code&gt; file from having any
+effect on &lt;code&gt;a/deep/nested/bit/of/code&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;reviewers&lt;/code&gt;: a list of GitHub usernames or aliases that are good candidates to &lt;code&gt;/lgtm&lt;/code&gt; a PR&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All users are expected to be assignable.
+In GitHub terms, this means they are either collaborators of the repo, or members of the organization to which the repo belongs.&lt;/p&gt;
+&lt;p&gt;A typical OWNERS file looks like:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;approvers:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  - alice
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  - bob     # this is a comment
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reviewers:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  - alice
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  - carol   # this is another comment
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  - sig-foo # this is an alias
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;owners_aliases&#34;&gt;OWNERS_ALIASES&lt;/h4&gt;
+&lt;p&gt;Each repo may contain at its root an OWNERS_ALIAS file.&lt;/p&gt;
+&lt;p&gt;OWNERS_ALIAS files are in YAML format and support the following keys:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;aliases&lt;/code&gt;: a mapping of alias name to a list of GitHub usernames&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We use aliases for groups instead of GitHub Teams, because changes to GitHub Teams are not publicly auditable.&lt;/p&gt;
+&lt;p&gt;A sample OWNERS_ALIASES file looks like:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;aliases:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  sig-foo:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    - david
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    - erin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  sig-bar:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    - bob
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    - frank
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;GitHub usernames and aliases listed in OWNERS files are case-insensitive.&lt;/p&gt;
+&lt;h3 id=&#34;the-code-review-process&#34;&gt;The code review process&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;strong&gt;author&lt;/strong&gt; submits a PR&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Phase 0: Automation suggests &lt;strong&gt;reviewers&lt;/strong&gt; and &lt;strong&gt;approvers&lt;/strong&gt; for the PR&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Determine the set of OWNERS files nearest to the code being changed&lt;/li&gt;
+&lt;li&gt;Choose at least two suggested &lt;strong&gt;reviewers&lt;/strong&gt;, trying to find a unique reviewer for every leaf
+OWNERS file, and request their reviews on the PR&lt;/li&gt;
+&lt;li&gt;Choose suggested &lt;strong&gt;approvers&lt;/strong&gt;, one from each OWNERS file, and list them in a comment on the PR&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Phase 1: Humans review the PR&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Reviewers&lt;/strong&gt; look for general code quality, correctness, sane software engineering, style, etc.&lt;/li&gt;
+&lt;li&gt;Anyone in the organization can act as a &lt;strong&gt;reviewer&lt;/strong&gt; with the exception of the individual who
+opened the PR&lt;/li&gt;
+&lt;li&gt;If the code changes look good to them, a &lt;strong&gt;reviewer&lt;/strong&gt; types &lt;code&gt;/lgtm&lt;/code&gt; in a PR comment or review;
+if they change their mind, they &lt;code&gt;/lgtm cancel&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Once a &lt;strong&gt;reviewer&lt;/strong&gt; has &lt;code&gt;/lgtm&lt;/code&gt;&amp;lsquo;ed, &lt;a href=&#34;https://prow.k8s.io&#34;&gt;prow&lt;/a&gt;
+(&lt;a href=&#34;https://github.com/k8s-ci-robot/&#34;&gt;@k8s-ci-robot&lt;/a&gt;) applies an &lt;code&gt;lgtm&lt;/code&gt; label to the PR&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Phase 2: Humans approve the PR&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The PR &lt;strong&gt;author&lt;/strong&gt; &lt;code&gt;/assign&lt;/code&gt;&amp;rsquo;s all suggested &lt;strong&gt;approvers&lt;/strong&gt; to the PR, and optionally notifies
+them (eg: &amp;ldquo;pinging @foo for approval&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;Only people listed in the relevant OWNERS files, either directly or through an alias, can act
+as &lt;strong&gt;approvers&lt;/strong&gt;, including the individual who opened the PR&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Approvers&lt;/strong&gt; look for holistic acceptance criteria, including dependencies with other features,
+forwards/backwards compatibility, API and flag definitions, etc&lt;/li&gt;
+&lt;li&gt;If the code changes look good to them, an &lt;strong&gt;approver&lt;/strong&gt; types &lt;code&gt;/approve&lt;/code&gt; in a PR comment or
+review; if they change their mind, they &lt;code&gt;/approve cancel&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://prow.k8s.io&#34;&gt;prow&lt;/a&gt; (&lt;a href=&#34;https://github.com/k8s-ci-robot/&#34;&gt;@k8s-ci-robot&lt;/a&gt;) updates its
+comment in the PR to indicate which &lt;strong&gt;approvers&lt;/strong&gt; still need to approve&lt;/li&gt;
+&lt;li&gt;Once all &lt;strong&gt;approvers&lt;/strong&gt; (one from each of the previously identified OWNERS files) have approved,
+&lt;a href=&#34;https://prow.k8s.io&#34;&gt;prow&lt;/a&gt; (&lt;a href=&#34;https://github.com/k8s-ci-robot/&#34;&gt;@k8s-ci-robot&lt;/a&gt;) applies an
+&lt;code&gt;approved&lt;/code&gt; label&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Phase 3: Automation merges the PR:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;If all of the following are true:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;All required labels are present (eg: &lt;code&gt;lgtm&lt;/code&gt;, &lt;code&gt;approved&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Any blocking labels are missing (eg: there is no &lt;code&gt;do-not-merge/hold&lt;/code&gt;, &lt;code&gt;needs-rebase&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;And if any of the following are true:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;there are no presubmit prow jobs configured for this repo&lt;/li&gt;
+&lt;li&gt;there are presubmit prow jobs configured for this repo, and they all pass after automatically
+being re-run one last time&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Then the PR will automatically be merged&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;quirks-of-the-process&#34;&gt;Quirks of the process&lt;/h3&gt;
+&lt;p&gt;There are a number of behaviors we&amp;rsquo;ve observed that while &lt;em&gt;possible&lt;/em&gt; are discouraged, as they go
+against the intent of this review process. Some of these could be prevented in the future, but this
+is the state of today.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;An &lt;strong&gt;approver&lt;/strong&gt;&amp;rsquo;s &lt;code&gt;/lgtm&lt;/code&gt; is simultaneously interpreted as an &lt;code&gt;/approve&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;While a convenient shortcut for some, it can be surprising that the same command is interpreted
+in one of two ways depending on who the commenter is&lt;/li&gt;
+&lt;li&gt;Instead, explicitly write out &lt;code&gt;/lgtm&lt;/code&gt; and &lt;code&gt;/approve&lt;/code&gt; to help observers, or save the &lt;code&gt;/lgtm&lt;/code&gt; for
+a &lt;strong&gt;reviewer&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;This goes against the idea of having at least two sets of eyes on a PR, and may be a sign that
+there are too few &lt;strong&gt;reviewers&lt;/strong&gt; (who aren&amp;rsquo;t also &lt;strong&gt;approver&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Technically, anyone who is a member of the Kubeflow GitHub organization can drive-by &lt;code&gt;/lgtm&lt;/code&gt; a
+PR
+&lt;ul&gt;
+&lt;li&gt;Drive-by reviews from non-members are encouraged as a way of demonstrating experience and
+intent to become a collaborator or reviewer&lt;/li&gt;
+&lt;li&gt;Drive-by &lt;code&gt;/lgtm&lt;/code&gt;&amp;rsquo;s from members may be a sign that our OWNERS files are too small, or that the
+existing &lt;strong&gt;reviewers&lt;/strong&gt; are too unresponsive&lt;/li&gt;
+&lt;li&gt;This goes against the idea of specifying &lt;strong&gt;reviewers&lt;/strong&gt; in the first place, to ensure that
+&lt;strong&gt;author&lt;/strong&gt; is getting actionable feedback from people knowledgeable with the code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reviewers&lt;/strong&gt;, and &lt;strong&gt;approvers&lt;/strong&gt; are unresponsive
+&lt;ul&gt;
+&lt;li&gt;This causes a lot of frustration for &lt;strong&gt;authors&lt;/strong&gt; who often have little visibility into why their
+PR is being ignored&lt;/li&gt;
+&lt;li&gt;Many &lt;strong&gt;reviewers&lt;/strong&gt; and &lt;strong&gt;approvers&lt;/strong&gt; are so overloaded by GitHub notifications that @mention&amp;rsquo;ing
+is unlikely to get a quick response&lt;/li&gt;
+&lt;li&gt;If an &lt;strong&gt;author&lt;/strong&gt; &lt;code&gt;/assign&lt;/code&gt;&amp;rsquo;s a PR, &lt;strong&gt;reviewers&lt;/strong&gt; and &lt;strong&gt;approvers&lt;/strong&gt; will be made aware of it on
+their &lt;a href=&#34;https://k8s-gubernator.appspot.com/pr&#34;&gt;PR dashboard&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;An &lt;strong&gt;author&lt;/strong&gt; can work around this by manually reading the relevant OWNERS files,
+&lt;code&gt;/unassign&lt;/code&gt;&amp;lsquo;ing unresponsive individuals, and &lt;code&gt;/assign&lt;/code&gt;&amp;lsquo;ing others&lt;/li&gt;
+&lt;li&gt;This is a sign that our OWNERS files are stale; pruning the &lt;strong&gt;reviewers&lt;/strong&gt; and &lt;strong&gt;approvers&lt;/strong&gt; lists
+would help with this&lt;/li&gt;
+&lt;li&gt;It is the PR &lt;strong&gt;authors&lt;/strong&gt; responsibility to drive a PR to resolution. This means if the PR &lt;strong&gt;reviewers&lt;/strong&gt; are unresponsive they should escalate as noted below
+&lt;ul&gt;
+&lt;li&gt;e.g ping &lt;strong&gt;reviewers&lt;/strong&gt; in a timely manner to get it reviewed&lt;/li&gt;
+&lt;li&gt;If the &lt;strong&gt;reviewers&lt;/strong&gt; don&amp;rsquo;t respond look at the OWNERs file in root and ping &lt;strong&gt;approvers&lt;/strong&gt; listed there&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Authors&lt;/strong&gt; are unresponsive
+&lt;ul&gt;
+&lt;li&gt;This costs a tremendous amount of attention as context for an individual PR is lost over time&lt;/li&gt;
+&lt;li&gt;This hurts the project in general as its general noise level increases over time&lt;/li&gt;
+&lt;li&gt;Instead, close PR&amp;rsquo;s that are untouched after too long (we currently have a bot do this after 90 days)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;automation-using-owners-files&#34;&gt;Automation using OWNERS files&lt;/h2&gt;
+&lt;h3 id=&#34;prowhttpsgitk8siotest-infraprow&#34;&gt;&lt;a href=&#34;https://git.k8s.io/test-infra/prow&#34;&gt;&lt;code&gt;prow&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Prow receives events from GitHub, and reacts to them. It is effectively stateless. The following
+pieces of prow are used to implement the code review process above.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://git.k8s.io/test-infra/prow/cmd/tide&#34;&gt;cmd: tide&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;per-repo configuration:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;labels&lt;/code&gt;: list of labels required to be present for merge (eg: &lt;code&gt;lgtm&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;missingLabels&lt;/code&gt;: list of labels required to be missing for merge (eg: &lt;code&gt;do-not-merge/hold&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;reviewApprovedRequired&lt;/code&gt;: defaults to &lt;code&gt;false&lt;/code&gt;; when true, require that there must be at least
+one &lt;a href=&#34;https://help.github.com/articles/about-pull-request-reviews/&#34;&gt;approved pull request review&lt;/a&gt;
+present for merge&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;merge_method&lt;/code&gt;: defaults to &lt;code&gt;merge&lt;/code&gt;; when &lt;code&gt;squash&lt;/code&gt; or &lt;code&gt;rebase&lt;/code&gt;, use that merge method instead
+when clicking a PR&amp;rsquo;s merge button&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;merges PR&amp;rsquo;s once they meet the appropriate criteria as configured above&lt;/li&gt;
+&lt;li&gt;if there are any presubmit prow jobs for the repo the PR is against, they will be re-run one
+final time just prior to merge&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://git.k8s.io/test-infra/prow/plugins/assign&#34;&gt;plugin: assign&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;assigns GitHub users in response to &lt;code&gt;/assign&lt;/code&gt; comments on a PR&lt;/li&gt;
+&lt;li&gt;unassigns GitHub users in response to &lt;code&gt;/unassign&lt;/code&gt; comments on a PR&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://git.k8s.io/test-infra/prow/plugins/approve&#34;&gt;plugin: approve&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;per-repo configuration:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;issue_required&lt;/code&gt;: defaults to &lt;code&gt;false&lt;/code&gt;; when &lt;code&gt;true&lt;/code&gt;, require that the PR description link to
+an issue, or that at least one &lt;strong&gt;approver&lt;/strong&gt; issues a &lt;code&gt;/approve no-issue&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;implicit_self_approve&lt;/code&gt;: defaults to &lt;code&gt;false&lt;/code&gt;; when &lt;code&gt;true&lt;/code&gt;, if the PR author is in relevant
+OWNERS files, act as if they have implicitly &lt;code&gt;/approve&lt;/code&gt;&amp;rsquo;d&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;adds the &lt;code&gt;approved&lt;/code&gt; label once an &lt;strong&gt;approver&lt;/strong&gt; for each of the required
+OWNERS files has &lt;code&gt;/approve&lt;/code&gt;&amp;rsquo;d&lt;/li&gt;
+&lt;li&gt;comments as required OWNERS files are satisfied&lt;/li&gt;
+&lt;li&gt;removes outdated approval status comments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://git.k8s.io/test-infra/prow/plugins/blunderbuss&#34;&gt;plugin: blunderbuss&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;determines &lt;strong&gt;reviewers&lt;/strong&gt; and requests their reviews on PR&amp;rsquo;s&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://git.k8s.io/test-infra/prow/plugins/lgtm&#34;&gt;plugin: lgtm&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;adds the &lt;code&gt;lgtm&lt;/code&gt; label when a &lt;strong&gt;reviewer&lt;/strong&gt; comments &lt;code&gt;/lgtm&lt;/code&gt; on a PR&lt;/li&gt;
+&lt;li&gt;the &lt;strong&gt;PR author&lt;/strong&gt; may not &lt;code&gt;/lgtm&lt;/code&gt; their own PR&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://git.k8s.io/test-infra/prow/repoowners/repoowners.go&#34;&gt;pkg: k8s.io/test-infra/prow/repoowners&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;parses OWNERS and OWNERS_ALIAS files&lt;/li&gt;
+&lt;li&gt;if the &lt;code&gt;no_parent_owners&lt;/code&gt; option is encountered, parent owners are excluded from having
+any influence over files adjacent to or underneath of the current OWNERS file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;maintaining-owners-files&#34;&gt;Maintaining OWNERS files&lt;/h2&gt;
+&lt;p&gt;OWNERS files should be regularly maintained.&lt;/p&gt;
+&lt;p&gt;We encourage people to self-nominate or self-remove from OWNERS files via PR&amp;rsquo;s. Ideally in the future
+we could use metrics-driven automation to assist in this process.&lt;/p&gt;
+&lt;p&gt;We should strive to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;grow the number of OWNERS files&lt;/li&gt;
+&lt;li&gt;add new people to OWNERS files&lt;/li&gt;
+&lt;li&gt;ensure OWNERS files only contain org members and repo collaborators&lt;/li&gt;
+&lt;li&gt;ensure OWNERS files only contain people are actively contributing to or reviewing the code they own&lt;/li&gt;
+&lt;li&gt;remove inactive people from OWNERS files&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bad examples of OWNERS usage:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;directories that lack OWNERS files, resulting in too many hitting root OWNERS&lt;/li&gt;
+&lt;li&gt;OWNERS files that have a single person as both approver and reviewer&lt;/li&gt;
+&lt;li&gt;OWNERS files that haven&amp;rsquo;t been touched in over 6 months&lt;/li&gt;
+&lt;li&gt;OWNERS files that have non-collaborators present&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Good examples of OWNERS usage:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;there are more &lt;code&gt;reviewers&lt;/code&gt; than &lt;code&gt;approvers&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;the &lt;code&gt;approvers&lt;/code&gt; are not in the &lt;code&gt;reviewers&lt;/code&gt; section&lt;/li&gt;
+&lt;li&gt;OWNERS files that are regularly updated (at least once per release)&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Documentation Style Guide</title>
+      <link>https://gkcalat.github.io/kubeflow-docs/docs/about/style-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gkcalat.github.io/kubeflow-docs/docs/about/style-guide/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This style guide is for the &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/&#34;&gt;Kubeflow documentation&lt;/a&gt;.
+The style guide helps contributors to write documentation that readers can understand quickly and correctly.&lt;/p&gt;
+&lt;p&gt;The Kubeflow docs aim for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Consistency in style and terminology, so that readers can expect certain
+structures and conventions. Readers don&amp;rsquo;t have to keep re-learning how to use
+the documentation or questioning whether they&amp;rsquo;ve understood something
+correctly.&lt;/li&gt;
+&lt;li&gt;Clear, concise writing so that readers can quickly find and understand the
+information they need.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;use-standard-american-spelling&#34;&gt;Use standard American spelling&lt;/h2&gt;
+&lt;p&gt;Use American spelling rather than Commonwealth or British spelling.
+Refer to &lt;a href=&#34;http://www.merriam-webster.com/&#34;&gt;Merriam-Webster&amp;rsquo;s Collegiate Dictionary, Eleventh Edition&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;use-capital-letters-sparingly&#34;&gt;Use capital letters sparingly&lt;/h2&gt;
+&lt;p&gt;Some hints:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Capitalize only the first letter of each heading within the page. (That is, use sentence case.)&lt;/li&gt;
+&lt;li&gt;Capitalize (almost) every word in page titles. (That is, use title case.)
+The little words like &amp;ldquo;and&amp;rdquo;, &amp;ldquo;in&amp;rdquo;, etc, don&amp;rsquo;t get a capital letter.&lt;/li&gt;
+&lt;li&gt;In page content, use capitals only for brand names, like Kubeflow, Kubernetes, and so on.
+See more about brand names &lt;a href=&#34;#use-full-correct-brand-names&#34;&gt;below&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t use capital letters to emphasize words.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;spell-out-abbreviations-and-acronyms-on-first-use&#34;&gt;Spell out abbreviations and acronyms on first use&lt;/h2&gt;
+&lt;p&gt;Always spell out the full term for every abbreviation or acronym the first time you use it on the page.
+Don&amp;rsquo;t assume people know what an abbreviation or acronym means, even if it seems like common knowledge.&lt;/p&gt;
+&lt;p&gt;Example: &amp;ldquo;To run Kubernetes locally in a virtual machine (VM)&amp;rdquo;&lt;/p&gt;
+&lt;h2 id=&#34;use-contractions-if-you-want-to&#34;&gt;Use contractions if you want to&lt;/h2&gt;
+&lt;p&gt;For example, it&amp;rsquo;s fine to write &amp;ldquo;it&amp;rsquo;s&amp;rdquo; instead of &amp;ldquo;it is&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#34;brand-names&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;use-full-correct-brand-names&#34;&gt;Use full, correct brand names&lt;/h2&gt;
+&lt;p&gt;When referring to a product or brand, use the full name.
+Capitalize the name as the product owners do in the product documentation.
+Do not use abbreviations even if they&amp;rsquo;re in common use, unless the product owner has sanctioned the abbreviation.&lt;/p&gt;
+&lt;div class=&#34;table-responsive&#34;&gt;
+  &lt;table class=&#34;table table-bordered&#34;&gt;
+    &lt;thead class=&#34;thead-light&#34;&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Use this&lt;/th&gt;
+        &lt;th&gt;Instead of this&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Kubeflow&lt;/td&gt;
+        &lt;td&gt;kubeflow&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Kubernetes&lt;/td&gt;
+        &lt;td&gt;k8s&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;ksonnet&lt;/td&gt;
+        &lt;td&gt;Ksonnet&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;be-consistent-with-punctuation&#34;&gt;Be consistent with punctuation&lt;/h2&gt;
+&lt;p&gt;Use punctuation consistently within a page.
+For example, if you use a period (full stop) after every item in list, then use a period on all other lists on the page.&lt;/p&gt;
+&lt;p&gt;Check the other pages if you&amp;rsquo;re unsure about a particular convention.&lt;/p&gt;
+&lt;p&gt;Examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Most pages in the Kubeflow docs use a period at the end of every list item.&lt;/li&gt;
+&lt;li&gt;There is no period at the end of the page subtitle and the subtitle need not be a full sentence.
+(The subtitle comes from the &lt;code&gt;description&lt;/code&gt; in the front matter of each page.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;use-active-voice-rather-than-passive-voice&#34;&gt;Use active voice rather than passive voice&lt;/h2&gt;
+&lt;p&gt;Passive voice is often confusing, as it&amp;rsquo;s not clear who should perform the action.&lt;/p&gt;
+&lt;div class=&#34;table-responsive&#34;&gt;
+  &lt;table class=&#34;table table-bordered&#34;&gt;
+    &lt;thead class=&#34;thead-light&#34;&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Use active voice&lt;/th&gt;
+        &lt;th&gt;Instead of passive voice&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;You can configure Kubeflow to&lt;/td&gt;
+        &lt;td&gt;Kubeflow can be configured to&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Add the directory to your path&lt;/td&gt;
+        &lt;td&gt;The directory should be added to your path&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;use-simple-present-tense&#34;&gt;Use simple present tense&lt;/h2&gt;
+&lt;p&gt;Avoid future tense (&amp;ldquo;will&amp;rdquo;) and complex syntax such as conjunctive mood (&amp;ldquo;would&amp;rdquo;, &amp;ldquo;should&amp;rdquo;).&lt;/p&gt;
+&lt;div class=&#34;table-responsive&#34;&gt;
+  &lt;table class=&#34;table table-bordered&#34;&gt;
+    &lt;thead class=&#34;thead-light&#34;&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Use simple present tense&lt;/th&gt;
+        &lt;th&gt;Instead of future tense or complex syntax&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;The following command provisions a virtual machine&lt;/td&gt;
+        &lt;td&gt;The following command will provision a virtual machine&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;If you add this configuration element, the system is open to
+          the Internet&lt;/td&gt;
+        &lt;td&gt;If you added this configuration element, the system would be open to
+          the Internet&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Exception:&lt;/strong&gt; Use future tense if it&amp;rsquo;s necessary to convey the correct meaning. This requirement is rare.&lt;/p&gt;
+&lt;h2 id=&#34;address-the-audience-directly&#34;&gt;Address the audience directly&lt;/h2&gt;
+&lt;p&gt;Using &amp;ldquo;we&amp;rdquo; in a sentence can be confusing, because the reader may not know whether they&amp;rsquo;re part of the &amp;ldquo;we&amp;rdquo; you&amp;rsquo;re describing.&lt;/p&gt;
+&lt;p&gt;For example, compare the following two statements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;In this release we&amp;rsquo;ve added many new features.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;In this tutorial we build a flying saucer.&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The words &amp;ldquo;the developer&amp;rdquo; or &amp;ldquo;the user&amp;rdquo; can be ambiguous.
+For example, if the reader is building a product that also has users,
+then the reader does not know whether you&amp;rsquo;re referring to the reader or the users of their product.&lt;/p&gt;
+&lt;div class=&#34;table-responsive&#34;&gt;
+  &lt;table class=&#34;table table-bordered&#34;&gt;
+    &lt;thead class=&#34;thead-light&#34;&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Address the reader directly&lt;/th&gt;
+        &lt;th&gt;Instead of &#34;we&#34;, &#34;the user&#34;, or &#34;the developer&#34;&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Include the directory in your path&lt;/td&gt;
+        &lt;td&gt;The user must make sure that the directory is included in their path
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;In this tutorial you build a flying saucer&lt;/td&gt;
+        &lt;td&gt;In this tutorial we build a flying saucer&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;use-short-simple-sentences&#34;&gt;Use short, simple sentences&lt;/h2&gt;
+&lt;p&gt;Keep sentences short. Short sentences are easier to read than long ones.
+Below are some tips for writing short sentences.&lt;/p&gt;
+&lt;div class=&#34;table-responsive&#34;&gt;
+  &lt;table class=&#34;table table-bordered&#34;&gt;
+    &lt;thead class=&#34;thead-light&#34;&gt;
+      &lt;tr&gt;
+        &lt;th colspan=&#34;2&#34;&gt;Use fewer words instead of many words that convey the same meaning&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Use this&lt;/th&gt;
+        &lt;th&gt;Instead of this&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;You can use&lt;/td&gt;
+        &lt;td&gt;It is also possible to use&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;You can&lt;/td&gt;
+        &lt;td&gt;You are able to&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&#34;table-responsive&#34;&gt;
+  &lt;table class=&#34;table table-bordered&#34;&gt;
+    &lt;thead class=&#34;thead-light&#34;&gt;
+      &lt;tr&gt;
+        &lt;th colspan=&#34;2&#34;&gt;Split a single long sentence into two or more shorter ones&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Use this&lt;/th&gt;
+        &lt;th&gt;Instead of this&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;You do not need a running GKE cluster. The deployment process
+          creates a cluster for you&lt;/td&gt;
+        &lt;td&gt;You do not need a running GKE cluster, because the deployment 
+          process creates a cluster for you&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&#34;table-responsive&#34;&gt;
+  &lt;table class=&#34;table table-bordered&#34;&gt;
+    &lt;thead class=&#34;thead-light&#34;&gt;
+      &lt;tr&gt;
+        &lt;th colspan=&#34;2&#34;&gt;Use a list instead of a long sentence showing various options&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Use this&lt;/th&gt;
+        &lt;th&gt;Instead of this&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;p&gt;To train a model:&lt;/p&gt;
+          &lt;ol&gt;
+            &lt;li&gt;Package your program in a Kubernetes container.&lt;/li&gt;
+            &lt;li&gt;Upload the container to an online registry.&lt;/li&gt;
+            &lt;li&gt;Submit your training job.&lt;/li&gt;
+          &lt;/ol&gt;
+        &lt;/td&gt;
+        &lt;td&gt;To train a model, you must package your program in a Kubernetes 
+          container, upload the container to an online registry, and submit your 
+          training job.&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;avoid-too-much-text-styling&#34;&gt;Avoid too much text styling&lt;/h2&gt;
+&lt;p&gt;Use &lt;strong&gt;bold text&lt;/strong&gt; when referring to UI controls or other UI elements.&lt;/p&gt;
+&lt;p&gt;Use &lt;code&gt;code style&lt;/code&gt; for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;filenames, directories, and paths&lt;/li&gt;
+&lt;li&gt;inline code and commands&lt;/li&gt;
+&lt;li&gt;object field names&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Avoid using bold text or capital letters for emphasis.
+If a page has too much textual highlighting it becomes confusing and even annoying.&lt;/p&gt;
+&lt;h2 id=&#34;use-angle-brackets-for-placeholders&#34;&gt;Use angle brackets for placeholders&lt;/h2&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;export KUBEFLOW_USERNAME=&amp;lt;your username&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--email &amp;lt;your email address&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;style-your-images&#34;&gt;Style your images&lt;/h2&gt;
+&lt;p&gt;The Kubeflow docs recognise Bootstrap classes to style images and other content.&lt;/p&gt;
+&lt;p&gt;The following code snippet shows the typical styling that makes an image show up nicely on the page:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;img src=&amp;#34;/docs/images/my-image.png&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  alt=&amp;#34;My image&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  class=&amp;#34;mt-3 mb-3 p-3 border border-info rounded&amp;#34;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To see some examples of styled images, take a look at the &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/gke/deploy/oauth-setup/&#34;&gt;OAuth setup page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For more help, see the guide to &lt;a href=&#34;https://getbootstrap.com/docs/4.6/content/images/&#34;&gt;Bootstrap image styling&lt;/a&gt; and the Bootstrap utilities, such as &lt;a href=&#34;https://getbootstrap.com/docs/4.6/utilities/borders/&#34;&gt;borders&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;a-detailed-style-guide&#34;&gt;A detailed style guide&lt;/h2&gt;
+&lt;p&gt;The &lt;a href=&#34;https://developers.google.com/style/&#34;&gt;Google Developer Documentation Style Guide&lt;/a&gt; contains detailed information about specific aspects of writing clear, readable, succinct documentation for a developer audience.&lt;/p&gt;
+&lt;h2 id=&#34;next-steps&#34;&gt;Next steps&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Take a look at the &lt;a href=&#34;https://github.com/kubeflow/website/blob/master/README.md&#34;&gt;documentation README&lt;/a&gt; for guidance on contributing to the Kubeflow docs.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
