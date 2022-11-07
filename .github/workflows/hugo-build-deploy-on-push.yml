@@ -61,5 +61,14 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          destination_dir: ${{ steps.prepare_gh_pages.outputs.branch_name }}
+          destination_dir: ${{ steps.prepare_gh_pages.outputs.version_name }}
+          keep_files: true
+
+      - name: Deploy to root (only main)
+        if: steps.prepare_gh_pages.outputs.version_name == 'dev'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          destination_dir: ./
           keep_files: true
