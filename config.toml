@@ -62,6 +62,9 @@ pygmentsStyle = "tango"
   [services.googleAnalytics]
     # Comment out the next line to disable GA tracking. Also disables the feature described in [params.ui.feedback].
     id = "G-GK9XL47N6S"
+[params]
+  # Google Custom Search Engine ID. Remove or comment out to disable search.
+  gcs_engine_id = "b698ddb9e4f3e4c92"
 ##########################################################
 # Hugo module configuration
 ##########################################################
@@ -107,7 +110,7 @@ pygmentsStyle = "tango"
     #pre = "<i class='fa-solid fa-rss pr-2'></i>"
     url = "./news/"
   [[menu.main]]
-    name = "Source"
+    name = "Manifests"
     weight = -99
     pre = "<i class='fa-brands fa-github pr-2'></i>"
     url = "https://github.com/GoogleCloudPlatform/kubeflow-distribution"
@@ -129,7 +132,7 @@ pygmentsStyle = "tango"
   section = ["HTML", "print", "RSS"]
 
 [params]
-  copyright = "Google"
+  copyright = "Kubeflow on GCP authors"
   privacy_policy = "https://policies.google.com/privacy"
 
   # First one is picked as the Twitter card image if not set on page.
@@ -137,7 +140,7 @@ pygmentsStyle = "tango"
 
   # Menu title if your navbar has a versions selector to access old versions of your site.
   # This menu appears only if you have at least one [params.versions] set.
-  version_menu = "Releases"
+  version_menu = "Versions"
   # Flag used in the "version-banner" partial to decide whether to display a 
   # banner on every page indicating that this is an archived version of the docs.
   # Set this flag to "true" if you want to display the banner.
@@ -156,24 +159,20 @@ pygmentsStyle = "tango"
   # These entries appear in the drop-down menu at the top of the website.
   [[params.versions]]
     version = "latest"
-    githubbranch = "v1.6-release"
-    url = "https://gkcalat.github.io/kubeflow-docs/v1.6-release/docs"
-  [[params.versions]]
-    version = "v1.6"
-    githubbranch = "v1.6-release"
-    url = "https://gkcalat.github.io/kubeflow-docs/v1.6-release/docs"
+    githubbranch = "main"
+    url = "https://gkcalat.github.io/kubeflow-docs/docs"
   [[params.versions]]
     version = "v1.5"
     githubbranch = "v1.5-release"
-    url = "https://gkcalat.github.io/kubeflow-docs/v1.5-release/docs"
+    url = "https://gkcalat.github.io/kubeflow-docs/v1.5/docs"
   [[params.versions]]
     version = "v1.4"
     githubbranch = "v1.4-release"
-    url = "https://gkcalat.github.io/kubeflow-docs/v1.4-release/docs"
+    url = "https://gkcalat.github.io/kubeflow-docs/v1.4/docs"
   [[params.versions]]
     version = "dev"
-    githubbranch = "main"
-    url = "https://gkcalat.github.io/kubeflow-docs/main/docs"
+    githubbranch = "dev"
+    url = "https://gkcalat.github.io/kubeflow-docs/dev/docs"
 
   # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
   github_repo = "https://github.com/gkcalat/kubeflow-docs"
@@ -182,9 +181,6 @@ pygmentsStyle = "tango"
 
   # An optional link to a related project repo. For example, the sibling repository where your product code lives.
   github_project_repo = "https://github.com/GoogleCloudPlatform/kubeflow-distribution"
-
-  # Google Custom Search Engine ID. Remove or comment out to disable search.
-  gcs_engine_id = "b698ddb9e4f3e4c92"
 
   # Enable Algolia DocSearch
   algolia_docsearch = false
@@ -217,8 +213,8 @@ pygmentsStyle = "tango"
       [params.ui.feedback]
         enable = true
         # The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
-        yes = 'Thank you! <a href="https://github.com/USERNAME/REPOSITORY/issues/new">Send your feedback to us</a>.'
-        no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
+        yes = 'Thank you! <a href="https://github.com/gkcalat/kubeflow-docs/issues/new">Send your feedback to us</a>.'
+        no = 'Sorry to hear that. Please <a href="https://github.com/gkcalat/kubeflow-docs/issues/new">tell us how we can improve</a>.'
 
       # Adds a reading time to the top of each doc.
       # If you want this feature, but occasionally need to remove the Reading time from a single page, 
@@ -233,6 +229,11 @@ pygmentsStyle = "tango"
       url = "https://www.kubeflow.org/docs/about/community/#kubeflow-mailing-list"
       icon = "fa fa-envelope"
       desc = "Discussion and help from Kubeflow users"
+    [[params.links.user]]
+      name = "Slack"
+      url = "https://www.kubeflow.org/docs/about/community/#kubeflow-slack"
+      icon = "fab fa-slack"
+      desc = "Chat with Kubeflow users and developers"
     [[params.links.user]]
       name ="Twitter"
       url = "https://twitter.com/kubeflow"
@@ -249,11 +250,6 @@ pygmentsStyle = "tango"
       url = "https://github.com/GoogleCloudPlatform/kubeflow-distribution"
       icon = "fab fa-github"
       desc = "Kubeflow on GKE repo"
-    [[params.links.developer]]
-      name = "Slack"
-      url = "https://www.kubeflow.org/docs/about/community/#kubeflow-slack"
-      icon = "fab fa-slack"
-      desc = "Chat with Kubeflow developers"
     [[params.links.developer]]
       name = "Kubeflow community calendar"
       url = "https://www.kubeflow.org/docs/about/community/#kubeflow-community-calendars"
