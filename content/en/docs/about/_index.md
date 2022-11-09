@@ -1,5 +1,5 @@
 +++
 title = "About"
-description = "About Kubeflow and its community"
+description = "About Kubeflow on GCP"
 weight = 10
 +++
