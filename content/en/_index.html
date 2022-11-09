@@ -1,22 +1,16 @@
 +++
-title = "Kubeflow"
+title = "Kubeflow on Google Cloud Platform"
 +++
 
 <!-- Hero section -->
-{{<blocks/cover title="Kubeflow" image_anchor="center" color="dark">}}
+{{<blocks/cover title="Kubeflow on GCP" image_anchor="center" color="dark">}}
 <div class="mx-auto">
-  <p class="lead mt-5">The Machine Learning Toolkit for Kubernetes</p>
+  <p class="lead mt-5">The Machine Learning Toolkit running on Google Kubernetes Engine (GKE)</p>
   <a
     class="btn btn-lg btn-primary mr-3 mb-4"
     href="/docs/started/"
   >
     Get Started <i class="fas fa-arrow-alt-circle-right ml-2"></i>
-  </a>
-  <a
-    class="btn btn-lg btn-secondary mr-3 mb-4"
-    href="/docs/about/contributing/"
-  >
-    Contribute <i class="fas fa-pencil-alt ml-2"></i>
   </a>
   <div class="mx-auto mt-5">
     {{<blocks/link-down color="light">}}
@@ -28,12 +22,10 @@ title = "Kubeflow"
   <div class="contain">
     <h4 class="section-head">What is Kubeflow?</h4>
     <p>
-      The Kubeflow project is dedicated to making deployments of machine
-      learning (ML) workflows on Kubernetes simple, portable and scalable. Our
-      goal is not to recreate other services, but to provide a straightforward
-      way to deploy best-of-breed open-source systems for ML to diverse
-      infrastructures. Anywhere you are running Kubernetes, you should be able
-      to run Kubeflow.
+      Kubeflow on GCP is an open-source toolkit for building
+      machine learning (ML) systems. Seamlessly integrated with GCP services
+      Kubeflow allows you to build secure, scalable, and reliable ML workflows of
+      any complexity, while reducing operational costs and development time.
     </p>
   </div>
 </div>
@@ -43,66 +35,24 @@ title = "Kubeflow"
     <div class="card-deck">
       <div class="card border-primary-dark">
         <img
-          src="/docs/images/logos/Jupyter.png"
+          src="/docs/images/logos/gke.png"
 		  class="card-img-top"
 		  draggable="false"
           style="padding: 2rem;"
-          alt="Jupyter Logo"
+          alt="Google Kubernetes Engine"
         />
         <div class="card-body bg-primary-dark">
-          <h5 class="card-title text-white section-head">Notebooks</h5>
+          <h5 class="card-title text-white section-head">GKE</h5>
           <p class="card-text text-white">
-            Kubeflow includes services to create and manage interactive <a target="_blank" rel="noopener" href="/docs/components/notebooks/">Jupyter
-            notebooks</a>.  You can customize your notebook deployment and your compute resources to
-            suit your data science needs. Experiment with your workflows locally, then
-            deploy them to a cloud when you're ready.
+            Kubeflow on GCP uses the most automated and scalable managed Kubernetes platform, <a target="_blank" rel="noopener" href="https://cloud.google.com/kubernetes-engine">GKE</a>. By choosing GKE,
+            one can gain benefit from advanced cluster managements features including automated node pool management,
+            automatic software upgrades, node auto-repair, logging and monitoring of the cloud resources, and many more.
           </p>
         </div>
       </div>
       <div class="card border-primary-dark">
         <img
-          src="/docs/images/logos/TensorFlow.png"
-		  class="card-img-top"
-		  draggable="false"
-          style="padding: 2rem;"
-          alt="TensorFlow"
-        />
-        <div class="card-body bg-primary-dark">
-          <h5 class="card-title text-white section-head">
-            TensorFlow model training
-          </h5>
-          <p class="card-text text-white">
-            Kubeflow provides a custom <a target="_blank" rel="noopener" href="/docs/components/training/tftraining/">TensorFlow training job operator</a>
-            that you can use to train your ML model. In particular, Kubeflow's job operator can handle distributed TensorFlow training jobs. 
-            Configure the training controller to use CPUs or GPUs and to suit various cluster sizes.
-          </p>
-        </div>
-      </div>
-      <div class="card border-primary-dark">
-        <img
-          src="/docs/images/logos/Models.png"
-		  class="card-img-top"
-		  draggable="false"
-          style="padding: 2rem;"
-          alt="Model serving image"
-        />
-        <div class="card-body bg-primary-dark">
-          <h5 class="card-title text-white section-head">Model serving</h5>
-          <p class="card-text text-white">
-            Kubeflow supports a <a target="_blank" rel="noopener" href="/docs/external-add-ons/serving/tfserving_new/">TensorFlow Serving</a> container to export trained
-            TensorFlow models to Kubernetes. Kubeflow is also integrated with
-            <a target="_blank" rel="noopener" href="/docs/external-add-ons/serving/seldon/">Seldon Core</a>, an open source platform for deploying machine learning
-            models on Kubernetes, <a target="_blank" rel="noopener" href="/docs/external-add-ons/serving/tritoninferenceserver/">NVIDIA Triton Inference Server</a> for
-            maximized GPU utilization when deploying ML/DL models at scale, and <a target="_blank" rel="noopener" href="/docs/external-add-ons/serving/mlrun/">MLRun Serving</a>, an open-source serverless framework for deployment and monitoring of real-time ML/DL pipelines.
-          </p>
-        </div>
-      </div>
-    </div>
-    <br />
-    <div class="card-deck">
-      <div class="card border-primary-dark">
-        <img
-          src="/docs/images/logos/Pipeline.png"
+          src="/docs/images/logos/kfp.png"
 		  class="card-img-top"
 		  draggable="false"
           style="padding: 2rem;"
@@ -111,7 +61,7 @@ title = "Kubeflow"
         <div class="card-body bg-primary-dark">
           <h5 class="card-title text-white section-head">Pipelines</h5>
           <p class="card-text text-white">
-			<a target="_blank" rel="noopener" href="/docs/components/pipelines/introduction/" >Kubeflow Pipelines</a> is a comprehensive solution for deploying
+			      Kubeflow Pipelines is a comprehensive solution for deploying
             and managing end-to-end ML workflows. Use Kubeflow Pipelines for rapid and reliable experimentation.
             You can schedule and compare runs, and examine detailed reports on each run.
           </p>
@@ -119,44 +69,19 @@ title = "Kubeflow"
       </div>
       <div class="card border-primary-dark">
         <img
-          src="/docs/images/logos/MultiPlatform.png"
+          src="/docs/images/logos/gcp.png"
 		  class="card-img-top"
 		  draggable="false"
           style="padding: 2rem;"
-          alt="Multiple Framework Logos"
+          alt="TensorFlow"
         />
         <div class="card-body bg-primary-dark">
-          <h5 class="card-title text-white section-head">Multi-framework</h5>
+          <h5 class="card-title text-white section-head">
+            Managed services
+          </h5>
           <p class="card-text text-white">
-            Our development plans extend beyond TensorFlow. We're working
-			hard to extend the support of 
-			<a target="_blank" rel="noopener" href="/docs/components/training/pytorch/">PyTorch</a>, 
-			<a target="_blank" rel="noopener" href="/docs/components/training/mxnet/"> Apache MXNet</a>, 
-		  	<a target="_blank" rel="noopener" href="/docs/components/training/mpi/"> MPI</a>,
-		  	<a target="_blank" rel="noopener" href="/docs/components/training/xgboost/"> XGBoost</a>,
-			<a target="_blank" rel="noopener" href="/docs/components/training/chainer/"> Chainer</a>, and more. We
-			also integrate with 
-			<a target="_blank" rel="noopener" href="https://istio.io/">Istio</a> and 
-			<a target="_blank" rel="noopener" href="https://www.getambassador.io/">Ambassador</a> for ingress, 
-			<a target="_blank" rel="noopener" href="https://nuclio.io/">Nuclio</a> as a
-            fast multi-purpose serverless framework, and <a target="_blank" rel="noopener" href="https://www.pachyderm.io/">Pachyderm</a> for managing
-            your data science pipelines.
-          </p>
-        </div>
-      </div>
-      <div class="card border-primary-dark">
-        <img
-          src="/docs/images/logos/Community.png"
-		  class="card-img-top"
-		  draggable="false"
-          style="padding: 2rem;"
-          alt="People Icon"
-        />
-        <div class=" card-body bg-primary-dark">
-          <h5 class="card-title text-white section-head">Community</h5>
-          <p class="card-text text-white">
-            We are an open and welcoming community of software developers, data scientists, and organizations!
-            Join our <a target="_blank" rel="noopener" href="/docs/about/community/#kubeflow-slack">Slack Workspace</a>!
+            Tightly integrated with managed services, Kubeflow on GCP allows to work faster, build smarter, and grow with a peace of mind.
+            Managed services include Cloud Storage, CloudSQL, Identity and Access Management, Identity-Aware Proxy, Anthos Service Mesh, and many others.
           </p>
         </div>
       </div>
@@ -169,16 +94,16 @@ title = "Kubeflow"
 
 <div id="community">
   <div class="contain">
-    <h4 class="section-head">Join our community</h4>
+    <h4 class="section-head">Source code</h4>
     <p>
-      Check out the <a href="/docs/about/community/#kubeflow-community-call">weekly community call</a>, get involved in discussions on the <a href="/docs/about/community/#kubeflow-mailing-list">mailing list</a> or chat with others on the <a href="/docs/about/community/#kubeflow-slack">Slack Workspace</a>!
+      Kubeflow on GCP is open-source. 
+      <a class="btn btn-lg btn-primary mr-3 mb-4" href="https://github.com/GoogleCloudPlatform/kubeflow-distribution">
+        Explore and contribute!
+        <i class="fas fa-arrow-alt-circle-right ml-2"></i>
+      </a>
     </p>
-
-    <a
-      class="btn btn-lg btn-primary mr-3 mb-4"
-      href="/docs/about/community/"
-    >
-      Join the community <i class="fas fa-arrow-alt-circle-right ml-2"></i>
-    </a>
+    <p>
+      Interested in getting more involved? <a href="https://www.kubeflow.org/docs/about/community/">Join Kubeflow Community!</a>
+    </p>
   </div>
 </div>
