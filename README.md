@@ -1,138 +1,137 @@
-# Docsy Example
+# Contributing to this repository
 
-[Docsy][] is a [Hugo theme module][] for technical documentation sites, providing easy
-site navigation, structure, and more. This **Docsy Example Project** uses the Docsy
-theme component as a hugo module and provides a skeleton documentation structure for you to use.
-You can clone/copy this project and edit it with your own content, or use it as an example.
+Welcome, Kubeflow users! This website contains the latest documentation for Kubeflow on GCP. It is hosted at https://gkcalat.github.io/kubeflow-docs. 
 
-In this project, the Docsy theme component is pulled in as a Hugo module, together with other module dependencies:
+## Running locally
+
+1. This website is being generated with [Hugo](https://gohugo.io/), a popular open-source static site generator. You will need to install the `extended` version of Hugo to be able to generate a website locally.
+
+    You can install Hugo using `brew`:
+    ```bash
+    brew install hugo
+    ```
+
+    Alternatively, you can also use `snap`:
+    ```bash
+    snap install hugo --channel=extended
+    ```
+
+    Check the [official documentation](https://gohugo.io/getting-started/installing/) on other installation options. See more details on how to deploy [GitHub pages static website using Hugo](https://gohugo.io/hosting-and-deployment/hosting-on-github/).
+
+1. We use [Docsy](https://github.com/google/docsy) theme, which has its prerequisites.
+
+    ```bash
+    npm install --save-dev autoprefixer
+    npm install --save-dev postcss-cli
+    npm install -D postcss
+    ```
+    If you don't have `npm`, install it using:
+    ```bash
+    sudo apt-get install npm
+    ```
+
+1. To run the website locally:
+
+    ```bash
+    hugo server
+    ```
+
+## Contributing
+
+Contributions are very welcome! Please, follow these simple steps:
+
+1. Fork the [repo](https://github.com/gkcalat/kubeflow-docs) on GitHub.
+
+2. Make your changes and send a pull request (PR) with a few sentences describing your changes. Merge into:
+   * `main` branch, if the changes are related to the latest released Kubeflow on GCP.
+   * `dev` branch if the changes are related to the unreleased ([master branch](https://github.com/GoogleCloudPlatform/kubeflow-distribution)) version of Kubeflow on GCP.
+   * `v*-release` if the changes are related to `v*` release of Kubeflow on GCP.
+
+
+3. Assign one of the [reviewers](https://github.com/kubeflow/website/edit/main/OWNERS.md) to the PR.
+
+## Releasing
+
+Kubeflow gets minor releases twice a year. [Kubeflow on GCP](https://github.com/GoogleCloudPlatform/kubeflow-distribution) follows the same cadence, but may also have patch releases in-between. Patch releases typically contain bug fixes, while minor releases include new features. Documentation (this repository) should stay in sync with the latest version of Kubeflow on GCP.
+
+For each minor release, we create a new branch for the relevant documentation (e.g. `v1.6-release`). When a new version is released, we create a new branch of the previous version and the `main` branch is updated with the content for the new version.
+
+The versioned sites follow this convention:
+
+* `gkcalat.github.io/kubeflow-docs` is deployed from `gh-pages` branch, which is automatically updated once new changes are pushed to `main`, `dev`, or `v*-release` branches.
+* Changes to `main` branch are pushed to the `./` directory of `gh-pages` branch, which is then reflected on `gkcalat.github.io/kubeflow-docs`.
+* Changes to `dev` branch are pushed to `./dev` subdirectory of `gh-pages` branch, which is then reflected on `gkcalat.github.io/kubeflow-docs/dev`.
+* Changes to `v*-release` branches are pushed to `./v*` subdirectories of `gh-pages` branch, which are then reflected on `gkcalat.github.io/kubeflow-docs/v*`.
+
+Whenever any documents reference any source code, you should use the version shortcode in the links, like so:
+
+```
+https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/{{< params "githubbranch" >}}/...
+```
+
+This ensures that all the links in a versioned webpage point to the correct branch.
+
+## Styling your content
+
+The theme holds its styles in the [`assets/scss` directory](https://github.com/gkcalat/kubeflow-docs/tree/main/themes/docsy/assets/scss).
+
+**Do not change these files**, they are not actually inside this repo, but are part of the [google/docsy](https://github.com/google/docsy) repo. To update referenced docsy commit, run the following command at the root of the repo:
 
 ```bash
-$ hugo mod graph
-hugo: collected modules in 566 ms
-hugo: collected modules in 578 ms
-github.com/google/docsy-example github.com/google/docsy@v0.5.1-0.20221017155306-99eacb09ffb0
-github.com/google/docsy-example github.com/google/docsy/dependencies@v0.5.1-0.20221014161617-be5da07ecff1
-github.com/google/docsy/dependencies@v0.5.1-0.20221014161617-be5da07ecff1 github.com/twbs/bootstrap@v4.6.2+incompatible
-github.com/google/docsy/dependencies@v0.5.1-0.20221014161617-be5da07ecff1 github.com/FortAwesome/Font-Awesome@v0.0.0-20220831210243-d3a7818c253f
+git submodule update --remote
 ```
 
-You can find detailed theme instructions in the [Docsy user guide][].
+The site's [front page](https://gkcalat.github.io/kubeflow-docs):
 
-This Docsy Example Project is hosted on [Netlify][] at [example.docsy.dev][].
-You can view deploy logs from the [deploy section of the project's Netlify
-dashboard][deploys], or this [alternate dashboard][].
+* See the [page source](https://github.com/gkcalat/kubeflow-docs/blob/main/content/en/_index.html).
 
-This is not an officially supported Google product. This project is currently maintained.
+* The CSS styles are in the [project variables file](https://github.com/gkcalat/kubeflow-docs/blob/main/assets/scss/_variables_project.scss).
 
-## Using the Docsy Example Project as a template
+* The page uses the [cover block](https://www.docsy.dev/docs/adding-content/shortcodes/#blocks-cover) defined by the theme.
 
-A simple way to get started is to use this project as a template, which gives you a site project that is set up and ready to use. To do this: 
+* The page also uses the [linkdown block](https://www.docsy.dev/docs/adding-content/shortcodes/#blocks-link-down).
 
-1. Click **Use this template**.
+## Using Hugo shortcodes
 
-2. Select a name for your new project and click **Create repository from template**.
+Sometimes it's useful to define a snippet of information in one place and reuse it wherever we need it. 
+For example, we want to be able to refer to the minimum version of various frameworks/libraries throughout the docs, 
+without causing a maintenance nightmare.
 
-3. Make your own local working copy of your new repo using git clone, replacing https://github.com/me/example.git with your repo’s web URL:
+For this purpose, we use Hugo's "shortcodes". 
+Shortcodes are similar to Django variables. You define a shortcode in a file, then use a specific markup 
+to invoke the shortcode in the docs. That markup is replaced by the content of the shortcode file when the page is built.
 
-```bash
-git clone --depth 1 https://github.com/me/example.git
-```
+To create a shortcode:
 
-You can now edit your own versions of the site’s source files.
+1. Add an HTML file in the `layouts/shortcodes/` directory. 
+   The file name must be short and meaningful, as it determines the shortcode you and others use in the docs.
 
-If you want to do SCSS edits and want to publish these, you need to install `PostCSS`
+1. For the file content, add the text and HTML markup that should replace the shortcode markup when the web page is built.
 
-```bash
-npm install
-```
+To use a shortcode in a document, wrap the name of the shortcode in braces and percent signs like this:
 
-## Running the website locally
+  ```
+  {{% shortcode-name %}}
+  ```
 
-Building and running the site locally requires a recent `extended` version of [Hugo](https://gohugo.io).
-You can find out more about how to install Hugo for your environment in our
-[Getting started](https://www.docsy.dev/docs/getting-started/#prerequisites-and-installation) guide.
+The shortcode name is the file name minus the `.html` file extension.
 
-Once you've made your working copy of the site repo, from the repo root folder, run:
+**Example:** The following shortcode defines the minimum required version of Kubernetes:
 
-```
-hugo server
-```
+* File name of the shortcode:
 
-## Running a container locally
+  ```
+  kubernetes-min-version.html
+  ```
 
-You can run docsy-example inside a [Docker](https://docs.docker.com/)
-container, the container runs with a volume bound to the `docsy-example`
-folder. This approach doesn't require you to install any dependencies other
-than [Docker Desktop](https://www.docker.com/products/docker-desktop) on
-Windows and Mac, and [Docker Compose](https://docs.docker.com/compose/install/)
-on Linux.
+* Content of the shortcode:
 
-1. Build the docker image 
+  ```
+  1.8
+  ```
 
-   ```bash
-   docker-compose build
-   ```
+* Usage in a document:
 
-1. Run the built image
-
-   ```bash
-   docker-compose up
-   ```
-
-   > NOTE: You can run both commands at once with `docker-compose up --build`.
-
-1. Verify that the service is working. 
-
-   Open your web browser and type `http://localhost:1313` in your navigation bar,
-   This opens a local instance of the docsy-example homepage. You can now make
-   changes to the docsy example and those changes will immediately show up in your
-   browser after you save.
-
-### Cleanup
-
-To stop Docker Compose, on your terminal window, press **Ctrl + C**. 
-
-To remove the produced images run:
-
-```console
-docker-compose rm
-```
-For more information see the [Docker Compose
-documentation](https://docs.docker.com/compose/gettingstarted/).
-
-## Troubleshooting
-
-As you run the website locally, you may run into the following error:
-
-```
-➜ hugo server
-
-INFO 2021/01/21 21:07:55 Using config file: 
-Building sites … INFO 2021/01/21 21:07:55 syncing static files to /
-Built in 288 ms
-Error: Error building site: TOCSS: failed to transform "scss/main.scss" (text/x-scss): resource "scss/scss/main.scss_9fadf33d895a46083cdd64396b57ef68" not found in file cache
-```
-
-This error occurs if you have not installed the extended version of Hugo.
-See this [section](https://www.docsy.dev/docs/get-started/docsy-as-module/installation-prerequisites/#install-hugo) of the user guide for instructions on how to install Hugo.
-
-Or you may encounter the following error:
-
-```
-➜ hugo server
-
-Error: failed to download modules: binary with name "go" not found
-```
-
-This error occurs if you have not installed the `go` programming language on your system.
-See this [section](https://www.docsy.dev/docs/get-started/docsy-as-module/installation-prerequisites/#install-go-language) of the user guide for instructions on how to install `go`.
-
-
-[alternate dashboard]: https://app.netlify.com/sites/goldydocs/deploys
-[deploys]: https://app.netlify.com/sites/docsy-example/deploys
-[Docsy user guide]: https://docsy.dev/docs
-[Docsy]: https://github.com/google/docsy
-[example.docsy.dev]: https://example.docsy.dev
-[Hugo theme module]: https://gohugo.io/hugo-modules/use-modules/#use-a-module-for-a-theme
-[Netlify]: https://netlify.com
+  ```
+  You need Kubernetes version {{% kubernetes-min-version %}} or later.
+  ```
