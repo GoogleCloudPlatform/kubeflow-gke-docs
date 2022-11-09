@@ -3,7 +3,7 @@ name: hugo-build-deploy-on-push
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main", "v*-release"]
+    branches: ["main", "dev", "v*-release"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -53,7 +53,7 @@ jobs:
       - name: Prepare GitHub Pages
         shell: bash
         run: |
-          echo "##[set-output name=version_name;]$(echo ${GITHUB_REF#refs/heads/} | sed 's/-.*//' | sed 's/main/dev/')"
+          echo "##[set-output name=version_name;]$(echo ${GITHUB_REF#refs/heads/} | sed 's/-.*//' | sed 's/main//')"
         id: prepare_gh_pages
 
       - name: Deploy
@@ -62,13 +62,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           destination_dir: ${{ steps.prepare_gh_pages.outputs.version_name }}
-          keep_files: true
-
-      - name: Deploy to root (only main)
-        if: steps.prepare_gh_pages.outputs.version_name == 'dev'
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          destination_dir: ./
           keep_files: true
