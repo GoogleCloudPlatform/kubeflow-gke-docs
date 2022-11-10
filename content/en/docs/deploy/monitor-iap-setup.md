@@ -113,10 +113,10 @@ problems:
     * `kubectl get pods -n istio-system`
     * The `istio-ingressgateway-XX` pods should be running
     * Check the logs of pod `backend-updater-0`, `iap-enabler-XX` to see if there is any error
-    * Follow the steps [here](https://www.kubeflow.org/docs/troubleshooting/#502-server-error) to check the load balancer and backend service on Google Cloud.
+    * Follow the steps [here](/docs/troubleshooting/#502-server-error) to check the load balancer and backend service on Google Cloud.
 
 
-1. Try accessing Cloud IAP at the fully qualified domain name in your web 
+2. Try accessing Cloud IAP at the fully qualified domain name in your web 
   browser:
 
     ```
