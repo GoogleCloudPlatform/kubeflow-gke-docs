@@ -1436,13 +1436,13 @@ reconfigure the context by:</p>
 <p>Starting from Kubeflow v1.6.0:</p>
 <ul>
 <li>Component with deprecated API versions were upgraded to support GKE v1.22. If you would like to upgrade your GKE cluster, follow <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/upgrading-a-cluster">GCP instructions</a>.</li>
-<li>ASM was upgraded to v1.14. Follow the instructions on how to <a href="#upgrade-asm-anthos-service-mesh">upgrade ASM (Anthos Service Mesh)</a>. If you want to use ASM version prior to 1.11, refer to <a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/tree/master/kubeflow/common/asm/deprecated/README.md">the legacy instructions</a>.</li>
+<li>ASM was upgraded to v1.14. Follow the instructions on how to <a href="#upgrade-asm-anthos-service-mesh">upgrade ASM (Anthos Service Mesh)</a>. If you want to use ASM version prior to 1.11, refer to [the legacy instructions](<a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/asm/deprecated/README.md">https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/asm/deprecated/README.md</a>.</li>
 <li>Knative was upgraded to v1.2. Follow <a href="https://knative.dev/docs/install/upgrade/upgrade-installation/">Knative instructions</a> to check current version and see if the update includes any breaking changes.</li>
 <li>Cert-manager was upgraded to v1.5. To check your current version and see if the update includes any breaking changes, follow the <a href="https://cert-manager.io/docs/installation/upgrading/">cert-manager instructions</a>.</li>
 <li>Deprecated kfserving component was removed. To upgrade to KServe, follow the <a href="https://github.com/kserve/kserve/tree/master/hack/kserve_migration">KServe Migration guide</a>.</li>
 </ul>
 <h3 id="upgrade-kubeflow-cluster-to-v15">Upgrade Kubeflow cluster to v1.5</h3>
-<p>In Kubeflow v1.5.1 we use ASM v1.13. See <a href="#upgrade-asm-anthos-service-mesh">how to upgrade ASM</a>. To use ASM versions prior to 1.11, follow <a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/tree/master/kubeflow/common/asm/deprecated/README.md">the legacy instructions</a>.</p>
+<p>In Kubeflow v1.5.1 we use ASM v1.13. See <a href="#upgrade-asm-anthos-service-mesh">how to upgrade ASM</a>. To use ASM versions prior to 1.11, follow [the legacy instructions](<a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/asm/deprecated/README.md">https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/asm/deprecated/README.md</a>.</p>
 <p>Starting from Kubeflow v1.5, Kubeflow manifests have included KServe as an independent component from kfserving, Google Cloud distribution has switched over from kfserving to KServe for default installed components. If you want to upgrade Kubeflow while keeping kfsering, you can comment KServe and uncomment kfserving in <code>kubeflow-distribution/kubeflow/config.yaml</code> file. If you want to upgrade to KServe, follow the <a href="https://github.com/kserve/kserve/tree/master/hack/kserve_migration">KServe Migration guide</a>.</p>
 <h3 id="upgrade-kubeflow-cluster-to-v13">Upgrade Kubeflow cluster to v1.3</h3>
 <p>Due to the refactoring of <code>kubeflow/manifests</code> repository, the way we depend on <code>GoogleCloudPlatform/kubeflow-distribution</code> has changed drastically. Upgrade to Kubeflow cluster v1.3 is not supported. And individual component upgrade has been deferred to its corresponding repository for support.</p>
@@ -1492,11 +1492,11 @@ of <code>.build</code> with a historic version with tools like <code>git diff</c
 </li>
 </ol>
 <h2 id="upgrade-asm-anthos-service-mesh">Upgrade ASM (Anthos Service Mesh)</h2>
-<p>If you want to upgrade ASM instead of the Kubeflow components, refer to <a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/tree/master/kubeflow/common/asm/README.md">kubeflow/common/asm/README.md</a> for the latest instructions on upgrading ASM. Detailed explanation is listed below. Note: if you are going to upgrade major or minor version of ASM, it is recommended to read <a href="https://cloud.google.com/service-mesh/docs/upgrade-path-old-versions-gke">the official ASM upgrade documentation</a> before proceeding with the steps below.</p>
+<p>If you want to upgrade ASM instead of the Kubeflow components, refer to [kubeflow/common/asm/README.md](<a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/asm/README.md">https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/asm/README.md</a> for the latest instructions on upgrading ASM. Detailed explanation is listed below. Note: if you are going to upgrade major or minor version of ASM, it is recommended to read <a href="https://cloud.google.com/service-mesh/docs/upgrade-path-old-versions-gke">the official ASM upgrade documentation</a> before proceeding with the steps below.</p>
 <h3 id="install-a-new-asm-workload">Install a new ASM workload</h3>
 <p>In order to use the new ASM version, we need to download the corresponding ASM configuration package and <code>asmcli</code> script. Get a list of available ASM packages and the corresponding <code>asmcli</code> scripts by running the following command:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl https://storage.googleapis.com/csm-artifacts/asm/ASMCLI_VERSIONS
-</span></span></code></pre></div><p>It should return a list of ASM versions that can be installed with asmcli script. To install older versions, refer to <a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/tree/master/kubeflow/common/asm/deprecated/README.md">the legacy instructions</a>. The returned list will have a format of <code>${ASM_PACKAGE_VERSION}:${ASMCLI_SCRIPT_VERSION}</code>. For example, in the following output:</p>
+</span></span></code></pre></div><p>It should return a list of ASM versions that can be installed with asmcli script. To install older versions, refer to [the legacy instructions](<a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/asm/deprecated/README.md">https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/asm/deprecated/README.md</a>. The returned list will have a format of <code>${ASM_PACKAGE_VERSION}:${ASMCLI_SCRIPT_VERSION}</code>. For example, in the following output:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">...
 </span></span><span class="line"><span class="cl">1.13.2-asm.5+config2:asmcli_1.13.2-asm.5-config2
 </span></span><span class="line"><span class="cl">1.13.2-asm.5+config1:asmcli_1.13.2-asm.5-config1
@@ -1632,7 +1632,7 @@ traffic. (31380 is the default port of the service <code>istio-ingressgateway</c
 <li><code>kubectl get pods -n istio-system</code></li>
 <li>The <code>istio-ingressgateway-XX</code> pods should be running</li>
 <li>Check the logs of pod <code>backend-updater-0</code>, <code>iap-enabler-XX</code> to see if there is any error</li>
-<li>Follow the steps <a href="https://www.kubeflow.org/docs/troubleshooting/#502-server-error">here</a> to check the load balancer and backend service on Google Cloud.</li>
+<li>Follow the steps <a href="/docs/troubleshooting/#502-server-error">here</a> to check the load balancer and backend service on Google Cloud.</li>
 </ul>
 </li>
 <li>

@@ -49,11 +49,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/deploy/monitor-iap-setup/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-11-10T00:25:22+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+<meta property="article:modified_time" content="2022-11-10T00:29:34+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
 
 <meta itemprop="name" content="Monitoring Cloud IAP Setup">
 <meta itemprop="description" content="Instructions for monitoring and troubleshooting Cloud IAP">
-<meta itemprop="dateModified" content="2022-11-10T00:25:22+00:00" />
+<meta itemprop="dateModified" content="2022-11-10T00:29:34+00:00" />
 <meta itemprop="wordCount" content="743">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Monitoring Cloud IAP Setup"/>
@@ -421,7 +421,7 @@ traffic. (31380 is the default port of the service <code>istio-ingressgateway</c
 <li><code>kubectl get pods -n istio-system</code></li>
 <li>The <code>istio-ingressgateway-XX</code> pods should be running</li>
 <li>Check the logs of pod <code>backend-updater-0</code>, <code>iap-enabler-XX</code> to see if there is any error</li>
-<li>Follow the steps <a href="https://www.kubeflow.org/docs/troubleshooting/#502-server-error">here</a> to check the load balancer and backend service on Google Cloud.</li>
+<li>Follow the steps <a href="/docs/troubleshooting/#502-server-error">here</a> to check the load balancer and backend service on Google Cloud.</li>
 </ul>
 </li>
 <li>
