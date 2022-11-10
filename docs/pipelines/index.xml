@@ -466,7 +466,7 @@ cluster can autoscale based on current workloads.&lt;/p&gt;
 &lt;p&gt;This guide assumes that you have already deployed Kubeflow Pipelines. If not,
 follow the guide to &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/gke/deploy/&#34;&gt;deploying Kubeflow on Google Cloud&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;before-you-start&#34;&gt;Before you start&lt;/h2&gt;
-&lt;p&gt;The variables defined in this page can be found in &lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/env.sh&#34;&gt;kubeflow-distribution/kubeflow/env.sh&lt;/a&gt;. They are the same value as you set based on your &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/distributions/gke/deploy/deploy-cli/#environment-variables&#34;&gt;Kubeflow deployment&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The variables defined in this page can be found in &lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/env.sh&#34;&gt;kubeflow-distribution/kubeflow/env.sh&lt;/a&gt;. They are the same value as you set based on your &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/deploy/deploy-cli/#environment-variables&#34;&gt;Kubeflow deployment&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;using-preemptible-vms-with-kubeflow-pipelines&#34;&gt;Using preemptible VMs with Kubeflow Pipelines&lt;/h2&gt;
 &lt;p&gt;In summary, the steps to schedule a pipeline to run on &lt;a href=&#34;https://cloud.google.com/compute/docs/instances/preemptible&#34;&gt;preemptible
 VMs&lt;/a&gt; are as
