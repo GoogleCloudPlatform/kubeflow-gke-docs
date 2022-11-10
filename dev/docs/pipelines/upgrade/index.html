@@ -4,8 +4,6 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.105.0">
-<link rel="alternate" type="text/html" href="https://gkcalat.github.io/kubeflow-docs/docs/_print/">
-<link rel="alternate" type="application/rss&#43;xml" href="https://gkcalat.github.io/kubeflow-docs/docs/index.xml">
 <meta name="robots" content="index, follow">
 
 <script type="application/ld+json">
@@ -17,9 +15,9 @@
            "@id": "https:\/\/gkcalat.github.io\/kubeflow-docs"
       },
       "articleSection" : "docs",
-      "name" : "Kubeflow on Google Cloud",
-      "headline" : "Kubeflow on Google Cloud",
-      "description" : "Running Kubeflow on Kubernetes Engine and Google Cloud Platform",
+      "name" : "Upgrading",
+      "headline" : "Upgrading",
+      "description" : "How to upgrade your Kubeflow Pipelines deployment on Google Cloud",
       "inLanguage" : "en-US",
       "author" : "",
       "creator" : "",
@@ -29,8 +27,8 @@
       "copyrightYear" : "0001",
       "datePublished": "0001-01-01 00:00:00 \u002b0000 UTC",
       "dateModified" : "0001-01-01 00:00:00 \u002b0000 UTC",
-      "url" : "https:\/\/gkcalat.github.io\/kubeflow-docs\/docs\/",
-      "wordCount" : "0",
+      "url" : "https:\/\/gkcalat.github.io\/kubeflow-docs\/docs\/pipelines\/upgrade\/",
+      "wordCount" : "504",
       "keywords" : [ "Kubeflow on GCP" ]
   }
   </script>
@@ -44,17 +42,22 @@
 <meta name="msapplication-TileColor" content="#4279f4">
 <meta name="theme-color" content="#4279f4">
 
-<title>Kubeflow on Google Cloud | Kubeflow on Google Cloud Platform</title>
-<meta name="description" content="Running Kubeflow on Kubernetes Engine and Google Cloud Platform">
-<meta property="og:title" content="Kubeflow on Google Cloud" />
-<meta property="og:description" content="Running Kubeflow on Kubernetes Engine and Google Cloud Platform" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+<title>Upgrading | Kubeflow on Google Cloud Platform</title>
+<meta name="description" content="How to upgrade your Kubeflow Pipelines deployment on Google Cloud">
+<meta property="og:title" content="Upgrading" />
+<meta property="og:description" content="How to upgrade your Kubeflow Pipelines deployment on Google Cloud" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/pipelines/upgrade/" /><meta property="article:section" content="docs" />
 
-<meta itemprop="name" content="Kubeflow on Google Cloud">
-<meta itemprop="description" content="Running Kubeflow on Kubernetes Engine and Google Cloud Platform"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Kubeflow on Google Cloud"/>
-<meta name="twitter:description" content="Running Kubeflow on Kubernetes Engine and Google Cloud Platform"/>
+<meta property="article:modified_time" content="2022-11-09T21:46:30+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+
+<meta itemprop="name" content="Upgrading">
+<meta itemprop="description" content="How to upgrade your Kubeflow Pipelines deployment on Google Cloud">
+<meta itemprop="dateModified" content="2022-11-09T21:46:30+00:00" />
+<meta itemprop="wordCount" content="504">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Upgrading"/>
+<meta name="twitter:description" content="How to upgrade your Kubeflow Pipelines deployment on Google Cloud"/>
 
 
 
@@ -79,7 +82,7 @@ if (!doNotTrack) {
 </script>
 
   </head>
-  <body class="td-section">
+  <body class="td-page">
     <header>
       
 <nav class="js-navbar-scroll navbar navbar-expand-md navbar-dark  td-navbar">
@@ -162,7 +165,7 @@ if (!doNotTrack) {
   <nav class="collapse td-sidebar-nav" id="td-section-nav">
     <ul class="td-sidebar-nav__section pr-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-kubeflow-docsdocs-li">
-  <a href="/kubeflow-docs/docs/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section tree-root" id="m-kubeflow-docsdocs"><span class="td-sidebar-nav-active-item">Kubeflow on Google Cloud</span></a>
+  <a href="/kubeflow-docs/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-kubeflow-docsdocs"><span class="">Kubeflow on Google Cloud</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-kubeflow-docsdocsdeploy-li">
   <a href="/kubeflow-docs/docs/deploy/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-kubeflow-docsdocsdeploy"><span class="">Deployment</span></a>
@@ -185,15 +188,15 @@ if (!doNotTrack) {
   <a href="/kubeflow-docs/docs/deploy/delete-cli/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeploydelete-cli"><span class="">Deleting Kubeflow</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-kubeflow-docsdocspipelines-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-kubeflow-docsdocspipelines-li">
   <a href="/kubeflow-docs/docs/pipelines/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-kubeflow-docsdocspipelines"><span class="">Pipelines on Google Cloud</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocspipelinesauthentication-sdk-li">
   <a href="/kubeflow-docs/docs/pipelines/authentication-sdk/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesauthentication-sdk"><span class="">Connecting to Kubeflow Pipelines on Google Cloud using the SDK</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocspipelinesauthentication-pipelines-li">
   <a href="/kubeflow-docs/docs/pipelines/authentication-pipelines/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesauthentication-pipelines"><span class="">Authenticating Pipelines to Google Cloud</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocspipelinesupgrade-li">
-  <a href="/kubeflow-docs/docs/pipelines/upgrade/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesupgrade"><span class="">Upgrading</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-kubeflow-docsdocspipelinesupgrade-li">
+  <a href="/kubeflow-docs/docs/pipelines/upgrade/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesupgrade"><span class="td-sidebar-nav-active-item">Upgrading</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocspipelinesenable-gpu-and-tpu-li">
   <a href="/kubeflow-docs/docs/pipelines/enable-gpu-and-tpu/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesenable-gpu-and-tpu"><span class="">Enabling GPU and TPU</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocspipelinespreemptible-li">
@@ -225,11 +228,30 @@ if (!doNotTrack) {
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-<a id="print" href="https://gkcalat.github.io/kubeflow-docs/docs/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
+<a id="print" href="https://gkcalat.github.io/kubeflow-docs/docs/pipelines/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
 
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#before-you-begin">Before you begin</a>
+      <ul>
+        <li><a href="#upgrade-related-feature-matrix">Upgrade-related feature matrix</a></li>
+      </ul>
+    </li>
+    <li><a href="#kubeflow-pipelines-standalone">Kubeflow Pipelines Standalone</a></li>
+    <li><a href="#full-kubeflow">Full Kubeflow</a></li>
+    <li><a href="#ai-platform-pipelines">AI Platform Pipelines</a>
+      <ul>
+        <li><a href="#for-instances-_without_-managed-storage">For instances <em>without</em> managed storage:</a></li>
+        <li><a href="#for-instances-_with_-managed-storage">For instances <em>with</em> managed storage:</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
             
 
 	
@@ -263,17 +285,23 @@ if (!doNotTrack) {
             
   
 
-            <nav aria-label="breadcrumb" class="td-breadcrumbs td-breadcrumbs__single">
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
   <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="https://gkcalat.github.io/kubeflow-docs/docs/">Kubeflow on Google Cloud</a>
+  </li>
+  <li class="breadcrumb-item">
+    <a href="https://gkcalat.github.io/kubeflow-docs/docs/pipelines/">Pipelines on Google Cloud</a>
+  </li>
   <li class="breadcrumb-item active" aria-current="page">
-    <a href="https://gkcalat.github.io/kubeflow-docs/docs/" aria-disabled="true" class="btn-link disabled">Kubeflow on Google Cloud</a>
+    <a href="https://gkcalat.github.io/kubeflow-docs/docs/pipelines/upgrade/" aria-disabled="true" class="btn-link disabled">Upgrading</a>
   </li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>Kubeflow on Google Cloud</h1>
-  <div class="lead">Running Kubeflow on Kubernetes Engine and Google Cloud Platform</div>
+	<h1>Upgrading</h1>
+	<div class="lead">How to upgrade your Kubeflow Pipelines deployment on Google Cloud</div>
 	<header class="article-meta">
 		
 
@@ -290,96 +318,103 @@ if (!doNotTrack) {
   
 
 		
-			<p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; less than a minute &nbsp;</p>
+			<p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 3 minute read &nbsp;</p>
 
 		
-	</header>
-	
-        <div class="section-index">
-    
-    
-    
-    
-    
-    
-    
-    
-    <hr class="panel-line">
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/deploy/">Deployment</a>
-                </h5>
-                <p>Instructions for deploying Kubeflow on Google Cloud</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/pipelines/">Pipelines on Google Cloud</a>
-                </h5>
-                <p>Instructions for customizing and using Kubeflow Pipelines on Google Cloud</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/customizing/">Customize Kubeflow on GKE</a>
-                </h5>
-                <p>Tailoring a GKE deployment of Kubeflow</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/custom-domain/">Using Your Own Domain</a>
-                </h5>
-                <p>Using a custom domain with Kubeflow on GKE</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/authentication/">Authenticating Kubeflow to Google Cloud</a>
-                </h5>
-                <p>Authentication and authorization to Google Cloud</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/private-clusters/">Securing Your Clusters</a>
-                </h5>
-                <p>How to secure Kubeflow clusters using private GKE</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/troubleshooting/">Troubleshooting Deployments on GKE</a>
-                </h5>
-                <p>Help fixing problems on GKE and Google Cloud</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/anthos/">Kubeflow On-premises on Anthos</a>
-                </h5>
-                <p>Running Kubeflow across on-premises and cloud environments with Anthos</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/changelog/">Changelog</a>
-                </h5>
-                <p>Kubeflow on GCP Changelog</p>
-            </div>
-        
-    
+	</header>    
+	<h2 id="before-you-begin">Before you begin</h2>
+<p>There are various options on how to install Kubeflow Pipelines in the <a href="/docs/components/pipelines/installation/overview/">Installation Options for Kubeflow Pipelines</a> guide. Be aware that upgrade support and instructions will vary depending on the method you used to install Kubeflow Pipelines.</p>
+<h3 id="upgrade-related-feature-matrix">Upgrade-related feature matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Installation \ Features</th>
+<th>In-place upgrade</th>
+<th>Reinstallation on the same cluster</th>
+<th>Reinstallation on a different cluster</th>
+<th>User customizations across upgrades (via <a href="https://kustomize.io/">Kustomize</a>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standalone</td>
+<td>✅</td>
+<td>⚠️ Data is deleted by default.</td>
+<td></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><a href="https://github.com/kubeflow/pipelines/tree/sdk/release-1.8/manifests/kustomize/env/gcp">Standalone (managed storage)</a></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>full Kubeflow (&gt;= v1.1)</td>
+<td>✅</td>
+<td>✅</td>
+<td>Needs documentation</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>full Kubeflow (&lt; v1.1)</td>
+<td></td>
+<td>✅</td>
+<td>✅</td>
+<td></td>
+</tr>
+<tr>
+<td>AI Platform Pipelines</td>
+<td></td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>AI Platform Pipelines (managed storage)</td>
+<td></td>
+<td>✅</td>
+<td>✅</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Notes:</p>
+<ul>
+<li>When you deploy Kubeflow Pipelines with managed storage on Google Cloud, you pipeline&rsquo;s metadata and artifacts are stored in <a href="https://cloud.google.com/storage/docs">Cloud Storage</a> and <a href="https://cloud.google.com/sql/docs">Cloud SQL</a>. Using managed storage makes it easier to manage, back up, and restore Kubeflow Pipelines data.</li>
+</ul>
+<h2 id="kubeflow-pipelines-standalone">Kubeflow Pipelines Standalone</h2>
+<p>Upgrade Support for Kubeflow Pipelines Standalone is in <strong>Beta</strong>.</p>
+<p><a href="/docs/components/pipelines/installation/standalone-deployment/#upgrading-kubeflow-pipelines">Upgrading Kubeflow Pipelines Standalone</a> introduces how to upgrade in-place.</p>
+<h2 id="full-kubeflow">Full Kubeflow</h2>
+<p>On Google Cloud, the full Kubeflow deployment follows <a href="https://googlecontainertools.github.io/kpt/guides/producer/packages/">the package pattern</a> starting from Kubeflow 1.1.</p>
+<p>The package pattern enables you to upgrade the full Kubeflow in-place while keeping user customizations — refer to the <a href="/docs/gke/deploy/upgrade">Upgrade Kubeflow on Google Cloud</a> documentation for instructions.</p>
+<p>However, there&rsquo;s no current support to upgrade from Kubeflow 1.0 or earlier to Kubeflow 1.1 while keeping Kubeflow Pipelines data. This may change in the future, so provide your feedback in <a href="https://github.com/kubeflow/pipelines/issues/4346">kubeflow/pipelines#4346</a> on GitHub.</p>
+<h2 id="ai-platform-pipelines">AI Platform Pipelines</h2>
+<p>Upgrade Support for AI Platform Pipelines is in <strong>Alpha</strong>.</p>
+
+
+<div class="alert alert-warning" role="alert">
+<h4 class="alert-heading">Warning</h4>
+
+    Kubeflow Pipelines Standalone deployments also show up in the AI Platform Pipelines dashboard, DO NOT follow instructions below if you deployed Kubeflow Pipelines using standalone deployment.
+Because data is deleted by default when a Kubeflow Pipelines Standalone deployment is deleted.
+
 </div>
+
+<p>Below are the steps that describe how to upgrade your AI Platform Pipelines instance while keeping existing data:</p>
+<h3 id="for-instances-_without_-managed-storage">For instances <em>without</em> managed storage:</h3>
+<ol>
+<li><a href="https://cloud.google.com/ai-platform/pipelines/docs/getting-started#clean_up">Delete your AI Platform Pipelines instance</a> <strong>WITHOUT</strong> selecting <strong>Delete cluster</strong>. The persisted artifacts and database data are stored in persistent volumes in the cluster. They are kept by default when you do not delete the cluster.</li>
+<li><a href="https://console.cloud.google.com/marketplace/details/google-cloud-ai-platform/kubeflow-pipelines">Reinstall Kubeflow Pipelines from the Google Cloud Marketplace</a> using the same <strong>Google Kubernetes Engine cluster</strong>, <strong>namespace</strong>, and <strong>application name</strong>. Persisted data will be automatically picked up during reinstallation.</li>
+</ol>
+<h3 id="for-instances-_with_-managed-storage">For instances <em>with</em> managed storage:</h3>
+<ol>
+<li><a href="https://cloud.google.com/ai-platform/pipelines/docs/getting-started#clean_up">Delete your AI Platform Pipelines instance</a>.</li>
+<li>If you are upgrading from Kubeflow Pipelines 0.5.1, note that the Cloud Storage bucket is a required starting from 1.0.0. Previously deployed instances should be using a bucket named like &ldquo;<cloudsql instance connection name>-<database prefix or instance name>&rdquo;. Browse <a href="https://console.cloud.google.com/storage/browser">your Cloud Storage buckets</a> to find your existing bucket name and provide it in the next step.</li>
+<li><a href="https://console.cloud.google.com/marketplace/details/google-cloud-ai-platform/kubeflow-pipelines">Reinstall Kubeflow Pipelines from the Google Cloud Marketplace</a> using the same application name and managed storage options as before. You can freely install it in any cluster and namespace (not necessarily the same as before), because persisted artifacts and database data are stored in managed storages (Cloud Storage and Cloud SQL), and will be automatically picked up during reinstallation.</li>
+</ol>
 
 	
 		<style>
@@ -449,6 +484,7 @@ if (!doNotTrack) {
 	
 	
 </div>
+
 
           </main>
         </div>

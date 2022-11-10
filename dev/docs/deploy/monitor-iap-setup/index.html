@@ -4,8 +4,6 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.105.0">
-<link rel="alternate" type="text/html" href="https://gkcalat.github.io/kubeflow-docs/docs/_print/">
-<link rel="alternate" type="application/rss&#43;xml" href="https://gkcalat.github.io/kubeflow-docs/docs/index.xml">
 <meta name="robots" content="index, follow">
 
 <script type="application/ld+json">
@@ -17,9 +15,9 @@
            "@id": "https:\/\/gkcalat.github.io\/kubeflow-docs"
       },
       "articleSection" : "docs",
-      "name" : "Kubeflow on Google Cloud",
-      "headline" : "Kubeflow on Google Cloud",
-      "description" : "Running Kubeflow on Kubernetes Engine and Google Cloud Platform",
+      "name" : "Monitoring Cloud IAP Setup",
+      "headline" : "Monitoring Cloud IAP Setup",
+      "description" : "Instructions for monitoring and troubleshooting Cloud IAP",
       "inLanguage" : "en-US",
       "author" : "",
       "creator" : "",
@@ -29,8 +27,8 @@
       "copyrightYear" : "0001",
       "datePublished": "0001-01-01 00:00:00 \u002b0000 UTC",
       "dateModified" : "0001-01-01 00:00:00 \u002b0000 UTC",
-      "url" : "https:\/\/gkcalat.github.io\/kubeflow-docs\/docs\/",
-      "wordCount" : "0",
+      "url" : "https:\/\/gkcalat.github.io\/kubeflow-docs\/docs\/deploy\/monitor-iap-setup\/",
+      "wordCount" : "743",
       "keywords" : [ "Kubeflow on GCP" ]
   }
   </script>
@@ -44,17 +42,22 @@
 <meta name="msapplication-TileColor" content="#4279f4">
 <meta name="theme-color" content="#4279f4">
 
-<title>Kubeflow on Google Cloud | Kubeflow on Google Cloud Platform</title>
-<meta name="description" content="Running Kubeflow on Kubernetes Engine and Google Cloud Platform">
-<meta property="og:title" content="Kubeflow on Google Cloud" />
-<meta property="og:description" content="Running Kubeflow on Kubernetes Engine and Google Cloud Platform" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+<title>Monitoring Cloud IAP Setup | Kubeflow on Google Cloud Platform</title>
+<meta name="description" content="Instructions for monitoring and troubleshooting Cloud IAP">
+<meta property="og:title" content="Monitoring Cloud IAP Setup" />
+<meta property="og:description" content="Instructions for monitoring and troubleshooting Cloud IAP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/deploy/monitor-iap-setup/" /><meta property="article:section" content="docs" />
 
-<meta itemprop="name" content="Kubeflow on Google Cloud">
-<meta itemprop="description" content="Running Kubeflow on Kubernetes Engine and Google Cloud Platform"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Kubeflow on Google Cloud"/>
-<meta name="twitter:description" content="Running Kubeflow on Kubernetes Engine and Google Cloud Platform"/>
+<meta property="article:modified_time" content="2022-11-10T00:29:34+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+
+<meta itemprop="name" content="Monitoring Cloud IAP Setup">
+<meta itemprop="description" content="Instructions for monitoring and troubleshooting Cloud IAP">
+<meta itemprop="dateModified" content="2022-11-10T00:29:34+00:00" />
+<meta itemprop="wordCount" content="743">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Monitoring Cloud IAP Setup"/>
+<meta name="twitter:description" content="Instructions for monitoring and troubleshooting Cloud IAP"/>
 
 
 
@@ -79,7 +82,7 @@ if (!doNotTrack) {
 </script>
 
   </head>
-  <body class="td-section">
+  <body class="td-page">
     <header>
       
 <nav class="js-navbar-scroll navbar navbar-expand-md navbar-dark  td-navbar">
@@ -162,9 +165,9 @@ if (!doNotTrack) {
   <nav class="collapse td-sidebar-nav" id="td-section-nav">
     <ul class="td-sidebar-nav__section pr-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-kubeflow-docsdocs-li">
-  <a href="/kubeflow-docs/docs/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section tree-root" id="m-kubeflow-docsdocs"><span class="td-sidebar-nav-active-item">Kubeflow on Google Cloud</span></a>
+  <a href="/kubeflow-docs/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-kubeflow-docsdocs"><span class="">Kubeflow on Google Cloud</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-kubeflow-docsdocsdeploy-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-kubeflow-docsdocsdeploy-li">
   <a href="/kubeflow-docs/docs/deploy/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-kubeflow-docsdocsdeploy"><span class="">Deployment</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeployoverview-li">
@@ -179,8 +182,8 @@ if (!doNotTrack) {
   <a href="/kubeflow-docs/docs/deploy/deploy-cli/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeploydeploy-cli"><span class="">Deploying Kubeflow cluster</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeployupgrade-li">
   <a href="/kubeflow-docs/docs/deploy/upgrade/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeployupgrade"><span class="">Upgrade Kubeflow</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeploymonitor-iap-setup-li">
-  <a href="/kubeflow-docs/docs/deploy/monitor-iap-setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeploymonitor-iap-setup"><span class="">Monitoring Cloud IAP Setup</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-kubeflow-docsdocsdeploymonitor-iap-setup-li">
+  <a href="/kubeflow-docs/docs/deploy/monitor-iap-setup/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeploymonitor-iap-setup"><span class="td-sidebar-nav-active-item">Monitoring Cloud IAP Setup</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeploydelete-cli-li">
   <a href="/kubeflow-docs/docs/deploy/delete-cli/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeploydelete-cli"><span class="">Deleting Kubeflow</span></a>
 </li>
@@ -225,11 +228,20 @@ if (!doNotTrack) {
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-<a id="print" href="https://gkcalat.github.io/kubeflow-docs/docs/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
+<a id="print" href="https://gkcalat.github.io/kubeflow-docs/docs/deploy/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
 
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#monitoring-your-cloud-iap-setup">Monitoring your Cloud IAP setup</a></li>
+    <li><a href="#next-steps">Next steps</a></li>
+  </ul>
+</nav>
+      </div>
+    
             
 
 	
@@ -263,17 +275,23 @@ if (!doNotTrack) {
             
   
 
-            <nav aria-label="breadcrumb" class="td-breadcrumbs td-breadcrumbs__single">
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
   <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="https://gkcalat.github.io/kubeflow-docs/docs/">Kubeflow on Google Cloud</a>
+  </li>
+  <li class="breadcrumb-item">
+    <a href="https://gkcalat.github.io/kubeflow-docs/docs/deploy/">Deployment</a>
+  </li>
   <li class="breadcrumb-item active" aria-current="page">
-    <a href="https://gkcalat.github.io/kubeflow-docs/docs/" aria-disabled="true" class="btn-link disabled">Kubeflow on Google Cloud</a>
+    <a href="https://gkcalat.github.io/kubeflow-docs/docs/deploy/monitor-iap-setup/" aria-disabled="true" class="btn-link disabled">Monitoring Cloud IAP Setup</a>
   </li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>Kubeflow on Google Cloud</h1>
-  <div class="lead">Running Kubeflow on Kubernetes Engine and Google Cloud Platform</div>
+	<h1>Monitoring Cloud IAP Setup</h1>
+	<div class="lead">Instructions for monitoring and troubleshooting Cloud IAP</div>
 	<header class="article-meta">
 		
 
@@ -290,96 +308,133 @@ if (!doNotTrack) {
   
 
 		
-			<p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; less than a minute &nbsp;</p>
+			<p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 4 minute read &nbsp;</p>
 
 		
-	</header>
-	
-        <div class="section-index">
-    
-    
-    
-    
-    
-    
-    
-    
-    <hr class="panel-line">
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/deploy/">Deployment</a>
-                </h5>
-                <p>Instructions for deploying Kubeflow on Google Cloud</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/pipelines/">Pipelines on Google Cloud</a>
-                </h5>
-                <p>Instructions for customizing and using Kubeflow Pipelines on Google Cloud</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/customizing/">Customize Kubeflow on GKE</a>
-                </h5>
-                <p>Tailoring a GKE deployment of Kubeflow</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/custom-domain/">Using Your Own Domain</a>
-                </h5>
-                <p>Using a custom domain with Kubeflow on GKE</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/authentication/">Authenticating Kubeflow to Google Cloud</a>
-                </h5>
-                <p>Authentication and authorization to Google Cloud</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/private-clusters/">Securing Your Clusters</a>
-                </h5>
-                <p>How to secure Kubeflow clusters using private GKE</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/troubleshooting/">Troubleshooting Deployments on GKE</a>
-                </h5>
-                <p>Help fixing problems on GKE and Google Cloud</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/anthos/">Kubeflow On-premises on Anthos</a>
-                </h5>
-                <p>Running Kubeflow across on-premises and cloud environments with Anthos</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/changelog/">Changelog</a>
-                </h5>
-                <p>Kubeflow on GCP Changelog</p>
-            </div>
-        
-    
-</div>
+	</header>    
+	<p><a href="https://cloud.google.com/iap/docs/">Cloud Identity-Aware Proxy (Cloud IAP)</a> is
+the recommended solution for accessing your Kubeflow
+deployment from outside the cluster, when running Kubeflow on Google Cloud.</p>
+<p>This document is a step-by-step guide to ensuring that your IAP-secured endpoint
+is available, and to debugging problems that may cause the endpoint to be
+unavailable.</p>
+<h2 id="introduction">Introduction</h2>
+<p>When deploying Kubeflow using the <a href="/docs/deploy/deploy-cli/">command-line interface</a>,
+you choose the authentication method you want to use. One of the options is
+Cloud IAP. This document assumes that you have already deployed Kubeflow.</p>
+<p>Kubeflow uses the <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/managed-certs">Google-managed certificate</a>
+to provide an SSL certificate for the Kubeflow Ingress.</p>
+<p>Cloud IAP gives you the following benefits:</p>
+<ul>
+<li>Users can log in in using their Google Cloud accounts.</li>
+<li>You benefit from Google&rsquo;s security expertise to protect your sensitive
+workloads.</li>
+</ul>
+<h2 id="monitoring-your-cloud-iap-setup">Monitoring your Cloud IAP setup</h2>
+<p>Follow these instructions to monitor your Cloud IAP setup and troubleshoot any
+problems:</p>
+<ol>
+<li>
+<p>Examine the
+<a href="https://kubernetes.io/docs/concepts/services-networking/ingress/">Ingress</a>
+and Google Cloud Build (GCB) load balancer to make sure it is available:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">kubectl -n istio-system describe ingress
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Name:             envoy-ingress
+</span></span><span class="line"><span class="cl">Namespace:        kubeflow
+</span></span><span class="line"><span class="cl">Address:          35.244.132.160
+</span></span><span class="line"><span class="cl">Default backend:  default-http-backend:80 (10.20.0.10:8080)
+</span></span><span class="line"><span class="cl">Annotations:
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">Events:
+</span></span><span class="line"><span class="cl">   Type     Reason     Age                 From                     Message
+</span></span><span class="line"><span class="cl">   ----     ------     ----                ----                     -------
+</span></span><span class="line"><span class="cl">   Normal   ADD        12m                 loadbalancer-controller  kubeflow/envoy-ingress
+</span></span><span class="line"><span class="cl">   Warning  Translate  12m (x10 over 12m)  loadbalancer-controller  error while evaluating the ingress spec: could not find service &#34;kubeflow/envoy&#34;
+</span></span><span class="line"><span class="cl">   Warning  Translate  12m (x2 over 12m)   loadbalancer-controller  error while evaluating the ingress spec: error getting BackendConfig for port &#34;8080&#34; on service &#34;kubeflow/envoy&#34;, err: no BackendConfig for service port exists.
+</span></span><span class="line"><span class="cl">   Warning  Sync       12m                 loadbalancer-controller  Error during sync: Error running backend syncing routine: received errors when updating backend service: googleapi: Error 400: The resource &#39;projects/code-search-demo/global/backendServices/k8s-be-32230--bee2fc38fcd6383f&#39; is not ready, resourceNotReady
+</span></span><span class="line"><span class="cl"> googleapi: Error 400: The resource &#39;projects/code-search-demo/global/backendServices/k8s-be-32230--bee2fc38fcd6383f&#39; is not ready, resourceNotReady
+</span></span><span class="line"><span class="cl">   Normal  CREATE  11m  loadbalancer-controller  ip: 35.244.132.160
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></div><p>There should be an annotation indicating that we are using managed certificate:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">annotation:
+</span></span><span class="line"><span class="cl">  networking.gke.io/managed-certificates: gke-certificate
+</span></span></code></pre></div><p>Any problems with creating the load balancer are reported as Kubernetes
+events in the results of the above <code>describe</code> command.</p>
+<ul>
+<li>
+<p>If the address isn&rsquo;t set then there was a problem creating the load
+balancer.</p>
+</li>
+<li>
+<p>The <code>CREATE</code> event indicates the load balancer was successfully
+created on the specified IP address.</p>
+</li>
+<li>
+<p>The most common error is running out of Google Cloud resource quota. To fix this problem,
+you must either increase the quota for the relevant resource on your Google Cloud
+project or delete some existing resources.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Verify that a managed certificate resource is generated:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">kubectl describe -n istio-system managedcertificate gke-certificate
+</span></span></code></pre></div><p>The status field should have information about the current status of the Certificate.
+Eventually, certificate status should be <code>Active</code>.</p>
+</li>
+<li>
+<p>Wait for the load balancer to report the back ends as healthy:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">kubectl describe -n istio-system ingress envoy-ingress
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">Annotations:
+</span></span><span class="line"><span class="cl"> kubernetes.io/ingress.global-static-ip-name:  kubeflow-ip
+</span></span><span class="line"><span class="cl"> kubernetes.io/tls-acme:                       true
+</span></span><span class="line"><span class="cl"> certmanager.k8s.io/issuer:                    letsencrypt-prod
+</span></span><span class="line"><span class="cl"> ingress.kubernetes.io/backends:               {&#34;k8s-be-31380--5e1566252944dfdb&#34;:&#34;HEALTHY&#34;,&#34;k8s-be-32133--5e1566252944dfdb&#34;:&#34;HEALTHY&#34;}
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></div><p>Both backends should be reported as healthy.
+It can take several minutes for the load balancer to consider the back ends
+healthy.</p>
+<p>The service with port <code>31380</code> is the one that handles Kubeflow
+traffic. (31380 is the default port of the service <code>istio-ingressgateway</code>.)</p>
+<p>If the backend is unhealthy, check the pods in <code>istio-system</code>:</p>
+<ul>
+<li><code>kubectl get pods -n istio-system</code></li>
+<li>The <code>istio-ingressgateway-XX</code> pods should be running</li>
+<li>Check the logs of pod <code>backend-updater-0</code>, <code>iap-enabler-XX</code> to see if there is any error</li>
+<li>Follow the steps <a href="/docs/troubleshooting/#502-server-error">here</a> to check the load balancer and backend service on Google Cloud.</li>
+</ul>
+</li>
+<li>
+<p>Try accessing Cloud IAP at the fully qualified domain name in your web
+browser:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://&lt;your-fully-qualified-domain-name&gt;     
+</span></span></code></pre></div><p>If you get SSL errors when you log in, this typically means that your SSL
+certificate is still propagating. Wait a few minutes and try again. SSL
+propagation can take up to 10 minutes.</p>
+<p>If you do not see a login prompt and you get a 404 error, the configuration
+of Cloud IAP is not yet complete. Keep retrying for up to 10 minutes.</p>
+</li>
+<li>
+<p>If you get an error <code>Error: redirect_uri_mismatch</code> after logging in, this means the list of OAuth authorized redirect URIs does not include your domain.</p>
+<p>The full error message looks like the following example and includes the 
+relevant links:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">The redirect URI in the request, https://&lt;my_kubeflow&gt;.endpoints.&lt;my_project&gt;.cloud.goog/_gcp_gatekeeper/authenticate, does not match the ones authorized for the OAuth client. 	
+</span></span><span class="line"><span class="cl">To update the authorized redirect URIs, visit: https://console.developers.google.com/apis/credentials/oauthclient/22222222222-7meeee7a9a76jvg54j0g2lv8lrsb4l8g.apps.googleusercontent.com?project=22222222222	
+</span></span></code></pre></div><p>Follow the link in the error message to find the OAuth credential being used
+and add the redirect URI listed in the error message to the list of 
+authorized URIs. For more information, read the guide to 
+<a href="/docs/deploy/oauth-setup/">setting up OAuth for Cloud IAP</a>.</p>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<ul>
+<li>The <a href="/docs/troubleshooting/">GKE troubleshooting guide</a> for Kubeflow.</li>
+<li>Guide to <a href="/docs/components/multi-tenancy/getting-started">sharing cluster access</a>.</li>
+<li>Google Cloud guide to <a href="https://cloud.google.com/iap/docs/">Cloud IAP</a>.</li>
+</ul>
 
 	
 		<style>
@@ -449,6 +504,7 @@ if (!doNotTrack) {
 	
 	
 </div>
+
 
           </main>
         </div>

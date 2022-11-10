@@ -4,8 +4,6 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.105.0">
-<link rel="alternate" type="text/html" href="https://gkcalat.github.io/kubeflow-docs/docs/_print/">
-<link rel="alternate" type="application/rss&#43;xml" href="https://gkcalat.github.io/kubeflow-docs/docs/index.xml">
 <meta name="robots" content="index, follow">
 
 <script type="application/ld+json">
@@ -17,9 +15,9 @@
            "@id": "https:\/\/gkcalat.github.io\/kubeflow-docs"
       },
       "articleSection" : "docs",
-      "name" : "Kubeflow on Google Cloud",
-      "headline" : "Kubeflow on Google Cloud",
-      "description" : "Running Kubeflow on Kubernetes Engine and Google Cloud Platform",
+      "name" : "Deleting Kubeflow",
+      "headline" : "Deleting Kubeflow",
+      "description" : "Deleting Kubeflow from Google Cloud using the command line interface (CLI)",
       "inLanguage" : "en-US",
       "author" : "",
       "creator" : "",
@@ -29,8 +27,8 @@
       "copyrightYear" : "0001",
       "datePublished": "0001-01-01 00:00:00 \u002b0000 UTC",
       "dateModified" : "0001-01-01 00:00:00 \u002b0000 UTC",
-      "url" : "https:\/\/gkcalat.github.io\/kubeflow-docs\/docs\/",
-      "wordCount" : "0",
+      "url" : "https:\/\/gkcalat.github.io\/kubeflow-docs\/docs\/deploy\/delete-cli\/",
+      "wordCount" : "429",
       "keywords" : [ "Kubeflow on GCP" ]
   }
   </script>
@@ -44,17 +42,22 @@
 <meta name="msapplication-TileColor" content="#4279f4">
 <meta name="theme-color" content="#4279f4">
 
-<title>Kubeflow on Google Cloud | Kubeflow on Google Cloud Platform</title>
-<meta name="description" content="Running Kubeflow on Kubernetes Engine and Google Cloud Platform">
-<meta property="og:title" content="Kubeflow on Google Cloud" />
-<meta property="og:description" content="Running Kubeflow on Kubernetes Engine and Google Cloud Platform" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+<title>Deleting Kubeflow | Kubeflow on Google Cloud Platform</title>
+<meta name="description" content="Deleting Kubeflow from Google Cloud using the command line interface (CLI)">
+<meta property="og:title" content="Deleting Kubeflow" />
+<meta property="og:description" content="Deleting Kubeflow from Google Cloud using the command line interface (CLI)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/deploy/delete-cli/" /><meta property="article:section" content="docs" />
 
-<meta itemprop="name" content="Kubeflow on Google Cloud">
-<meta itemprop="description" content="Running Kubeflow on Kubernetes Engine and Google Cloud Platform"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Kubeflow on Google Cloud"/>
-<meta name="twitter:description" content="Running Kubeflow on Kubernetes Engine and Google Cloud Platform"/>
+<meta property="article:modified_time" content="2022-11-10T00:03:02+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+
+<meta itemprop="name" content="Deleting Kubeflow">
+<meta itemprop="description" content="Deleting Kubeflow from Google Cloud using the command line interface (CLI)">
+<meta itemprop="dateModified" content="2022-11-10T00:03:02+00:00" />
+<meta itemprop="wordCount" content="429">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Deleting Kubeflow"/>
+<meta name="twitter:description" content="Deleting Kubeflow from Google Cloud using the command line interface (CLI)"/>
 
 
 
@@ -79,7 +82,7 @@ if (!doNotTrack) {
 </script>
 
   </head>
-  <body class="td-section">
+  <body class="td-page">
     <header>
       
 <nav class="js-navbar-scroll navbar navbar-expand-md navbar-dark  td-navbar">
@@ -162,9 +165,9 @@ if (!doNotTrack) {
   <nav class="collapse td-sidebar-nav" id="td-section-nav">
     <ul class="td-sidebar-nav__section pr-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-kubeflow-docsdocs-li">
-  <a href="/kubeflow-docs/docs/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section tree-root" id="m-kubeflow-docsdocs"><span class="td-sidebar-nav-active-item">Kubeflow on Google Cloud</span></a>
+  <a href="/kubeflow-docs/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-kubeflow-docsdocs"><span class="">Kubeflow on Google Cloud</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-kubeflow-docsdocsdeploy-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-kubeflow-docsdocsdeploy-li">
   <a href="/kubeflow-docs/docs/deploy/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-kubeflow-docsdocsdeploy"><span class="">Deployment</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeployoverview-li">
@@ -181,8 +184,8 @@ if (!doNotTrack) {
   <a href="/kubeflow-docs/docs/deploy/upgrade/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeployupgrade"><span class="">Upgrade Kubeflow</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeploymonitor-iap-setup-li">
   <a href="/kubeflow-docs/docs/deploy/monitor-iap-setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeploymonitor-iap-setup"><span class="">Monitoring Cloud IAP Setup</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeploydelete-cli-li">
-  <a href="/kubeflow-docs/docs/deploy/delete-cli/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeploydelete-cli"><span class="">Deleting Kubeflow</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-kubeflow-docsdocsdeploydelete-cli-li">
+  <a href="/kubeflow-docs/docs/deploy/delete-cli/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeploydelete-cli"><span class="td-sidebar-nav-active-item">Deleting Kubeflow</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-kubeflow-docsdocspipelines-li">
@@ -225,11 +228,25 @@ if (!doNotTrack) {
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-<a id="print" href="https://gkcalat.github.io/kubeflow-docs/docs/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
+<a id="print" href="https://gkcalat.github.io/kubeflow-docs/docs/deploy/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
 
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#before-you-start">Before you start</a></li>
+    <li><a href="#deleting-your-kubeflow-cluster">Deleting your Kubeflow cluster</a></li>
+    <li><a href="#clean-up-your-management-cluster">Clean up your management cluster</a>
+      <ul>
+        <li><a href="#delete-or-keep-managed-google-cloud-resources">Delete or keep managed Google Cloud resources</a></li>
+        <li><a href="#delete-management-cluster">Delete management cluster</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
             
 
 	
@@ -263,17 +280,23 @@ if (!doNotTrack) {
             
   
 
-            <nav aria-label="breadcrumb" class="td-breadcrumbs td-breadcrumbs__single">
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
   <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="https://gkcalat.github.io/kubeflow-docs/docs/">Kubeflow on Google Cloud</a>
+  </li>
+  <li class="breadcrumb-item">
+    <a href="https://gkcalat.github.io/kubeflow-docs/docs/deploy/">Deployment</a>
+  </li>
   <li class="breadcrumb-item active" aria-current="page">
-    <a href="https://gkcalat.github.io/kubeflow-docs/docs/" aria-disabled="true" class="btn-link disabled">Kubeflow on Google Cloud</a>
+    <a href="https://gkcalat.github.io/kubeflow-docs/docs/deploy/delete-cli/" aria-disabled="true" class="btn-link disabled">Deleting Kubeflow</a>
   </li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>Kubeflow on Google Cloud</h1>
-  <div class="lead">Running Kubeflow on Kubernetes Engine and Google Cloud Platform</div>
+	<h1>Deleting Kubeflow</h1>
+	<div class="lead">Deleting Kubeflow from Google Cloud using the command line interface (CLI)</div>
 	<header class="article-meta">
 		
 
@@ -290,96 +313,74 @@ if (!doNotTrack) {
   
 
 		
-			<p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; less than a minute &nbsp;</p>
+			<p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 3 minute read &nbsp;</p>
 
 		
-	</header>
-	
-        <div class="section-index">
-    
-    
-    
-    
-    
-    
-    
-    
-    <hr class="panel-line">
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/deploy/">Deployment</a>
-                </h5>
-                <p>Instructions for deploying Kubeflow on Google Cloud</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/pipelines/">Pipelines on Google Cloud</a>
-                </h5>
-                <p>Instructions for customizing and using Kubeflow Pipelines on Google Cloud</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/customizing/">Customize Kubeflow on GKE</a>
-                </h5>
-                <p>Tailoring a GKE deployment of Kubeflow</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/custom-domain/">Using Your Own Domain</a>
-                </h5>
-                <p>Using a custom domain with Kubeflow on GKE</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/authentication/">Authenticating Kubeflow to Google Cloud</a>
-                </h5>
-                <p>Authentication and authorization to Google Cloud</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/private-clusters/">Securing Your Clusters</a>
-                </h5>
-                <p>How to secure Kubeflow clusters using private GKE</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/troubleshooting/">Troubleshooting Deployments on GKE</a>
-                </h5>
-                <p>Help fixing problems on GKE and Google Cloud</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/anthos/">Kubeflow On-premises on Anthos</a>
-                </h5>
-                <p>Running Kubeflow across on-premises and cloud environments with Anthos</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/changelog/">Changelog</a>
-                </h5>
-                <p>Kubeflow on GCP Changelog</p>
-            </div>
-        
-    
-</div>
+	</header>    
+	<p>This page explains how to delete your Kubeflow cluster or management cluster on
+Google Cloud.</p>
+<h2 id="before-you-start">Before you start</h2>
+<p>This guide assumes the following settings:</p>
+<ul>
+<li>
+<p>For Management cluster: The <code>${MGMT_PROJECT}</code>, <code>${MGMT_DIR}</code> and <code>${MGMT_NAME}</code> environment variables
+are the same as in <a href="/docs/deploy/management-setup#configure-environment-variables">Deploy Management cluster</a>.</p>
+</li>
+<li>
+<p>For Kubeflow cluster: The <code>${KF_PROJECT}</code>, <code>${KF_NAME}</code> and <code>${MGMTCTXT}</code> environment variables
+are the same as in <a href="../deploy-cli#environment-variables">Deploy Kubeflow cluster</a>.</p>
+</li>
+<li>
+<p>The <code>${KF_DIR}</code> environment variable contains the path to
+your Kubeflow application directory, which holds your Kubeflow configuration
+files. For example, <code>/opt/kubeflow-distribution/kubeflow/</code>.</p>
+</li>
+</ul>
+<h2 id="deleting-your-kubeflow-cluster">Deleting your Kubeflow cluster</h2>
+<ol>
+<li>
+<p>To delete the applications running in the Kubeflow namespace, remove that namespace:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl delete namespace kubeflow
+</span></span></code></pre></div></li>
+<li>
+<p>To delete the cluster and all Google Cloud resources, run the following commands:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">KF_DIR</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">make delete
+</span></span></code></pre></div><p><strong>Warning</strong>: this will delete the persistent disks storing metadata. If you want to preserve the disks, don&rsquo;t run this command;
+instead selectively delete only those resources you want to delete.</p>
+</li>
+</ol>
+<h2 id="clean-up-your-management-cluster">Clean up your management cluster</h2>
+<p>The following instructions introduce how to clean up all resources created when
+installing management cluster in management project, and when using management cluster to manage Google Cloud resources in managed Kubeflow projects.</p>
+<h3 id="delete-or-keep-managed-google-cloud-resources">Delete or keep managed Google Cloud resources</h3>
+<p>There are Google Cloud resources managed by Config Connector in the
+management cluster after you deploy Kubeflow clusters with this management
+cluster.</p>
+<p>To delete all the managed Google Cloud resources, delete the managed project namespace:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl config use-context <span class="s2">&#34;</span><span class="si">${</span><span class="nv">MGMTCTXT</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">kubectl delete namespace --wait <span class="s2">&#34;</span><span class="si">${</span><span class="nv">KF_PROJECT</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><p>To keep all the managed Google Cloud resources, you can <a href="#delete-management-cluster">delete the management
+cluster</a> directly.</p>
+<p>If you need fine-grained control, refer to
+<a href="https://cloud.google.com/config-connector/docs/how-to/managing-deleting-resources#keeping_resources_after_deletion">Config Connector: Keeping resources after deletion</a>
+for more details.</p>
+<p>After deleting Config Connector resources for a managed project, you can revoke IAM permission
+that let the management cluster manage the project:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcloud projects remove-iam-policy-binding <span class="s2">&#34;</span><span class="si">${</span><span class="nv">KF_PROJECT</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    <span class="s2">&#34;--member=serviceAccount:</span><span class="si">${</span><span class="nv">MGMT_NAME</span><span class="si">}</span><span class="s2">-cnrm-system@</span><span class="si">${</span><span class="nv">MGMT_PROJECT</span><span class="si">}</span><span class="s2">.iam.gserviceaccount.com&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --role<span class="o">=</span>roles/owner
+</span></span></code></pre></div><h3 id="delete-management-cluster">Delete management cluster</h3>
+<p>To delete the Google service account and the management cluster:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">MGMT_DIR</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">make delete-cluster
+</span></span></code></pre></div><p>Starting from Kubeflow v1.5, Google Cloud distribution has switched to Config Controller for Google-managed Management cluster. You can learn more detail by reading <a href="https://cloud.google.com/anthos-config-management/docs/how-to/config-controller-setup#delete_your">Delete your Config Controller</a>.</p>
+<p>Note, after deleting the management cluster, all the managed Google Cloud
+resources will be kept. You will be responsible for managing them by yourself.
+If you want to delete the managed Google Cloud resources, make sure to delete resources in the <code>${KF_PROJECT}</code> namespace in the management cluster first.
+You can learn more about the <code>${KF_PROJECT}</code> namespace in <code>kubeflow-distribution/kubeflow/kcc</code> folder.</p>
+<p>You can create a management cluster to manage them again if you apply the same
+Config Connector resources. Refer to <a href="https://cloud.google.com/config-connector/docs/how-to/managing-deleting-resources#acquiring_an_existing_resource">Managing and deleting resources - Acquiring an existing resource</a>.</p>
 
 	
 		<style>
@@ -449,6 +450,7 @@ if (!doNotTrack) {
 	
 	
 </div>
+
 
           </main>
         </div>

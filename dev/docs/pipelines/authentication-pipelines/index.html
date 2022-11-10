@@ -4,8 +4,6 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.105.0">
-<link rel="alternate" type="text/html" href="https://gkcalat.github.io/kubeflow-docs/docs/_print/">
-<link rel="alternate" type="application/rss&#43;xml" href="https://gkcalat.github.io/kubeflow-docs/docs/index.xml">
 <meta name="robots" content="index, follow">
 
 <script type="application/ld+json">
@@ -17,9 +15,9 @@
            "@id": "https:\/\/gkcalat.github.io\/kubeflow-docs"
       },
       "articleSection" : "docs",
-      "name" : "Kubeflow on Google Cloud",
-      "headline" : "Kubeflow on Google Cloud",
-      "description" : "Running Kubeflow on Kubernetes Engine and Google Cloud Platform",
+      "name" : "Authenticating Pipelines to Google Cloud",
+      "headline" : "Authenticating Pipelines to Google Cloud",
+      "description" : "Authentication and authorization to Google Cloud in Pipelines",
       "inLanguage" : "en-US",
       "author" : "",
       "creator" : "",
@@ -29,8 +27,8 @@
       "copyrightYear" : "0001",
       "datePublished": "0001-01-01 00:00:00 \u002b0000 UTC",
       "dateModified" : "0001-01-01 00:00:00 \u002b0000 UTC",
-      "url" : "https:\/\/gkcalat.github.io\/kubeflow-docs\/docs\/",
-      "wordCount" : "0",
+      "url" : "https:\/\/gkcalat.github.io\/kubeflow-docs\/docs\/pipelines\/authentication-pipelines\/",
+      "wordCount" : "1365",
       "keywords" : [ "Kubeflow on GCP" ]
   }
   </script>
@@ -44,17 +42,22 @@
 <meta name="msapplication-TileColor" content="#4279f4">
 <meta name="theme-color" content="#4279f4">
 
-<title>Kubeflow on Google Cloud | Kubeflow on Google Cloud Platform</title>
-<meta name="description" content="Running Kubeflow on Kubernetes Engine and Google Cloud Platform">
-<meta property="og:title" content="Kubeflow on Google Cloud" />
-<meta property="og:description" content="Running Kubeflow on Kubernetes Engine and Google Cloud Platform" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+<title>Authenticating Pipelines to Google Cloud | Kubeflow on Google Cloud Platform</title>
+<meta name="description" content="Authentication and authorization to Google Cloud in Pipelines">
+<meta property="og:title" content="Authenticating Pipelines to Google Cloud" />
+<meta property="og:description" content="Authentication and authorization to Google Cloud in Pipelines" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/pipelines/authentication-pipelines/" /><meta property="article:section" content="docs" />
 
-<meta itemprop="name" content="Kubeflow on Google Cloud">
-<meta itemprop="description" content="Running Kubeflow on Kubernetes Engine and Google Cloud Platform"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Kubeflow on Google Cloud"/>
-<meta name="twitter:description" content="Running Kubeflow on Kubernetes Engine and Google Cloud Platform"/>
+<meta property="article:modified_time" content="2022-11-09T21:46:30+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+
+<meta itemprop="name" content="Authenticating Pipelines to Google Cloud">
+<meta itemprop="description" content="Authentication and authorization to Google Cloud in Pipelines">
+<meta itemprop="dateModified" content="2022-11-09T21:46:30+00:00" />
+<meta itemprop="wordCount" content="1365">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Authenticating Pipelines to Google Cloud"/>
+<meta name="twitter:description" content="Authentication and authorization to Google Cloud in Pipelines"/>
 
 
 
@@ -79,7 +82,7 @@ if (!doNotTrack) {
 </script>
 
   </head>
-  <body class="td-section">
+  <body class="td-page">
     <header>
       
 <nav class="js-navbar-scroll navbar navbar-expand-md navbar-dark  td-navbar">
@@ -162,7 +165,7 @@ if (!doNotTrack) {
   <nav class="collapse td-sidebar-nav" id="td-section-nav">
     <ul class="td-sidebar-nav__section pr-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-kubeflow-docsdocs-li">
-  <a href="/kubeflow-docs/docs/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section tree-root" id="m-kubeflow-docsdocs"><span class="td-sidebar-nav-active-item">Kubeflow on Google Cloud</span></a>
+  <a href="/kubeflow-docs/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-kubeflow-docsdocs"><span class="">Kubeflow on Google Cloud</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-kubeflow-docsdocsdeploy-li">
   <a href="/kubeflow-docs/docs/deploy/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-kubeflow-docsdocsdeploy"><span class="">Deployment</span></a>
@@ -185,13 +188,13 @@ if (!doNotTrack) {
   <a href="/kubeflow-docs/docs/deploy/delete-cli/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeploydelete-cli"><span class="">Deleting Kubeflow</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-kubeflow-docsdocspipelines-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-kubeflow-docsdocspipelines-li">
   <a href="/kubeflow-docs/docs/pipelines/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-kubeflow-docsdocspipelines"><span class="">Pipelines on Google Cloud</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocspipelinesauthentication-sdk-li">
   <a href="/kubeflow-docs/docs/pipelines/authentication-sdk/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesauthentication-sdk"><span class="">Connecting to Kubeflow Pipelines on Google Cloud using the SDK</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocspipelinesauthentication-pipelines-li">
-  <a href="/kubeflow-docs/docs/pipelines/authentication-pipelines/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesauthentication-pipelines"><span class="">Authenticating Pipelines to Google Cloud</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-kubeflow-docsdocspipelinesauthentication-pipelines-li">
+  <a href="/kubeflow-docs/docs/pipelines/authentication-pipelines/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesauthentication-pipelines"><span class="td-sidebar-nav-active-item">Authenticating Pipelines to Google Cloud</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocspipelinesupgrade-li">
   <a href="/kubeflow-docs/docs/pipelines/upgrade/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesupgrade"><span class="">Upgrading</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocspipelinesenable-gpu-and-tpu-li">
@@ -225,11 +228,30 @@ if (!doNotTrack) {
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-<a id="print" href="https://gkcalat.github.io/kubeflow-docs/docs/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
+<a id="print" href="https://gkcalat.github.io/kubeflow-docs/docs/pipelines/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
 
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#before-you-begin">Before you begin</a></li>
+    <li><a href="#compute-engine-default-service-account">Compute Engine default service account</a>
+      <ul>
+        <li><a href="#cluster-setup-to-use-compute-engine-default-service-account">Cluster setup to use Compute Engine default service account</a></li>
+        <li><a href="#authoring-pipelines-to-use-default-service-account">Authoring pipelines to use default service account</a></li>
+      </ul>
+    </li>
+    <li><a href="#securing-the-cluster-with-fine-grained-google-cloud-permission-control">Securing the cluster with fine-grained Google Cloud permission control</a>
+      <ul>
+        <li><a href="#workload-identity">Workload Identity</a></li>
+        <li><a href="#google-service-account-keys-stored-as-kubernetes-secrets">Google service account keys stored as Kubernetes secrets</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
             
 
 	
@@ -263,17 +285,23 @@ if (!doNotTrack) {
             
   
 
-            <nav aria-label="breadcrumb" class="td-breadcrumbs td-breadcrumbs__single">
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
   <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="https://gkcalat.github.io/kubeflow-docs/docs/">Kubeflow on Google Cloud</a>
+  </li>
+  <li class="breadcrumb-item">
+    <a href="https://gkcalat.github.io/kubeflow-docs/docs/pipelines/">Pipelines on Google Cloud</a>
+  </li>
   <li class="breadcrumb-item active" aria-current="page">
-    <a href="https://gkcalat.github.io/kubeflow-docs/docs/" aria-disabled="true" class="btn-link disabled">Kubeflow on Google Cloud</a>
+    <a href="https://gkcalat.github.io/kubeflow-docs/docs/pipelines/authentication-pipelines/" aria-disabled="true" class="btn-link disabled">Authenticating Pipelines to Google Cloud</a>
   </li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>Kubeflow on Google Cloud</h1>
-  <div class="lead">Running Kubeflow on Kubernetes Engine and Google Cloud Platform</div>
+	<h1>Authenticating Pipelines to Google Cloud</h1>
+	<div class="lead">Authentication and authorization to Google Cloud in Pipelines</div>
 	<header class="article-meta">
 		
 
@@ -290,96 +318,151 @@ if (!doNotTrack) {
   
 
 		
-			<p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; less than a minute &nbsp;</p>
+			<p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 7 minute read &nbsp;</p>
 
 		
-	</header>
-	
-        <div class="section-index">
-    
-    
-    
-    
-    
-    
-    
-    
-    <hr class="panel-line">
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/deploy/">Deployment</a>
-                </h5>
-                <p>Instructions for deploying Kubeflow on Google Cloud</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/pipelines/">Pipelines on Google Cloud</a>
-                </h5>
-                <p>Instructions for customizing and using Kubeflow Pipelines on Google Cloud</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/customizing/">Customize Kubeflow on GKE</a>
-                </h5>
-                <p>Tailoring a GKE deployment of Kubeflow</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/custom-domain/">Using Your Own Domain</a>
-                </h5>
-                <p>Using a custom domain with Kubeflow on GKE</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/authentication/">Authenticating Kubeflow to Google Cloud</a>
-                </h5>
-                <p>Authentication and authorization to Google Cloud</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/private-clusters/">Securing Your Clusters</a>
-                </h5>
-                <p>How to secure Kubeflow clusters using private GKE</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/troubleshooting/">Troubleshooting Deployments on GKE</a>
-                </h5>
-                <p>Help fixing problems on GKE and Google Cloud</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/anthos/">Kubeflow On-premises on Anthos</a>
-                </h5>
-                <p>Running Kubeflow across on-premises and cloud environments with Anthos</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/changelog/">Changelog</a>
-                </h5>
-                <p>Kubeflow on GCP Changelog</p>
-            </div>
-        
-    
+	</header>    
+	<p>This page describes authentication for Kubeflow Pipelines to Google Cloud.
+Available options listed below have different tradeoffs. You should choose the one that fits your use-case.</p>
+<ul>
+<li>Configuring your cluster to access Google Cloud using <a href="#compute-engine-default-service-account">Compute Engine default service account</a> with the &ldquo;cloud-platform&rdquo; scope is easier to set up than the other options. However, this approach grants excessive permissions. Therefore, it is not suitable if you need workload permission separation.</li>
+<li><a href="#workload-identity">Workload Identity</a> takes more efforts to set up, but allows fine-grained permission control. It is recommended for production use-cases.</li>
+<li><a href="#google-service-account-keys-stored-as-kubernetes-secrets">Google service account keys stored as Kubernetes secrets</a> is the legacy approach and no longer recommended in GKE. However, it&rsquo;s the only option to use Google Cloud APIs when your cluster is an <a href="https://cloud.google.com/anthos">anthos</a> or on-prem cluster.</li>
+</ul>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>There are various options on how to install Kubeflow Pipelines in the <a href="/docs/components/pipelines/installation/overview/">Installation Options for Kubeflow Pipelines</a> guide.
+Be aware that authentication support and cluster setup instructions will vary depending on the method you used to install Kubeflow Pipelines.</p>
+<ul>
+<li>For Kubeflow Pipelines standalone, you can compare and choose from all 3 options.</li>
+<li>For full Kubeflow starting from Kubeflow 1.1, <a href="#workload-identity">Workload Identity</a> is the recommended and default option.</li>
+<li>For AI Platform Pipelines, <a href="#compute-engine-default-service-account">Compute Engine default service account</a> is the only supported option.</li>
+</ul>
+<h2 id="compute-engine-default-service-account">Compute Engine default service account</h2>
+<p>This is good for trying out Kubeflow Pipelines, because it is easy to set up.</p>
+<p>However, it does not support permission separation for workloads in the cluster. <strong>Any workload</strong> in the cluster will be able to call <strong>any Google Cloud APIs</strong> in the chosen scope.</p>
+
+
+<div class="alert alert-warning" role="alert">
+
+
+    NOTE: Using pipelines with Compute Engine default service account is not supported in Full Kubeflow deployment.
+
 </div>
+
+<h3 id="cluster-setup-to-use-compute-engine-default-service-account">Cluster setup to use Compute Engine default service account</h3>
+<p>By default, your GKE nodes use <a href="https://cloud.google.com/compute/docs/access/service-accounts#default_service_account">Compute Engine default service account</a>. If you allowed <code>cloud-platform</code> scope when creating the cluster,
+Kubeflow Pipelines can authenticate to Google Cloud and manage resources in your project without further configuration.</p>
+<p>Use one of the following options to create a GKE cluster that uses the Compute Engine default service account:</p>
+<ul>
+<li>If you followed instructions in <a href="https://cloud.google.com/ai-platform/pipelines/docs/setting-up">Setting up AI Platform Pipelines</a> and checked <code>Allow access to the following Cloud APIs</code>, your cluster is already using Compute Engine default service account.</li>
+<li>In Google Cloud Console UI, you can enable it in <code>Create a Kubernetes cluster -&gt; default-pool -&gt; Security -&gt; Access Scopes -&gt; Allow full access to all Cloud APIs</code> like the following:
+<img src="/docs/images/pipelines/v1/gke-allow-full-access.png"></li>
+<li>Using <code>gcloud</code> CLI, you can enable it with <code>--scopes cloud-platform</code> like the following:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcloud container clusters create &lt;cluster-name&gt; <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --scopes cloud-platform
+</span></span></code></pre></div><p>Please refer to <a href="https://cloud.google.com/sdk/gcloud/reference/container/clusters/create#--scopes">gcloud container clusters create command documentation</a> for other available options.</p>
+<h3 id="authoring-pipelines-to-use-default-service-account">Authoring pipelines to use default service account</h3>
+<p>Pipelines don&rsquo;t need any specific changes to authenticate to Google Cloud, it will use the default service account transparently.</p>
+<p>However, you must update existing pipelines that use the <a href="https://kubeflow-pipelines.readthedocs.io/en/stable/source/kfp.extensions.html#kfp.gcp.use_gcp_secret">use_gcp_secret kfp sdk operator</a>. Remove the <code>use_gcp_secret</code> usage to let your pipeline authenticate to Google Cloud using the default service account.</p>
+<h2 id="securing-the-cluster-with-fine-grained-google-cloud-permission-control">Securing the cluster with fine-grained Google Cloud permission control</h2>
+<h3 id="workload-identity">Workload Identity</h3>
+<blockquote>
+<p>Workload Identity is the recommended way for your GKE applications to consume services provided by Google APIs. You accomplish this by configuring a <a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/">Kubernetes service account</a> to act as a <a href="https://cloud.google.com/iam/docs/service-accounts">Google service account</a>. Any Pods running as the Kubernetes service account then use the Google service account to authenticate to cloud services.</p>
+</blockquote>
+<p>Referenced from <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity">Workload Identity Documentation</a>. Please read this doc for:</p>
+<ul>
+<li>A detailed introduction to Workload Identity.</li>
+<li>Instructions to enable it on your cluster.</li>
+<li>Whether its limitations affect your adoption.</li>
+</ul>
+<h4 id="terminology">Terminology</h4>
+<p>This document distinguishes between <a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/">Kubernetes service accounts</a> (KSAs) and <a href="https://cloud.google.com/iam/docs/service-accounts">Google service accounts</a> (GSAs). KSAs are Kubernetes resources, while GSAs are specific to Google Cloud. Other documentation usually refers to both of them as just &ldquo;service accounts&rdquo;.</p>
+<h4 id="authoring-pipelines-to-use-workload-identity">Authoring pipelines to use Workload Identity</h4>
+<p>Pipelines don&rsquo;t need any specific changes to authenticate to Google Cloud. With Workload Identity, pipelines run as the Google service account that is bound to the KSA.</p>
+<p>However, existing pipelines that use <a href="https://kubeflow-pipelines.readthedocs.io/en/stable/source/kfp.extensions.html#kfp.gcp.use_gcp_secret">use_gcp_secret kfp sdk operator</a> need to remove the <code>use_gcp_secret</code> usage to use the bound GSA.
+You can also continue to use <code>use_gcp_secret</code> in a cluster with Workload Identity enabled and <code>use_gcp_secret</code> will take precedence for those workloads.</p>
+<h4 id="cluster-setup-to-use-workload-identity-for-full-kubeflow">Cluster setup to use Workload Identity for Full Kubeflow</h4>
+<p>Starting from Kubeflow 1.1, Kubeflow Pipelines <a href="/docs/components/pipelines/overview/multi-user/">supports multi-user isolation</a>. Therefore, pipeline runs are executed in user namespaces using the <code>default-editor</code> KSA. The <code>default-editor</code> KSA is auto-bound to the GSA specified in the user profile, which defaults to a shared GSA <code>${KFNAME}-user@${PROJECT}.iam.gserviceaccount.com</code>.</p>
+<p>If you want to bind the <code>default-editor</code> KSA with a different GSA for a specific namespace, refer to the <a href="/docs/gke/authentication/#in-cluster-authentication">In-cluster authentication to Google Cloud</a> guide.</p>
+<p>Additionally, the Kubeflow Pipelines UI, visualization, and TensorBoard server instances are deployed in your user namespace using the <code>default-editor</code> KSA. Therefore, to <a href="/docs/components/pipelines/sdk/output-viewer/">visualize results in the Pipelines UI</a>, they can fetch artifacts in Google Cloud Storage using permissions of the same GSA you configured for this namespace.</p>
+<h4 id="cluster-setup-to-use-workload-identity-for-pipelines-standalone">Cluster setup to use Workload Identity for Pipelines Standalone</h4>
+<h5 id="1-create-your-cluster-with-workload-identity-enabled">1. Create your cluster with Workload Identity enabled</h5>
+<ul>
+<li>
+<p>In Google Cloud Console UI, you can enable Workload Identity in <code>Create a Kubernetes cluster -&gt; Security -&gt; Enable Workload Identity</code> like the following:
+<img src="/docs/images/pipelines/v1/gke-enable-workload-identity.png"></p>
+</li>
+<li>
+<p>Using <code>gcloud</code> CLI, you can enable it with:</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcloud beta container clusters create &lt;cluster-name&gt; <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --release-channel regular <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --workload-pool<span class="o">=</span>project-id.svc.id.goog
+</span></span></code></pre></div><p>References:</p>
+<ul>
+<li>
+<p><a href="https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#enable_workload_identity_on_a_new_cluster">Enable Workload Identity on a new cluster</a></p>
+</li>
+<li>
+<p><a href="https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#enable_workload_identity_on_an_existing_cluster">Enable Workload Identity on an existing cluster</a></p>
+</li>
+</ul>
+<h5 id="2-deploy-kubeflow-pipelines">2. Deploy Kubeflow Pipelines</h5>
+<p>Deploy via <a href="/docs/components/pipelines/installation/overview/#kubeflow-pipelines-standalone">Pipelines Standalone</a> as usual.</p>
+<h5 id="3-bind-workload-identities-for-ksas-used-by-kubeflow-pipelines">3. Bind Workload Identities for KSAs used by Kubeflow Pipelines</h5>
+<p>The following helper bash scripts bind Workload Identities for KSAs used by Kubeflow Pipelines:</p>
+<ul>
+<li><a href="https://github.com/kubeflow/pipelines/blob/sdk/release-1.8/manifests/kustomize/gcp-workload-identity-setup.sh">gcp-workload-identity-setup.sh</a> helps you create GSAs and bind them to KSAs used by pipelines workloads. This script provides an interactive command line dialog with explanation messages.</li>
+<li><a href="https://github.com/kubeflow/pipelines/blob/sdk/release-1.8/manifests/kustomize/wi-utils.sh">wi-utils.sh</a> alternatively provides minimal utility bash functions that let you customize your setup. The minimal utilities make it easy to read and use programmatically.</li>
+</ul>
+<p>For example, to get a default setup using <code>gcp-workload-identity-setup.sh</code>, you can</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ curl -O https://raw.githubusercontent.com/kubeflow/pipelines/master/manifests/kustomize/gcp-workload-identity-setup.sh
+</span></span><span class="line"><span class="cl">$ chmod +x ./gcp-workload-identity-setup.sh
+</span></span><span class="line"><span class="cl">$ ./gcp-workload-identity-setup.sh
+</span></span><span class="line"><span class="cl"># This prints the command&#39;s usage example and introduction.
+</span></span><span class="line"><span class="cl"># Then you can run the command with required parameters.
+</span></span><span class="line"><span class="cl"># Command output will tell you which GSAs and Workload Identity bindings have been
+</span></span><span class="line"><span class="cl"># created.
+</span></span></code></pre></div><h5 id="4-configure-iam-permissions-of-used-gsas">4. Configure IAM permissions of used GSAs</h5>
+<p>If you used <code>gcp-workload-identity-setup.sh</code> to bind Workload Identities for your cluster, you can simply add the following IAM bindings:</p>
+<ul>
+<li>Give GSA <code>&lt;cluster-name&gt;-kfp-system@&lt;project-id&gt;.iam.gserviceaccount.com</code> <code>Storage Object Viewer</code> role to let UI load data in GCS in the same project.</li>
+<li>Give GSA <code>&lt;cluster-name&gt;-kfp-user@&lt;project-id&gt;.iam.gserviceaccount.com</code> any permissions your pipelines need. For quick tryouts, you can give it <code>Project Editor</code> role for all permissions.</li>
+</ul>
+<p>If you configured bindings by yourself, here are Google Cloud permission requirements for KFP KSAs:</p>
+<ul>
+<li>Pipelines use <code>pipeline-runner</code> KSA. Configure IAM permissions of the GSA bound to this KSA to allow pipelines use Google Cloud APIs.</li>
+<li>Pipelines UI uses <code>ml-pipeline-ui</code> KSA. Pipelines Visualization Server uses <code>ml-pipeline-visualizationserver</code> KSA. If you need to view artifacts and visualizations stored in Google Cloud Storage (GCS) from pipelines UI, you should add Storage Object Viewer permission (or the minimal required permission) to their bound GSAs.</li>
+</ul>
+<h3 id="google-service-account-keys-stored-as-kubernetes-secrets">Google service account keys stored as Kubernetes secrets</h3>
+<p>It is recommended to use Workload Identity for easier and secure management, but you can also choose to use GSA keys.</p>
+<h4 id="authoring-pipelines-to-use-gsa-keys">Authoring pipelines to use GSA keys</h4>
+<p>Each pipeline step describes a
+container that is run independently. If you want to grant access for a single step to use
+one of your service accounts, you can use
+<a href="https://kubeflow-pipelines.readthedocs.io/en/stable/source/kfp.extensions.html#kfp.gcp.use_gcp_secret"><code>kfp.gcp.use_gcp_secret()</code></a>.
+Examples for how to use this function can be found in the
+<a href="https://github.com/kubeflow/examples/blob/871895c54402f68685c8e227c954d86a81c0575f/pipelines/mnist-pipelines/mnist_pipeline.py#L97">Kubeflow examples repo</a>.</p>
+<h4 id="cluster-setup-to-use-use_gcp_secret-for-full-kubeflow">Cluster setup to use use_gcp_secret for Full Kubeflow</h4>
+<p>From Kubeflow 1.1, there&rsquo;s no longer a <code>user-gcp-sa</code> secrets deployed for you. Recommend using Workload Identity instead.</p>
+<p>For Kubeflow 1.0 or earlier, you don&rsquo;t need to do anything. Full Kubeflow deployment has already deployed the <code>user-gcp-sa</code> secret for you.</p>
+<h4 id="cluster-setup-to-use-use_gcp_secret-for-pipelines-standalone">Cluster setup to use use_gcp_secret for Pipelines Standalone</h4>
+<p>Pipelines Standalone require your manual setup for the <code>user-gcp-sa</code> secret used by <code>use_gcp_secret</code>.</p>
+<p>Instructions to set up the secret:</p>
+<ol>
+<li>
+<p>First download the GCE VM service account token (refer to <a href="https://cloud.google.com/iam/docs/creating-managing-service-account-keys#creating_service_account_keys">Google Cloud documentation</a> for more information):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">gcloud iam service-accounts keys create application_default_credentials.json \
+</span></span><span class="line"><span class="cl">  --iam-account [SA-NAME]@[PROJECT-ID].iam.gserviceaccount.com
+</span></span></code></pre></div></li>
+<li>
+<p>Run:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">kubectl create secret -n [your-namespace] generic user-gcp-sa \
+</span></span><span class="line"><span class="cl">  --from-file=user-gcp-sa.json=application_default_credentials.json
+</span></span></code></pre></div></li>
+</ol>
 
 	
 		<style>
@@ -449,6 +532,7 @@ if (!doNotTrack) {
 	
 	
 </div>
+
 
           </main>
         </div>

@@ -4,8 +4,6 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.105.0">
-<link rel="alternate" type="text/html" href="https://gkcalat.github.io/kubeflow-docs/docs/_print/">
-<link rel="alternate" type="application/rss&#43;xml" href="https://gkcalat.github.io/kubeflow-docs/docs/index.xml">
 <meta name="robots" content="index, follow">
 
 <script type="application/ld+json">
@@ -17,9 +15,9 @@
            "@id": "https:\/\/gkcalat.github.io\/kubeflow-docs"
       },
       "articleSection" : "docs",
-      "name" : "Kubeflow on Google Cloud",
-      "headline" : "Kubeflow on Google Cloud",
-      "description" : "Running Kubeflow on Kubernetes Engine and Google Cloud Platform",
+      "name" : "Connecting to Kubeflow Pipelines on Google Cloud using the SDK",
+      "headline" : "Connecting to Kubeflow Pipelines on Google Cloud using the SDK",
+      "description" : "How to connect to different Kubeflow Pipelines installations on Google Cloud using the Kubeflow Pipelines SDK",
       "inLanguage" : "en-US",
       "author" : "",
       "creator" : "",
@@ -29,8 +27,8 @@
       "copyrightYear" : "0001",
       "datePublished": "0001-01-01 00:00:00 \u002b0000 UTC",
       "dateModified" : "0001-01-01 00:00:00 \u002b0000 UTC",
-      "url" : "https:\/\/gkcalat.github.io\/kubeflow-docs\/docs\/",
-      "wordCount" : "0",
+      "url" : "https:\/\/gkcalat.github.io\/kubeflow-docs\/docs\/pipelines\/authentication-sdk\/",
+      "wordCount" : "668",
       "keywords" : [ "Kubeflow on GCP" ]
   }
   </script>
@@ -44,17 +42,22 @@
 <meta name="msapplication-TileColor" content="#4279f4">
 <meta name="theme-color" content="#4279f4">
 
-<title>Kubeflow on Google Cloud | Kubeflow on Google Cloud Platform</title>
-<meta name="description" content="Running Kubeflow on Kubernetes Engine and Google Cloud Platform">
-<meta property="og:title" content="Kubeflow on Google Cloud" />
-<meta property="og:description" content="Running Kubeflow on Kubernetes Engine and Google Cloud Platform" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+<title>Connecting to Kubeflow Pipelines on Google Cloud using the SDK | Kubeflow on Google Cloud Platform</title>
+<meta name="description" content="How to connect to different Kubeflow Pipelines installations on Google Cloud using the Kubeflow Pipelines SDK">
+<meta property="og:title" content="Connecting to Kubeflow Pipelines on Google Cloud using the SDK" />
+<meta property="og:description" content="How to connect to different Kubeflow Pipelines installations on Google Cloud using the Kubeflow Pipelines SDK" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/pipelines/authentication-sdk/" /><meta property="article:section" content="docs" />
 
-<meta itemprop="name" content="Kubeflow on Google Cloud">
-<meta itemprop="description" content="Running Kubeflow on Kubernetes Engine and Google Cloud Platform"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Kubeflow on Google Cloud"/>
-<meta name="twitter:description" content="Running Kubeflow on Kubernetes Engine and Google Cloud Platform"/>
+<meta property="article:modified_time" content="2022-11-09T21:46:30+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+
+<meta itemprop="name" content="Connecting to Kubeflow Pipelines on Google Cloud using the SDK">
+<meta itemprop="description" content="How to connect to different Kubeflow Pipelines installations on Google Cloud using the Kubeflow Pipelines SDK">
+<meta itemprop="dateModified" content="2022-11-09T21:46:30+00:00" />
+<meta itemprop="wordCount" content="668">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Connecting to Kubeflow Pipelines on Google Cloud using the SDK"/>
+<meta name="twitter:description" content="How to connect to different Kubeflow Pipelines installations on Google Cloud using the Kubeflow Pipelines SDK"/>
 
 
 
@@ -79,7 +82,7 @@ if (!doNotTrack) {
 </script>
 
   </head>
-  <body class="td-section">
+  <body class="td-page">
     <header>
       
 <nav class="js-navbar-scroll navbar navbar-expand-md navbar-dark  td-navbar">
@@ -162,7 +165,7 @@ if (!doNotTrack) {
   <nav class="collapse td-sidebar-nav" id="td-section-nav">
     <ul class="td-sidebar-nav__section pr-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-kubeflow-docsdocs-li">
-  <a href="/kubeflow-docs/docs/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section tree-root" id="m-kubeflow-docsdocs"><span class="td-sidebar-nav-active-item">Kubeflow on Google Cloud</span></a>
+  <a href="/kubeflow-docs/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-kubeflow-docsdocs"><span class="">Kubeflow on Google Cloud</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-kubeflow-docsdocsdeploy-li">
   <a href="/kubeflow-docs/docs/deploy/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-kubeflow-docsdocsdeploy"><span class="">Deployment</span></a>
@@ -185,11 +188,11 @@ if (!doNotTrack) {
   <a href="/kubeflow-docs/docs/deploy/delete-cli/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeploydelete-cli"><span class="">Deleting Kubeflow</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-kubeflow-docsdocspipelines-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-kubeflow-docsdocspipelines-li">
   <a href="/kubeflow-docs/docs/pipelines/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-kubeflow-docsdocspipelines"><span class="">Pipelines on Google Cloud</span></a>
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocspipelinesauthentication-sdk-li">
-  <a href="/kubeflow-docs/docs/pipelines/authentication-sdk/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesauthentication-sdk"><span class="">Connecting to Kubeflow Pipelines on Google Cloud using the SDK</span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-kubeflow-docsdocspipelinesauthentication-sdk-li">
+  <a href="/kubeflow-docs/docs/pipelines/authentication-sdk/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesauthentication-sdk"><span class="td-sidebar-nav-active-item">Connecting to Kubeflow Pipelines on Google Cloud using the SDK</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocspipelinesauthentication-pipelines-li">
   <a href="/kubeflow-docs/docs/pipelines/authentication-pipelines/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesauthentication-pipelines"><span class="">Authenticating Pipelines to Google Cloud</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocspipelinesupgrade-li">
@@ -225,11 +228,22 @@ if (!doNotTrack) {
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-<a id="print" href="https://gkcalat.github.io/kubeflow-docs/docs/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
+<a id="print" href="https://gkcalat.github.io/kubeflow-docs/docs/pipelines/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
 
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#before-you-begin">Before you begin</a></li>
+    <li><a href="#how-sdk-connects-to-kubeflow-pipelines-api">How SDK connects to Kubeflow Pipelines API</a></li>
+    <li><a href="#connecting-to-kubeflow-pipelines-standalone-or-ai-platform-pipelines">Connecting to Kubeflow Pipelines standalone or AI Platform Pipelines</a></li>
+    <li><a href="#connecting-to-kubeflow-pipelines-in-a-full-kubeflow-deployment">Connecting to Kubeflow Pipelines in a full Kubeflow deployment</a></li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
+  </ul>
+</nav>
+      </div>
+    
             
 
 	
@@ -263,17 +277,23 @@ if (!doNotTrack) {
             
   
 
-            <nav aria-label="breadcrumb" class="td-breadcrumbs td-breadcrumbs__single">
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
   <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="https://gkcalat.github.io/kubeflow-docs/docs/">Kubeflow on Google Cloud</a>
+  </li>
+  <li class="breadcrumb-item">
+    <a href="https://gkcalat.github.io/kubeflow-docs/docs/pipelines/">Pipelines on Google Cloud</a>
+  </li>
   <li class="breadcrumb-item active" aria-current="page">
-    <a href="https://gkcalat.github.io/kubeflow-docs/docs/" aria-disabled="true" class="btn-link disabled">Kubeflow on Google Cloud</a>
+    <a href="https://gkcalat.github.io/kubeflow-docs/docs/pipelines/authentication-sdk/" aria-disabled="true" class="btn-link disabled">Connecting to Kubeflow Pipelines on Google Cloud using the SDK</a>
   </li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>Kubeflow on Google Cloud</h1>
-  <div class="lead">Running Kubeflow on Kubernetes Engine and Google Cloud Platform</div>
+	<h1>Connecting to Kubeflow Pipelines on Google Cloud using the SDK</h1>
+	<div class="lead">How to connect to different Kubeflow Pipelines installations on Google Cloud using the Kubeflow Pipelines SDK</div>
 	<header class="article-meta">
 		
 
@@ -290,96 +310,100 @@ if (!doNotTrack) {
   
 
 		
-			<p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; less than a minute &nbsp;</p>
+			<p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 4 minute read &nbsp;</p>
 
 		
-	</header>
-	
-        <div class="section-index">
-    
-    
-    
-    
-    
-    
-    
-    
-    <hr class="panel-line">
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/deploy/">Deployment</a>
-                </h5>
-                <p>Instructions for deploying Kubeflow on Google Cloud</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/pipelines/">Pipelines on Google Cloud</a>
-                </h5>
-                <p>Instructions for customizing and using Kubeflow Pipelines on Google Cloud</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/customizing/">Customize Kubeflow on GKE</a>
-                </h5>
-                <p>Tailoring a GKE deployment of Kubeflow</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/custom-domain/">Using Your Own Domain</a>
-                </h5>
-                <p>Using a custom domain with Kubeflow on GKE</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/authentication/">Authenticating Kubeflow to Google Cloud</a>
-                </h5>
-                <p>Authentication and authorization to Google Cloud</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/private-clusters/">Securing Your Clusters</a>
-                </h5>
-                <p>How to secure Kubeflow clusters using private GKE</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/troubleshooting/">Troubleshooting Deployments on GKE</a>
-                </h5>
-                <p>Help fixing problems on GKE and Google Cloud</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/anthos/">Kubeflow On-premises on Anthos</a>
-                </h5>
-                <p>Running Kubeflow across on-premises and cloud environments with Anthos</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/changelog/">Changelog</a>
-                </h5>
-                <p>Kubeflow on GCP Changelog</p>
-            </div>
-        
-    
-</div>
+	</header>    
+	<p>This guide describes how to connect to your Kubeflow Pipelines cluster on Google
+Cloud using <a href="/docs/components/pipelines/sdk/sdk-overview/">the Kubeflow Pipelines SDK</a>.</p>
+<h2 id="before-you-begin">Before you begin</h2>
+<ul>
+<li>You need a Kubeflow Pipelines deployment on Google Cloud using one of the <a href="/docs/components/pipelines/installation/overview/">installation options</a>.</li>
+<li><a href="/docs/components/pipelines/sdk/install-sdk/">Install the Kubeflow Pipelines SDK</a>.</li>
+</ul>
+<h2 id="how-sdk-connects-to-kubeflow-pipelines-api">How SDK connects to Kubeflow Pipelines API</h2>
+<p>Kubeflow Pipelines includes an API service named <code>ml-pipeline-ui</code>. The
+<code>ml-pipeline-ui</code> API service is deployed in the same Kubernetes namespace you
+deployed Kubeflow Pipelines in.</p>
+<p>The Kubeflow Pipelines SDK can send REST API requests to this API service, but
+the SDK needs to know the hostname to connect to the API service.</p>
+<p>If the hostname can be accessed without authentication, it&rsquo;s very simple to
+connect to it. For example, you can use <code>kubectl port-forward</code> to access it via
+localhost:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># The Kubeflow Pipelines API service and the UI is available at</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># http://localhost:3000 without authentication check.</span>
+</span></span><span class="line"><span class="cl">$ kubectl port-forward svc/ml-pipeline-ui 3000:80 --namespace kubeflow
+</span></span><span class="line"><span class="cl"><span class="c1"># Change the namespace if you deployed Kubeflow Pipelines in a different</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># namespace.</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">kfp</span>
+</span></span><span class="line"><span class="cl"><span class="n">client</span> <span class="o">=</span> <span class="n">kfp</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;http://localhost:3000&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>When deploying Kubeflow Pipelines on Google Cloud, a public endpoint for this
+API service is auto-configured for you, but this public endpoint has security
+checks to protect your cluster from unauthorized access.</p>
+<p>The following sections introduce how to authenticate your SDK requests to connect
+to Kubeflow Pipelines via the public endpoint.</p>
+<h2 id="connecting-to-kubeflow-pipelines-standalone-or-ai-platform-pipelines">Connecting to Kubeflow Pipelines standalone or AI Platform Pipelines</h2>
+<p>Refer to <a href="https://cloud.google.com/ai-platform/pipelines/docs/connecting-with-sdk">Connecting to AI Platform Pipelines using the Kubeflow Pipelines SDK</a> for
+both Kubeflow Pipelines standalone and AI Platform Pipelines.</p>
+<p>Kubeflow Pipelines standalone deployments also show up in <a href="https://console.cloud.google.com/ai-platform/pipelines/clusters">AI Platform Pipelines</a>. They have the
+name &ldquo;pipeline&rdquo; by default, but you can customize the name by overriding
+<a href="https://github.com/kubeflow/pipelines/blob/sdk/release-1.8/manifests/kustomize/sample/params.env#L1">the <code>appName</code> parameter in <code>params.env</code></a> when <a href="/docs/components/pipelines/installation/standalone-deployment/">deploying Kubeflow Pipelines standalone</a>.</p>
+<h2 id="connecting-to-kubeflow-pipelines-in-a-full-kubeflow-deployment">Connecting to Kubeflow Pipelines in a full Kubeflow deployment</h2>
+<p>A full Kubeflow deployment on Google Cloud uses an <a href="https://cloud.google.com/iap/docs">Identity-Aware Proxy (IAP)</a> to manage access to the public Kubeflow endpoint. The steps
+below let you connect to Kubeflow Pipelines in a full Kubeflow deployment with
+authentication through IAP.</p>
+<ol>
+<li>
+<p>Find out your IAP OAuth 2.0 client ID.</p>
+<p>You or your cluster admin followed <a href="https://www.kubeflow.org/docs/gke/deploy/oauth-setup/">Set up OAuth for Cloud IAP</a>
+to deploy your full Kubeflow deployment on Google Cloud. You need the OAuth client
+ID created in that step.</p>
+<p>You can browse all of your existing OAuth client IDs <a href="https://console.cloud.google.com/apis/credentials">in the Credentials page of Google Cloud Console</a>.</p>
+</li>
+<li>
+<p>Create another SDK OAuth Client ID for authenticating Kubeflow Pipelines SDK users.
+Follow <a href="https://cloud.google.com/iap/docs/authentication-howto#authenticating_from_a_desktop_app">the steps to set up a client ID to authenticate from a desktop app</a>. Take
+a note of the <strong>client ID</strong> and <strong>client secret</strong>. This client ID and secret can
+be shared among all SDK users, because a separate login step is still needed below.</p>
+</li>
+<li>
+<p>To connect to Kubeflow Pipelines public endpoint, initiate SDK client like the following:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">kfp</span>
+</span></span><span class="line"><span class="cl"><span class="n">client</span> <span class="o">=</span> <span class="n">kfp</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;https://&lt;KF_NAME&gt;.endpoints.&lt;PROJECT&gt;.cloud.goog/pipeline&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">client_id</span><span class="o">=</span><span class="s1">&#39;&lt;AAAAAAAAAAAAAAAAAAAAAA&gt;.apps.googleusercontent.com&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">other_client_id</span><span class="o">=</span><span class="s1">&#39;&lt;BBBBBBBBBBBBBBBBBBB&gt;.apps.googleusercontent.com&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">other_client_secret</span><span class="o">=</span><span class="s1">&#39;&lt;CCCCCCCCCCCCCCCCCCCC&gt;&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li>Pass your <strong>IAP</strong> OAuth client ID found in <strong>step 1</strong> to <code>client_id</code> argument.</li>
+<li>Pass your <strong>SDK</strong> OAuth client ID and secret created in <strong>step 2</strong> to <code>other_client_id</code>
+and <code>other_client_secret</code> arguments.</li>
+</ul>
+</li>
+<li>
+<p>When you init the SDK client for the first time, you will be asked to log in.
+The Kubeflow Pipelines SDK stores obtained credentials in <code>$HOME/.config/kfp/credentials.json</code>. You do not need to log in again unless you manually delete the credentials file.</p>
+<pre><code>To use the SDK from cron tasks where you cannot log in manually, you can copy the credentials file in `$HOME/.config/kfp/credentials.json` to another machine.
+However, you should keep the credentials safe and never expose it to
+third parties.
+</code></pre>
+</li>
+<li>
+<p>After login, you can use the client.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">client</span><span class="o">.</span><span class="n">list_pipelines</span><span class="p">())</span>
+</span></span></code></pre></div></li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<ul>
+<li>
+<p>Error &ldquo;Failed to authorize with API resource references: there is no user identity header&rdquo; when using SDK methods.</p>
+<p>Direct access to the API service without authentication works for Kubeflow
+Pipelines standalone, AI Platform Pipelines, and Kubeflow 1.0 or earlier.</p>
+<p>However, it fails authorization checks for Kubeflow Pipelines with multi-user
+isolation in the full Kubeflow deployment starting from Kubeflow 1.1.
+Multi-user isolation requires all API access to authenticate as a user. Refer to <a href="/docs/components/pipelines/overview/multi-user/#in-cluster-request-authentication">Kubeflow Pipelines Multi-user isolation documentation</a>
+for more details.</p>
+</li>
+</ul>
 
 	
 		<style>
@@ -449,6 +473,7 @@ if (!doNotTrack) {
 	
 	
 </div>
+
 
           </main>
         </div>
