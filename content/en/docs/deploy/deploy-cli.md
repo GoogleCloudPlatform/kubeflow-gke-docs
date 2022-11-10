@@ -1,5 +1,5 @@
 +++
-title = "Deploy Kubeflow cluster"
+title = "Deploying Kubeflow cluster"
 description = "Instructions for using kubectl and kpt to deploy Kubeflow on Google Cloud"
 weight = 5
 +++
@@ -15,22 +15,21 @@ Before installing Kubeflow on the command line:
 
 1. You must have created a management cluster and installed Config Connector.
 
-   * If you don't have a management cluster follow the [instructions](/docs/distributions/gke/deploy/management-setup/)
+   * If you don't have a management cluster follow the [instructions](/docs/deploy/management-setup/)
 
    * Your management cluster will need a namespace setup to administer the Google Cloud project where Kubeflow will be deployed. This step will be included in later step of current page.
 
-1. You need to use Linux or [Cloud Shell](https://cloud.google.com/shell/) for ASM installation. Currently ASM installation doesn't work on macOS because it [comes with an old version of bash](https://cloud.google.com/service-mesh/docs/scripted-install/asm-onboarding#installing_required_tools).
+2. You need to use Linux or [Cloud Shell](https://cloud.google.com/shell/) for ASM installation. Currently ASM installation doesn't work on macOS because it [comes with an old version of bash](https://cloud.google.com/service-mesh/docs/scripted-install/asm-onboarding#installing_required_tools).
 
-1. Make sure that your Google Cloud project meets the minimum requirements
-  described in the [project setup guide](/docs/distributions/gke/deploy/project-setup/).
+3. Make sure that your Google Cloud project meets the minimum requirements
+  described in the [project setup guide](/docs/deploy/project-setup/).
 
-1. Follow the guide
-  [setting up OAuth credentials](/docs/distributions/gke/deploy/oauth-setup/)
+4. Follow the guide
+  [setting up OAuth credentials](/docs/deploy/oauth-setup/)
   to create OAuth credentials for [Cloud Identity-Aware Proxy (Cloud
   IAP)](https://cloud.google.com/iap/docs/).
     * Unfortunately [GKE's BackendConfig](https://cloud.google.com/kubernetes-engine/docs/concepts/backendconfig)
   currently doesn't support creating [IAP OAuth clients programmatically](https://cloud.google.com/iap/docs/programmatic-oauth-clients).
-
 
 ### Install the required tools
 
@@ -78,7 +77,6 @@ Before installing Kubeflow on the command line:
     bash ./pull-upstream.sh
     ```
 
-
 ### Environment Variables
 
 Log in to gcloud. You only need to run this command once:
@@ -86,7 +84,6 @@ Log in to gcloud. You only need to run this command once:
   ```bash
   gcloud auth login
   ```
-
 
 1. Review and fill all the environment variables in `kubeflow-distribution/kubeflow/env.sh`, they will be used by `kpt` later on, and some of them will be used in this deployment guide. Review the comment in `env.sh` for the explanation for each environment variable. After defining these environment variables, run:
 
@@ -127,7 +124,7 @@ You can learn more about `list-setters` in [kpt documentation](https://catalog.k
 
 #### Authorize Cloud Config Connector for each Kubeflow project
 
-In the [Management cluster deployment](/docs/distributions/gke/deploy/management-setup/) we created the Google Cloud service account **serviceAccount:kcc-${KF_PROJECT}@${MGMT_PROJECT}.iam.gserviceaccount.com**
+In the [Management cluster deployment](/docs/deploy/management-setup/) we created the Google Cloud service account **serviceAccount:kcc-${KF_PROJECT}@${MGMT_PROJECT}.iam.gserviceaccount.com**
 this is the service account that Config Connector will use to create any Google Cloud resources in `${KF_PROJECT}`. You need to grant this Google Cloud service account sufficient privileges to create the desired resources in Kubeflow project. 
 You only need to perform steps below once for each Kubeflow project, but make sure to do it even when KF_PROJECT and MGMT_PROJECT are the same project.
 
@@ -139,12 +136,11 @@ The easiest way to do this is to grant the Google Cloud service account owner pe
     MGMT_PROJECT=<the project where you deploy your management cluster>
     MGMT_NAME=<the kubectl context name for management cluster>
     ```
-1. Apply ConfigConnectorContext for `${KF_PROJECT}` in management cluster:
+2. Apply ConfigConnectorContext for `${KF_PROJECT}` in management cluster:
 
     ```bash
     make apply-kcc
     ```
-
 
 ### Configure Kubeflow
 
@@ -153,8 +149,6 @@ Make sure you are using KF_PROJECT in the gcloud CLI tool:
   ```bash
   gcloud config set project ${KF_PROJECT}
   ```
-
-
 
 ### Deploy Kubeflow
 
@@ -288,7 +282,7 @@ The service accounts are:
 
 ## Upgrade Kubeflow
 
-Refer to [Upgrading Kubeflow cluster](/docs/distributions/gke/deploy/upgrade#upgrading-kubeflow-cluster).
+Refer to [Upgrading Kubeflow cluster](/docs/deploy/upgrade#upgrading-kubeflow-cluster).
 
 ## Next steps
 
@@ -296,7 +290,7 @@ Refer to [Upgrading Kubeflow cluster](/docs/distributions/gke/deploy/upgrade#upg
   [end-to-end MNIST tutorial](https://github.com/kubeflow/examples/blob/master/mnist/mnist_gcp.ipynb) or the
   [GitHub issue summarization Pipelines
   example](https://github.com/kubeflow/examples/tree/master/github_issue_summarization/pipelines).
-* Learn how to [delete your Kubeflow deployment using the CLI](/docs/distributions/gke/deploy/delete-cli/).
-* To add users to Kubeflow, go to [a dedicated section in Customizing Kubeflow on GKE](/docs/distributions/gke/customizing-gke/#add-users-to-kubeflow).
-* To taylor your Kubeflow deployment on GKE, go to [Customizing Kubeflow on GKE](/docs/distributions/gke/customizing-gke/).
-* For troubleshooting Kubeflow deployments on GKE, go to the [Troubleshooting deployments](/docs/distributions/gke/troubleshooting-gke/) guide.
+* Learn how to [delete your Kubeflow deployment using the CLI](/docs/deploy/delete-cli/).
+* To add users to Kubeflow, go to [a dedicated section in Customizing Kubeflow on GKE](/docs/customizing-gke/#add-users-to-kubeflow).
+* To taylor your Kubeflow deployment on GKE, go to [Customizing Kubeflow on GKE](/docs/customizing-gke/).
+* For troubleshooting Kubeflow deployments on GKE, go to the [Troubleshooting deployments](/docs/troubleshooting-gke/) guide.

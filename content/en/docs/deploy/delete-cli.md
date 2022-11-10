@@ -1,5 +1,5 @@
 +++
-title = "Delete Kubeflow"
+title = "Deleting Kubeflow"
 description = "Deleting Kubeflow from Google Cloud using the command line interface (CLI)"
 weight = 8
 +++
@@ -12,7 +12,7 @@ Google Cloud.
 This guide assumes the following settings:
 
 * For Management cluster: The `${MGMT_PROJECT}`, `${MGMT_DIR}` and `${MGMT_NAME}` environment variables
-  are the same as in [Deploy Management cluster](/docs/distributions/gke/deploy/management-setup#configure-environment-variables).
+  are the same as in [Deploy Management cluster](/docs/deploy/management-setup#configure-environment-variables).
 
 * For Kubeflow cluster: The `${KF_PROJECT}`, `${KF_NAME}` and `${MGMTCTXT}` environment variables
   are the same as in [Deploy Kubeflow cluster](../deploy-cli#environment-variables).

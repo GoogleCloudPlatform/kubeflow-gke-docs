@@ -1,5 +1,5 @@
 +++
-title = "Set up OAuth client"
+title = "Setting up OAuth client"
 description = "Creating an OAuth client for Cloud IAP on Google Cloud"
 weight = 3
                     
@@ -95,5 +95,5 @@ address to verify the user's identity.
   **client secret** later when you're ready to enable Cloud IAP.
   
 ## Next steps
-* [Set up your management cluster](/docs/distributions/gke/deploy/management-setup/).
+* [Set up your management cluster](/docs/deploy/management-setup/).
 * [Grant your users the IAP-secured Web App User IAM role](https://cloud.google.com/iam/docs/granting-changing-revoking-access#granting-console) so they can access the Kubeflow console through IAP.

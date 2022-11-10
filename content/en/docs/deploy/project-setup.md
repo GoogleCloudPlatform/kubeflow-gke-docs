@@ -1,13 +1,12 @@
 +++
-title = "Set up Project"
+title = "Setting up GCP Project"
 description = "Creating a Google Cloud project for your Kubeflow deployment"
 weight = 2
 +++
 
-In order to create GKE cluster and deploy Kubeflow on it, you need to set up a Google Cloud project
-and enable necessary APIs for the deployment.
+In order to deploy Kubeflow on GCP, you need to set up a Google Cloud project and enable necessary APIs for the deployment.
 
-## Set up project and API scopes
+## Setting up a project
 
 Follow these steps to set up your Google Cloud project:
 
@@ -26,24 +25,8 @@ Follow these steps to set up your Google Cloud project:
 *  Make sure that billing is enabled for your project. Refer to
   [Enable billing for a project](https://cloud.google.com/billing/docs/how-to/modify-project).
 
-*  Open following pages on the Google Cloud Console and ensure that the 
-  specified APIs are enabled for all projects:
+*  Enable the following APIs by running the following command in a Cloud Shell or local terminal (needs to be authenticated via `gcloud auth login`):
 
-    * [Service Usage API](https://cloud.google.com/service-usage/docs/reference/rest)
-    * [Compute Engine API](https://console.cloud.google.com/apis/library/compute.googleapis.com)
-    * [Kubernetes Engine API](https://console.cloud.google.com/apis/library/container.googleapis.com)
-    * [Identity and Access Management (IAM) API](https://console.cloud.google.com/apis/library/iam.googleapis.com)
-    * [Service Management API](https://console.cloud.google.com/apis/api/servicemanagement.googleapis.com)
-    * [Cloud Resource Manager API](https://console.developers.google.com/apis/library/cloudresourcemanager.googleapis.com)
-    * [AI Platform Training & Prediction API](https://console.developers.google.com/apis/library/ml.googleapis.com)
-    * [Cloud Identity-Aware Proxy API](https://console.cloud.google.com/apis/library/iap.googleapis.com)
-    * [Cloud Build API](https://console.cloud.google.com/apis/library/cloudbuild.googleapis.com) (It's required if you plan to use [Fairing](https://www.kubeflow.org/docs/external-add-ons/fairing/) in your Kubeflow cluster)
-    * [Cloud SQL Admin API](https://console.cloud.google.com/apis/library/sqladmin.googleapis.com)
-    * [Config Controller (KRM API Hosting API)](https://console.cloud.google.com/apis/library/krmapihosting.googleapis.com)
-    * [Service Control API](https://console.cloud.google.com/apis/library/servicecontrol.googleapis.com)
-    * [Google Cloud Endpoints](https://console.cloud.google.com/apis/library/endpoints.googleapis.com)
-
-    You can also enable these APIs by running the following command in Cloud Shell:
     ```bash
     gcloud services enable \
       serviceusage.googleapis.com \
@@ -58,11 +41,24 @@ Follow these steps to set up your Google Cloud project:
       meshconfig.googleapis.com \
       krmapihosting.googleapis.com \
       servicecontrol.googleapis.com \
-      endpoints.googleapis.com
-
-    # Cloud Build API is optional, you need it if using Fairing.
-    # gcloud services enable cloudbuild.googleapis.com
+      endpoints.googleapis.com \
+      cloudbuild.googleapis.com
     ```
+  Alternatively, you can these APIs can be enabled via Google Cloud Console:
+
+    * [Service Usage API](https://cloud.google.com/service-usage/docs/reference/rest)
+    * [Compute Engine API](https://console.cloud.google.com/apis/library/compute.googleapis.com)
+    * [Kubernetes Engine API](https://console.cloud.google.com/apis/library/container.googleapis.com)
+    * [Identity and Access Management (IAM) API](https://console.cloud.google.com/apis/library/iam.googleapis.com)
+    * [Service Management API](https://console.cloud.google.com/apis/api/servicemanagement.googleapis.com)
+    * [Cloud Resource Manager API](https://console.developers.google.com/apis/library/cloudresourcemanager.googleapis.com)
+    * [AI Platform Training & Prediction API](https://console.developers.google.com/apis/library/ml.googleapis.com)
+    * [Cloud Identity-Aware Proxy API](https://console.cloud.google.com/apis/library/iap.googleapis.com)
+    * [Cloud Build API](https://console.cloud.google.com/apis/library/cloudbuild.googleapis.com) (It's required if you plan to use [Fairing](https://www.kubeflow.org/docs/external-add-ons/fairing/) in your Kubeflow cluster)
+    * [Cloud SQL Admin API](https://console.cloud.google.com/apis/library/sqladmin.googleapis.com)
+    * [Config Controller (KRM API Hosting API)](https://console.cloud.google.com/apis/library/krmapihosting.googleapis.com)
+    * [Service Control API](https://console.cloud.google.com/apis/library/servicecontrol.googleapis.com)
+    * [Google Cloud Endpoints](https://console.cloud.google.com/apis/library/endpoints.googleapis.com)
 
 *  If you are using the
   [Google Cloud Free Program](https://cloud.google.com/free/docs/gcp-free-tier) or the
@@ -81,7 +77,6 @@ Follow these steps to set up your Google Cloud project:
     to understand quotas on resource usage that Compute Engine enforces, and 
     to learn how to check and increase your quotas.
 
-  
 *  Initialize your project to prepare it for Anthos Service Mesh installation:
 
     ```bash
@@ -108,9 +103,9 @@ cluster for you.
 
 ## Next steps
 
-* [Set up an OAuth credential](/docs/distributions/gke/deploy/oauth-setup) to use 
+* [Set up an OAuth credential](/docs/deploy/oauth-setup) to use 
   [Cloud Identity-Aware Proxy (Cloud IAP)](https://cloud.google.com/iap/docs/).
   Cloud IAP is recommended for production deployments or deployments with access 
   to sensitive data.
-* [Set up Management Cluster](/docs/distributions/gke/deploy/management-setup) to deploy and manage Kubeflow clusters.
-* [Deploy Kubeflow](/docs/distributions/gke/deploy/deploy-cli) using kubectl, kustomize and kpt.
+* [Set up Management Cluster](/docs/deploy/management-setup) to deploy and manage Kubeflow clusters.
+* [Deploy Kubeflow](/docs/deploy/deploy-cli) using kubectl, kustomize and kpt.

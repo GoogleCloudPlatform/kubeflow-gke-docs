@@ -1,5 +1,5 @@
 +++
-title = "Deploy Management cluster"
+title = "Deploying Management cluster"
 description = "Setting up a management cluster on Google Cloud"
 weight = 4
 +++
@@ -200,5 +200,5 @@ kubectl --context=${MGMT_NAME} get IAMServiceAccount <service-account-name> -n $
 For a more detailed explanation of the drastic changes happened in Kubeflow v1.1 on Google Cloud, read [GoogleCloudPlatform/kubeflow-distribution #123](https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/123).
 
 ## Next steps
-* [Deploy Kubeflow](/docs/distributions/gke/deploy/deploy-cli) using kubectl, kustomize and kpt.
+* [Deploy Kubeflow](/docs/deploy/deploy-cli) using kubectl, kustomize and kpt.
 
