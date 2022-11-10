@@ -42,11 +42,6 @@
   </url>
   
   <url>
-    <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/about/</loc>
-    <lastmod>2022-11-09T22:15:12+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/deploy/</loc>
     <lastmod>2022-11-09T21:46:30+00:00</lastmod>
   </url>
@@ -112,13 +107,13 @@
   </url>
   
   <url>
-    <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/releases/</loc>
-    <lastmod>2022-11-10T00:25:22+00:00</lastmod>
+    <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/anthos/</loc>
+    <lastmod>2022-11-09T21:46:30+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/anthos/</loc>
-    <lastmod>2022-11-09T21:46:30+00:00</lastmod>
+    <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/changelog/</loc>
+    <lastmod>2022-11-10T03:07:29+00:00</lastmod>
   </url>
   
   <url>
@@ -127,7 +122,7 @@
   
   <url>
     <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/</loc>
-    <lastmod>2022-11-09T19:31:06+00:00</lastmod>
+    <lastmod>2022-11-10T03:07:29+00:00</lastmod>
   </url>
   
   <url>
