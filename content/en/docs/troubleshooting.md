@@ -469,17 +469,17 @@ cd ${KF_DIR}
 kfctl apply -V -f ${CONFIG}
 ```
 
-## CPU platform unavailable in requested zone
+<!-- ## CPU platform unavailable in requested zone
 
 By default, we set minCpuPlatform to `Intel Haswell` to make sure AVX2 is supported.
 See [troubleshooting](/docs/other-guides/troubleshooting/) for more details.
 
 If you encounter this `CPU platform unavailable` error (might manifest as
 `Cluster is currently being created, deleted, updated or repaired and cannot be updated.`),
-you can change the [zone](https://github.com/kubeflow/manifests/blob/master/gcp/deployment_manager_configs/cluster-kubeflow.yaml#L31)
-or change the [minCpuPlatform](https://github.com/kubeflow/manifests/blob/master/gcp/deployment_manager_configs/cluster.jinja#L131).
+you can change the [zone](https://github.com/kubeflow/manifests/tree/master/gcp/deployment_manager_configs/cluster-kubeflow.yaml#L31)
+or change the [minCpuPlatform](https://github.com/kubeflow/manifests/tree/master/gcp/deployment_manager_configs/cluster.jinja#L131).
 See [here](https://cloud.google.com/compute/docs/regions-zones/#available)
-for available zones and cpu platforms.
+for available zones and cpu platforms. -->
 
 ## Changing the OAuth client used by IAP
 

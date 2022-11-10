@@ -32,7 +32,7 @@ parser.add_argument(
     '--dir',
     dest='input_dir',
     nargs='?',
-    default='kubeflow/website/content',
+    default='../content/en',
     help=
     'Path to the doc content folder. (Default: %(default)s)',
 )
@@ -63,6 +63,7 @@ def main():
         for f in filenames:
             if f.endswith(".md"):
                 files.append(os.path.join(dirpath, f))
+    print(f'Found {len(files)} MD files')
 
     urls = {}
     for file in files:
@@ -70,7 +71,8 @@ def main():
             u = HTTP_PATTERN.findall(f.read())
             if u:
                 urls[file[len(args.input_dir):]] = u
-
+    print(f'Found {len(urls)} URLS')
+    
     problematic_urls = []
     for file, urls in urls.items():
         for url in urls:

@@ -113,7 +113,7 @@ problems:
     * `kubectl get pods -n istio-system`
     * The `istio-ingressgateway-XX` pods should be running
     * Check the logs of pod `backend-updater-0`, `iap-enabler-XX` to see if there is any error
-    * Follow the steps [here](https://www.kubeflow.org/docs/troubleshooting-gke/#502-server-error) to check the load balancer and backend service on Google Cloud.
+    * Follow the steps [here](https://www.kubeflow.org/docs/troubleshooting/#502-server-error) to check the load balancer and backend service on Google Cloud.
 
 
 1. Try accessing Cloud IAP at the fully qualified domain name in your web 
@@ -136,7 +136,7 @@ problems:
     relevant links:	
 
     ```	
-    The redirect URI in the request, https://mykubeflow.endpoints.myproject.cloud.goog/_gcp_gatekeeper/authenticate, does not match the ones authorized for the OAuth client. 	
+    The redirect URI in the request, https://<my_kubeflow>.endpoints.<my_project>.cloud.goog/_gcp_gatekeeper/authenticate, does not match the ones authorized for the OAuth client. 	
     To update the authorized redirect URIs, visit: https://console.developers.google.com/apis/credentials/oauthclient/22222222222-7meeee7a9a76jvg54j0g2lv8lrsb4l8g.apps.googleusercontent.com?project=22222222222	
     ```	
 
@@ -146,6 +146,6 @@ problems:
     [setting up OAuth for Cloud IAP](/docs/deploy/oauth-setup/).	
 
 ## Next steps
-* The [GKE troubleshooting guide](/docs/troubleshooting-gke/) for Kubeflow.
+* The [GKE troubleshooting guide](/docs/troubleshooting/) for Kubeflow.
 * Guide to [sharing cluster access](/docs/components/multi-tenancy/getting-started).
 * Google Cloud guide to [Cloud IAP](https://cloud.google.com/iap/docs/).
