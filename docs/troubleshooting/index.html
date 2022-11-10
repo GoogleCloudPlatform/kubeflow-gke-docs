@@ -28,7 +28,7 @@
       "datePublished": "0001-01-01 00:00:00 \u002b0000 UTC",
       "dateModified" : "0001-01-01 00:00:00 \u002b0000 UTC",
       "url" : "https:\/\/gkcalat.github.io\/kubeflow-docs\/docs\/troubleshooting\/",
-      "wordCount" : "2410",
+      "wordCount" : "2344",
       "keywords" : [ "Kubeflow on GCP" ]
   }
   </script>
@@ -49,12 +49,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/troubleshooting/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-11-10T00:03:02+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+<meta property="article:modified_time" content="2022-11-10T00:25:22+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
 
 <meta itemprop="name" content="Troubleshooting Deployments on GKE">
 <meta itemprop="description" content="Help fixing problems on GKE and Google Cloud">
-<meta itemprop="dateModified" content="2022-11-10T00:03:02+00:00" />
-<meta itemprop="wordCount" content="2410">
+<meta itemprop="dateModified" content="2022-11-10T00:25:22+00:00" />
+<meta itemprop="wordCount" content="2344">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Troubleshooting Deployments on GKE"/>
 <meta name="twitter:description" content="Help fixing problems on GKE and Google Cloud"/>
@@ -217,17 +217,8 @@ if (!doNotTrack) {
   <a href="/kubeflow-docs/docs/private-clusters/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsprivate-clusters"><span class="">Securing Your Clusters</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-kubeflow-docsdocstroubleshooting-li">
   <a href="/kubeflow-docs/docs/troubleshooting/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocstroubleshooting"><span class="td-sidebar-nav-active-item">Troubleshooting Deployments on GKE</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-kubeflow-docsdocsreleases-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsreleases-li">
   <a href="/kubeflow-docs/docs/releases/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-kubeflow-docsdocsreleases"><span class="">Releases</span></a>
-  <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsreleaseskubeflow-16-li">
-  <a href="/kubeflow-docs/docs/releases/kubeflow-1.6/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsreleaseskubeflow-16"><span class="">Kubeflow 1.6</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsreleaseskubeflow-15-li">
-  <a href="/kubeflow-docs/docs/releases/kubeflow-1.5/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsreleaseskubeflow-15"><span class="">Kubeflow 1.5</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsreleaseskubeflow-14-li">
-  <a href="/kubeflow-docs/docs/releases/kubeflow-1.4/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsreleaseskubeflow-14"><span class="">Kubeflow 1.4</span></a>
-</li>
-  </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsanthos-li">
   <a href="/kubeflow-docs/docs/anthos/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsanthos"><span class="">Kubeflow On-premises on Anthos</span></a>
 </li>
@@ -266,7 +257,6 @@ if (!doNotTrack) {
       </ul>
     </li>
     <li><a href="#legacy-networks-are-not-supported">Legacy networks are not supported</a></li>
-    <li><a href="#cpu-platform-unavailable-in-requested-zone">CPU platform unavailable in requested zone</a></li>
     <li><a href="#changing-the-oauth-client-used-by-iap">Changing the OAuth client used by IAP</a></li>
     <li><a href="#troubleshooting-ssl-certificate-errors">Troubleshooting SSL certificate errors</a></li>
   </ul>
@@ -760,15 +750,17 @@ deploying Kubeflow.</p>
 <p>Apply the changes.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd ${KF_DIR}
 </span></span><span class="line"><span class="cl">kfctl apply -V -f ${CONFIG}
-</span></span></code></pre></div><h2 id="cpu-platform-unavailable-in-requested-zone">CPU platform unavailable in requested zone</h2>
-<p>By default, we set minCpuPlatform to <code>Intel Haswell</code> to make sure AVX2 is supported.
-See <a href="/docs/other-guides/troubleshooting/">troubleshooting</a> for more details.</p>
-<p>If you encounter this <code>CPU platform unavailable</code> error (might manifest as
-<code>Cluster is currently being created, deleted, updated or repaired and cannot be updated.</code>),
-you can change the <a href="https://github.com/kubeflow/manifests/blob/master/gcp/deployment_manager_configs/cluster-kubeflow.yaml#L31">zone</a>
-or change the <a href="https://github.com/kubeflow/manifests/blob/master/gcp/deployment_manager_configs/cluster.jinja#L131">minCpuPlatform</a>.
-See <a href="https://cloud.google.com/compute/docs/regions-zones/#available">here</a>
-for available zones and cpu platforms.</p>
+</span></span></code></pre></div><!-- ## CPU platform unavailable in requested zone
+
+By default, we set minCpuPlatform to `Intel Haswell` to make sure AVX2 is supported.
+See [troubleshooting](/docs/other-guides/troubleshooting/) for more details.
+
+If you encounter this `CPU platform unavailable` error (might manifest as
+`Cluster is currently being created, deleted, updated or repaired and cannot be updated.`),
+you can change the [zone](https://github.com/kubeflow/manifests/tree/master/gcp/deployment_manager_configs/cluster-kubeflow.yaml#L31)
+or change the [minCpuPlatform](https://github.com/kubeflow/manifests/tree/master/gcp/deployment_manager_configs/cluster.jinja#L131).
+See [here](https://cloud.google.com/compute/docs/regions-zones/#available)
+for available zones and cpu platforms. -->
 <h2 id="changing-the-oauth-client-used-by-iap">Changing the OAuth client used by IAP</h2>
 <p>If you need to change the OAuth client used by IAP, you can run the following commands
 to replace the Kubernetes secret containing the ID and secret.</p>

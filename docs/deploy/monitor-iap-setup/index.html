@@ -49,11 +49,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/deploy/monitor-iap-setup/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-11-10T00:03:02+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+<meta property="article:modified_time" content="2022-11-10T00:25:22+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
 
 <meta itemprop="name" content="Monitoring Cloud IAP Setup">
 <meta itemprop="description" content="Instructions for monitoring and troubleshooting Cloud IAP">
-<meta itemprop="dateModified" content="2022-11-10T00:03:02+00:00" />
+<meta itemprop="dateModified" content="2022-11-10T00:25:22+00:00" />
 <meta itemprop="wordCount" content="743">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Monitoring Cloud IAP Setup"/>
@@ -217,17 +217,8 @@ if (!doNotTrack) {
   <a href="/kubeflow-docs/docs/private-clusters/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsprivate-clusters"><span class="">Securing Your Clusters</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocstroubleshooting-li">
   <a href="/kubeflow-docs/docs/troubleshooting/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocstroubleshooting"><span class="">Troubleshooting Deployments on GKE</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-kubeflow-docsdocsreleases-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsreleases-li">
   <a href="/kubeflow-docs/docs/releases/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-kubeflow-docsdocsreleases"><span class="">Releases</span></a>
-  <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsreleaseskubeflow-16-li">
-  <a href="/kubeflow-docs/docs/releases/kubeflow-1.6/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsreleaseskubeflow-16"><span class="">Kubeflow 1.6</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsreleaseskubeflow-15-li">
-  <a href="/kubeflow-docs/docs/releases/kubeflow-1.5/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsreleaseskubeflow-15"><span class="">Kubeflow 1.5</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsreleaseskubeflow-14-li">
-  <a href="/kubeflow-docs/docs/releases/kubeflow-1.4/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsreleaseskubeflow-14"><span class="">Kubeflow 1.4</span></a>
-</li>
-  </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsanthos-li">
   <a href="/kubeflow-docs/docs/anthos/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsanthos"><span class="">Kubeflow On-premises on Anthos</span></a>
 </li>
@@ -430,7 +421,7 @@ traffic. (31380 is the default port of the service <code>istio-ingressgateway</c
 <li><code>kubectl get pods -n istio-system</code></li>
 <li>The <code>istio-ingressgateway-XX</code> pods should be running</li>
 <li>Check the logs of pod <code>backend-updater-0</code>, <code>iap-enabler-XX</code> to see if there is any error</li>
-<li>Follow the steps <a href="https://www.kubeflow.org/docs/troubleshooting-gke/#502-server-error">here</a> to check the load balancer and backend service on Google Cloud.</li>
+<li>Follow the steps <a href="https://www.kubeflow.org/docs/troubleshooting/#502-server-error">here</a> to check the load balancer and backend service on Google Cloud.</li>
 </ul>
 </li>
 <li>
@@ -447,7 +438,7 @@ of Cloud IAP is not yet complete. Keep retrying for up to 10 minutes.</p>
 <p>If you get an error <code>Error: redirect_uri_mismatch</code> after logging in, this means the list of OAuth authorized redirect URIs does not include your domain.</p>
 <p>The full error message looks like the following example and includes the 
 relevant links:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">The redirect URI in the request, https://mykubeflow.endpoints.myproject.cloud.goog/_gcp_gatekeeper/authenticate, does not match the ones authorized for the OAuth client. 	
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">The redirect URI in the request, https://&lt;my_kubeflow&gt;.endpoints.&lt;my_project&gt;.cloud.goog/_gcp_gatekeeper/authenticate, does not match the ones authorized for the OAuth client. 	
 </span></span><span class="line"><span class="cl">To update the authorized redirect URIs, visit: https://console.developers.google.com/apis/credentials/oauthclient/22222222222-7meeee7a9a76jvg54j0g2lv8lrsb4l8g.apps.googleusercontent.com?project=22222222222	
 </span></span></code></pre></div><p>Follow the link in the error message to find the OAuth credential being used
 and add the redirect URI listed in the error message to the list of 
@@ -457,7 +448,7 @@ authorized URIs. For more information, read the guide to
 </ol>
 <h2 id="next-steps">Next steps</h2>
 <ul>
-<li>The <a href="/docs/troubleshooting-gke/">GKE troubleshooting guide</a> for Kubeflow.</li>
+<li>The <a href="/docs/troubleshooting/">GKE troubleshooting guide</a> for Kubeflow.</li>
 <li>Guide to <a href="/docs/components/multi-tenancy/getting-started">sharing cluster access</a>.</li>
 <li>Google Cloud guide to <a href="https://cloud.google.com/iap/docs/">Cloud IAP</a>.</li>
 </ul>

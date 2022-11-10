@@ -19,7 +19,7 @@
       "articleSection" : "docs",
       "name" : "Releases",
       "headline" : "Releases",
-      "description" : "Information about past and future Kubeflow releases",
+      "description" : "Kubeflow on GCP Changelog",
       "inLanguage" : "en-US",
       "author" : "",
       "creator" : "",
@@ -30,7 +30,7 @@
       "datePublished": "0001-01-01 00:00:00 \u002b0000 UTC",
       "dateModified" : "0001-01-01 00:00:00 \u002b0000 UTC",
       "url" : "https:\/\/gkcalat.github.io\/kubeflow-docs\/docs\/releases\/",
-      "wordCount" : "0",
+      "wordCount" : "364",
       "keywords" : [ "Kubeflow on GCP" ]
   }
   </script>
@@ -45,16 +45,16 @@
 <meta name="theme-color" content="#4279f4">
 
 <title>Releases | Kubeflow on Google Cloud Platform</title>
-<meta name="description" content="Information about past and future Kubeflow releases">
+<meta name="description" content="Kubeflow on GCP Changelog">
 <meta property="og:title" content="Releases" />
-<meta property="og:description" content="Information about past and future Kubeflow releases" />
+<meta property="og:description" content="Kubeflow on GCP Changelog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/releases/" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
 
 <meta itemprop="name" content="Releases">
-<meta itemprop="description" content="Information about past and future Kubeflow releases"><meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="Kubeflow on GCP Changelog"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Releases"/>
-<meta name="twitter:description" content="Information about past and future Kubeflow releases"/>
+<meta name="twitter:description" content="Kubeflow on GCP Changelog"/>
 
 
 
@@ -214,17 +214,8 @@ if (!doNotTrack) {
   <a href="/kubeflow-docs/docs/private-clusters/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsprivate-clusters"><span class="">Securing Your Clusters</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocstroubleshooting-li">
   <a href="/kubeflow-docs/docs/troubleshooting/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocstroubleshooting"><span class="">Troubleshooting Deployments on GKE</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-kubeflow-docsdocsreleases-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-kubeflow-docsdocsreleases-li">
   <a href="/kubeflow-docs/docs/releases/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-kubeflow-docsdocsreleases"><span class="td-sidebar-nav-active-item">Releases</span></a>
-  <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsreleaseskubeflow-16-li">
-  <a href="/kubeflow-docs/docs/releases/kubeflow-1.6/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsreleaseskubeflow-16"><span class="">Kubeflow 1.6</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsreleaseskubeflow-15-li">
-  <a href="/kubeflow-docs/docs/releases/kubeflow-1.5/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsreleaseskubeflow-15"><span class="">Kubeflow 1.5</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsreleaseskubeflow-14-li">
-  <a href="/kubeflow-docs/docs/releases/kubeflow-1.4/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsreleaseskubeflow-14"><span class="">Kubeflow 1.4</span></a>
-</li>
-  </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsanthos-li">
   <a href="/kubeflow-docs/docs/anthos/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsanthos"><span class="">Kubeflow On-premises on Anthos</span></a>
 </li>
@@ -242,7 +233,43 @@ if (!doNotTrack) {
 
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#161">1.6.1</a>
+      <ul>
+        <li><a href="#changes">Changes:</a></li>
+      </ul>
+    </li>
+    <li><a href="#160">1.6.0:</a>
+      <ul>
+        <li><a href="#changes-1">Changes:</a></li>
+      </ul>
+    </li>
+    <li><a href="#151">1.5.1</a>
+      <ul>
+        <li><a href="#changes-2">Changes:</a></li>
+      </ul>
+    </li>
+    <li><a href="#150">1.5.0:</a>
+      <ul>
+        <li><a href="#changes-3">Changes:</a></li>
+      </ul>
+    </li>
+    <li><a href="#141">1.4.1</a>
+      <ul>
+        <li><a href="#changes-4">Changes:</a></li>
+      </ul>
+    </li>
+    <li><a href="#140">1.4.0:</a>
+      <ul>
+        <li><a href="#changes-5">Changes:</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
             
 
 	
@@ -302,7 +329,7 @@ if (!doNotTrack) {
             
 <div class="td-content">
 	<h1>Releases</h1>
-  <div class="lead">Information about past and future Kubeflow releases</div>
+  <div class="lead">Kubeflow on GCP Changelog</div>
 	<header class="article-meta">
 		
 
@@ -319,11 +346,80 @@ if (!doNotTrack) {
   
 
 		
-			<p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; less than a minute &nbsp;</p>
+			<p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 2 minute read &nbsp;</p>
 
 		
 	</header>
-	
+	<h2 id="161">1.6.1</h2>
+<p><a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/releases/tag/v1.6.1">Release notes</a></p>
+<h3 id="changes">Changes:</h3>
+<ul>
+<li>🔼 Upgraded upstream Manifests to v1.6.1.</li>
+<li>🔼 Upgraded pipelines to v 2.0.0-alpha.6 (fixes #392).</li>
+<li>🔼 Updated MySQL to 8.0 (#391).</li>
+<li>🔨 Fixed ASM deployment issue (#389)</li>
+<li>🔨 Minor improvements of deployment process.</li>
+<li>🧪 Validated deployment using GKE 1.22.</li>
+</ul>
+<h2 id="160">1.6.0:</h2>
+<p><a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/releases/tag/v1.6.0">Release notes</a></p>
+<h3 id="changes-1">Changes:</h3>
+<ul>
+<li>🔼 Upgraded upstream Manifests to v1.6.0</li>
+<li>🔼 Upgraded ASM to v 1.14 (#385).</li>
+<li>🔼 Upgraded Knative to v 1.2 (#373).</li>
+<li>🔼 Upgraded cert-manager to v 1.5 (#372).</li>
+<li>🔼 Upgraded pipelines to v 2.0.0-alpha.4.</li>
+<li>🔼 Upgraded APIs to support GKE 1.22 (#349).</li>
+<li>🔨 Improved deployment stability (#371, #376, #384, #386).</li>
+<li>🚚 Removed deprecated kfserving, cloud-endpoints, and application manifests (#375, #377).</li>
+<li>🧪 Validated deployment using GKE 1.21 and GKE 1.22.</li>
+</ul>
+<h2 id="151">1.5.1</h2>
+<p><a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/releases/tag/v1.5.1">Release notes</a></p>
+<h3 id="changes-2">Changes:</h3>
+<ul>
+<li>🔼 Upgraded ASM to v 1.13.</li>
+<li>🔨 Fixed KServe issues with dashboard (#362) and directory(#361).</li>
+<li>🚚 Increased the maximum length of Kubeflow cluster name (#359).</li>
+<li>🚚 Moved RequestAuthentication policy creation to iap-enabler to improve GitOps friendliness (#364).</li>
+<li>🧪 Validated deployment using GKE 1.21.11.</li>
+</ul>
+<h2 id="150">1.5.0:</h2>
+<p><a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/releases/tag/v1.5.0">Release notes</a></p>
+<h3 id="changes-3">Changes:</h3>
+<ul>
+<li>🔼 Upgrade Kubeflow components versions as listed in <a href="https://github.com/kubeflow/manifests/tree/v1.5.0#kubeflow-components-versions">components versions table</a></li>
+<li>🚀 Integrated with Config Controller, simplified management cluster maintenance cost, there is no need to manually upgrade Config Connector CRD.</li>
+<li>🚚 Switch from kfserving to KServe as default serving component, you can switch back to kfserving in <code>config.yaml</code>.</li>
+<li>🔨 Fixed cloudsqlproxy issue with livenessProbe configuration.</li>
+<li>🧪 Validated deployment using GKE 1.20.12.</li>
+</ul>
+<h2 id="141">1.4.1</h2>
+<p><a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/releases/tag/v1.4.1">Release notes</a></p>
+<h3 id="changes-4">Changes:</h3>
+<p>Changes on top of v1.4.0:</p>
+<ul>
+<li>🔼 Upgrade: Integrate with Kubeflow 1.4.1 manifests (kubeflow/manifests#2084)</li>
+<li>🔨 Fix: Change cloud endpoint images destination (#343)</li>
+<li>🔨 Fix: Use yq4 in iap-ingress Makefile.</li>
+</ul>
+<h2 id="140">1.4.0:</h2>
+<p><a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/releases/tag/v1.4.0">Release notes</a></p>
+<h3 id="changes-5">Changes:</h3>
+<ul>
+<li>🔼 Upgrade Kubeflow components versions as listed in components versions table</li>
+<li>🚢 Removed GKE 1.18 image version and k8s runtime pin, now GKE version is default to Stable channel.</li>
+<li>🌊 Set Emissary Executor as default Argo Workflow executor for Kubeflow Pipelines.</li>
+<li>🔼 Upgraded kpt versions from 0.X.X to 1.0.0-beta.6.</li>
+<li>🔼 Upgraded yq from v3 to v4.</li>
+<li>🔼 Upgraded ASM(Anthos Service Mesh) to 1.10.4-asm.6.</li>
+<li>🚀 Unblocked KFSserving usage by removing commonLabels from kustomization patch #298 #324.</li>
+<li>🔗 Integrated with KFServing Web App UI.</li>
+<li>🔗 Integrated with unified operator: training-operator.</li>
+<li>🪁 Simplified deployment: Removed requirement for independent installation of yq, jq, kustomize, kpt.</li>
+</ul>
+
         <div class="section-index">
     
     
@@ -333,32 +429,6 @@ if (!doNotTrack) {
     
     
     
-    <hr class="panel-line">
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/releases/kubeflow-1.6/">Kubeflow 1.6</a>
-                </h5>
-                <p>Information about the Kubeflow 1.6 release</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/releases/kubeflow-1.5/">Kubeflow 1.5</a>
-                </h5>
-                <p>Information about the Kubeflow 1.5 release</p>
-            </div>
-        
-            
-            <div class="entry">
-                <h5>
-                    <a href="/kubeflow-docs/docs/releases/kubeflow-1.4/">Kubeflow 1.4</a>
-                </h5>
-                <p>Information about the Kubeflow 1.4 release</p>
-            </div>
-        
     
 </div>
 
