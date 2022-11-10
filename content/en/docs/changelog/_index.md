@@ -1,7 +1,7 @@
 +++
-title = "Releases"
+title = "Changelog"
 description = "Kubeflow on GCP Changelog"
-weight = 100
+weight = 300
 +++
 
 ## 1.6.1
