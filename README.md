@@ -1,6 +1,7 @@
 # Contributing to this repository
 
 Welcome, Kubeflow users! This website contains the latest documentation for Kubeflow on GCP. It is hosted at https://gkcalat.github.io/kubeflow-docs. 
+Before contributing, please read [these guidelines](./CONTRIBUTING.md).
 
 ## Running locally
 
