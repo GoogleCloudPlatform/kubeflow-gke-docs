@@ -54,13 +54,13 @@ Follow these steps to set up your Google Cloud project:
     * [Cloud Resource Manager API](https://console.developers.google.com/apis/library/cloudresourcemanager.googleapis.com)
     * [AI Platform Training & Prediction API](https://console.developers.google.com/apis/library/ml.googleapis.com)
     * [Cloud Identity-Aware Proxy API](https://console.cloud.google.com/apis/library/iap.googleapis.com)
-    * [Cloud Build API](https://console.cloud.google.com/apis/library/cloudbuild.googleapis.com) (It's required if you plan to use [Fairing](https://www.kubeflow.org/docs/external-add-ons/fairing/) in your Kubeflow cluster)
+    * [Cloud Build API](https://console.cloud.google.com/apis/library/cloudbuild.googleapis.com)
     * [Cloud SQL Admin API](https://console.cloud.google.com/apis/library/sqladmin.googleapis.com)
     * [Config Controller (KRM API Hosting API)](https://console.cloud.google.com/apis/library/krmapihosting.googleapis.com)
     * [Service Control API](https://console.cloud.google.com/apis/library/servicecontrol.googleapis.com)
     * [Google Cloud Endpoints](https://console.cloud.google.com/apis/library/endpoints.googleapis.com)
 
-*  If you are using the
+* If you are using the
   [Google Cloud Free Program](https://cloud.google.com/free/docs/gcp-free-tier) or the
   12-month trial period with $300 credit, note that the free tier does not offer enough
   resources for default full Kubeflow installation. You need to 

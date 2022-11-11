@@ -15,7 +15,7 @@ This guide assumes the following settings:
   are the same as in [Deploy Management cluster](/docs/deploy/management-setup#configure-environment-variables).
 
 * For Kubeflow cluster: The `${KF_PROJECT}`, `${KF_NAME}` and `${MGMTCTXT}` environment variables
-  are the same as in [Deploy Kubeflow cluster](../deploy-cli#environment-variables).
+  are the same as in [Deploy Kubeflow cluster](/docs/deploy/deploy-cli#environment-variables).
   
 * The `${KF_DIR}` environment variable contains the path to
   your Kubeflow application directory, which holds your Kubeflow configuration 

@@ -310,14 +310,14 @@ Due to the refactoring of `kubeflow/manifests` repository, the way we depend on 
 
     ```bash
     kubectl delete statefulset kfserving-controller-manager -n kubeflow --wait
-    kubectl delete crds experiments.kubeflow.org suggestions.kubeflow.org trials.kubeflow.org
+    kubectl delete crds experiments.kubeflow suggestions.kubeflow trials.kubeflow
     ```
 
     **WARNING**: This step **deletes** all Katib running resources.
 
     Refer to [a github comment in the v1.2 release issue](https://github.com/kubeflow/kubeflow/issues/5371#issuecomment-731359384) for more details.
 
-1. Redeploy:
+2. Redeploy:
 
     ```bash
     make apply
@@ -326,7 +326,7 @@ Due to the refactoring of `kubeflow/manifests` repository, the way we depend on 
     To evaluate the changes before deploying them you can:
 
     1. Run `make hydrate`.
-    1. Compare the contents
+    2. Compare the contents
     of `.build` with a historic version with tools like `git diff`.
 
 

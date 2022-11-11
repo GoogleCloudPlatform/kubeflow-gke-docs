@@ -17,14 +17,14 @@ The Kubeflow deployment process is divided into two steps, **hydrate** and
 **apply**, so that you can modify your configuration before deploying your 
 Kubeflow cluster.
 
-Follow the guide to [deploying Kubeflow on Google Cloud](/docs/gke/deploy/deploy-cli/). You can add your patches in corresponding component folder, and include those patches in `kustomization.yaml` file. Learn more about the usage of [kustomize](https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/). You can also find the existing kustomization in [GoogleCloudPlatform/kubeflow-distribution](https://github.com/GoogleCloudPlatform/kubeflow-distribution) as example. After adding the patches, you can run `make hydrate` to validate the resulting resources. Finally, you can run `make apply` to deploy the customized Kubeflow.
+Follow the guide to [deploying Kubeflow on Google Cloud](/docs/deploy/deploy-cli/). You can add your patches in corresponding component folder, and include those patches in `kustomization.yaml` file. Learn more about the usage of [kustomize](https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/). You can also find the existing kustomization in [GoogleCloudPlatform/kubeflow-distribution](https://github.com/GoogleCloudPlatform/kubeflow-distribution) as example. After adding the patches, you can run `make hydrate` to validate the resulting resources. Finally, you can run `make apply` to deploy the customized Kubeflow.
 
 
 ## Customizing an existing deployment
 
 You can also customize an existing Kubeflow deployment. In that case, this 
 guide assumes that you have already followed the guide to 
-[deploying Kubeflow on Google Cloud](/docs/gke/deploy/deploy-cli/) and have deployed
+[deploying Kubeflow on Google Cloud](/docs/deploy/deploy-cli/) and have deployed
 Kubeflow to a GKE cluster.
 
 ## Before you start
@@ -41,7 +41,7 @@ This guide assumes the following settings:
   ``` 
 
 * Make sure your environment variables are set up for the Kubeflow cluster you want to customize. For further background about the settings, see the guide to
-  [deploying Kubeflow with the CLI](/docs/gke/deploy/deploy-cli).
+  [deploying Kubeflow with the CLI](/docs/deploy/deploy-cli).
 
 
 ## Customizing Google Cloud resources
@@ -78,8 +78,7 @@ This folder contains multiple dependencies on sibling directories for Google Clo
 You can use [kustomize](https://kustomize.io/) to customize Kubeflow. 
 Make sure that you have the minimum required version of kustomize:
 <b>{{% kustomize-min-version %}}</b> or later. For more information about
-kustomize in Kubeflow, see
-[how Kubeflow uses kustomize](/docs/methods/kfctl/kustomize/).
+kustomize in Kubeflow, see how Kubeflow uses kustomize.
 
 To customize the Kubernetes resources running within the cluster, you can modify 
 the kustomize manifests in corresponding component under `${KF_DIR}`.
@@ -88,16 +87,16 @@ For example, to modify settings for the Jupyter web app:
 
 1. Open `${KF_DIR}/apps/jupyter/jupyter-web-app/kustomization.yaml` in a text editor.
 
-1. Review the file's inclusion of `deployment-patch.yaml`, and add your modification to `deployment-patch.yaml` based on the original content in `${KF_DIR}/apps/jupyter/jupyter-web-app/upstream/base/deployment.yaml`. For example: change `volumeMounts`'s `mountPath` if you need to customize it.
+2. Review the file's inclusion of `deployment-patch.yaml`, and add your modification to `deployment-patch.yaml` based on the original content in `${KF_DIR}/apps/jupyter/jupyter-web-app/upstream/base/deployment.yaml`. For example: change `volumeMounts`'s `mountPath` if you need to customize it.
 
-1. Verify the output resources in `/build` folder using `Makefile`"
+3. Verify the output resources in `/build` folder using `Makefile`"
 
     ```bash
     cd "${KF_DIR}"
     make hydrate
     ```
 
-1. Redeploy Kubeflow using `Makefile`:
+4. Redeploy Kubeflow using `Makefile`:
 
     ```bash
     cd "${KF_DIR}"
@@ -282,5 +281,4 @@ You can learn more at [Creating a new cluster with Cloud TPU support](https://cl
 ## More customizations
 
 Refer to the navigation panel on the left of these docs for more customizations,
-including [using your own domain](/docs/custom-domain), 
-[setting up Cloud Filestore](/docs/cloud-filestore), and more.
+including [using your own domain](/docs/custom-domain) and more.
