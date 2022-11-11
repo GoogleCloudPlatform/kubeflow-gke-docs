@@ -62,18 +62,18 @@ authentication through IAP.
 
 1.  Find out your IAP OAuth 2.0 client ID.
 
-    You or your cluster admin followed [Set up OAuth for Cloud IAP](https://www.kubeflow.org/docs/gke/deploy/oauth-setup/)
+    You or your cluster admin followed [Set up OAuth for Cloud IAP](/docs/deploy/oauth-setup/)
     to deploy your full Kubeflow deployment on Google Cloud. You need the OAuth client
     ID created in that step.
 
     You can browse all of your existing OAuth client IDs [in the Credentials page of Google Cloud Console](https://console.cloud.google.com/apis/credentials).
 
-1.  Create another SDK OAuth Client ID for authenticating Kubeflow Pipelines SDK users.
+2.  Create another SDK OAuth Client ID for authenticating Kubeflow Pipelines SDK users.
     Follow [the steps to set up a client ID to authenticate from a desktop app](https://cloud.google.com/iap/docs/authentication-howto#authenticating_from_a_desktop_app). Take
     a note of the **client ID** and **client secret**. This client ID and secret can
     be shared among all SDK users, because a separate login step is still needed below.
 
-1.  To connect to Kubeflow Pipelines public endpoint, initiate SDK client like the following:
+3.  To connect to Kubeflow Pipelines public endpoint, initiate SDK client like the following:
 
     ```python
     import kfp
@@ -87,14 +87,14 @@ authentication through IAP.
     - Pass your **SDK** OAuth client ID and secret created in **step 2** to `other_client_id`
       and `other_client_secret` arguments.
 
-1.  When you init the SDK client for the first time, you will be asked to log in.
+4.  When you init the SDK client for the first time, you will be asked to log in.
     The Kubeflow Pipelines SDK stores obtained credentials in `$HOME/.config/kfp/credentials.json`. You do not need to log in again unless you manually delete the credentials file.
 
         To use the SDK from cron tasks where you cannot log in manually, you can copy the credentials file in `$HOME/.config/kfp/credentials.json` to another machine.
         However, you should keep the credentials safe and never expose it to
         third parties.
 
-1.  After login, you can use the client.
+5.  After login, you can use the client.
     ```python
     print(client.list_pipelines())
     ```

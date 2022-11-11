@@ -1,4 +1,4 @@
----
-title: Search results
-layout: search
----
++++
+title = "Search Results"
+layout = "search"
++++

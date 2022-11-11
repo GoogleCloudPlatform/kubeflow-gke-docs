@@ -22,12 +22,12 @@ You can configure a Kubernetes service account (KSA) to act as a Google Cloud se
 If you deployed Kubeflow following the Google Cloud instructions, then the profiler controller automatically binds the "default-editor" service account for every profile namespace to a default Google Cloud service account created during kubeflow deployment. 
 The Kubeflow deployment process also creates a default profile for the cluster admin.
 
-For more info about profiles see the [Multi-user isolation](/docs/components/multi-tenancy/) page.
+For more info about profiles see the [Multi-user isolation](https://kubeflow.org/docs/components/multi-tenancy/) page.
 
 Here is an example profile spec:
 
 ```
-apiVersion: kubeflow.org/v1beta1
+apiVersion: kubeflow/v1beta1
 kind: Profile
 spec:
   plugins:
@@ -83,7 +83,7 @@ gcloud iam service-accounts add-iam-policy-binding \
 4. Manually create a profile for user1 and specify the Google Cloud service account to bind in `plugins` field:
 
 ```yaml
-apiVersion: kubeflow.org/v1beta1
+apiVersion: kubeflow/v1beta1
 kind: Profile
 metadata:
   name: profileName   # replace with the name of the profile (the user's namespace name)
@@ -105,11 +105,11 @@ You can find more details on workload identity in the [GKE documentation](https:
 
 ### Authentication from Kubeflow Pipelines
 
-Starting from Kubeflow v1.1, Kubeflow Pipelines [supports multi-user isolation](/docs/components/pipelines/overview/multi-user/). Therefore, pipeline runs are executed in user namespaces also using the `default-editor` KSA.
+Starting from Kubeflow v1.1, Kubeflow Pipelines supports multi-user isolation. Therefore, pipeline runs are executed in user namespaces also using the `default-editor` KSA.
 
-Additionally, the Kubeflow Pipelines UI, visualization, and TensorBoard server instances are deployed in your user namespace using the `default-editor` KSA. Therefore, to [visualize results in the Pipelines UI](/docs/components/pipelines/sdk/output-viewer/), they can fetch artifacts in Google Cloud Storage using permissions of the same GSA you configured for this namespace.
+Additionally, the Kubeflow Pipelines UI, visualization, and TensorBoard server instances are deployed in your user namespace using the `default-editor` KSA. Therefore, to visualize results in the Pipelines UI, they can fetch artifacts in Google Cloud Storage using permissions of the same GSA you configured for this namespace.
 
-For more details, refer to [Authenticating Pipelines to Google Cloud](/docs/gke/pipelines/authentication-pipelines/).
+For more details, refer to [Authenticating Pipelines to Google Cloud](/docs/pipelines/authentication-pipelines/).
 
 ---
 
@@ -151,8 +151,7 @@ In the output of the command, an asterisk denotes your active account.
 ##### Viewing IAM roles
 
 Permissions are handled in Google Cloud using [IAM Roles](https://cloud.google.com/iam/docs/understanding-roles). 
-These roles define which resources your account can read or write to. Provided you have the 
-[necessary permissions](https://cloud.google.com/iam/docs/understanding-custom-roles#required_permissions_and_roles_),
+These roles define which resources your account can read or write to. Provided you have the [necessary permissions](https://cloud.google.com/iam/docs/understanding-custom-roles#required_permissions_and_roles_),
 you can check which roles were assigned to your account using the following gcloud command:
 
 ```
@@ -241,4 +240,4 @@ You can find more information in the
 
 ## Next steps
 
-See the [troubleshooting guide](/docs/gke/troubleshooting-gke/) for help with diagnosing and fixing issues you may encounter with Kubeflow on Google Cloud
+See the [troubleshooting guide](/docs/troubleshooting/) for help with diagnosing and fixing issues you may encounter with Kubeflow on Google Cloud

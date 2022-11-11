@@ -147,7 +147,7 @@ deployment process, so that you can customize your management cluster if necessa
 ### Config Controller
 
 Management cluster is a tool for managing Google Cloud services like KRM, for example: GKE container cluster, MySQL database, etc. 
-And you can use one Managment cluster for multiple Kubeflow clusters, across multiple Google Cloud projects.
+And you can use one Management cluster for multiple Kubeflow clusters, across multiple Google Cloud projects.
 This capability is offered by [Config Connector](https://cloud.google.com/config-connector/docs/how-to/getting-started). 
 
 Starting with Kubeflow 1.5, we leveraged the managed version of Config Connector, which is called [Config Controller](https://cloud.google.com/anthos-config-management/docs/concepts/config-controller-overview). 
@@ -158,7 +158,7 @@ Note that you can create only one Management cluster within a Google Cloud proje
 
 ### Management cluster layout
 
-Inside the Config Controller, we manange Google Cloud resources in namespace mode. That means one namespace is responsible to manage Google Cloud resources deployed to the Google Cloud project with the same name. Your management cluster contains following namespaces:
+Inside the Config Controller, we manage Google Cloud resources in namespace mode. That means one namespace is responsible to manage Google Cloud resources deployed to the Google Cloud project with the same name. Your management cluster contains following namespaces:
 
 1. config-control
 1. namespace with the same name as your Kubeflow clusters' Google Cloud project name
@@ -167,7 +167,7 @@ Inside the Config Controller, we manange Google Cloud resources in namespace mod
 within this project to manage Config Connector. It is the prerequisite for managing resources in other Google Cloud projects.
 
 `namespace with the same name as your Kubeflow clusters' Google Cloud project name` is the resource pool for Kubeflow cluster's Google Cloud project.
-For each Kubeflow Google Cloud project, you will have service account with pattern `kcc-<kf-project-name>@<management-project-name>.iam.gserviceaccount.com` in `config-control` namespace, and it needs to have owner permission to `${KF_PROJECT}`, you will perform this step during [Deploy Kubeflow cluster](/docs/gke/deploy/deploy-cli/). After setup, your Google Cloud resources in Kubeflow cluster project will be deployed to the namespace with name `${KF_PROJECT}` in the management cluster.
+For each Kubeflow Google Cloud project, you will have service account with pattern `kcc-<kf-project-name>@<management-project-name>.iam.gserviceaccount.com` in `config-control` namespace, and it needs to have owner permission to `${KF_PROJECT}`, you will perform this step during [Deploy Kubeflow cluster](/docs/deploy/deploy-cli/). After setup, your Google Cloud resources in Kubeflow cluster project will be deployed to the namespace with name `${KF_PROJECT}` in the management cluster.
 
 Your management cluster directory contains the following file:
 
@@ -201,4 +201,3 @@ For a more detailed explanation of the drastic changes happened in Kubeflow v1.1
 
 ## Next steps
 * [Deploy Kubeflow](/docs/deploy/deploy-cli) using kubectl, kustomize and kpt.
-
