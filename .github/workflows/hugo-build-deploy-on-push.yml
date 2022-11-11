@@ -53,7 +53,7 @@ jobs:
       - name: Prepare GitHub Pages
         shell: bash
         run: |
-          echo "##[set-output name=version_name;]$(echo ${GITHUB_REF#refs/heads/} | sed 's/-.*//' | sed 's/main//')"
+          echo "version_name=$(${GITHUB_REF#refs/heads/} | sed 's/-.*//' | sed 's/main//') >> $GITHUB_OUTPUT"
         id: prepare_gh_pages
 
       - name: Deploy
