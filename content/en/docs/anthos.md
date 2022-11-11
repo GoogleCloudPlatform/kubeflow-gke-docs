@@ -18,5 +18,4 @@ to the GitHub issue [GoogleCloudPlatform/kubeflow-distribution#138](https://gith
 
 ## Next steps
 
-While waiting for a response from the support team, you may like to [deploy
-Kubeflow on GKE](/docs/gke/deploy/).
+While waiting for a response from the support team, you may like to [deploy Kubeflow on GKE](/docs/deploy/).

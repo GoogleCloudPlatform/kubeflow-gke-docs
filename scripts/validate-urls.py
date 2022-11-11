@@ -24,7 +24,7 @@ import re
 import requests
 
 parser = argparse.ArgumentParser(
-    description='Validate all URLs in the kubeflow.org website'
+    description='Validate all URLs in the Kubeflow on GCP website'
 )
 
 parser.add_argument(

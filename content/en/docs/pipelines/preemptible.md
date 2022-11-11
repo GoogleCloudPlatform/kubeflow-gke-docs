@@ -29,7 +29,7 @@ In addition to using preemptible VMs, your Google Kubernetes Engine (GKE)
 cluster can autoscale based on current workloads.
 
 This guide assumes that you have already deployed Kubeflow Pipelines. If not,
-follow the guide to [deploying Kubeflow on Google Cloud](/docs/gke/deploy/).
+follow the guide to [deploying Kubeflow on Google Cloud](/docs/deploy/).
 
 ## Before you start
 
@@ -136,7 +136,7 @@ gcloud container node-pools create preemptible-cpu-pool \
 After configuring a node pool with preemptible VMs, you must configure your
 pipelines to run on the preemptible VMs. 
 
-In the [DSL code](/docs/components/pipelines/sdk/sdk-overview/) for
+In the DSL code for
 your pipeline, add the following to the `ContainerOp` instance:
 
     .apply(gcp.use_preemptible_nodepool())
@@ -361,5 +361,5 @@ kubectl --context=${MGMTCTXT} --namespace=${KF_PROJECT} describe containernodepo
 
 ## Next steps
 
-* Explore further options for [customizing Kubeflow on Google Cloud](/docs/gke/).
-* See how to [build pipelines with the SDK](/docs/components/pipelines/sdk/).
+* Explore further options for [customizing Kubeflow on Google Cloud](/docs/).
+* See how to [build pipelines with the SDK](https://kubeflow.org/docs/components/pipelines/sdk/).

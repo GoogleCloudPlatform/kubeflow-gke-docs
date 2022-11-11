@@ -223,9 +223,6 @@ To access the Kubeflow central dashboard, follow these steps:
     export HOST=$(kubectl -n istio-system get ingress envoy-ingress -o=jsonpath={.spec.rules[0].host})
     ```
 
-1. Follow the instructions on the UI to create a namespace. Refer to this guide on
-  [creation of profiles](/docs/components/multi-tenancy/getting-started/#automatic-profile-creation).
-
 Notes:
 
 * It can take 20 minutes for the URI to become available.
