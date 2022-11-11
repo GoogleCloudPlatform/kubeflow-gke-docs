@@ -6,7 +6,7 @@ weight = 30
 
 This guide assumes you have already set up Kubeflow on Google Cloud. If you haven't done
 so, follow the guide to
-[getting started with Kubeflow on Google Cloud](/docs/deploy/).
+[getting started with Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/deploy/).
 
 ## Using your own domain
 

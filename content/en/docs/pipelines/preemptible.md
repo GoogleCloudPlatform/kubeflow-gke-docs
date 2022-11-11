@@ -29,11 +29,11 @@ In addition to using preemptible VMs, your Google Kubernetes Engine (GKE)
 cluster can autoscale based on current workloads.
 
 This guide assumes that you have already deployed Kubeflow Pipelines. If not,
-follow the guide to [deploying Kubeflow on Google Cloud](/docs/deploy/).
+follow the guide to [deploying Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/deploy/).
 
 ## Before you start
 
-The variables defined in this page can be found in [kubeflow-distribution/kubeflow/env.sh](https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/env.sh). They are the same value as you set based on your [Kubeflow deployment](/docs/deploy/deploy-cli/#environment-variables). 
+The variables defined in this page can be found in [kubeflow-distribution/kubeflow/env.sh](https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/env.sh). They are the same value as you set based on your [Kubeflow deployment](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli/#environment-variables). 
 
 ## Using preemptible VMs with Kubeflow Pipelines
 
@@ -294,7 +294,7 @@ gcloud container node-pools create preemptible-gpu-pool \
 
 ### 3. Schedule your pipeline to run on the preemptible VMs with preemptible GPUs
 
-In the [DSL code](/docs/components/pipelines/sdk/sdk-overview/) for
+In the [DSL code](/{{ .Site.Params.version_url_prefix }}docs/components/pipelines/sdk/sdk-overview/) for
 your pipeline, add the following to the `ContainerOp` instance:
 
     .apply(gcp.use_preemptible_nodepool()
@@ -361,5 +361,5 @@ kubectl --context=${MGMTCTXT} --namespace=${KF_PROJECT} describe containernodepo
 
 ## Next steps
 
-* Explore further options for [customizing Kubeflow on Google Cloud](/docs/).
+* Explore further options for [customizing Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/).
 * See how to [build pipelines with the SDK](https://kubeflow.org/docs/components/pipelines/sdk/).
