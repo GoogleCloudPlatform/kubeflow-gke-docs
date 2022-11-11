@@ -28,7 +28,7 @@
       "datePublished": "0001-01-01 00:00:00 \u002b0000 UTC",
       "dateModified" : "0001-01-01 00:00:00 \u002b0000 UTC",
       "url" : "https:\/\/gkcalat.github.io\/kubeflow-docs\/docs\/pipelines\/preemptible\/",
-      "wordCount" : "1355",
+      "wordCount" : "1363",
       "keywords" : [ "Kubeflow on GCP" ]
   }
   </script>
@@ -49,12 +49,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/pipelines/preemptible/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-11-11T00:13:55+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+<meta property="article:modified_time" content="2022-11-11T17:49:27+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
 
 <meta itemprop="name" content="Using Preemptible VMs and GPUs on Google Cloud">
 <meta itemprop="description" content="Configuring preemptible VMs and GPUs for Kubeflow Pipelines on Google Cloud">
-<meta itemprop="dateModified" content="2022-11-11T00:13:55+00:00" />
-<meta itemprop="wordCount" content="1355">
+<meta itemprop="dateModified" content="2022-11-11T17:49:27+00:00" />
+<meta itemprop="wordCount" content="1363">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Using Preemptible VMs and GPUs on Google Cloud"/>
 <meta name="twitter:description" content="Configuring preemptible VMs and GPUs for Kubeflow Pipelines on Google Cloud"/>
@@ -388,9 +388,9 @@ work like normal GPUs but persist only for the life of the instance.</p>
 In addition to using preemptible VMs, your Google Kubernetes Engine (GKE)
 cluster can autoscale based on current workloads.</p>
 <p>This guide assumes that you have already deployed Kubeflow Pipelines. If not,
-follow the guide to <a href="/docs/deploy/">deploying Kubeflow on Google Cloud</a>.</p>
+follow the guide to [deploying Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/deploy/).</p>
 <h2 id="before-you-start">Before you start</h2>
-<p>The variables defined in this page can be found in <a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/env.sh">kubeflow-distribution/kubeflow/env.sh</a>. They are the same value as you set based on your <a href="/docs/deploy/deploy-cli/#environment-variables">Kubeflow deployment</a>.</p>
+<p>The variables defined in this page can be found in <a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/env.sh">kubeflow-distribution/kubeflow/env.sh</a>. They are the same value as you set based on your [Kubeflow deployment](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli/#environment-variables).</p>
 <h2 id="using-preemptible-vms-with-kubeflow-pipelines">Using preemptible VMs with Kubeflow Pipelines</h2>
 <p>In summary, the steps to schedule a pipeline to run on <a href="https://cloud.google.com/compute/docs/instances/preemptible">preemptible
 VMs</a> are as
@@ -603,7 +603,7 @@ Console.</p>
 </span></span><span class="line"><span class="cl">    --service-account=user-4-18-vm@ml-pipeline-project.iam.gserviceaccount.com \
 </span></span><span class="line"><span class="cl">    --accelerator=type=nvidia-tesla-t4,count=2
 </span></span></code></pre></div><h3 id="3-schedule-your-pipeline-to-run-on-the-preemptible-vms-with-preemptible-gpus">3. Schedule your pipeline to run on the preemptible VMs with preemptible GPUs</h3>
-<p>In the <a href="/docs/components/pipelines/sdk/sdk-overview/">DSL code</a> for
+<p>In the [DSL code](/{{ .Site.Params.version_url_prefix }}docs/components/pipelines/sdk/sdk-overview/) for
 your pipeline, add the following to the <code>ContainerOp</code> instance:</p>
 <pre><code>.apply(gcp.use_preemptible_nodepool()
 </code></pre>
@@ -662,7 +662,7 @@ if __name__ == '__main__':
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl --context<span class="o">=</span><span class="si">${</span><span class="nv">MGMTCTXT</span><span class="si">}</span> --namespace<span class="o">=</span><span class="si">${</span><span class="nv">KF_PROJECT</span><span class="si">}</span> describe containernodepool -l kf-name<span class="o">=</span><span class="si">${</span><span class="nv">KF_NAME</span><span class="si">}</span>
 </span></span></code></pre></div><h2 id="next-steps">Next steps</h2>
 <ul>
-<li>Explore further options for <a href="/docs/">customizing Kubeflow on Google Cloud</a>.</li>
+<li>Explore further options for [customizing Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/).</li>
 <li>See how to <a href="https://kubeflow.org/docs/components/pipelines/sdk/">build pipelines with the SDK</a>.</li>
 </ul>
 

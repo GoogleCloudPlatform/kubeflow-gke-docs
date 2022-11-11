@@ -28,7 +28,7 @@
       "datePublished": "0001-01-01 00:00:00 \u002b0000 UTC",
       "dateModified" : "0001-01-01 00:00:00 \u002b0000 UTC",
       "url" : "https:\/\/gkcalat.github.io\/kubeflow-docs\/docs\/deploy\/upgrade\/",
-      "wordCount" : "1891",
+      "wordCount" : "1899",
       "keywords" : [ "Kubeflow on GCP" ]
   }
   </script>
@@ -49,12 +49,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/deploy/upgrade/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-11-11T00:13:55+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+<meta property="article:modified_time" content="2022-11-11T17:49:27+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
 
 <meta itemprop="name" content="Upgrade Kubeflow">
 <meta itemprop="description" content="Upgrading your Kubeflow installation on Google Cloud">
-<meta itemprop="dateModified" content="2022-11-11T00:13:55+00:00" />
-<meta itemprop="wordCount" content="1891">
+<meta itemprop="dateModified" content="2022-11-11T17:49:27+00:00" />
+<meta itemprop="wordCount" content="1899">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Upgrade Kubeflow"/>
 <meta name="twitter:description" content="Upgrading your Kubeflow installation on Google Cloud"/>
@@ -380,15 +380,15 @@ if (!doNotTrack) {
 	<h2 id="before-you-start">Before you start</h2>
 <p>To better understand upgrade process, you should read the following sections first:</p>
 <ul>
-<li><a href="/docs/deploy/management-setup#understanding-the-deployment-process">Understanding the deployment process for management cluster</a></li>
-<li><a href="/docs/deploy/deploy-cli#understanding-the-deployment-process">Understanding the deployment process for Kubeflow cluster</a></li>
+<li>[Understanding the deployment process for management cluster](/{{ .Site.Params.version_url_prefix }}docs/deploy/management-setup#understanding-the-deployment-process)</li>
+<li>[Understanding the deployment process for Kubeflow cluster](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli#understanding-the-deployment-process)</li>
 </ul>
 <p>This guide assumes the following settings:</p>
 <ul>
 <li>The <code>${MGMT_DIR}</code> and <code>${MGMT_NAME}</code> environment variables
-are the same as in <a href="/docs/deploy/management-setup#configure-environment-variables">Management cluster setup</a>.</li>
+are the same as in [Management cluster setup](/{{ .Site.Params.version_url_prefix }}docs/deploy/management-setup#configure-environment-variables).</li>
 <li>The <code>${KF_NAME}</code>, <code>${CLIENT_ID}</code> and <code>${CLIENT_SECRET}</code> environment variables
-are the same as in <a href="/docs/deploy/deploy-cli#environment-variables">Deploy using kubectl and kpt</a>.</li>
+are the same as in [Deploy using kubectl and kpt](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli#environment-variables).</li>
 <li>The <code>${KF_DIR}</code> environment variable contains the path to
 your Kubeflow application directory, which holds your Kubeflow configuration
 files. For example, <code>/opt/kubeflow-distribution/kubeflow/</code>.</li>

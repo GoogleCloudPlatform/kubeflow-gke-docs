@@ -28,7 +28,7 @@
       "datePublished": "0001-01-01 00:00:00 \u002b0000 UTC",
       "dateModified" : "0001-01-01 00:00:00 \u002b0000 UTC",
       "url" : "https:\/\/gkcalat.github.io\/kubeflow-docs\/docs\/deploy\/management-setup\/",
-      "wordCount" : "1150",
+      "wordCount" : "1154",
       "keywords" : [ "Kubeflow on GCP" ]
   }
   </script>
@@ -49,12 +49,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/deploy/management-setup/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-11-11T00:13:55+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+<meta property="article:modified_time" content="2022-11-11T17:49:27+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
 
 <meta itemprop="name" content="Deploying Management cluster">
 <meta itemprop="description" content="Setting up a management cluster on Google Cloud">
-<meta itemprop="dateModified" content="2022-11-11T00:13:55+00:00" />
-<meta itemprop="wordCount" content="1150">
+<meta itemprop="dateModified" content="2022-11-11T17:49:27+00:00" />
+<meta itemprop="wordCount" content="1154">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Deploying Management cluster"/>
 <meta name="twitter:description" content="Setting up a management cluster on Google Cloud"/>
@@ -491,7 +491,7 @@ Note that you can create only one Management cluster within a Google Cloud proje
 <p><code>config-control</code> is the default namespace which is installed while creating Management cluster, you have granted the default service account (like <code>service-&lt;management-project-id&gt;@gcp-sa-yakima.iam.gserviceaccount.com</code>)
 within this project to manage Config Connector. It is the prerequisite for managing resources in other Google Cloud projects.</p>
 <p><code>namespace with the same name as your Kubeflow clusters' Google Cloud project name</code> is the resource pool for Kubeflow cluster&rsquo;s Google Cloud project.
-For each Kubeflow Google Cloud project, you will have service account with pattern <code>kcc-&lt;kf-project-name&gt;@&lt;management-project-name&gt;.iam.gserviceaccount.com</code> in <code>config-control</code> namespace, and it needs to have owner permission to <code>${KF_PROJECT}</code>, you will perform this step during <a href="/docs/deploy/deploy-cli/">Deploy Kubeflow cluster</a>. After setup, your Google Cloud resources in Kubeflow cluster project will be deployed to the namespace with name <code>${KF_PROJECT}</code> in the management cluster.</p>
+For each Kubeflow Google Cloud project, you will have service account with pattern <code>kcc-&lt;kf-project-name&gt;@&lt;management-project-name&gt;.iam.gserviceaccount.com</code> in <code>config-control</code> namespace, and it needs to have owner permission to <code>${KF_PROJECT}</code>, you will perform this step during [Deploy Kubeflow cluster](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli/). After setup, your Google Cloud resources in Kubeflow cluster project will be deployed to the namespace with name <code>${KF_PROJECT}</code> in the management cluster.</p>
 <p>Your management cluster directory contains the following file:</p>
 <ul>
 <li><strong>Makefile</strong> is a file that defines rules to automate deployment process. You can refer to <a href="https://www.gnu.org/software/make/manual/make.html#Introduction">GNU make documentation</a> for more introduction. The Makefile we provide is designed to be user maintainable. You are encouraged to read, edit and maintain it to suit your own deployment customization needs.</li>
@@ -518,7 +518,7 @@ Learn more with <a href="https://cloud.google.com/config-connector/docs/how-to/m
 <p>For a more detailed explanation of the drastic changes happened in Kubeflow v1.1 on Google Cloud, read <a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/123">GoogleCloudPlatform/kubeflow-distribution #123</a>.</p>
 <h2 id="next-steps">Next steps</h2>
 <ul>
-<li><a href="/docs/deploy/deploy-cli">Deploy Kubeflow</a> using kubectl, kustomize and kpt.</li>
+<li>[Deploy Kubeflow](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli) using kubectl, kustomize and kpt.</li>
 </ul>
 
 	

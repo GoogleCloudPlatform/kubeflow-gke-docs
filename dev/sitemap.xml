@@ -3,42 +3,42 @@
   
   <url>
     <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/deploy/overview/</loc>
-    <lastmod>2022-11-11T00:13:55+00:00</lastmod>
+    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/deploy/project-setup/</loc>
-    <lastmod>2022-11-11T00:13:55+00:00</lastmod>
+    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/deploy/oauth-setup/</loc>
-    <lastmod>2022-11-10T00:03:02+00:00</lastmod>
+    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/deploy/management-setup/</loc>
-    <lastmod>2022-11-11T00:13:55+00:00</lastmod>
+    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/deploy/deploy-cli/</loc>
-    <lastmod>2022-11-11T00:13:55+00:00</lastmod>
+    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/deploy/upgrade/</loc>
-    <lastmod>2022-11-11T00:13:55+00:00</lastmod>
+    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/deploy/monitor-iap-setup/</loc>
-    <lastmod>2022-11-10T00:29:34+00:00</lastmod>
+    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/deploy/delete-cli/</loc>
-    <lastmod>2022-11-11T00:13:55+00:00</lastmod>
+    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
   </url>
   
   <url>
@@ -53,12 +53,12 @@
   
   <url>
     <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/pipelines/authentication-sdk/</loc>
-    <lastmod>2022-11-11T00:13:55+00:00</lastmod>
+    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/customizing/</loc>
-    <lastmod>2022-11-11T00:13:55+00:00</lastmod>
+    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
   </url>
   
   <url>
@@ -68,27 +68,27 @@
   
   <url>
     <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/custom-domain/</loc>
-    <lastmod>2022-11-11T00:13:55+00:00</lastmod>
+    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/authentication/</loc>
-    <lastmod>2022-11-11T00:13:55+00:00</lastmod>
+    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/pipelines/authentication-pipelines/</loc>
-    <lastmod>2022-11-11T00:13:55+00:00</lastmod>
+    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/pipelines/upgrade/</loc>
-    <lastmod>2022-11-11T00:13:55+00:00</lastmod>
+    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/pipelines/enable-gpu-and-tpu/</loc>
-    <lastmod>2022-11-11T00:13:55+00:00</lastmod>
+    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
   </url>
   
   <url>
@@ -98,17 +98,17 @@
   
   <url>
     <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/troubleshooting/</loc>
-    <lastmod>2022-11-10T00:25:22+00:00</lastmod>
+    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/pipelines/preemptible/</loc>
-    <lastmod>2022-11-11T00:13:55+00:00</lastmod>
+    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/docs/anthos/</loc>
-    <lastmod>2022-11-11T00:13:55+00:00</lastmod>
+    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
   </url>
   
   <url>
@@ -122,7 +122,7 @@
   
   <url>
     <loc>https://gkcalat.github.io/kubeflow-docshttps://gkcalat.github.io/kubeflow-docs/</loc>
-    <lastmod>2022-11-10T19:45:25+00:00</lastmod>
+    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
   </url>
   
   <url>

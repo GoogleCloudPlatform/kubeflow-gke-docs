@@ -28,7 +28,7 @@
       "datePublished": "0001-01-01 00:00:00 \u002b0000 UTC",
       "dateModified" : "0001-01-01 00:00:00 \u002b0000 UTC",
       "url" : "https:\/\/gkcalat.github.io\/kubeflow-docs\/docs\/pipelines\/enable-gpu-and-tpu\/",
-      "wordCount" : "279",
+      "wordCount" : "281",
       "keywords" : [ "Kubeflow on GCP" ]
   }
   </script>
@@ -49,12 +49,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/pipelines/enable-gpu-and-tpu/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-11-11T00:13:55+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+<meta property="article:modified_time" content="2022-11-11T17:49:27+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
 
 <meta itemprop="name" content="Enabling GPU and TPU">
 <meta itemprop="description" content="Enable GPU and TPU for Kubeflow Pipelines on Google Kubernetes Engine (GKE)">
-<meta itemprop="dateModified" content="2022-11-11T00:13:55+00:00" />
-<meta itemprop="wordCount" content="279">
+<meta itemprop="dateModified" content="2022-11-11T17:49:27+00:00" />
+<meta itemprop="wordCount" content="281">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Enabling GPU and TPU"/>
 <meta name="twitter:description" content="Enable GPU and TPU for Kubeflow Pipelines on Google Kubernetes Engine (GKE)"/>
@@ -360,7 +360,7 @@ if (!doNotTrack) {
 DSL language.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>To enable GPU and TPU on your Kubeflow cluster, follow the instructions on how to
-<a href="/docs/customizing-gke#common-customizations">customize</a> the GKE cluster for Kubeflow before
+[customize](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke#common-customizations) the GKE cluster for Kubeflow before
 setting up the cluster.</p>
 <h2 id="configure-containerop-to-consume-gpus">Configure ContainerOp to consume GPUs</h2>
 <p>After enabling the GPU, the Kubeflow setup script installs a default GPU pool with type nvidia-tesla-k80 with auto-scaling enabled.
