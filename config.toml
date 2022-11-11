@@ -137,7 +137,7 @@ pygmentsStyle = "tango"
 
   # Menu title if your navbar has a versions selector to access old versions of your site.
   # This menu appears only if you have at least one [params.versions] set.
-  version_menu = "Versions"
+  version_menu = "dev"
   # Flag used in the "version-banner" partial to decide whether to display a 
   # banner on every page indicating that this is an archived version of the docs.
   # Set this flag to "true" if you want to display the banner.
@@ -155,7 +155,7 @@ pygmentsStyle = "tango"
 
   # These entries appear in the drop-down menu at the top of the website.
   [[params.versions]]
-    version = "v1.6"
+    version = "v1.6 (latest)"
     githubbranch = "v1.6-release"
     url = "https://gkcalat.github.io/kubeflow-docs/docs"
   [[params.versions]]
