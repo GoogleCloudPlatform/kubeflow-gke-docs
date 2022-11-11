@@ -155,7 +155,7 @@ pygmentsStyle = "tango"
 
   # These entries appear in the drop-down menu at the top of the website.
   [[params.versions]]
-    version = "v1.6"
+    version = "v1.6 (latest)"
     githubbranch = "v1.6-release"
     url = "https://gkcalat.github.io/kubeflow-docs/docs"
   [[params.versions]]
