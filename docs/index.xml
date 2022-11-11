@@ -22,18 +22,18 @@
       <description>
         
         
-        &lt;p&gt;This guide describes how to deploy Kubeflow and a series of Kubeflow components on GKE (Google Kubernetes Engine).
-If you want to use Kubeflow Pipelines only, refer to &lt;a href=&#34;https://www.kubeflow.org/docs/components/pipelines/installation/overview/&#34;&gt;Installation Options for Kubeflow Pipelines&lt;/a&gt;
-for choosing an installation option.&lt;/p&gt;
+        &lt;p&gt;This guide describes how to deploy Kubeflow and a series of Kubeflow components on GKE (Google Kubernetes Engine).&lt;/p&gt;
+&lt;!-- If you want to use Kubeflow Pipelines only, refer to [Installation Options for Kubeflow Pipelines](https://www.kubeflow.org/docs/components/pipelines/installation/overview/) for choosing an installation option.
+--&gt;
 &lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
 &lt;p&gt;Once deployed, Kubeflow of GCP includes:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;1. Full-fledge multi-user Kubeflow running on GKE.
-1. [Cluster Autoscaler](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler)
+2. [Cluster Autoscaler](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler)
     with automatic resizing of the node pool.
-1. [Cloud Endpoint](https://cloud.google.com/endpoints/docs) integrated with [IAP (Identity-aware Proxy)](https://cloud.google.com/iap).
-1. GPU and [Cloud TPU](https://cloud.google.com/tpu/) accelerated nodes available for your ML workloads.
-1. [Cloud Logging](https://cloud.google.com/logging/docs/) for easy debugging and troubleshooting.
-1. Many more managed services offered by Google Cloud.
+3. [Cloud Endpoint](https://cloud.google.com/endpoints/docs) integrated with [IAP (Identity-aware Proxy)](https://cloud.google.com/iap).
+4. GPU and [Cloud TPU](https://cloud.google.com/tpu/) accelerated nodes available for your ML workloads.
+5. [Cloud Logging](https://cloud.google.com/logging/docs/) for easy debugging and troubleshooting.
+6. Many more managed services offered by Google Cloud.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://gkcalat.github.io/kubeflow-docs/docs/images/gke/full-kf-home.png&#34; 
 alt=&#34;Full Kubeflow Central Dashboard&#34;
@@ -51,9 +51,8 @@ class=&#34;mt-3 mb-3 border border-info rounded&#34;&gt;&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/deploy/management-setup/&#34;&gt;Deploy Management Cluster&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/deploy/deploy-cli/&#34;&gt;Deploy Kubeflow Cluster&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;If you encounter any issue during the deployment steps, refer to &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/troubleshooting/&#34;&gt;Troubleshooting deployments&lt;/a&gt; to find common issues
-and debugging approaches. If this issue is new, file a bug to &lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution&#34;&gt;GoogleCloudPlatform/kubeflow-distribution&lt;/a&gt; for GKE related issue,
-or file a bug to the corresponding component in &lt;a href=&#34;https://github.com/kubeflow/&#34;&gt;Kubeflow on GitHub&lt;/a&gt; if the issue is component specific.&lt;/p&gt;
+&lt;p&gt;If you encounter any issues during the deployment steps, refer to &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/troubleshooting/&#34;&gt;Troubleshooting deployments&lt;/a&gt; to find common issues
+and debugging approaches. If this issue is new, file a bug to &lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution&#34;&gt;GoogleCloudPlatform/kubeflow-distribution&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;next-steps&#34;&gt;Next steps&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Repeat &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/deploy/deploy-cli/&#34;&gt;Deploy Kubeflow Cluster&lt;/a&gt; if you want to deploy another Kubeflow cluster.&lt;/li&gt;
@@ -121,7 +120,7 @@ owner role for the project in order to deploy Kubeflow.&lt;/p&gt;
 * [Cloud Resource Manager API](https://console.developers.google.com/apis/library/cloudresourcemanager.googleapis.com)
 * [AI Platform Training &amp;amp; Prediction API](https://console.developers.google.com/apis/library/ml.googleapis.com)
 * [Cloud Identity-Aware Proxy API](https://console.cloud.google.com/apis/library/iap.googleapis.com)
-* [Cloud Build API](https://console.cloud.google.com/apis/library/cloudbuild.googleapis.com) (It&#39;s required if you plan to use [Fairing](https://www.kubeflow.org/docs/external-add-ons/fairing/) in your Kubeflow cluster)
+* [Cloud Build API](https://console.cloud.google.com/apis/library/cloudbuild.googleapis.com)
 * [Cloud SQL Admin API](https://console.cloud.google.com/apis/library/sqladmin.googleapis.com)
 * [Config Controller (KRM API Hosting API)](https://console.cloud.google.com/apis/library/krmapihosting.googleapis.com)
 * [Service Control API](https://console.cloud.google.com/apis/library/servicecontrol.googleapis.com)
@@ -412,13 +411,13 @@ allow Config Controller to manage Google Cloud resources. Refer to &lt;a href=&#
 deployment process, so that you can customize your management cluster if necessary.&lt;/p&gt;
 &lt;h3 id=&#34;config-controller&#34;&gt;Config Controller&lt;/h3&gt;
 &lt;p&gt;Management cluster is a tool for managing Google Cloud services like KRM, for example: GKE container cluster, MySQL database, etc.
-And you can use one Managment cluster for multiple Kubeflow clusters, across multiple Google Cloud projects.
+And you can use one Management cluster for multiple Kubeflow clusters, across multiple Google Cloud projects.
 This capability is offered by &lt;a href=&#34;https://cloud.google.com/config-connector/docs/how-to/getting-started&#34;&gt;Config Connector&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Starting with Kubeflow 1.5, we leveraged the managed version of Config Connector, which is called &lt;a href=&#34;https://cloud.google.com/anthos-config-management/docs/concepts/config-controller-overview&#34;&gt;Config Controller&lt;/a&gt;.
 Therefore, The Management cluster is the Config Controller cluster deployed using &lt;a href=&#34;https://cloud.google.com/anthos-config-management/docs/how-to/config-controller-setup&#34;&gt;Config Controller setup&lt;/a&gt; process.
 Note that you can create only one Management cluster within a Google Cloud project, and you usually need just one Management cluster.&lt;/p&gt;
 &lt;h3 id=&#34;management-cluster-layout&#34;&gt;Management cluster layout&lt;/h3&gt;
-&lt;p&gt;Inside the Config Controller, we manange Google Cloud resources in namespace mode. That means one namespace is responsible to manage Google Cloud resources deployed to the Google Cloud project with the same name. Your management cluster contains following namespaces:&lt;/p&gt;
+&lt;p&gt;Inside the Config Controller, we manage Google Cloud resources in namespace mode. That means one namespace is responsible to manage Google Cloud resources deployed to the Google Cloud project with the same name. Your management cluster contains following namespaces:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;config-control&lt;/li&gt;
 &lt;li&gt;namespace with the same name as your Kubeflow clusters&amp;rsquo; Google Cloud project name&lt;/li&gt;
@@ -426,7 +425,7 @@ Note that you can create only one Management cluster within a Google Cloud proje
 &lt;p&gt;&lt;code&gt;config-control&lt;/code&gt; is the default namespace which is installed while creating Management cluster, you have granted the default service account (like &lt;code&gt;service-&amp;lt;management-project-id&amp;gt;@gcp-sa-yakima.iam.gserviceaccount.com&lt;/code&gt;)
 within this project to manage Config Connector. It is the prerequisite for managing resources in other Google Cloud projects.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;namespace with the same name as your Kubeflow clusters&#39; Google Cloud project name&lt;/code&gt; is the resource pool for Kubeflow cluster&amp;rsquo;s Google Cloud project.
-For each Kubeflow Google Cloud project, you will have service account with pattern &lt;code&gt;kcc-&amp;lt;kf-project-name&amp;gt;@&amp;lt;management-project-name&amp;gt;.iam.gserviceaccount.com&lt;/code&gt; in &lt;code&gt;config-control&lt;/code&gt; namespace, and it needs to have owner permission to &lt;code&gt;${KF_PROJECT}&lt;/code&gt;, you will perform this step during &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/gke/deploy/deploy-cli/&#34;&gt;Deploy Kubeflow cluster&lt;/a&gt;. After setup, your Google Cloud resources in Kubeflow cluster project will be deployed to the namespace with name &lt;code&gt;${KF_PROJECT}&lt;/code&gt; in the management cluster.&lt;/p&gt;
+For each Kubeflow Google Cloud project, you will have service account with pattern &lt;code&gt;kcc-&amp;lt;kf-project-name&amp;gt;@&amp;lt;management-project-name&amp;gt;.iam.gserviceaccount.com&lt;/code&gt; in &lt;code&gt;config-control&lt;/code&gt; namespace, and it needs to have owner permission to &lt;code&gt;${KF_PROJECT}&lt;/code&gt;, you will perform this step during &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/deploy/deploy-cli/&#34;&gt;Deploy Kubeflow cluster&lt;/a&gt;. After setup, your Google Cloud resources in Kubeflow cluster project will be deployed to the namespace with name &lt;code&gt;${KF_PROJECT}&lt;/code&gt; in the management cluster.&lt;/p&gt;
 &lt;p&gt;Your management cluster directory contains the following file:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Makefile&lt;/strong&gt; is a file that defines rules to automate deployment process. You can refer to &lt;a href=&#34;https://www.gnu.org/software/make/manual/make.html#Introduction&#34;&gt;GNU make documentation&lt;/a&gt; for more introduction. The Makefile we provide is designed to be user maintainable. You are encouraged to read, edit and maintain it to suit your own deployment customization needs.&lt;/li&gt;
@@ -645,10 +644,6 @@ minutes for the URI to become available: &lt;code&gt;https://${KF_NAME}.endpoint
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The following command sets an environment variable named &lt;code&gt;HOST&lt;/code&gt; to the URI:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HOST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;kubectl -n istio-system get ingress envoy-ingress -o&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;jsonpath&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;={&lt;/span&gt;.spec.rules&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;0&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;.host&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Follow the instructions on the UI to create a namespace. Refer to this guide on
-&lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/components/multi-tenancy/getting-started/#automatic-profile-creation&#34;&gt;creation of profiles&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Notes:&lt;/p&gt;
 &lt;ul&gt;
@@ -977,7 +972,7 @@ reconfigure the context by:&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;Before applying new resources, you need to delete some immutable resources that were updated in this release:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl delete statefulset kfserving-controller-manager -n kubeflow --wait
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl delete crds experiments.kubeflow.org suggestions.kubeflow.org trials.kubeflow.org
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl delete crds experiments.kubeflow suggestions.kubeflow trials.kubeflow
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;WARNING&lt;/strong&gt;: This step &lt;strong&gt;deletes&lt;/strong&gt; all Katib running resources.&lt;/p&gt;
 &lt;p&gt;Refer to &lt;a href=&#34;https://github.com/kubeflow/kubeflow/issues/5371#issuecomment-731359384&#34;&gt;a github comment in the v1.2 release issue&lt;/a&gt; for more details.&lt;/p&gt;
 &lt;/li&gt;
@@ -1184,7 +1179,7 @@ are the same as in &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;For Kubeflow cluster: The &lt;code&gt;${KF_PROJECT}&lt;/code&gt;, &lt;code&gt;${KF_NAME}&lt;/code&gt; and &lt;code&gt;${MGMTCTXT}&lt;/code&gt; environment variables
-are the same as in &lt;a href=&#34;../deploy-cli#environment-variables&#34;&gt;Deploy Kubeflow cluster&lt;/a&gt;.&lt;/p&gt;
+are the same as in &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/deploy/deploy-cli#environment-variables&#34;&gt;Deploy Kubeflow cluster&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The &lt;code&gt;${KF_DIR}&lt;/code&gt; environment variable contains the path to
@@ -1291,7 +1286,7 @@ authentication through IAP.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Find out your IAP OAuth 2.0 client ID.&lt;/p&gt;
-&lt;p&gt;You or your cluster admin followed &lt;a href=&#34;https://www.kubeflow.org/docs/gke/deploy/oauth-setup/&#34;&gt;Set up OAuth for Cloud IAP&lt;/a&gt;
+&lt;p&gt;You or your cluster admin followed &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/deploy/oauth-setup/&#34;&gt;Set up OAuth for Cloud IAP&lt;/a&gt;
 to deploy your full Kubeflow deployment on Google Cloud. You need the OAuth client
 ID created in that step.&lt;/p&gt;
 &lt;p&gt;You can browse all of your existing OAuth client IDs &lt;a href=&#34;https://console.cloud.google.com/apis/credentials&#34;&gt;in the Credentials page of Google Cloud Console&lt;/a&gt;.&lt;/p&gt;
@@ -1361,11 +1356,11 @@ Kubernetes Engine (GKE) on Google Cloud.&lt;/p&gt;
 &lt;p&gt;The Kubeflow deployment process is divided into two steps, &lt;strong&gt;hydrate&lt;/strong&gt; and
 &lt;strong&gt;apply&lt;/strong&gt;, so that you can modify your configuration before deploying your
 Kubeflow cluster.&lt;/p&gt;
-&lt;p&gt;Follow the guide to &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/gke/deploy/deploy-cli/&#34;&gt;deploying Kubeflow on Google Cloud&lt;/a&gt;. You can add your patches in corresponding component folder, and include those patches in &lt;code&gt;kustomization.yaml&lt;/code&gt; file. Learn more about the usage of &lt;a href=&#34;https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/&#34;&gt;kustomize&lt;/a&gt;. You can also find the existing kustomization in &lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution&#34;&gt;GoogleCloudPlatform/kubeflow-distribution&lt;/a&gt; as example. After adding the patches, you can run &lt;code&gt;make hydrate&lt;/code&gt; to validate the resulting resources. Finally, you can run &lt;code&gt;make apply&lt;/code&gt; to deploy the customized Kubeflow.&lt;/p&gt;
+&lt;p&gt;Follow the guide to &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/deploy/deploy-cli/&#34;&gt;deploying Kubeflow on Google Cloud&lt;/a&gt;. You can add your patches in corresponding component folder, and include those patches in &lt;code&gt;kustomization.yaml&lt;/code&gt; file. Learn more about the usage of &lt;a href=&#34;https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/&#34;&gt;kustomize&lt;/a&gt;. You can also find the existing kustomization in &lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution&#34;&gt;GoogleCloudPlatform/kubeflow-distribution&lt;/a&gt; as example. After adding the patches, you can run &lt;code&gt;make hydrate&lt;/code&gt; to validate the resulting resources. Finally, you can run &lt;code&gt;make apply&lt;/code&gt; to deploy the customized Kubeflow.&lt;/p&gt;
 &lt;h2 id=&#34;customizing-an-existing-deployment&#34;&gt;Customizing an existing deployment&lt;/h2&gt;
 &lt;p&gt;You can also customize an existing Kubeflow deployment. In that case, this
 guide assumes that you have already followed the guide to
-&lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/gke/deploy/deploy-cli/&#34;&gt;deploying Kubeflow on Google Cloud&lt;/a&gt; and have deployed
+&lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/deploy/deploy-cli/&#34;&gt;deploying Kubeflow on Google Cloud&lt;/a&gt; and have deployed
 Kubeflow to a GKE cluster.&lt;/p&gt;
 &lt;h2 id=&#34;before-you-start-1&#34;&gt;Before you start&lt;/h2&gt;
 &lt;p&gt;This guide assumes the following settings:&lt;/p&gt;
@@ -1379,7 +1374,7 @@ files. For example, &lt;code&gt;/opt/kubeflow-distribution/kubeflow/&lt;/code&gt
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Make sure your environment variables are set up for the Kubeflow cluster you want to customize. For further background about the settings, see the guide to
-&lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/gke/deploy/deploy-cli&#34;&gt;deploying Kubeflow with the CLI&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/deploy/deploy-cli&#34;&gt;deploying Kubeflow with the CLI&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;customizing-google-cloud-resources&#34;&gt;Customizing Google Cloud resources&lt;/h2&gt;
@@ -1420,8 +1415,7 @@ modify the Deployment settings starting in &lt;code&gt;${KF_DIR}/common/cnrm&lt;
 &lt;p&gt;You can use &lt;a href=&#34;https://kustomize.io/&#34;&gt;kustomize&lt;/a&gt; to customize Kubeflow.
 Make sure that you have the minimum required version of kustomize:
 &lt;b&gt;2.0.3&lt;/b&gt; or later. For more information about
-kustomize in Kubeflow, see
-&lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/methods/kfctl/kustomize/&#34;&gt;how Kubeflow uses kustomize&lt;/a&gt;.&lt;/p&gt;
+kustomize in Kubeflow, see how Kubeflow uses kustomize.&lt;/p&gt;
 &lt;p&gt;To customize the Kubernetes resources running within the cluster, you can modify
 the kustomize manifests in corresponding component under &lt;code&gt;${KF_DIR}&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;For example, to modify settings for the Jupyter web app:&lt;/p&gt;
@@ -1577,8 +1571,7 @@ in &lt;code&gt;${KF_DIR}/common/cluster/upstream/cluster.yaml&lt;/code&gt; and e
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can learn more at &lt;a href=&#34;https://cloud.google.com/tpu/docs/kubernetes-engine-setup#new-cluster&#34;&gt;Creating a new cluster with Cloud TPU support&lt;/a&gt;, and view an example &lt;a href=&#34;https://cloud.google.com/config-connector/docs/reference/resource-docs/container/containercluster&#34;&gt;Vpc Native Container Cluster&lt;/a&gt; config connector yaml file.&lt;/p&gt;
 &lt;h2 id=&#34;more-customizations&#34;&gt;More customizations&lt;/h2&gt;
 &lt;p&gt;Refer to the navigation panel on the left of these docs for more customizations,
-including &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/custom-domain&#34;&gt;using your own domain&lt;/a&gt;,
-&lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/cloud-filestore&#34;&gt;setting up Cloud Filestore&lt;/a&gt;, and more.&lt;/p&gt;
+including &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/custom-domain&#34;&gt;using your own domain&lt;/a&gt; and more.&lt;/p&gt;
 
       </description>
     </item>
@@ -1594,7 +1587,7 @@ including &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/custom-do
         
         &lt;p&gt;This guide assumes you have already set up Kubeflow on Google Cloud. If you haven&amp;rsquo;t done
 so, follow the guide to
-&lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/gke/deploy/&#34;&gt;getting started with Kubeflow on Google Cloud&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/deploy/&#34;&gt;getting started with Kubeflow on Google Cloud&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;using-your-own-domain&#34;&gt;Using your own domain&lt;/h2&gt;
 &lt;p&gt;If you want to use your own domain instead of &lt;strong&gt;${KF_NAME}.endpoints.${PROJECT}.cloud.goog&lt;/strong&gt;, follow these instructions after building your cluster:&lt;/p&gt;
 &lt;ol&gt;
@@ -1651,9 +1644,9 @@ This is the recommended way to access Google Cloud APIs from your GKE cluster.
 You can configure a Kubernetes service account (KSA) to act as a Google Cloud service account (GSA).&lt;/p&gt;
 &lt;p&gt;If you deployed Kubeflow following the Google Cloud instructions, then the profiler controller automatically binds the &amp;ldquo;default-editor&amp;rdquo; service account for every profile namespace to a default Google Cloud service account created during kubeflow deployment.
 The Kubeflow deployment process also creates a default profile for the cluster admin.&lt;/p&gt;
-&lt;p&gt;For more info about profiles see the &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/components/multi-tenancy/&#34;&gt;Multi-user isolation&lt;/a&gt; page.&lt;/p&gt;
+&lt;p&gt;For more info about profiles see the &lt;a href=&#34;https://kubeflow.org/docs/components/multi-tenancy/&#34;&gt;Multi-user isolation&lt;/a&gt; page.&lt;/p&gt;
 &lt;p&gt;Here is an example profile spec:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apiVersion: kubeflow.org/v1beta1
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apiVersion: kubeflow/v1beta1
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kind: Profile
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;spec:
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  plugins:
@@ -1693,7 +1686,7 @@ When creating a profile, you can specify a custom Google Cloud service account f
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;Manually create a profile for user1 and specify the Google Cloud service account to bind in &lt;code&gt;plugins&lt;/code&gt; field:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;apiVersion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;kubeflow.org/v1beta1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;apiVersion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;kubeflow/v1beta1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;kind&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Profile&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;metadata&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;profileName  &lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# replace with the name of the profile (the user&amp;#39;s namespace name)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -1710,9 +1703,9 @@ The profile controller currently doesn&amp;rsquo;t perform any access control ch
 As a result, any user who can create a profile can get access to any service account for which the admin controller has owner permissions. We will improve this in subsequent releases.&lt;/p&gt;
 &lt;p&gt;You can find more details on workload identity in the &lt;a href=&#34;https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity&#34;&gt;GKE documentation&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;authentication-from-kubeflow-pipelines&#34;&gt;Authentication from Kubeflow Pipelines&lt;/h3&gt;
-&lt;p&gt;Starting from Kubeflow v1.1, Kubeflow Pipelines &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/components/pipelines/overview/multi-user/&#34;&gt;supports multi-user isolation&lt;/a&gt;. Therefore, pipeline runs are executed in user namespaces also using the &lt;code&gt;default-editor&lt;/code&gt; KSA.&lt;/p&gt;
-&lt;p&gt;Additionally, the Kubeflow Pipelines UI, visualization, and TensorBoard server instances are deployed in your user namespace using the &lt;code&gt;default-editor&lt;/code&gt; KSA. Therefore, to &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/components/pipelines/sdk/output-viewer/&#34;&gt;visualize results in the Pipelines UI&lt;/a&gt;, they can fetch artifacts in Google Cloud Storage using permissions of the same GSA you configured for this namespace.&lt;/p&gt;
-&lt;p&gt;For more details, refer to &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/gke/pipelines/authentication-pipelines/&#34;&gt;Authenticating Pipelines to Google Cloud&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Starting from Kubeflow v1.1, Kubeflow Pipelines supports multi-user isolation. Therefore, pipeline runs are executed in user namespaces also using the &lt;code&gt;default-editor&lt;/code&gt; KSA.&lt;/p&gt;
+&lt;p&gt;Additionally, the Kubeflow Pipelines UI, visualization, and TensorBoard server instances are deployed in your user namespace using the &lt;code&gt;default-editor&lt;/code&gt; KSA. Therefore, to visualize results in the Pipelines UI, they can fetch artifacts in Google Cloud Storage using permissions of the same GSA you configured for this namespace.&lt;/p&gt;
+&lt;p&gt;For more details, refer to &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/pipelines/authentication-pipelines/&#34;&gt;Authenticating Pipelines to Google Cloud&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;local-authentication&#34;&gt;Local authentication&lt;/h2&gt;
 &lt;h3 id=&#34;gcloud&#34;&gt;gcloud&lt;/h3&gt;
@@ -1742,8 +1735,7 @@ command to authenticate your &lt;code&gt;gcloud&lt;/code&gt; session.&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In the output of the command, an asterisk denotes your active account.&lt;/p&gt;
 &lt;h5 id=&#34;viewing-iam-roles&#34;&gt;Viewing IAM roles&lt;/h5&gt;
 &lt;p&gt;Permissions are handled in Google Cloud using &lt;a href=&#34;https://cloud.google.com/iam/docs/understanding-roles&#34;&gt;IAM Roles&lt;/a&gt;.
-These roles define which resources your account can read or write to. Provided you have the
-&lt;a href=&#34;https://cloud.google.com/iam/docs/understanding-custom-roles#required_permissions_and_roles_&#34;&gt;necessary permissions&lt;/a&gt;,
+These roles define which resources your account can read or write to. Provided you have the &lt;a href=&#34;https://cloud.google.com/iam/docs/understanding-custom-roles#required_permissions_and_roles_&#34;&gt;necessary permissions&lt;/a&gt;,
 you can check which roles were assigned to your account using the following gcloud command:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PROJECT_ID=your-gcp-project-id-here
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -1800,7 +1792,7 @@ Kubernetes resources.&lt;/p&gt;
 &lt;p&gt;You can find more information in the
 &lt;a href=&#34;https://kubernetes.io/docs/reference/access-authn-authz/rbac/#role-and-clusterrole&#34;&gt;Kubernetes docs&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;next-steps&#34;&gt;Next steps&lt;/h2&gt;
-&lt;p&gt;See the &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/gke/troubleshooting-gke/&#34;&gt;troubleshooting guide&lt;/a&gt; for help with diagnosing and fixing issues you may encounter with Kubeflow on Google Cloud&lt;/p&gt;
+&lt;p&gt;See the &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/troubleshooting/&#34;&gt;troubleshooting guide&lt;/a&gt; for help with diagnosing and fixing issues you may encounter with Kubeflow on Google Cloud&lt;/p&gt;
 
       </description>
     </item>
@@ -1822,7 +1814,7 @@ Available options listed below have different tradeoffs. You should choose the o
 &lt;li&gt;&lt;a href=&#34;#google-service-account-keys-stored-as-kubernetes-secrets&#34;&gt;Google service account keys stored as Kubernetes secrets&lt;/a&gt; is the legacy approach and no longer recommended in GKE. However, it&amp;rsquo;s the only option to use Google Cloud APIs when your cluster is an &lt;a href=&#34;https://cloud.google.com/anthos&#34;&gt;anthos&lt;/a&gt; or on-prem cluster.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;before-you-begin&#34;&gt;Before you begin&lt;/h2&gt;
-&lt;p&gt;There are various options on how to install Kubeflow Pipelines in the &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/components/pipelines/installation/overview/&#34;&gt;Installation Options for Kubeflow Pipelines&lt;/a&gt; guide.
+&lt;p&gt;There are various options on how to install Kubeflow Pipelines in the &lt;a href=&#34;https://www.kubeflow.org/docs/components/pipelines/installation/overview/&#34;&gt;Installation Options for Kubeflow Pipelines&lt;/a&gt; guide.
 Be aware that authentication support and cluster setup instructions will vary depending on the method you used to install Kubeflow Pipelines.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;For Kubeflow Pipelines standalone, you can compare and choose from all 3 options.&lt;/li&gt;
@@ -1875,9 +1867,9 @@ Kubeflow Pipelines can authenticate to Google Cloud and manage resources in your
 &lt;p&gt;However, existing pipelines that use &lt;a href=&#34;https://kubeflow-pipelines.readthedocs.io/en/stable/source/kfp.extensions.html#kfp.gcp.use_gcp_secret&#34;&gt;use_gcp_secret kfp sdk operator&lt;/a&gt; need to remove the &lt;code&gt;use_gcp_secret&lt;/code&gt; usage to use the bound GSA.
 You can also continue to use &lt;code&gt;use_gcp_secret&lt;/code&gt; in a cluster with Workload Identity enabled and &lt;code&gt;use_gcp_secret&lt;/code&gt; will take precedence for those workloads.&lt;/p&gt;
 &lt;h4 id=&#34;cluster-setup-to-use-workload-identity-for-full-kubeflow&#34;&gt;Cluster setup to use Workload Identity for Full Kubeflow&lt;/h4&gt;
-&lt;p&gt;Starting from Kubeflow 1.1, Kubeflow Pipelines &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/components/pipelines/overview/multi-user/&#34;&gt;supports multi-user isolation&lt;/a&gt;. Therefore, pipeline runs are executed in user namespaces using the &lt;code&gt;default-editor&lt;/code&gt; KSA. The &lt;code&gt;default-editor&lt;/code&gt; KSA is auto-bound to the GSA specified in the user profile, which defaults to a shared GSA &lt;code&gt;${KFNAME}-user@${PROJECT}.iam.gserviceaccount.com&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;If you want to bind the &lt;code&gt;default-editor&lt;/code&gt; KSA with a different GSA for a specific namespace, refer to the &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/gke/authentication/#in-cluster-authentication&#34;&gt;In-cluster authentication to Google Cloud&lt;/a&gt; guide.&lt;/p&gt;
-&lt;p&gt;Additionally, the Kubeflow Pipelines UI, visualization, and TensorBoard server instances are deployed in your user namespace using the &lt;code&gt;default-editor&lt;/code&gt; KSA. Therefore, to &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/components/pipelines/sdk/output-viewer/&#34;&gt;visualize results in the Pipelines UI&lt;/a&gt;, they can fetch artifacts in Google Cloud Storage using permissions of the same GSA you configured for this namespace.&lt;/p&gt;
+&lt;p&gt;Starting from Kubeflow 1.1, Kubeflow Pipelines supports multi-user isolation. Therefore, pipeline runs are executed in user namespaces using the &lt;code&gt;default-editor&lt;/code&gt; KSA. The &lt;code&gt;default-editor&lt;/code&gt; KSA is auto-bound to the GSA specified in the user profile, which defaults to a shared GSA &lt;code&gt;${KFNAME}-user@${PROJECT}.iam.gserviceaccount.com&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If you want to bind the &lt;code&gt;default-editor&lt;/code&gt; KSA with a different GSA for a specific namespace, refer to the &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/authentication/#in-cluster-authentication&#34;&gt;In-cluster authentication to Google Cloud&lt;/a&gt; guide.&lt;/p&gt;
+&lt;p&gt;Additionally, the Kubeflow Pipelines UI, visualization, and TensorBoard server instances are deployed in your user namespace using the &lt;code&gt;default-editor&lt;/code&gt; KSA. Therefore, to visualize results in the Pipelines UI, they can fetch artifacts in Google Cloud Storage using permissions of the same GSA you configured for this namespace.&lt;/p&gt;
 &lt;h4 id=&#34;cluster-setup-to-use-workload-identity-for-pipelines-standalone&#34;&gt;Cluster setup to use Workload Identity for Pipelines Standalone&lt;/h4&gt;
 &lt;h5 id=&#34;1-create-your-cluster-with-workload-identity-enabled&#34;&gt;1. Create your cluster with Workload Identity enabled&lt;/h5&gt;
 &lt;ul&gt;
@@ -1902,7 +1894,7 @@ You can also continue to use &lt;code&gt;use_gcp_secret&lt;/code&gt; in a cluste
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h5 id=&#34;2-deploy-kubeflow-pipelines&#34;&gt;2. Deploy Kubeflow Pipelines&lt;/h5&gt;
-&lt;p&gt;Deploy via &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/components/pipelines/installation/overview/#kubeflow-pipelines-standalone&#34;&gt;Pipelines Standalone&lt;/a&gt; as usual.&lt;/p&gt;
+&lt;p&gt;Deploy via &lt;a href=&#34;https://www.kubeflow.org/docs/components/pipelines/installation/overview/#kubeflow-pipelines-standalone&#34;&gt;Pipelines Standalone&lt;/a&gt; as usual.&lt;/p&gt;
 &lt;h5 id=&#34;3-bind-workload-identities-for-ksas-used-by-kubeflow-pipelines&#34;&gt;3. Bind Workload Identities for KSAs used by Kubeflow Pipelines&lt;/h5&gt;
 &lt;p&gt;The following helper bash scripts bind Workload Identities for KSAs used by Kubeflow Pipelines:&lt;/p&gt;
 &lt;ul&gt;
@@ -1969,7 +1961,7 @@ Examples for how to use this function can be found in the
         
         
         &lt;h2 id=&#34;before-you-begin&#34;&gt;Before you begin&lt;/h2&gt;
-&lt;p&gt;There are various options on how to install Kubeflow Pipelines in the &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/components/pipelines/installation/overview/&#34;&gt;Installation Options for Kubeflow Pipelines&lt;/a&gt; guide. Be aware that upgrade support and instructions will vary depending on the method you used to install Kubeflow Pipelines.&lt;/p&gt;
+&lt;p&gt;There are various options on how to install Kubeflow Pipelines in the &lt;a href=&#34;https://kubeflow.org/docs/components/pipelines/installation/overview/&#34;&gt;Installation Options for Kubeflow Pipelines&lt;/a&gt; guide. Be aware that upgrade support and instructions will vary depending on the method you used to install Kubeflow Pipelines.&lt;/p&gt;
 &lt;h3 id=&#34;upgrade-related-feature-matrix&#34;&gt;Upgrade-related feature matrix&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -2032,10 +2024,10 @@ Examples for how to use this function can be found in the
 &lt;/ul&gt;
 &lt;h2 id=&#34;kubeflow-pipelines-standalone&#34;&gt;Kubeflow Pipelines Standalone&lt;/h2&gt;
 &lt;p&gt;Upgrade Support for Kubeflow Pipelines Standalone is in &lt;strong&gt;Beta&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/components/pipelines/installation/standalone-deployment/#upgrading-kubeflow-pipelines&#34;&gt;Upgrading Kubeflow Pipelines Standalone&lt;/a&gt; introduces how to upgrade in-place.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://kubeflow.org/docs/components/pipelines/installation/standalone-deployment/#upgrading-kubeflow-pipelines&#34;&gt;Upgrading Kubeflow Pipelines Standalone&lt;/a&gt; introduces how to upgrade in-place.&lt;/p&gt;
 &lt;h2 id=&#34;full-kubeflow&#34;&gt;Full Kubeflow&lt;/h2&gt;
 &lt;p&gt;On Google Cloud, the full Kubeflow deployment follows &lt;a href=&#34;https://googlecontainertools.github.io/kpt/guides/producer/packages/&#34;&gt;the package pattern&lt;/a&gt; starting from Kubeflow 1.1.&lt;/p&gt;
-&lt;p&gt;The package pattern enables you to upgrade the full Kubeflow in-place while keeping user customizations — refer to the &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/gke/deploy/upgrade&#34;&gt;Upgrade Kubeflow on Google Cloud&lt;/a&gt; documentation for instructions.&lt;/p&gt;
+&lt;p&gt;The package pattern enables you to upgrade the full Kubeflow in-place while keeping user customizations — refer to the &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/deploy/upgrade&#34;&gt;Upgrade Kubeflow on Google Cloud&lt;/a&gt; documentation for instructions.&lt;/p&gt;
 &lt;p&gt;However, there&amp;rsquo;s no current support to upgrade from Kubeflow 1.0 or earlier to Kubeflow 1.1 while keeping Kubeflow Pipelines data. This may change in the future, so provide your feedback in &lt;a href=&#34;https://github.com/kubeflow/pipelines/issues/4346&#34;&gt;kubeflow/pipelines#4346&lt;/a&gt; on GitHub.&lt;/p&gt;
 &lt;h2 id=&#34;ai-platform-pipelines&#34;&gt;AI Platform Pipelines&lt;/h2&gt;
 &lt;p&gt;Upgrade Support for AI Platform Pipelines is in &lt;strong&gt;Alpha&lt;/strong&gt;.&lt;/p&gt;
@@ -2078,7 +2070,7 @@ Because data is deleted by default when a Kubeflow Pipelines Standalone deployme
 DSL language.&lt;/p&gt;
 &lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
 &lt;p&gt;To enable GPU and TPU on your Kubeflow cluster, follow the instructions on how to
-&lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/gke/customizing-gke#common-customizations&#34;&gt;customize&lt;/a&gt; the GKE cluster for Kubeflow before
+&lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/customizing-gke#common-customizations&#34;&gt;customize&lt;/a&gt; the GKE cluster for Kubeflow before
 setting up the cluster.&lt;/p&gt;
 &lt;h2 id=&#34;configure-containerop-to-consume-gpus&#34;&gt;Configure ContainerOp to consume GPUs&lt;/h2&gt;
 &lt;p&gt;After enabling the GPU, the Kubeflow setup script installs a default GPU pool with type nvidia-tesla-k80 with auto-scaling enabled.
@@ -2645,7 +2637,7 @@ work like normal GPUs but persist only for the life of the instance.&lt;/p&gt;
 In addition to using preemptible VMs, your Google Kubernetes Engine (GKE)
 cluster can autoscale based on current workloads.&lt;/p&gt;
 &lt;p&gt;This guide assumes that you have already deployed Kubeflow Pipelines. If not,
-follow the guide to &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/gke/deploy/&#34;&gt;deploying Kubeflow on Google Cloud&lt;/a&gt;.&lt;/p&gt;
+follow the guide to &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/deploy/&#34;&gt;deploying Kubeflow on Google Cloud&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;before-you-start&#34;&gt;Before you start&lt;/h2&gt;
 &lt;p&gt;The variables defined in this page can be found in &lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/env.sh&#34;&gt;kubeflow-distribution/kubeflow/env.sh&lt;/a&gt;. They are the same value as you set based on your &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/deploy/deploy-cli/#environment-variables&#34;&gt;Kubeflow deployment&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;using-preemptible-vms-with-kubeflow-pipelines&#34;&gt;Using preemptible VMs with Kubeflow Pipelines&lt;/h2&gt;
@@ -2725,7 +2717,7 @@ in your cluster that contains preemptible VMs.&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-schedule-your-pipeline-to-run-on-the-preemptible-vms&#34;&gt;2. Schedule your pipeline to run on the preemptible VMs&lt;/h3&gt;
 &lt;p&gt;After configuring a node pool with preemptible VMs, you must configure your
 pipelines to run on the preemptible VMs.&lt;/p&gt;
-&lt;p&gt;In the &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/components/pipelines/sdk/sdk-overview/&#34;&gt;DSL code&lt;/a&gt; for
+&lt;p&gt;In the DSL code for
 your pipeline, add the following to the &lt;code&gt;ContainerOp&lt;/code&gt; instance:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;.apply(gcp.use_preemptible_nodepool())
 &lt;/code&gt;&lt;/pre&gt;
@@ -2919,8 +2911,8 @@ if __name__ == &#39;__main__&#39;:
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl --context&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;MGMTCTXT&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; --namespace&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;KF_PROJECT&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; describe containernodepool -l kf-name&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;KF_NAME&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;next-steps&#34;&gt;Next steps&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Explore further options for &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/gke/&#34;&gt;customizing Kubeflow on Google Cloud&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;See how to &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/components/pipelines/sdk/&#34;&gt;build pipelines with the SDK&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Explore further options for &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/&#34;&gt;customizing Kubeflow on Google Cloud&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;See how to &lt;a href=&#34;https://kubeflow.org/docs/components/pipelines/sdk/&#34;&gt;build pipelines with the SDK&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -2944,8 +2936,7 @@ cloud environments, helping you to automate policy and security at scale.&lt;/p&
 &lt;p&gt;We are collecting interest for Kubeflow on GKE On Prem. You can subscribe
 to the GitHub issue &lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/138&#34;&gt;GoogleCloudPlatform/kubeflow-distribution#138&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;next-steps&#34;&gt;Next steps&lt;/h2&gt;
-&lt;p&gt;While waiting for a response from the support team, you may like to &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/gke/deploy/&#34;&gt;deploy
-Kubeflow on GKE&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;While waiting for a response from the support team, you may like to &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/deploy/&#34;&gt;deploy Kubeflow on GKE&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>
