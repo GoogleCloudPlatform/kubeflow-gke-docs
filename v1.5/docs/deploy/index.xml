@@ -22,18 +22,18 @@
       <description>
         
         
-        &lt;p&gt;This guide describes how to deploy Kubeflow and a series of Kubeflow components on GKE (Google Kubernetes Engine).
-If you want to use Kubeflow Pipelines only, refer to &lt;a href=&#34;https://www.kubeflow.org/docs/components/pipelines/installation/overview/&#34;&gt;Installation Options for Kubeflow Pipelines&lt;/a&gt;
-for choosing an installation option.&lt;/p&gt;
+        &lt;p&gt;This guide describes how to deploy Kubeflow and a series of Kubeflow components on GKE (Google Kubernetes Engine).&lt;/p&gt;
+&lt;!-- If you want to use Kubeflow Pipelines only, refer to [Installation Options for Kubeflow Pipelines](https://www.kubeflow.org/docs/components/pipelines/installation/overview/) for choosing an installation option.
+--&gt;
 &lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
 &lt;p&gt;Once deployed, Kubeflow of GCP includes:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;1. Full-fledge multi-user Kubeflow running on GKE.
-1. [Cluster Autoscaler](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler)
+2. [Cluster Autoscaler](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler)
     with automatic resizing of the node pool.
-1. [Cloud Endpoint](https://cloud.google.com/endpoints/docs) integrated with [IAP (Identity-aware Proxy)](https://cloud.google.com/iap).
-1. GPU and [Cloud TPU](https://cloud.google.com/tpu/) accelerated nodes available for your ML workloads.
-1. [Cloud Logging](https://cloud.google.com/logging/docs/) for easy debugging and troubleshooting.
-1. Many more managed services offered by Google Cloud.
+3. [Cloud Endpoint](https://cloud.google.com/endpoints/docs) integrated with [IAP (Identity-aware Proxy)](https://cloud.google.com/iap).
+4. GPU and [Cloud TPU](https://cloud.google.com/tpu/) accelerated nodes available for your ML workloads.
+5. [Cloud Logging](https://cloud.google.com/logging/docs/) for easy debugging and troubleshooting.
+6. Many more managed services offered by Google Cloud.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://gkcalat.github.io/kubeflow-docs/docs/images/gke/full-kf-home.png&#34; 
 alt=&#34;Full Kubeflow Central Dashboard&#34;
@@ -51,9 +51,8 @@ class=&#34;mt-3 mb-3 border border-info rounded&#34;&gt;&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/deploy/management-setup/&#34;&gt;Deploy Management Cluster&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/deploy/deploy-cli/&#34;&gt;Deploy Kubeflow Cluster&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;If you encounter any issue during the deployment steps, refer to &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/troubleshooting/&#34;&gt;Troubleshooting deployments&lt;/a&gt; to find common issues
-and debugging approaches. If this issue is new, file a bug to &lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution&#34;&gt;GoogleCloudPlatform/kubeflow-distribution&lt;/a&gt; for GKE related issue,
-or file a bug to the corresponding component in &lt;a href=&#34;https://github.com/kubeflow/&#34;&gt;Kubeflow on GitHub&lt;/a&gt; if the issue is component specific.&lt;/p&gt;
+&lt;p&gt;If you encounter any issues during the deployment steps, refer to &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/troubleshooting/&#34;&gt;Troubleshooting deployments&lt;/a&gt; to find common issues
+and debugging approaches. If this issue is new, file a bug to &lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution&#34;&gt;GoogleCloudPlatform/kubeflow-distribution&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;next-steps&#34;&gt;Next steps&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Repeat &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/deploy/deploy-cli/&#34;&gt;Deploy Kubeflow Cluster&lt;/a&gt; if you want to deploy another Kubeflow cluster.&lt;/li&gt;
@@ -121,7 +120,7 @@ owner role for the project in order to deploy Kubeflow.&lt;/p&gt;
 * [Cloud Resource Manager API](https://console.developers.google.com/apis/library/cloudresourcemanager.googleapis.com)
 * [AI Platform Training &amp;amp; Prediction API](https://console.developers.google.com/apis/library/ml.googleapis.com)
 * [Cloud Identity-Aware Proxy API](https://console.cloud.google.com/apis/library/iap.googleapis.com)
-* [Cloud Build API](https://console.cloud.google.com/apis/library/cloudbuild.googleapis.com) (It&#39;s required if you plan to use [Fairing](https://www.kubeflow.org/docs/external-add-ons/fairing/) in your Kubeflow cluster)
+* [Cloud Build API](https://console.cloud.google.com/apis/library/cloudbuild.googleapis.com)
 * [Cloud SQL Admin API](https://console.cloud.google.com/apis/library/sqladmin.googleapis.com)
 * [Config Controller (KRM API Hosting API)](https://console.cloud.google.com/apis/library/krmapihosting.googleapis.com)
 * [Service Control API](https://console.cloud.google.com/apis/library/servicecontrol.googleapis.com)
@@ -412,13 +411,13 @@ allow Config Controller to manage Google Cloud resources. Refer to &lt;a href=&#
 deployment process, so that you can customize your management cluster if necessary.&lt;/p&gt;
 &lt;h3 id=&#34;config-controller&#34;&gt;Config Controller&lt;/h3&gt;
 &lt;p&gt;Management cluster is a tool for managing Google Cloud services like KRM, for example: GKE container cluster, MySQL database, etc.
-And you can use one Managment cluster for multiple Kubeflow clusters, across multiple Google Cloud projects.
+And you can use one Management cluster for multiple Kubeflow clusters, across multiple Google Cloud projects.
 This capability is offered by &lt;a href=&#34;https://cloud.google.com/config-connector/docs/how-to/getting-started&#34;&gt;Config Connector&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Starting with Kubeflow 1.5, we leveraged the managed version of Config Connector, which is called &lt;a href=&#34;https://cloud.google.com/anthos-config-management/docs/concepts/config-controller-overview&#34;&gt;Config Controller&lt;/a&gt;.
 Therefore, The Management cluster is the Config Controller cluster deployed using &lt;a href=&#34;https://cloud.google.com/anthos-config-management/docs/how-to/config-controller-setup&#34;&gt;Config Controller setup&lt;/a&gt; process.
 Note that you can create only one Management cluster within a Google Cloud project, and you usually need just one Management cluster.&lt;/p&gt;
 &lt;h3 id=&#34;management-cluster-layout&#34;&gt;Management cluster layout&lt;/h3&gt;
-&lt;p&gt;Inside the Config Controller, we manange Google Cloud resources in namespace mode. That means one namespace is responsible to manage Google Cloud resources deployed to the Google Cloud project with the same name. Your management cluster contains following namespaces:&lt;/p&gt;
+&lt;p&gt;Inside the Config Controller, we manage Google Cloud resources in namespace mode. That means one namespace is responsible to manage Google Cloud resources deployed to the Google Cloud project with the same name. Your management cluster contains following namespaces:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;config-control&lt;/li&gt;
 &lt;li&gt;namespace with the same name as your Kubeflow clusters&amp;rsquo; Google Cloud project name&lt;/li&gt;
@@ -426,7 +425,7 @@ Note that you can create only one Management cluster within a Google Cloud proje
 &lt;p&gt;&lt;code&gt;config-control&lt;/code&gt; is the default namespace which is installed while creating Management cluster, you have granted the default service account (like &lt;code&gt;service-&amp;lt;management-project-id&amp;gt;@gcp-sa-yakima.iam.gserviceaccount.com&lt;/code&gt;)
 within this project to manage Config Connector. It is the prerequisite for managing resources in other Google Cloud projects.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;namespace with the same name as your Kubeflow clusters&#39; Google Cloud project name&lt;/code&gt; is the resource pool for Kubeflow cluster&amp;rsquo;s Google Cloud project.
-For each Kubeflow Google Cloud project, you will have service account with pattern &lt;code&gt;kcc-&amp;lt;kf-project-name&amp;gt;@&amp;lt;management-project-name&amp;gt;.iam.gserviceaccount.com&lt;/code&gt; in &lt;code&gt;config-control&lt;/code&gt; namespace, and it needs to have owner permission to &lt;code&gt;${KF_PROJECT}&lt;/code&gt;, you will perform this step during &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/gke/deploy/deploy-cli/&#34;&gt;Deploy Kubeflow cluster&lt;/a&gt;. After setup, your Google Cloud resources in Kubeflow cluster project will be deployed to the namespace with name &lt;code&gt;${KF_PROJECT}&lt;/code&gt; in the management cluster.&lt;/p&gt;
+For each Kubeflow Google Cloud project, you will have service account with pattern &lt;code&gt;kcc-&amp;lt;kf-project-name&amp;gt;@&amp;lt;management-project-name&amp;gt;.iam.gserviceaccount.com&lt;/code&gt; in &lt;code&gt;config-control&lt;/code&gt; namespace, and it needs to have owner permission to &lt;code&gt;${KF_PROJECT}&lt;/code&gt;, you will perform this step during &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/deploy/deploy-cli/&#34;&gt;Deploy Kubeflow cluster&lt;/a&gt;. After setup, your Google Cloud resources in Kubeflow cluster project will be deployed to the namespace with name &lt;code&gt;${KF_PROJECT}&lt;/code&gt; in the management cluster.&lt;/p&gt;
 &lt;p&gt;Your management cluster directory contains the following file:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Makefile&lt;/strong&gt; is a file that defines rules to automate deployment process. You can refer to &lt;a href=&#34;https://www.gnu.org/software/make/manual/make.html#Introduction&#34;&gt;GNU make documentation&lt;/a&gt; for more introduction. The Makefile we provide is designed to be user maintainable. You are encouraged to read, edit and maintain it to suit your own deployment customization needs.&lt;/li&gt;
@@ -645,10 +644,6 @@ minutes for the URI to become available: &lt;code&gt;https://${KF_NAME}.endpoint
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The following command sets an environment variable named &lt;code&gt;HOST&lt;/code&gt; to the URI:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HOST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;kubectl -n istio-system get ingress envoy-ingress -o&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;jsonpath&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;={&lt;/span&gt;.spec.rules&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;0&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;.host&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Follow the instructions on the UI to create a namespace. Refer to this guide on
-&lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/components/multi-tenancy/getting-started/#automatic-profile-creation&#34;&gt;creation of profiles&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Notes:&lt;/p&gt;
 &lt;ul&gt;
@@ -977,7 +972,7 @@ reconfigure the context by:&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;Before applying new resources, you need to delete some immutable resources that were updated in this release:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl delete statefulset kfserving-controller-manager -n kubeflow --wait
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl delete crds experiments.kubeflow.org suggestions.kubeflow.org trials.kubeflow.org
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl delete crds experiments.kubeflow suggestions.kubeflow trials.kubeflow
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;WARNING&lt;/strong&gt;: This step &lt;strong&gt;deletes&lt;/strong&gt; all Katib running resources.&lt;/p&gt;
 &lt;p&gt;Refer to &lt;a href=&#34;https://github.com/kubeflow/kubeflow/issues/5371#issuecomment-731359384&#34;&gt;a github comment in the v1.2 release issue&lt;/a&gt; for more details.&lt;/p&gt;
 &lt;/li&gt;
@@ -1184,7 +1179,7 @@ are the same as in &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;For Kubeflow cluster: The &lt;code&gt;${KF_PROJECT}&lt;/code&gt;, &lt;code&gt;${KF_NAME}&lt;/code&gt; and &lt;code&gt;${MGMTCTXT}&lt;/code&gt; environment variables
-are the same as in &lt;a href=&#34;../deploy-cli#environment-variables&#34;&gt;Deploy Kubeflow cluster&lt;/a&gt;.&lt;/p&gt;
+are the same as in &lt;a href=&#34;https://gkcalat.github.io/kubeflow-docs/docs/deploy/deploy-cli#environment-variables&#34;&gt;Deploy Kubeflow cluster&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The &lt;code&gt;${KF_DIR}&lt;/code&gt; environment variable contains the path to

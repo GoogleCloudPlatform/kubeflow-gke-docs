@@ -126,11 +126,11 @@ if (!doNotTrack) {
 			
 			<li class="nav-item dropdown mt-1 mt-lg-0 mr-2">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	Versions
+	v1.5
 </a>
 <div class="dropdown-menu dropdown-menu-md-right dropdown-menu-lg-left" aria-labelledby="navbarDropdownMenuLink">
 	
-	<a class="dropdown-item" href="https://gkcalat.github.io/kubeflow-docs/docs">latest</a>
+	<a class="dropdown-item" href="https://gkcalat.github.io/kubeflow-docs/docs">v1.6 (latest)</a>
 	
 	<a class="dropdown-item" href="https://gkcalat.github.io/kubeflow-docs/v1.5/docs">v1.5</a>
 	
@@ -292,7 +292,7 @@ authentication through IAP.</p>
 <ol>
 <li>
 <p>Find out your IAP OAuth 2.0 client ID.</p>
-<p>You or your cluster admin followed <a href="https://www.kubeflow.org/docs/gke/deploy/oauth-setup/">Set up OAuth for Cloud IAP</a>
+<p>You or your cluster admin followed <a href="/docs/deploy/oauth-setup/">Set up OAuth for Cloud IAP</a>
 to deploy your full Kubeflow deployment on Google Cloud. You need the OAuth client
 ID created in that step.</p>
 <p>You can browse all of your existing OAuth client IDs <a href="https://console.cloud.google.com/apis/credentials">in the Credentials page of Google Cloud Console</a>.</p>
@@ -366,7 +366,7 @@ Available options listed below have different tradeoffs. You should choose the o
 <li><a href="#google-service-account-keys-stored-as-kubernetes-secrets">Google service account keys stored as Kubernetes secrets</a> is the legacy approach and no longer recommended in GKE. However, it&rsquo;s the only option to use Google Cloud APIs when your cluster is an <a href="https://cloud.google.com/anthos">anthos</a> or on-prem cluster.</li>
 </ul>
 <h2 id="before-you-begin">Before you begin</h2>
-<p>There are various options on how to install Kubeflow Pipelines in the <a href="/docs/components/pipelines/installation/overview/">Installation Options for Kubeflow Pipelines</a> guide.
+<p>There are various options on how to install Kubeflow Pipelines in the <a href="https://www.kubeflow.org/docs/components/pipelines/installation/overview/">Installation Options for Kubeflow Pipelines</a> guide.
 Be aware that authentication support and cluster setup instructions will vary depending on the method you used to install Kubeflow Pipelines.</p>
 <ul>
 <li>For Kubeflow Pipelines standalone, you can compare and choose from all 3 options.</li>
@@ -419,9 +419,9 @@ Kubeflow Pipelines can authenticate to Google Cloud and manage resources in your
 <p>However, existing pipelines that use <a href="https://kubeflow-pipelines.readthedocs.io/en/stable/source/kfp.extensions.html#kfp.gcp.use_gcp_secret">use_gcp_secret kfp sdk operator</a> need to remove the <code>use_gcp_secret</code> usage to use the bound GSA.
 You can also continue to use <code>use_gcp_secret</code> in a cluster with Workload Identity enabled and <code>use_gcp_secret</code> will take precedence for those workloads.</p>
 <h4 id="cluster-setup-to-use-workload-identity-for-full-kubeflow">Cluster setup to use Workload Identity for Full Kubeflow</h4>
-<p>Starting from Kubeflow 1.1, Kubeflow Pipelines <a href="/docs/components/pipelines/overview/multi-user/">supports multi-user isolation</a>. Therefore, pipeline runs are executed in user namespaces using the <code>default-editor</code> KSA. The <code>default-editor</code> KSA is auto-bound to the GSA specified in the user profile, which defaults to a shared GSA <code>${KFNAME}-user@${PROJECT}.iam.gserviceaccount.com</code>.</p>
-<p>If you want to bind the <code>default-editor</code> KSA with a different GSA for a specific namespace, refer to the <a href="/docs/gke/authentication/#in-cluster-authentication">In-cluster authentication to Google Cloud</a> guide.</p>
-<p>Additionally, the Kubeflow Pipelines UI, visualization, and TensorBoard server instances are deployed in your user namespace using the <code>default-editor</code> KSA. Therefore, to <a href="/docs/components/pipelines/sdk/output-viewer/">visualize results in the Pipelines UI</a>, they can fetch artifacts in Google Cloud Storage using permissions of the same GSA you configured for this namespace.</p>
+<p>Starting from Kubeflow 1.1, Kubeflow Pipelines supports multi-user isolation. Therefore, pipeline runs are executed in user namespaces using the <code>default-editor</code> KSA. The <code>default-editor</code> KSA is auto-bound to the GSA specified in the user profile, which defaults to a shared GSA <code>${KFNAME}-user@${PROJECT}.iam.gserviceaccount.com</code>.</p>
+<p>If you want to bind the <code>default-editor</code> KSA with a different GSA for a specific namespace, refer to the <a href="/docs/authentication/#in-cluster-authentication">In-cluster authentication to Google Cloud</a> guide.</p>
+<p>Additionally, the Kubeflow Pipelines UI, visualization, and TensorBoard server instances are deployed in your user namespace using the <code>default-editor</code> KSA. Therefore, to visualize results in the Pipelines UI, they can fetch artifacts in Google Cloud Storage using permissions of the same GSA you configured for this namespace.</p>
 <h4 id="cluster-setup-to-use-workload-identity-for-pipelines-standalone">Cluster setup to use Workload Identity for Pipelines Standalone</h4>
 <h5 id="1-create-your-cluster-with-workload-identity-enabled">1. Create your cluster with Workload Identity enabled</h5>
 <ul>
@@ -446,7 +446,7 @@ You can also continue to use <code>use_gcp_secret</code> in a cluster with Workl
 </li>
 </ul>
 <h5 id="2-deploy-kubeflow-pipelines">2. Deploy Kubeflow Pipelines</h5>
-<p>Deploy via <a href="/docs/components/pipelines/installation/overview/#kubeflow-pipelines-standalone">Pipelines Standalone</a> as usual.</p>
+<p>Deploy via <a href="https://www.kubeflow.org/docs/components/pipelines/installation/overview/#kubeflow-pipelines-standalone">Pipelines Standalone</a> as usual.</p>
 <h5 id="3-bind-workload-identities-for-ksas-used-by-kubeflow-pipelines">3. Bind Workload Identities for KSAs used by Kubeflow Pipelines</h5>
 <p>The following helper bash scripts bind Workload Identities for KSAs used by Kubeflow Pipelines:</p>
 <ul>
@@ -517,7 +517,7 @@ Examples for how to use this function can be found in the
 	<h1 id="pg-e8f58dfedb7f24d2f30aab8ff214e5d9">3 - Upgrading</h1>
     <div class="lead">How to upgrade your Kubeflow Pipelines deployment on Google Cloud</div>
 	<h2 id="before-you-begin">Before you begin</h2>
-<p>There are various options on how to install Kubeflow Pipelines in the <a href="/docs/components/pipelines/installation/overview/">Installation Options for Kubeflow Pipelines</a> guide. Be aware that upgrade support and instructions will vary depending on the method you used to install Kubeflow Pipelines.</p>
+<p>There are various options on how to install Kubeflow Pipelines in the <a href="https://kubeflow.org/docs/components/pipelines/installation/overview/">Installation Options for Kubeflow Pipelines</a> guide. Be aware that upgrade support and instructions will vary depending on the method you used to install Kubeflow Pipelines.</p>
 <h3 id="upgrade-related-feature-matrix">Upgrade-related feature matrix</h3>
 <table>
 <thead>
@@ -580,10 +580,10 @@ Examples for how to use this function can be found in the
 </ul>
 <h2 id="kubeflow-pipelines-standalone">Kubeflow Pipelines Standalone</h2>
 <p>Upgrade Support for Kubeflow Pipelines Standalone is in <strong>Beta</strong>.</p>
-<p><a href="/docs/components/pipelines/installation/standalone-deployment/#upgrading-kubeflow-pipelines">Upgrading Kubeflow Pipelines Standalone</a> introduces how to upgrade in-place.</p>
+<p><a href="https://kubeflow.org/docs/components/pipelines/installation/standalone-deployment/#upgrading-kubeflow-pipelines">Upgrading Kubeflow Pipelines Standalone</a> introduces how to upgrade in-place.</p>
 <h2 id="full-kubeflow">Full Kubeflow</h2>
 <p>On Google Cloud, the full Kubeflow deployment follows <a href="https://googlecontainertools.github.io/kpt/guides/producer/packages/">the package pattern</a> starting from Kubeflow 1.1.</p>
-<p>The package pattern enables you to upgrade the full Kubeflow in-place while keeping user customizations — refer to the <a href="/docs/gke/deploy/upgrade">Upgrade Kubeflow on Google Cloud</a> documentation for instructions.</p>
+<p>The package pattern enables you to upgrade the full Kubeflow in-place while keeping user customizations — refer to the <a href="/docs/deploy/upgrade">Upgrade Kubeflow on Google Cloud</a> documentation for instructions.</p>
 <p>However, there&rsquo;s no current support to upgrade from Kubeflow 1.0 or earlier to Kubeflow 1.1 while keeping Kubeflow Pipelines data. This may change in the future, so provide your feedback in <a href="https://github.com/kubeflow/pipelines/issues/4346">kubeflow/pipelines#4346</a> on GitHub.</p>
 <h2 id="ai-platform-pipelines">AI Platform Pipelines</h2>
 <p>Upgrade Support for AI Platform Pipelines is in <strong>Alpha</strong>.</p>
@@ -630,7 +630,7 @@ Because data is deleted by default when a Kubeflow Pipelines Standalone deployme
 DSL language.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>To enable GPU and TPU on your Kubeflow cluster, follow the instructions on how to
-<a href="/docs/gke/customizing-gke#common-customizations">customize</a> the GKE cluster for Kubeflow before
+<a href="/docs/customizing-gke#common-customizations">customize</a> the GKE cluster for Kubeflow before
 setting up the cluster.</p>
 <h2 id="configure-containerop-to-consume-gpus">Configure ContainerOp to consume GPUs</h2>
 <p>After enabling the GPU, the Kubeflow setup script installs a default GPU pool with type nvidia-tesla-k80 with auto-scaling enabled.
@@ -709,7 +709,7 @@ work like normal GPUs but persist only for the life of the instance.</p>
 In addition to using preemptible VMs, your Google Kubernetes Engine (GKE)
 cluster can autoscale based on current workloads.</p>
 <p>This guide assumes that you have already deployed Kubeflow Pipelines. If not,
-follow the guide to <a href="/docs/gke/deploy/">deploying Kubeflow on Google Cloud</a>.</p>
+follow the guide to <a href="/docs/deploy/">deploying Kubeflow on Google Cloud</a>.</p>
 <h2 id="before-you-start">Before you start</h2>
 <p>The variables defined in this page can be found in <a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/env.sh">kubeflow-distribution/kubeflow/env.sh</a>. They are the same value as you set based on your <a href="/docs/deploy/deploy-cli/#environment-variables">Kubeflow deployment</a>.</p>
 <h2 id="using-preemptible-vms-with-kubeflow-pipelines">Using preemptible VMs with Kubeflow Pipelines</h2>
@@ -789,7 +789,7 @@ in your cluster that contains preemptible VMs.</li>
 </span></span></code></pre></div><h3 id="2-schedule-your-pipeline-to-run-on-the-preemptible-vms">2. Schedule your pipeline to run on the preemptible VMs</h3>
 <p>After configuring a node pool with preemptible VMs, you must configure your
 pipelines to run on the preemptible VMs.</p>
-<p>In the <a href="/docs/components/pipelines/sdk/sdk-overview/">DSL code</a> for
+<p>In the DSL code for
 your pipeline, add the following to the <code>ContainerOp</code> instance:</p>
 <pre><code>.apply(gcp.use_preemptible_nodepool())
 </code></pre>
@@ -983,8 +983,8 @@ if __name__ == '__main__':
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl --context<span class="o">=</span><span class="si">${</span><span class="nv">MGMTCTXT</span><span class="si">}</span> --namespace<span class="o">=</span><span class="si">${</span><span class="nv">KF_PROJECT</span><span class="si">}</span> describe containernodepool -l kf-name<span class="o">=</span><span class="si">${</span><span class="nv">KF_NAME</span><span class="si">}</span>
 </span></span></code></pre></div><h2 id="next-steps">Next steps</h2>
 <ul>
-<li>Explore further options for <a href="/docs/gke/">customizing Kubeflow on Google Cloud</a>.</li>
-<li>See how to <a href="/docs/components/pipelines/sdk/">build pipelines with the SDK</a>.</li>
+<li>Explore further options for <a href="/docs/">customizing Kubeflow on Google Cloud</a>.</li>
+<li>See how to <a href="https://kubeflow.org/docs/components/pipelines/sdk/">build pipelines with the SDK</a>.</li>
 </ul>
 
 </div>
@@ -1039,6 +1039,13 @@ if __name__ == '__main__':
         
         
       </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2022 Kubeflow on GCP authors | Documentation Distributed under CC BY 4.0</small>
+        <p><small class="ml-1"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></small></p>
+	
+		
+	
+      </div>
       <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
         
         
@@ -1061,13 +1068,6 @@ if __name__ == '__main__':
 
         
         
-      </div>
-      <div class="col-12 col-sm-5 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2022 Kubeflow on GCP authors | Documentation Distributed under CC BY 4.0</small>
-        <p><small class="ml-1"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></small></p>
-	
-		
-	
       </div>
     </div>
   </div>
