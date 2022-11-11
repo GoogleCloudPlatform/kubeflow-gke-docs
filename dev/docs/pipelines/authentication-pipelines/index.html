@@ -49,11 +49,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/pipelines/authentication-pipelines/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-11-09T21:46:30+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+<meta property="article:modified_time" content="2022-11-11T00:13:55+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
 
 <meta itemprop="name" content="Authenticating Pipelines to Google Cloud">
 <meta itemprop="description" content="Authentication and authorization to Google Cloud in Pipelines">
-<meta itemprop="dateModified" content="2022-11-09T21:46:30+00:00" />
+<meta itemprop="dateModified" content="2022-11-11T00:13:55+00:00" />
 <meta itemprop="wordCount" content="1365">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Authenticating Pipelines to Google Cloud"/>
@@ -129,11 +129,11 @@ if (!doNotTrack) {
 			
 			<li class="nav-item dropdown mt-1 mt-lg-0 mr-2">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	Versions
+	dev
 </a>
 <div class="dropdown-menu dropdown-menu-md-right dropdown-menu-lg-left" aria-labelledby="navbarDropdownMenuLink">
 	
-	<a class="dropdown-item" href="https://gkcalat.github.io/kubeflow-docs/docs">latest</a>
+	<a class="dropdown-item" href="https://gkcalat.github.io/kubeflow-docs/docs">v1.6 (latest)</a>
 	
 	<a class="dropdown-item" href="https://gkcalat.github.io/kubeflow-docs/v1.5/docs">v1.5</a>
 	
@@ -162,61 +162,105 @@ if (!doNotTrack) {
     <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
     </button>
   </form>
-  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+  <nav class="collapse td-sidebar-nav foldable-nav" id="td-section-nav">
     <ul class="td-sidebar-nav__section pr-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-kubeflow-docsdocs-li">
   <a href="/kubeflow-docs/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-kubeflow-docsdocs"><span class="">Kubeflow on Google Cloud</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-kubeflow-docsdocsdeploy-li">
-  <a href="/kubeflow-docs/docs/deploy/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-kubeflow-docsdocsdeploy"><span class="">Deployment</span></a>
+  <input type="checkbox" id="m-kubeflow-docsdocsdeploy-check"/>
+  <label for="m-kubeflow-docsdocsdeploy-check"><a href="/kubeflow-docs/docs/deploy/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-kubeflow-docsdocsdeploy"><span class="">Deployment</span></a></label>
+  
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeployoverview-li">
-  <a href="/kubeflow-docs/docs/deploy/overview/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeployoverview"><span class="">Overview</span></a>
+  <input type="checkbox" id="m-kubeflow-docsdocsdeployoverview-check"/>
+  <label for="m-kubeflow-docsdocsdeployoverview-check"><a href="/kubeflow-docs/docs/deploy/overview/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeployoverview"><span class="">Overview</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeployproject-setup-li">
-  <a href="/kubeflow-docs/docs/deploy/project-setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeployproject-setup"><span class="">Setting up GCP Project</span></a>
+  <input type="checkbox" id="m-kubeflow-docsdocsdeployproject-setup-check"/>
+  <label for="m-kubeflow-docsdocsdeployproject-setup-check"><a href="/kubeflow-docs/docs/deploy/project-setup/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeployproject-setup"><span class="">Setting up GCP Project</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeployoauth-setup-li">
-  <a href="/kubeflow-docs/docs/deploy/oauth-setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeployoauth-setup"><span class="">Setting up OAuth client</span></a>
+  <input type="checkbox" id="m-kubeflow-docsdocsdeployoauth-setup-check"/>
+  <label for="m-kubeflow-docsdocsdeployoauth-setup-check"><a href="/kubeflow-docs/docs/deploy/oauth-setup/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeployoauth-setup"><span class="">Setting up OAuth client</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeploymanagement-setup-li">
-  <a href="/kubeflow-docs/docs/deploy/management-setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeploymanagement-setup"><span class="">Deploying Management cluster</span></a>
+  <input type="checkbox" id="m-kubeflow-docsdocsdeploymanagement-setup-check"/>
+  <label for="m-kubeflow-docsdocsdeploymanagement-setup-check"><a href="/kubeflow-docs/docs/deploy/management-setup/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeploymanagement-setup"><span class="">Deploying Management cluster</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeploydeploy-cli-li">
-  <a href="/kubeflow-docs/docs/deploy/deploy-cli/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeploydeploy-cli"><span class="">Deploying Kubeflow cluster</span></a>
+  <input type="checkbox" id="m-kubeflow-docsdocsdeploydeploy-cli-check"/>
+  <label for="m-kubeflow-docsdocsdeploydeploy-cli-check"><a href="/kubeflow-docs/docs/deploy/deploy-cli/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeploydeploy-cli"><span class="">Deploying Kubeflow cluster</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeployupgrade-li">
-  <a href="/kubeflow-docs/docs/deploy/upgrade/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeployupgrade"><span class="">Upgrade Kubeflow</span></a>
+  <input type="checkbox" id="m-kubeflow-docsdocsdeployupgrade-check"/>
+  <label for="m-kubeflow-docsdocsdeployupgrade-check"><a href="/kubeflow-docs/docs/deploy/upgrade/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeployupgrade"><span class="">Upgrade Kubeflow</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeploymonitor-iap-setup-li">
-  <a href="/kubeflow-docs/docs/deploy/monitor-iap-setup/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeploymonitor-iap-setup"><span class="">Monitoring Cloud IAP Setup</span></a>
+  <input type="checkbox" id="m-kubeflow-docsdocsdeploymonitor-iap-setup-check"/>
+  <label for="m-kubeflow-docsdocsdeploymonitor-iap-setup-check"><a href="/kubeflow-docs/docs/deploy/monitor-iap-setup/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeploymonitor-iap-setup"><span class="">Monitoring Cloud IAP Setup</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeploydelete-cli-li">
-  <a href="/kubeflow-docs/docs/deploy/delete-cli/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeploydelete-cli"><span class="">Deleting Kubeflow</span></a>
+  <input type="checkbox" id="m-kubeflow-docsdocsdeploydelete-cli-check"/>
+  <label for="m-kubeflow-docsdocsdeploydelete-cli-check"><a href="/kubeflow-docs/docs/deploy/delete-cli/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeploydelete-cli"><span class="">Deleting Kubeflow</span></a></label>
+  
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-kubeflow-docsdocspipelines-li">
-  <a href="/kubeflow-docs/docs/pipelines/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-kubeflow-docsdocspipelines"><span class="">Pipelines on Google Cloud</span></a>
+  <input type="checkbox" id="m-kubeflow-docsdocspipelines-check" checked/>
+  <label for="m-kubeflow-docsdocspipelines-check"><a href="/kubeflow-docs/docs/pipelines/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-kubeflow-docsdocspipelines"><span class="">Pipelines on Google Cloud</span></a></label>
+  
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocspipelinesauthentication-sdk-li">
-  <a href="/kubeflow-docs/docs/pipelines/authentication-sdk/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesauthentication-sdk"><span class="">Connecting to Kubeflow Pipelines on Google Cloud using the SDK</span></a>
+  <input type="checkbox" id="m-kubeflow-docsdocspipelinesauthentication-sdk-check"/>
+  <label for="m-kubeflow-docsdocspipelinesauthentication-sdk-check"><a href="/kubeflow-docs/docs/pipelines/authentication-sdk/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesauthentication-sdk"><span class="">Connecting to Kubeflow Pipelines on Google Cloud using the SDK</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-kubeflow-docsdocspipelinesauthentication-pipelines-li">
-  <a href="/kubeflow-docs/docs/pipelines/authentication-pipelines/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesauthentication-pipelines"><span class="td-sidebar-nav-active-item">Authenticating Pipelines to Google Cloud</span></a>
+  <input type="checkbox" id="m-kubeflow-docsdocspipelinesauthentication-pipelines-check" checked/>
+  <label for="m-kubeflow-docsdocspipelinesauthentication-pipelines-check"><a href="/kubeflow-docs/docs/pipelines/authentication-pipelines/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesauthentication-pipelines"><span class="td-sidebar-nav-active-item">Authenticating Pipelines to Google Cloud</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocspipelinesupgrade-li">
-  <a href="/kubeflow-docs/docs/pipelines/upgrade/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesupgrade"><span class="">Upgrading</span></a>
+  <input type="checkbox" id="m-kubeflow-docsdocspipelinesupgrade-check"/>
+  <label for="m-kubeflow-docsdocspipelinesupgrade-check"><a href="/kubeflow-docs/docs/pipelines/upgrade/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesupgrade"><span class="">Upgrading</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocspipelinesenable-gpu-and-tpu-li">
-  <a href="/kubeflow-docs/docs/pipelines/enable-gpu-and-tpu/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesenable-gpu-and-tpu"><span class="">Enabling GPU and TPU</span></a>
+  <input type="checkbox" id="m-kubeflow-docsdocspipelinesenable-gpu-and-tpu-check"/>
+  <label for="m-kubeflow-docsdocspipelinesenable-gpu-and-tpu-check"><a href="/kubeflow-docs/docs/pipelines/enable-gpu-and-tpu/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesenable-gpu-and-tpu"><span class="">Enabling GPU and TPU</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocspipelinespreemptible-li">
-  <a href="/kubeflow-docs/docs/pipelines/preemptible/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinespreemptible"><span class="">Using Preemptible VMs and GPUs on Google Cloud</span></a>
+  <input type="checkbox" id="m-kubeflow-docsdocspipelinespreemptible-check"/>
+  <label for="m-kubeflow-docsdocspipelinespreemptible-check"><a href="/kubeflow-docs/docs/pipelines/preemptible/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinespreemptible"><span class="">Using Preemptible VMs and GPUs on Google Cloud</span></a></label>
+  
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocscustomizing-li">
-  <a href="/kubeflow-docs/docs/customizing/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocscustomizing"><span class="">Customize Kubeflow on GKE</span></a>
+  <input type="checkbox" id="m-kubeflow-docsdocscustomizing-check"/>
+  <label for="m-kubeflow-docsdocscustomizing-check"><a href="/kubeflow-docs/docs/customizing/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocscustomizing"><span class="">Customize Kubeflow on GKE</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocscustom-domain-li">
-  <a href="/kubeflow-docs/docs/custom-domain/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocscustom-domain"><span class="">Using Your Own Domain</span></a>
+  <input type="checkbox" id="m-kubeflow-docsdocscustom-domain-check"/>
+  <label for="m-kubeflow-docsdocscustom-domain-check"><a href="/kubeflow-docs/docs/custom-domain/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocscustom-domain"><span class="">Using Your Own Domain</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsauthentication-li">
-  <a href="/kubeflow-docs/docs/authentication/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsauthentication"><span class="">Authenticating Kubeflow to Google Cloud</span></a>
+  <input type="checkbox" id="m-kubeflow-docsdocsauthentication-check"/>
+  <label for="m-kubeflow-docsdocsauthentication-check"><a href="/kubeflow-docs/docs/authentication/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsauthentication"><span class="">Authenticating Kubeflow to Google Cloud</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsprivate-clusters-li">
-  <a href="/kubeflow-docs/docs/private-clusters/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsprivate-clusters"><span class="">Securing Your Clusters</span></a>
+  <input type="checkbox" id="m-kubeflow-docsdocsprivate-clusters-check"/>
+  <label for="m-kubeflow-docsdocsprivate-clusters-check"><a href="/kubeflow-docs/docs/private-clusters/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsprivate-clusters"><span class="">Securing Your Clusters</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocstroubleshooting-li">
-  <a href="/kubeflow-docs/docs/troubleshooting/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocstroubleshooting"><span class="">Troubleshooting Deployments on GKE</span></a>
+  <input type="checkbox" id="m-kubeflow-docsdocstroubleshooting-check"/>
+  <label for="m-kubeflow-docsdocstroubleshooting-check"><a href="/kubeflow-docs/docs/troubleshooting/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocstroubleshooting"><span class="">Troubleshooting Deployments on GKE</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsanthos-li">
-  <a href="/kubeflow-docs/docs/anthos/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsanthos"><span class="">Kubeflow On-premises on Anthos</span></a>
+  <input type="checkbox" id="m-kubeflow-docsdocsanthos-check"/>
+  <label for="m-kubeflow-docsdocsanthos-check"><a href="/kubeflow-docs/docs/anthos/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsanthos"><span class="">Kubeflow On-premises on Anthos</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocschangelog-li">
-  <a href="/kubeflow-docs/docs/changelog/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-kubeflow-docsdocschangelog"><span class="">Changelog</span></a>
+  <input type="checkbox" id="m-kubeflow-docsdocschangelog-check"/>
+  <label for="m-kubeflow-docsdocschangelog-check"><a href="/kubeflow-docs/docs/changelog/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-kubeflow-docsdocschangelog"><span class="">Changelog</span></a></label>
+  
 </li>
   </ul>
 </li>
@@ -330,7 +374,7 @@ Available options listed below have different tradeoffs. You should choose the o
 <li><a href="#google-service-account-keys-stored-as-kubernetes-secrets">Google service account keys stored as Kubernetes secrets</a> is the legacy approach and no longer recommended in GKE. However, it&rsquo;s the only option to use Google Cloud APIs when your cluster is an <a href="https://cloud.google.com/anthos">anthos</a> or on-prem cluster.</li>
 </ul>
 <h2 id="before-you-begin">Before you begin</h2>
-<p>There are various options on how to install Kubeflow Pipelines in the <a href="/docs/components/pipelines/installation/overview/">Installation Options for Kubeflow Pipelines</a> guide.
+<p>There are various options on how to install Kubeflow Pipelines in the <a href="https://www.kubeflow.org/docs/components/pipelines/installation/overview/">Installation Options for Kubeflow Pipelines</a> guide.
 Be aware that authentication support and cluster setup instructions will vary depending on the method you used to install Kubeflow Pipelines.</p>
 <ul>
 <li>For Kubeflow Pipelines standalone, you can compare and choose from all 3 options.</li>
@@ -383,9 +427,9 @@ Kubeflow Pipelines can authenticate to Google Cloud and manage resources in your
 <p>However, existing pipelines that use <a href="https://kubeflow-pipelines.readthedocs.io/en/stable/source/kfp.extensions.html#kfp.gcp.use_gcp_secret">use_gcp_secret kfp sdk operator</a> need to remove the <code>use_gcp_secret</code> usage to use the bound GSA.
 You can also continue to use <code>use_gcp_secret</code> in a cluster with Workload Identity enabled and <code>use_gcp_secret</code> will take precedence for those workloads.</p>
 <h4 id="cluster-setup-to-use-workload-identity-for-full-kubeflow">Cluster setup to use Workload Identity for Full Kubeflow</h4>
-<p>Starting from Kubeflow 1.1, Kubeflow Pipelines <a href="/docs/components/pipelines/overview/multi-user/">supports multi-user isolation</a>. Therefore, pipeline runs are executed in user namespaces using the <code>default-editor</code> KSA. The <code>default-editor</code> KSA is auto-bound to the GSA specified in the user profile, which defaults to a shared GSA <code>${KFNAME}-user@${PROJECT}.iam.gserviceaccount.com</code>.</p>
-<p>If you want to bind the <code>default-editor</code> KSA with a different GSA for a specific namespace, refer to the <a href="/docs/gke/authentication/#in-cluster-authentication">In-cluster authentication to Google Cloud</a> guide.</p>
-<p>Additionally, the Kubeflow Pipelines UI, visualization, and TensorBoard server instances are deployed in your user namespace using the <code>default-editor</code> KSA. Therefore, to <a href="/docs/components/pipelines/sdk/output-viewer/">visualize results in the Pipelines UI</a>, they can fetch artifacts in Google Cloud Storage using permissions of the same GSA you configured for this namespace.</p>
+<p>Starting from Kubeflow 1.1, Kubeflow Pipelines supports multi-user isolation. Therefore, pipeline runs are executed in user namespaces using the <code>default-editor</code> KSA. The <code>default-editor</code> KSA is auto-bound to the GSA specified in the user profile, which defaults to a shared GSA <code>${KFNAME}-user@${PROJECT}.iam.gserviceaccount.com</code>.</p>
+<p>If you want to bind the <code>default-editor</code> KSA with a different GSA for a specific namespace, refer to the <a href="/docs/authentication/#in-cluster-authentication">In-cluster authentication to Google Cloud</a> guide.</p>
+<p>Additionally, the Kubeflow Pipelines UI, visualization, and TensorBoard server instances are deployed in your user namespace using the <code>default-editor</code> KSA. Therefore, to visualize results in the Pipelines UI, they can fetch artifacts in Google Cloud Storage using permissions of the same GSA you configured for this namespace.</p>
 <h4 id="cluster-setup-to-use-workload-identity-for-pipelines-standalone">Cluster setup to use Workload Identity for Pipelines Standalone</h4>
 <h5 id="1-create-your-cluster-with-workload-identity-enabled">1. Create your cluster with Workload Identity enabled</h5>
 <ul>
@@ -410,7 +454,7 @@ You can also continue to use <code>use_gcp_secret</code> in a cluster with Workl
 </li>
 </ul>
 <h5 id="2-deploy-kubeflow-pipelines">2. Deploy Kubeflow Pipelines</h5>
-<p>Deploy via <a href="/docs/components/pipelines/installation/overview/#kubeflow-pipelines-standalone">Pipelines Standalone</a> as usual.</p>
+<p>Deploy via <a href="https://www.kubeflow.org/docs/components/pipelines/installation/overview/#kubeflow-pipelines-standalone">Pipelines Standalone</a> as usual.</p>
 <h5 id="3-bind-workload-identities-for-ksas-used-by-kubeflow-pipelines">3. Bind Workload Identities for KSAs used by Kubeflow Pipelines</h5>
 <p>The following helper bash scripts bind Workload Identities for KSAs used by Kubeflow Pipelines:</p>
 <ul>
@@ -576,6 +620,13 @@ Examples for how to use this function can be found in the
         
         
       </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2022 Kubeflow on GCP authors | Documentation Distributed under CC BY 4.0</small>
+        <p><small class="ml-1"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></small></p>
+	
+		
+	
+      </div>
       <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
         
         
@@ -598,13 +649,6 @@ Examples for how to use this function can be found in the
 
         
         
-      </div>
-      <div class="col-12 col-sm-5 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2022 Kubeflow on GCP authors | Documentation Distributed under CC BY 4.0</small>
-        <p><small class="ml-1"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></small></p>
-	
-		
-	
       </div>
     </div>
   </div>
