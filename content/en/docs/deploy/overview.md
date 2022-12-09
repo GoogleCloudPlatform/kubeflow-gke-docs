@@ -29,7 +29,7 @@ Kubeflow deployed on Google Cloud includes the following:
 
 Kubeflow on GCP employs management cluster, which allows you to manage Google Cloud resources via [Config Connector](https://cloud.google.com/config-connector/docs/overview). The management cluster is independent from Kubeflow cluster. Its purpose is to manage Kubeflow clusters (see figure below). The management cluster can live in a different Google Cloud project by assigning owner permission to the associated service account.
 
-<img src="./{{ .Site.Params.version_url_prefix }}docs/images/gke/full-deployment-structure.png" 
+<img src="../images/logos/gcp.png"
     alt="Full Kubeflow deployment structure"
     class="mt-3 mb-3 border border-info rounded">
 
