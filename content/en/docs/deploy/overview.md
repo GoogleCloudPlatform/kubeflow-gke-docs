@@ -4,23 +4,23 @@ description = "Full fledged Kubeflow deployment on Google Cloud"
 weight = 1
 +++
 
-This guide describes how to deploy Kubeflow and a series of Kubeflow components on GKE (Google Kubernetes Engine).
+This guide describes how to deploy Kubeflow and a series of Kubeflow components on Google Kubernetes Engine (GKE).
 <!-- If you want to use Kubeflow Pipelines only, refer to [Installation Options for Kubeflow Pipelines](https://www.kubeflow.org/docs/components/pipelines/installation/overview/) for choosing an installation option.
 -->
 
 ## Features
 
-Once deployed, Kubeflow of GCP includes:
+Kubeflow deployed on Google Cloud includes the following:
 
-    1. Full-fledge multi-user Kubeflow running on GKE.
-    2. [Cluster Autoscaler](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler)
-        with automatic resizing of the node pool.
-    3. [Cloud Endpoint](https://cloud.google.com/endpoints/docs) integrated with [IAP (Identity-aware Proxy)](https://cloud.google.com/iap).
-    4. GPU and [Cloud TPU](https://cloud.google.com/tpu/) accelerated nodes available for your ML workloads.
-    5. [Cloud Logging](https://cloud.google.com/logging/docs/) for easy debugging and troubleshooting.
-    6. Many more managed services offered by Google Cloud.
+1. Full-fledged multi-user Kubeflow running on GKE.
+1. [Cluster Autoscaler](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler)
+    with automatic resizing of the node pool.
+1. [Cloud Endpoint](https://cloud.google.com/endpoints/docs) integrated with [Identity-aware Proxy (IAP)](https://cloud.google.com/iap).
+1. GPU and [Cloud TPU](https://cloud.google.com/tpu/) accelerated nodes available for your Machine Learning (ML) workloads.
+1. [Cloud Logging](https://cloud.google.com/logging/docs/) for easy debugging and troubleshooting.
+1. Other managed services offered by Google Cloud, such as [Cloud Storage](https://cloud.google.com/storage), [Cloud SQL](https://cloud.google.com/sql), [Anthos Service Mesh](https://cloud.google.com/anthos/service-mesh), [Identity and Access Management (IAM)](https://cloud.google.com/iam), [Config Controller](https://cloud.google.com/anthos-config-management/docs/concepts/config-controller-overview), and so on.
 
-<img src="/{{ .Site.Params.version_url_prefix }}docs/images/gke/full-kf-home.png" 
+<img src=".{{ .Site.Params.version_url_prefix }}/docs/images/gke/full-kf-home.png" 
     alt="Full Kubeflow Central Dashboard"
     class="mt-3 mb-3 border border-info rounded">
 
@@ -29,7 +29,7 @@ Once deployed, Kubeflow of GCP includes:
 
 Kubeflow on GCP employs management cluster, which allows you to manage Google Cloud resources via [Config Connector](https://cloud.google.com/config-connector/docs/overview). The management cluster is independent from Kubeflow cluster. Its purpose is to manage Kubeflow clusters (see figure below). The management cluster can live in a different Google Cloud project by assigning owner permission to the associated service account.
 
-<img src="/{{ .Site.Params.version_url_prefix }}docs/images/gke/full-deployment-structure.png" 
+<img src="./{{ .Site.Params.version_url_prefix }}docs/images/gke/full-deployment-structure.png" 
     alt="Full Kubeflow deployment structure"
     class="mt-3 mb-3 border border-info rounded">
 

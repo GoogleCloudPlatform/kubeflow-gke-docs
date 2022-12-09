@@ -158,7 +158,7 @@ pygmentsStyle = "tango"
   version = "dev"
   # URL prefix for this specific version
   # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
-  version_url_prefix = "dev/"
+  version_url_prefix = "/dev"
   # A link to latest version of the docs. Used in the "version-banner" partial to
   # point people to the main doc site.
   url_latest_version = "https://gkcalat.github.io/kubeflow-docs/docs"
