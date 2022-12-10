@@ -24,6 +24,8 @@ pygmentsUseClassic = false
 #pygmentsOptions = "linenos=table"
 # See https://help.farbox.com/pygments.html
 pygmentsStyle = "tango"
+# Relative urls:
+relativeURLs = true
 
 # Image processing configuration.
 [imaging]
