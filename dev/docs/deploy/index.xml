@@ -36,25 +36,25 @@ with automatic resizing of the node pool.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://cloud.google.com/logging/docs/&#34;&gt;Cloud Logging&lt;/a&gt; for easy debugging and troubleshooting.&lt;/li&gt;
 &lt;li&gt;Other managed services offered by Google Cloud, such as &lt;a href=&#34;https://cloud.google.com/storage&#34;&gt;Cloud Storage&lt;/a&gt;, &lt;a href=&#34;https://cloud.google.com/sql&#34;&gt;Cloud SQL&lt;/a&gt;, &lt;a href=&#34;https://cloud.google.com/anthos/service-mesh&#34;&gt;Anthos Service Mesh&lt;/a&gt;, &lt;a href=&#34;https://cloud.google.com/iam&#34;&gt;Identity and Access Management (IAM)&lt;/a&gt;, &lt;a href=&#34;https://cloud.google.com/anthos-config-management/docs/concepts/config-controller-overview&#34;&gt;Config Controller&lt;/a&gt;, and so on.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;../images/gke/full-kf-home.png&#34; alt=&#34;Kubeflow on Google Cloud: central dashboard&#34;&gt;{mt-3 mb-3 border border-info rounded}
+&lt;p&gt;&lt;img src=&#34;../../images/gke/full-kf-home.png&#34; alt=&#34;Kubeflow on Google Cloud: central dashboard&#34;&gt;
 &lt;strong&gt;Figure 1.&lt;/strong&gt; User interface of full-fledged Kubeflow deployment on Google Cloud.&lt;/p&gt;
 &lt;h2 id=&#34;management-cluster&#34;&gt;Management cluster&lt;/h2&gt;
 &lt;p&gt;Kubeflow on Google Cloud employs a management cluster, which lets you manage Google Cloud resources via &lt;a href=&#34;https://cloud.google.com/anthos-config-management/docs/concepts/config-controller-overview&#34;&gt;Config Controller&lt;/a&gt;. The management cluster is independent from the Kubeflow cluster and manages Kubeflow clusters. You can also use a management cluster from a different Google Cloud project, by assigning owner permissions to the associated service account.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../images/gke/full-deployment-structure.png&#34; alt=&#34;Kubeflow on Google Cloud: clusters hierarchy&#34;&gt;{class=&amp;ldquo;mt-3 mb-3 border border-info rounded&amp;rdquo;}
+&lt;p&gt;&lt;img src=&#34;../../images/gke/full-deployment-structure.png&#34; alt=&#34;Kubeflow on Google Cloud: clusters hierarchy&#34;&gt;
 &lt;strong&gt;Figure 2.&lt;/strong&gt; Example of Kubeflow on Google Cloud deployment.&lt;/p&gt;
 &lt;h2 id=&#34;deployment-process&#34;&gt;Deployment process&lt;/h2&gt;
 &lt;p&gt;To set up a Kubeflow environment on Google Cloud, complete these steps:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;./project-setup/&#34;&gt;Set up Google Cloud project&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;./oauth-setup/&#34;&gt;Set up OAuth client&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;./management-setup/&#34;&gt;Deploy Management cluster&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;./deploy-cli/&#34;&gt;Deploy Kubeflow cluster&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../project-setup/&#34;&gt;Set up Google Cloud project&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../oauth-setup/&#34;&gt;Set up OAuth client&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../management-setup/&#34;&gt;Deploy Management cluster&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../deploy-cli/&#34;&gt;Deploy Kubeflow cluster&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;For debugging approaches to common issues encountered during these deployment steps, see &lt;a href=&#34;../troubleshooting/&#34;&gt;troubleshooting deployments&lt;/a&gt; to find common issues
+&lt;p&gt;For debugging approaches to common issues encountered during these deployment steps, see &lt;a href=&#34;../../troubleshooting/&#34;&gt;troubleshooting deployments&lt;/a&gt; to find common issues
 and debugging approaches. If the issue isn’t included in the list of commonly encountered issues, report a bug at &lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution&#34;&gt;GoogleCloudPlatform/kubeflow-distribution&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;next-steps&#34;&gt;Next steps&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;./deploy-cli/&#34;&gt;Deploy Kubeflow Cluster&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../deploy-cli/&#34;&gt;Deploy Kubeflow Cluster&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Run a full ML workflow on Kubeflow by using the &lt;a href=&#34;https://github.com/kubeflow/pipelines/blob/e42d9d2609369b96973c821dca11fe5b2565e705/samples/contrib/kubeflow-e2e-mnist/kubeflow-e2e-mnist.ipynb&#34;&gt;end-to-end MNIST notebook&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
