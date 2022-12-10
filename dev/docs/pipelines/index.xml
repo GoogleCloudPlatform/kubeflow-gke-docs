@@ -159,7 +159,7 @@ Kubeflow Pipelines can authenticate to Google Cloud and manage resources in your
 &lt;ul&gt;
 &lt;li&gt;If you followed instructions in &lt;a href=&#34;https://cloud.google.com/ai-platform/pipelines/docs/setting-up&#34;&gt;Setting up AI Platform Pipelines&lt;/a&gt; and checked &lt;code&gt;Allow access to the following Cloud APIs&lt;/code&gt;, your cluster is already using Compute Engine default service account.&lt;/li&gt;
 &lt;li&gt;In Google Cloud Console UI, you can enable it in &lt;code&gt;Create a Kubernetes cluster -&amp;gt; default-pool -&amp;gt; Security -&amp;gt; Access Scopes -&amp;gt; Allow full access to all Cloud APIs&lt;/code&gt; like the following:
-&lt;img src=&#34;https://gkcalat.github.io/kubeflow-docs/{{ .Site.Params.version_url_prefix }}docs/images/pipelines/v1/gke-allow-full-access.png&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;../../{{ .Site.Params.version_url_prefix }}docs/images/pipelines/v1/gke-allow-full-access.png&#34;&gt;&lt;/li&gt;
 &lt;li&gt;Using &lt;code&gt;gcloud&lt;/code&gt; CLI, you can enable it with &lt;code&gt;--scopes cloud-platform&lt;/code&gt; like the following:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gcloud container clusters create &amp;lt;cluster-name&amp;gt; &lt;span class=&#34;se&#34;&gt;\
@@ -194,7 +194,7 @@ You can also continue to use &lt;code&gt;use_gcp_secret&lt;/code&gt; in a cluste
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;In Google Cloud Console UI, you can enable Workload Identity in &lt;code&gt;Create a Kubernetes cluster -&amp;gt; Security -&amp;gt; Enable Workload Identity&lt;/code&gt; like the following:
-&lt;img src=&#34;https://gkcalat.github.io/kubeflow-docs/{{ .Site.Params.version_url_prefix }}docs/images/pipelines/v1/gke-enable-workload-identity.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;../../{{ .Site.Params.version_url_prefix }}docs/images/pipelines/v1/gke-enable-workload-identity.png&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Using &lt;code&gt;gcloud&lt;/code&gt; CLI, you can enable it with:&lt;/p&gt;
