@@ -281,7 +281,7 @@ This is the multi-page printable view of this section.
 <h2 id="features">Features</h2>
 <p>Kubeflow deployed on Google Cloud includes the following:</p>
 <ol>
-<li>Full-fledged multi-user Kubeflow running on GKE.</li>
+<li>Full-fledged multi-user Kubeflow running on Google Kubernetes Engine.</li>
 <li><a href="https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler">Cluster Autoscaler</a>
 with automatic resizing of the node pool.</li>
 <li><a href="https://cloud.google.com/endpoints/docs">Cloud Endpoint</a> integrated with <a href="https://cloud.google.com/iap">Identity-aware Proxy (IAP)</a>.</li>
@@ -327,7 +327,7 @@ and debugging approaches. If the issue isn’t included in the list of commonly 
     
 	<h1 id="pg-4007501063b92f590822dfd88381b1a3">2 - Setting up GCP Project</h1>
     <div class="lead">Creating a Google Cloud project for your Kubeflow deployment</div>
-	<p>In order to deploy Kubeflow on GCP, you need to set up a Google Cloud project and enable necessary APIs for the deployment.</p>
+	<p>In order to deploy Kubeflow on Google Cloud, you need to set up a Google Cloud project and enable necessary APIs for the deployment.</p>
 <h2 id="setting-up-a-project">Setting up a project</h2>
 <p>Follow these steps to set up your Google Cloud project:</p>
 <ul>
@@ -416,7 +416,7 @@ be needed for projects that haven&rsquo;t had a cluster set up beforehand.</li>
 </ul>
 </li>
 </ul>
-<p>You do not need a running GKE cluster. The deployment process creates a
+<p>You do not need a running Google Kubernetes Engine cluster. The deployment process creates a
 cluster for you.</p>
 <h2 id="next-steps">Next steps</h2>
 <ul>
@@ -674,7 +674,7 @@ allow Config Controller to manage Google Cloud resources. Refer to <a href="http
 <p>This section gives you more details about the configuration and
 deployment process, so that you can customize your management cluster if necessary.</p>
 <h3 id="config-controller">Config Controller</h3>
-<p>Management cluster is a tool for managing Google Cloud services like KRM, for example: GKE container cluster, MySQL database, etc.
+<p>Management cluster is a tool for managing Google Cloud services like KRM, for example: Google Kubernetes Engine container cluster, MySQL database, etc.
 And you can use one Management cluster for multiple Kubeflow clusters, across multiple Google Cloud projects.
 This capability is offered by <a href="https://cloud.google.com/config-connector/docs/how-to/getting-started">Config Connector</a>.</p>
 <p>Starting with Kubeflow 1.5, we leveraged the managed version of Config Connector, which is called <a href="https://cloud.google.com/anthos-config-management/docs/concepts/config-controller-overview">Config Controller</a>.
@@ -765,7 +765,7 @@ described in the [project setup guide](/{{ .Site.Params.version_url_prefix }}doc
 to create OAuth credentials for <a href="https://cloud.google.com/iap/docs/">Cloud Identity-Aware Proxy (Cloud
 IAP)</a>.</p>
 <ul>
-<li>Unfortunately <a href="https://cloud.google.com/kubernetes-engine/docs/concepts/backendconfig">GKE&rsquo;s BackendConfig</a>
+<li>Unfortunately <a href="https://cloud.google.com/kubernetes-engine/docs/concepts/backendconfig">Google Kubernetes Engine&rsquo;s BackendConfig</a>
 currently doesn&rsquo;t support creating <a href="https://cloud.google.com/iap/docs/programmatic-oauth-clients">IAP OAuth clients programmatically</a>.</li>
 </ul>
 </li>
@@ -890,7 +890,7 @@ This issue is expected and can happen multiple times for different kinds of reso
 <code>kubeflow</code> in your new cluster.  To do this from the command line, first set
 your <code>kubectl</code> credentials to point to the new cluster:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcloud container clusters get-credentials <span class="s2">&#34;</span><span class="si">${</span><span class="nv">KF_NAME</span><span class="si">}</span><span class="s2">&#34;</span> --zone <span class="s2">&#34;</span><span class="si">${</span><span class="nv">ZONE</span><span class="si">}</span><span class="s2">&#34;</span> --project <span class="s2">&#34;</span><span class="si">${</span><span class="nv">KF_PROJECT</span><span class="si">}</span><span class="s2">&#34;</span>
-</span></span></code></pre></div><p>Then, check what&rsquo;s installed in the <code>kubeflow</code> namespace of your GKE cluster:</p>
+</span></span></code></pre></div><p>Then, check what&rsquo;s installed in the <code>kubeflow</code> namespace of your Google Kubernetes Engine cluster:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl -n kubeflow get all
 </span></span></code></pre></div></li>
 </ol>
@@ -977,9 +977,9 @@ account has the minimal permissions needed to send metrics and logs to
 <a href="https://github.com/kubeflow/examples/tree/master/github_issue_summarization/pipelines">GitHub issue summarization Pipelines
 example</a>.</li>
 <li>Learn how to [delete your Kubeflow deployment using the CLI](/{{ .Site.Params.version_url_prefix }}docs/deploy/delete-cli/).</li>
-<li>To add users to Kubeflow, go to [a dedicated section in Customizing Kubeflow on GKE](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke/#add-users-to-kubeflow).</li>
-<li>To taylor your Kubeflow deployment on GKE, go to [Customizing Kubeflow on GKE](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke/).</li>
-<li>For troubleshooting Kubeflow deployments on GKE, go to the [Troubleshooting deployments](/{{ .Site.Params.version_url_prefix }}docs/troubleshooting-gke/) guide.</li>
+<li>To add users to Kubeflow, go to [a dedicated section in Customizing Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke/#add-users-to-kubeflow).</li>
+<li>To taylor your Kubeflow deployment on Google Cloud, go to [Customizing Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke/).</li>
+<li>For troubleshooting Kubeflow deployments on Google Cloud, go to the [Troubleshooting deployments](/{{ .Site.Params.version_url_prefix }}docs/troubleshooting-gke/) guide.</li>
 </ul>
 
 </div>
@@ -1203,7 +1203,7 @@ reconfigure the context by:</p>
 <h3 id="upgrade-kubeflow-cluster-to-v16">Upgrade Kubeflow cluster to v1.6</h3>
 <p>Starting from Kubeflow v1.6.0:</p>
 <ul>
-<li>Component with deprecated API versions were upgraded to support GKE v1.22. If you would like to upgrade your GKE cluster, follow <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/upgrading-a-cluster">GCP instructions</a>.</li>
+<li>Component with deprecated API versions were upgraded to support Google Kubernetes Engine v1.22. If you would like to upgrade your Google Kubernetes Engine cluster, follow <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/upgrading-a-cluster">GCP instructions</a>.</li>
 <li>ASM was upgraded to v1.14. Follow the instructions on how to <a href="#upgrade-asm-anthos-service-mesh">upgrade ASM (Anthos Service Mesh)</a>. If you want to use ASM version prior to 1.11, refer to <a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/asm/deprecated/README.md">the legacy instructions</a>.</li>
 <li>Knative was upgraded to v1.2. Follow <a href="https://knative.dev/docs/install/upgrade/upgrade-installation/">Knative instructions</a> to check current version and see if the update includes any breaking changes.</li>
 <li>Cert-manager was upgraded to v1.5. To check your current version and see if the update includes any breaking changes, follow the <a href="https://cert-manager.io/docs/installation/upgrading/">cert-manager instructions</a>.</li>
@@ -1427,7 +1427,7 @@ authorized URIs. For more information, read the guide to
 </ol>
 <h2 id="next-steps">Next steps</h2>
 <ul>
-<li>The [GKE troubleshooting guide](/{{ .Site.Params.version_url_prefix }}docs/troubleshooting/) for Kubeflow.</li>
+<li>The [Google Kubernetes Engine troubleshooting guide](/{{ .Site.Params.version_url_prefix }}docs/troubleshooting/) for Kubeflow.</li>
 <li>Guide to [sharing cluster access](/{{ .Site.Params.version_url_prefix }}docs/components/multi-tenancy/getting-started).</li>
 <li>Google Cloud guide to <a href="https://cloud.google.com/iap/docs/">Cloud IAP</a>.</li>
 </ul>
@@ -1566,7 +1566,7 @@ Config Connector resources. Refer to <a href="https://cloud.google.com/config-co
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2022 Kubeflow on GCP authors | Documentation Distributed under CC BY 4.0</small>
+        <small class="text-white">&copy; 2022 The Kubeflow Authors. | Documentation Distributed under CC BY 4.0</small>
         <p><small class="ml-1"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></small></p>
 	
 		

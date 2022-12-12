@@ -28,7 +28,7 @@
       "datePublished": "0001-01-01 00:00:00 \u002b0000 UTC",
       "dateModified" : "0001-01-01 00:00:00 \u002b0000 UTC",
       "url" : "https:\/\/gkcalat.github.io\/kubeflow-docs\/docs\/pipelines\/enable-gpu-and-tpu\/",
-      "wordCount" : "281",
+      "wordCount" : "291",
       "keywords" : [ "Kubeflow on GCP" ]
   }
   </script>
@@ -49,12 +49,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/pipelines/enable-gpu-and-tpu/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-11-11T17:49:27+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+<meta property="article:modified_time" content="2022-12-12T23:32:20+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
 
 <meta itemprop="name" content="Enabling GPU and TPU">
 <meta itemprop="description" content="Enable GPU and TPU for Kubeflow Pipelines on Google Kubernetes Engine (GKE)">
-<meta itemprop="dateModified" content="2022-11-11T17:49:27+00:00" />
-<meta itemprop="wordCount" content="281">
+<meta itemprop="dateModified" content="2022-12-12T23:32:20+00:00" />
+<meta itemprop="wordCount" content="291">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Enabling GPU and TPU"/>
 <meta name="twitter:description" content="Enable GPU and TPU for Kubeflow Pipelines on Google Kubernetes Engine (GKE)"/>
@@ -235,7 +235,7 @@ if (!doNotTrack) {
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocscustomizing-li">
   <input type="checkbox" id="m-kubeflow-docsdocscustomizing-check"/>
-  <label for="m-kubeflow-docsdocscustomizing-check"><a href="../../../kubeflow-docs/docs/customizing/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocscustomizing"><span class="">Customize Kubeflow on GKE</span></a></label>
+  <label for="m-kubeflow-docsdocscustomizing-check"><a href="../../../kubeflow-docs/docs/customizing/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocscustomizing"><span class="">Customize Kubeflow on Google Cloud</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocscustom-domain-li">
   <input type="checkbox" id="m-kubeflow-docsdocscustom-domain-check"/>
@@ -251,7 +251,7 @@ if (!doNotTrack) {
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocstroubleshooting-li">
   <input type="checkbox" id="m-kubeflow-docsdocstroubleshooting-check"/>
-  <label for="m-kubeflow-docsdocstroubleshooting-check"><a href="../../../kubeflow-docs/docs/troubleshooting/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocstroubleshooting"><span class="">Troubleshooting Deployments on GKE</span></a></label>
+  <label for="m-kubeflow-docsdocstroubleshooting-check"><a href="../../../kubeflow-docs/docs/troubleshooting/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocstroubleshooting"><span class="">Troubleshooting Deployments on Google Cloud</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsanthos-li">
   <input type="checkbox" id="m-kubeflow-docsdocsanthos-check"/>
@@ -356,11 +356,11 @@ if (!doNotTrack) {
 
 		
 	</header>    
-	<p>This page describes how to enable GPU or TPU for a pipeline on GKE by using the Pipelines
+	<p>This page describes how to enable GPU or TPU for a pipeline on Google Kubernetes Engine by using the Pipelines
 DSL language.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>To enable GPU and TPU on your Kubeflow cluster, follow the instructions on how to
-[customize](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke#common-customizations) the GKE cluster for Kubeflow before
+[customize](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke#common-customizations) the Google Kubernetes Engine cluster for Kubeflow before
 setting up the cluster.</p>
 <h2 id="configure-containerop-to-consume-gpus">Configure ContainerOp to consume GPUs</h2>
 <p>After enabling the GPU, the Kubeflow setup script installs a default GPU pool with type nvidia-tesla-k80 with auto-scaling enabled.
@@ -386,9 +386,9 @@ The following code consumes 2 GPUs in a ContainerOp.</p>
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">nodeSelector</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">cloud.google.com/gke-accelerator</span><span class="p">:</span><span class="w"> </span><span class="l">nvidia-tesla-p4</span><span class="w">
 </span></span></span></code></pre></div><p>See <a href="https://github.com/kubeflow/pipelines/tree/sdk/release-1.8/samples/tutorials/gpu">GPU tutorial</a> for a complete example to build a Kubeflow pipeline that uses GPUs.</p>
-<p>Check the <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/gpus">GKE GPU guide</a> to learn more about GPU settings.</p>
+<p>Check the <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/gpus">Google Kubernetes Engine GPU guide</a> to learn more about GPU settings.</p>
 <h2 id="configure-containerop-to-consume-tpus">Configure ContainerOp to consume TPUs</h2>
-<p>Use the following code to configure ContainerOp to consume TPUs on GKE:</p>
+<p>Use the following code to configure ContainerOp to consume TPUs on Google Kubernetes Engine:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">kfp.dsl</span> <span class="k">as</span> <span class="nn">dsl</span>
 </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">kfp.gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
 </span></span><span class="line"><span class="cl"><span class="n">tpu_op</span> <span class="o">=</span> <span class="n">dsl</span><span class="o">.</span><span class="n">ContainerOp</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;tpu-op&#39;</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">gcp</span><span class="o">.</span><span class="n">use_tpu</span><span class="p">(</span>
@@ -403,7 +403,7 @@ The following code consumes 2 GPUs in a ContainerOp.</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">annotations</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">tf-version.cloud-tpus.google.com</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;1.12&#34;</span><span class="w">
 </span></span></span></code></pre></div><p>To learn more, see an <a href="https://github.com/kubeflow/pipelines/blob/sdk/release-1.8/samples/core/preemptible_tpu_gpu/preemptible_tpu_gpu.py">example pipeline that uses a preemptible node pool with TPU or GPU.</a>.</p>
-<p>See the <a href="https://cloud.google.com/tpu/docs/kubernetes-engine-setup">GKE TPU Guide</a> to learn more about TPU settings.</p>
+<p>See the <a href="https://cloud.google.com/tpu/docs/kubernetes-engine-setup">Google Kubernetes Engine TPU Guide</a> to learn more about TPU settings.</p>
 
 	
 		<style>
@@ -428,10 +428,10 @@ The following code consumes 2 GPUs in a ContainerOp.</p>
     <button class="btn btn-primary feedback--answer feedback--answer-yes" style="width: 5rem;">Yes</button>
     <button class="btn btn-primary feedback--answer feedback--answer-no" style="width: 5rem;">No</button>
     <p class="feedback--response feedback--response-yes">
-      Thank you! <a href="https://github.com/gkcalat/kubeflow-docs/issues/new">Send your feedback to us</a>.
+      Thank you! <a href="https://github.com/googlestaging/kubeflow-gke-docs/issues/new">Send your feedback to us</a>.
     </p>
     <p class="feedback--response feedback--response-no">
-      Sorry to hear that. Please <a href="https://github.com/gkcalat/kubeflow-docs/issues/new">tell us how we can improve</a>.
+      Sorry to hear that. Please <a href="https://github.com/googlestaging/kubeflow-gke-docs/issues/new">tell us how we can improve</a>.
     </p>
   </div>
 </div>
@@ -518,7 +518,7 @@ The following code consumes 2 GPUs in a ContainerOp.</p>
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2022 Kubeflow on GCP authors | Documentation Distributed under CC BY 4.0</small>
+        <small class="text-white">&copy; 2022 The Kubeflow Authors. | Documentation Distributed under CC BY 4.0</small>
         <p><small class="ml-1"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></small></p>
 	
 		

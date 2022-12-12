@@ -28,7 +28,7 @@
       "datePublished": "0001-01-01 00:00:00 \u002b0000 UTC",
       "dateModified" : "0001-01-01 00:00:00 \u002b0000 UTC",
       "url" : "https:\/\/gkcalat.github.io\/kubeflow-docs\/docs\/authentication\/",
-      "wordCount" : "1208",
+      "wordCount" : "1216",
       "keywords" : [ "Kubeflow on GCP" ]
   }
   </script>
@@ -49,12 +49,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/authentication/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-11-11T17:49:27+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+<meta property="article:modified_time" content="2022-12-12T23:32:20+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
 
 <meta itemprop="name" content="Authenticating Kubeflow to Google Cloud">
 <meta itemprop="description" content="Authentication and authorization to Google Cloud">
-<meta itemprop="dateModified" content="2022-11-11T17:49:27+00:00" />
-<meta itemprop="wordCount" content="1208">
+<meta itemprop="dateModified" content="2022-12-12T23:32:20+00:00" />
+<meta itemprop="wordCount" content="1216">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Authenticating Kubeflow to Google Cloud"/>
 <meta name="twitter:description" content="Authentication and authorization to Google Cloud"/>
@@ -235,7 +235,7 @@ if (!doNotTrack) {
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocscustomizing-li">
   <input type="checkbox" id="m-kubeflow-docsdocscustomizing-check"/>
-  <label for="m-kubeflow-docsdocscustomizing-check"><a href="../../kubeflow-docs/docs/customizing/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocscustomizing"><span class="">Customize Kubeflow on GKE</span></a></label>
+  <label for="m-kubeflow-docsdocscustomizing-check"><a href="../../kubeflow-docs/docs/customizing/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocscustomizing"><span class="">Customize Kubeflow on Google Cloud</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocscustom-domain-li">
   <input type="checkbox" id="m-kubeflow-docsdocscustom-domain-check"/>
@@ -251,7 +251,7 @@ if (!doNotTrack) {
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocstroubleshooting-li">
   <input type="checkbox" id="m-kubeflow-docsdocstroubleshooting-check"/>
-  <label for="m-kubeflow-docsdocstroubleshooting-check"><a href="../../kubeflow-docs/docs/troubleshooting/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocstroubleshooting"><span class="">Troubleshooting Deployments on GKE</span></a></label>
+  <label for="m-kubeflow-docsdocstroubleshooting-check"><a href="../../kubeflow-docs/docs/troubleshooting/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocstroubleshooting"><span class="">Troubleshooting Deployments on Google Cloud</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsanthos-li">
   <input type="checkbox" id="m-kubeflow-docsdocsanthos-check"/>
@@ -369,8 +369,8 @@ if (!doNotTrack) {
 The <code>kubeflow</code> namespace is only for running Kubeflow system components. Individual jobs and model deployments
 run in separate namespaces.</p>
 <h3 id="google-kubernetes-engine-gke-workload-identity">Google Kubernetes Engine (GKE) workload identity</h3>
-<p>Starting in v0.7, Kubeflow uses the new GKE feature: <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity">workload identity</a>.
-This is the recommended way to access Google Cloud APIs from your GKE cluster.
+<p>Starting in v0.7, Kubeflow uses the new Google Kubernetes Engine feature: <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity">workload identity</a>.
+This is the recommended way to access Google Cloud APIs from your Google Kubernetes Engine cluster.
 You can configure a Kubernetes service account (KSA) to act as a Google Cloud service account (GSA).</p>
 <p>If you deployed Kubeflow following the Google Cloud instructions, then the profiler controller automatically binds the &ldquo;default-editor&rdquo; service account for every profile namespace to a default Google Cloud service account created during kubeflow deployment.
 The Kubeflow deployment process also creates a default profile for the cluster admin.</p>
@@ -431,7 +431,7 @@ When creating a profile, you can specify a custom Google Cloud service account f
 </span></span></span></code></pre></div><p><strong>Note:</strong>
 The profile controller currently doesn&rsquo;t perform any access control checks to see whether the user creating the profile should be able to use the Google Cloud service account.
 As a result, any user who can create a profile can get access to any service account for which the admin controller has owner permissions. We will improve this in subsequent releases.</p>
-<p>You can find more details on workload identity in the <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity">GKE documentation</a>.</p>
+<p>You can find more details on workload identity in the <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity">Google Kubernetes Engine documentation</a>.</p>
 <h3 id="authentication-from-kubeflow-pipelines">Authentication from Kubeflow Pipelines</h3>
 <p>Starting from Kubeflow v1.1, Kubeflow Pipelines supports multi-user isolation. Therefore, pipeline runs are executed in user namespaces also using the <code>default-editor</code> KSA.</p>
 <p>Additionally, the Kubeflow Pipelines UI, visualization, and TensorBoard server instances are deployed in your user namespace using the <code>default-editor</code> KSA. Therefore, to visualize results in the Pipelines UI, they can fetch artifacts in Google Cloud Storage using permissions of the same GSA you configured for this namespace.</p>
@@ -480,7 +480,7 @@ you can check which roles were assigned to your account using the following gclo
 <h3 id="kubectl">kubectl</h3>
 <p>The <a href="https://kubernetes.io/docs/reference/kubectl/overview/"><code>kubectl</code> tool</a> is used for interacting with a Kubernetes cluster through the command line.</p>
 <h5 id="connecting-to-a-cluster-using-a-google-cloud-account">Connecting to a cluster using a Google Cloud account</h5>
-<p>If you set up your Kubernetes cluster using GKE, you can authenticate with the cluster using a Google Cloud account.
+<p>If you set up your Kubernetes cluster using Google Kubernetes Engine, you can authenticate with the cluster using a Google Cloud account.
 The following commands fetch the credentials for your cluster and save them to your local
 <a href="https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/"><code>kubeconfig</code> file</a>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">CLUSTER_NAME=your-gke-cluster
@@ -547,10 +547,10 @@ Kubernetes resources.</p>
     <button class="btn btn-primary feedback--answer feedback--answer-yes" style="width: 5rem;">Yes</button>
     <button class="btn btn-primary feedback--answer feedback--answer-no" style="width: 5rem;">No</button>
     <p class="feedback--response feedback--response-yes">
-      Thank you! <a href="https://github.com/gkcalat/kubeflow-docs/issues/new">Send your feedback to us</a>.
+      Thank you! <a href="https://github.com/googlestaging/kubeflow-gke-docs/issues/new">Send your feedback to us</a>.
     </p>
     <p class="feedback--response feedback--response-no">
-      Sorry to hear that. Please <a href="https://github.com/gkcalat/kubeflow-docs/issues/new">tell us how we can improve</a>.
+      Sorry to hear that. Please <a href="https://github.com/googlestaging/kubeflow-gke-docs/issues/new">tell us how we can improve</a>.
     </p>
   </div>
 </div>
@@ -637,7 +637,7 @@ Kubernetes resources.</p>
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2022 Kubeflow on GCP authors | Documentation Distributed under CC BY 4.0</small>
+        <small class="text-white">&copy; 2022 The Kubeflow Authors. | Documentation Distributed under CC BY 4.0</small>
         <p><small class="ml-1"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></small></p>
 	
 		

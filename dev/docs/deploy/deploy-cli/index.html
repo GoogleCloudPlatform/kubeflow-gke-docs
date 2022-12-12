@@ -28,7 +28,7 @@
       "datePublished": "0001-01-01 00:00:00 \u002b0000 UTC",
       "dateModified" : "0001-01-01 00:00:00 \u002b0000 UTC",
       "url" : "https:\/\/gkcalat.github.io\/kubeflow-docs\/docs\/deploy\/deploy-cli\/",
-      "wordCount" : "1530",
+      "wordCount" : "1538",
       "keywords" : [ "Kubeflow on GCP" ]
   }
   </script>
@@ -49,12 +49,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/deploy/deploy-cli/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-11-11T17:49:27+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+<meta property="article:modified_time" content="2022-12-12T23:32:20+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
 
 <meta itemprop="name" content="Deploying Kubeflow cluster">
 <meta itemprop="description" content="Instructions for using kubectl and kpt to deploy Kubeflow on Google Cloud">
-<meta itemprop="dateModified" content="2022-11-11T17:49:27+00:00" />
-<meta itemprop="wordCount" content="1530">
+<meta itemprop="dateModified" content="2022-12-12T23:32:20+00:00" />
+<meta itemprop="wordCount" content="1538">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Deploying Kubeflow cluster"/>
 <meta name="twitter:description" content="Instructions for using kubectl and kpt to deploy Kubeflow on Google Cloud"/>
@@ -235,7 +235,7 @@ if (!doNotTrack) {
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocscustomizing-li">
   <input type="checkbox" id="m-kubeflow-docsdocscustomizing-check"/>
-  <label for="m-kubeflow-docsdocscustomizing-check"><a href="../../../kubeflow-docs/docs/customizing/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocscustomizing"><span class="">Customize Kubeflow on GKE</span></a></label>
+  <label for="m-kubeflow-docsdocscustomizing-check"><a href="../../../kubeflow-docs/docs/customizing/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocscustomizing"><span class="">Customize Kubeflow on Google Cloud</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocscustom-domain-li">
   <input type="checkbox" id="m-kubeflow-docsdocscustom-domain-check"/>
@@ -251,7 +251,7 @@ if (!doNotTrack) {
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocstroubleshooting-li">
   <input type="checkbox" id="m-kubeflow-docsdocstroubleshooting-check"/>
-  <label for="m-kubeflow-docsdocstroubleshooting-check"><a href="../../../kubeflow-docs/docs/troubleshooting/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocstroubleshooting"><span class="">Troubleshooting Deployments on GKE</span></a></label>
+  <label for="m-kubeflow-docsdocstroubleshooting-check"><a href="../../../kubeflow-docs/docs/troubleshooting/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocstroubleshooting"><span class="">Troubleshooting Deployments on Google Cloud</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsanthos-li">
   <input type="checkbox" id="m-kubeflow-docsdocsanthos-check"/>
@@ -404,7 +404,7 @@ described in the [project setup guide](/{{ .Site.Params.version_url_prefix }}doc
 to create OAuth credentials for <a href="https://cloud.google.com/iap/docs/">Cloud Identity-Aware Proxy (Cloud
 IAP)</a>.</p>
 <ul>
-<li>Unfortunately <a href="https://cloud.google.com/kubernetes-engine/docs/concepts/backendconfig">GKE&rsquo;s BackendConfig</a>
+<li>Unfortunately <a href="https://cloud.google.com/kubernetes-engine/docs/concepts/backendconfig">Google Kubernetes Engine&rsquo;s BackendConfig</a>
 currently doesn&rsquo;t support creating <a href="https://cloud.google.com/iap/docs/programmatic-oauth-clients">IAP OAuth clients programmatically</a>.</li>
 </ul>
 </li>
@@ -529,7 +529,7 @@ This issue is expected and can happen multiple times for different kinds of reso
 <code>kubeflow</code> in your new cluster.  To do this from the command line, first set
 your <code>kubectl</code> credentials to point to the new cluster:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcloud container clusters get-credentials <span class="s2">&#34;</span><span class="si">${</span><span class="nv">KF_NAME</span><span class="si">}</span><span class="s2">&#34;</span> --zone <span class="s2">&#34;</span><span class="si">${</span><span class="nv">ZONE</span><span class="si">}</span><span class="s2">&#34;</span> --project <span class="s2">&#34;</span><span class="si">${</span><span class="nv">KF_PROJECT</span><span class="si">}</span><span class="s2">&#34;</span>
-</span></span></code></pre></div><p>Then, check what&rsquo;s installed in the <code>kubeflow</code> namespace of your GKE cluster:</p>
+</span></span></code></pre></div><p>Then, check what&rsquo;s installed in the <code>kubeflow</code> namespace of your Google Kubernetes Engine cluster:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl -n kubeflow get all
 </span></span></code></pre></div></li>
 </ol>
@@ -616,9 +616,9 @@ account has the minimal permissions needed to send metrics and logs to
 <a href="https://github.com/kubeflow/examples/tree/master/github_issue_summarization/pipelines">GitHub issue summarization Pipelines
 example</a>.</li>
 <li>Learn how to [delete your Kubeflow deployment using the CLI](/{{ .Site.Params.version_url_prefix }}docs/deploy/delete-cli/).</li>
-<li>To add users to Kubeflow, go to [a dedicated section in Customizing Kubeflow on GKE](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke/#add-users-to-kubeflow).</li>
-<li>To taylor your Kubeflow deployment on GKE, go to [Customizing Kubeflow on GKE](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke/).</li>
-<li>For troubleshooting Kubeflow deployments on GKE, go to the [Troubleshooting deployments](/{{ .Site.Params.version_url_prefix }}docs/troubleshooting-gke/) guide.</li>
+<li>To add users to Kubeflow, go to [a dedicated section in Customizing Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke/#add-users-to-kubeflow).</li>
+<li>To taylor your Kubeflow deployment on Google Cloud, go to [Customizing Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke/).</li>
+<li>For troubleshooting Kubeflow deployments on Google Cloud, go to the [Troubleshooting deployments](/{{ .Site.Params.version_url_prefix }}docs/troubleshooting-gke/) guide.</li>
 </ul>
 
 	
@@ -644,10 +644,10 @@ example</a>.</li>
     <button class="btn btn-primary feedback--answer feedback--answer-yes" style="width: 5rem;">Yes</button>
     <button class="btn btn-primary feedback--answer feedback--answer-no" style="width: 5rem;">No</button>
     <p class="feedback--response feedback--response-yes">
-      Thank you! <a href="https://github.com/gkcalat/kubeflow-docs/issues/new">Send your feedback to us</a>.
+      Thank you! <a href="https://github.com/googlestaging/kubeflow-gke-docs/issues/new">Send your feedback to us</a>.
     </p>
     <p class="feedback--response feedback--response-no">
-      Sorry to hear that. Please <a href="https://github.com/gkcalat/kubeflow-docs/issues/new">tell us how we can improve</a>.
+      Sorry to hear that. Please <a href="https://github.com/googlestaging/kubeflow-gke-docs/issues/new">tell us how we can improve</a>.
     </p>
   </div>
 </div>
@@ -734,7 +734,7 @@ example</a>.</li>
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2022 Kubeflow on GCP authors | Documentation Distributed under CC BY 4.0</small>
+        <small class="text-white">&copy; 2022 The Kubeflow Authors. | Documentation Distributed under CC BY 4.0</small>
         <p><small class="ml-1"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></small></p>
 	
 		

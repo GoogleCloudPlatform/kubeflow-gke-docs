@@ -130,7 +130,7 @@ Available options listed below have different tradeoffs. You should choose the o
 &lt;ul&gt;
 &lt;li&gt;Configuring your cluster to access Google Cloud using &lt;a href=&#34;#compute-engine-default-service-account&#34;&gt;Compute Engine default service account&lt;/a&gt; with the &amp;ldquo;cloud-platform&amp;rdquo; scope is easier to set up than the other options. However, this approach grants excessive permissions. Therefore, it is not suitable if you need workload permission separation.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#workload-identity&#34;&gt;Workload Identity&lt;/a&gt; takes more efforts to set up, but allows fine-grained permission control. It is recommended for production use-cases.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#google-service-account-keys-stored-as-kubernetes-secrets&#34;&gt;Google service account keys stored as Kubernetes secrets&lt;/a&gt; is the legacy approach and no longer recommended in GKE. However, it&amp;rsquo;s the only option to use Google Cloud APIs when your cluster is an &lt;a href=&#34;https://cloud.google.com/anthos&#34;&gt;anthos&lt;/a&gt; or on-prem cluster.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#google-service-account-keys-stored-as-kubernetes-secrets&#34;&gt;Google service account keys stored as Kubernetes secrets&lt;/a&gt; is the legacy approach and no longer recommended in Google Kubernetes Engine. However, it&amp;rsquo;s the only option to use Google Cloud APIs when your cluster is an &lt;a href=&#34;https://cloud.google.com/anthos&#34;&gt;anthos&lt;/a&gt; or on-prem cluster.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;before-you-begin&#34;&gt;Before you begin&lt;/h2&gt;
 &lt;p&gt;There are various options on how to install Kubeflow Pipelines in the &lt;a href=&#34;https://www.kubeflow.org/docs/components/pipelines/installation/overview/&#34;&gt;Installation Options for Kubeflow Pipelines&lt;/a&gt; guide.
@@ -153,9 +153,9 @@ Be aware that authentication support and cluster setup instructions will vary de
 &lt;/div&gt;
 
 &lt;h3 id=&#34;cluster-setup-to-use-compute-engine-default-service-account&#34;&gt;Cluster setup to use Compute Engine default service account&lt;/h3&gt;
-&lt;p&gt;By default, your GKE nodes use &lt;a href=&#34;https://cloud.google.com/compute/docs/access/service-accounts#default_service_account&#34;&gt;Compute Engine default service account&lt;/a&gt;. If you allowed &lt;code&gt;cloud-platform&lt;/code&gt; scope when creating the cluster,
+&lt;p&gt;By default, your Google Kubernetes Engine nodes use &lt;a href=&#34;https://cloud.google.com/compute/docs/access/service-accounts#default_service_account&#34;&gt;Compute Engine default service account&lt;/a&gt;. If you allowed &lt;code&gt;cloud-platform&lt;/code&gt; scope when creating the cluster,
 Kubeflow Pipelines can authenticate to Google Cloud and manage resources in your project without further configuration.&lt;/p&gt;
-&lt;p&gt;Use one of the following options to create a GKE cluster that uses the Compute Engine default service account:&lt;/p&gt;
+&lt;p&gt;Use one of the following options to create a Google Kubernetes Engine cluster that uses the Compute Engine default service account:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;If you followed instructions in &lt;a href=&#34;https://cloud.google.com/ai-platform/pipelines/docs/setting-up&#34;&gt;Setting up AI Platform Pipelines&lt;/a&gt; and checked &lt;code&gt;Allow access to the following Cloud APIs&lt;/code&gt;, your cluster is already using Compute Engine default service account.&lt;/li&gt;
 &lt;li&gt;In Google Cloud Console UI, you can enable it in &lt;code&gt;Create a Kubernetes cluster -&amp;gt; default-pool -&amp;gt; Security -&amp;gt; Access Scopes -&amp;gt; Allow full access to all Cloud APIs&lt;/code&gt; like the following:
@@ -171,7 +171,7 @@ Kubeflow Pipelines can authenticate to Google Cloud and manage resources in your
 &lt;h2 id=&#34;securing-the-cluster-with-fine-grained-google-cloud-permission-control&#34;&gt;Securing the cluster with fine-grained Google Cloud permission control&lt;/h2&gt;
 &lt;h3 id=&#34;workload-identity&#34;&gt;Workload Identity&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Workload Identity is the recommended way for your GKE applications to consume services provided by Google APIs. You accomplish this by configuring a &lt;a href=&#34;https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/&#34;&gt;Kubernetes service account&lt;/a&gt; to act as a &lt;a href=&#34;https://cloud.google.com/iam/docs/service-accounts&#34;&gt;Google service account&lt;/a&gt;. Any Pods running as the Kubernetes service account then use the Google service account to authenticate to cloud services.&lt;/p&gt;
+&lt;p&gt;Workload Identity is the recommended way for your Google Kubernetes Engine applications to consume services provided by Google APIs. You accomplish this by configuring a &lt;a href=&#34;https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/&#34;&gt;Kubernetes service account&lt;/a&gt; to act as a &lt;a href=&#34;https://cloud.google.com/iam/docs/service-accounts&#34;&gt;Google service account&lt;/a&gt;. Any Pods running as the Kubernetes service account then use the Google service account to authenticate to cloud services.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Referenced from &lt;a href=&#34;https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity&#34;&gt;Workload Identity Documentation&lt;/a&gt;. Please read this doc for:&lt;/p&gt;
 &lt;ul&gt;
@@ -385,11 +385,11 @@ Because data is deleted by default when a Kubeflow Pipelines Standalone deployme
       <description>
         
         
-        &lt;p&gt;This page describes how to enable GPU or TPU for a pipeline on GKE by using the Pipelines
+        &lt;p&gt;This page describes how to enable GPU or TPU for a pipeline on Google Kubernetes Engine by using the Pipelines
 DSL language.&lt;/p&gt;
 &lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
 &lt;p&gt;To enable GPU and TPU on your Kubeflow cluster, follow the instructions on how to
-[customize](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke#common-customizations) the GKE cluster for Kubeflow before
+[customize](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke#common-customizations) the Google Kubernetes Engine cluster for Kubeflow before
 setting up the cluster.&lt;/p&gt;
 &lt;h2 id=&#34;configure-containerop-to-consume-gpus&#34;&gt;Configure ContainerOp to consume GPUs&lt;/h2&gt;
 &lt;p&gt;After enabling the GPU, the Kubeflow setup script installs a default GPU pool with type nvidia-tesla-k80 with auto-scaling enabled.
@@ -415,9 +415,9 @@ The following code consumes 2 GPUs in a ContainerOp.&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;nodeSelector&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;cloud.google.com/gke-accelerator&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;nvidia-tesla-p4&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;See &lt;a href=&#34;https://github.com/kubeflow/pipelines/tree/sdk/release-1.8/samples/tutorials/gpu&#34;&gt;GPU tutorial&lt;/a&gt; for a complete example to build a Kubeflow pipeline that uses GPUs.&lt;/p&gt;
-&lt;p&gt;Check the &lt;a href=&#34;https://cloud.google.com/kubernetes-engine/docs/how-to/gpus&#34;&gt;GKE GPU guide&lt;/a&gt; to learn more about GPU settings.&lt;/p&gt;
+&lt;p&gt;Check the &lt;a href=&#34;https://cloud.google.com/kubernetes-engine/docs/how-to/gpus&#34;&gt;Google Kubernetes Engine GPU guide&lt;/a&gt; to learn more about GPU settings.&lt;/p&gt;
 &lt;h2 id=&#34;configure-containerop-to-consume-tpus&#34;&gt;Configure ContainerOp to consume TPUs&lt;/h2&gt;
-&lt;p&gt;Use the following code to configure ContainerOp to consume TPUs on GKE:&lt;/p&gt;
+&lt;p&gt;Use the following code to configure ContainerOp to consume TPUs on Google Kubernetes Engine:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;kfp.dsl&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;dsl&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;kfp.gcp&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;gcp&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;tpu_op&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dsl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ContainerOp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;tpu-op&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;apply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gcp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;use_tpu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
@@ -432,7 +432,7 @@ The following code consumes 2 GPUs in a ContainerOp.&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;annotations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tf-version.cloud-tpus.google.com&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;1.12&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To learn more, see an &lt;a href=&#34;https://github.com/kubeflow/pipelines/blob/sdk/release-1.8/samples/core/preemptible_tpu_gpu/preemptible_tpu_gpu.py&#34;&gt;example pipeline that uses a preemptible node pool with TPU or GPU.&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;See the &lt;a href=&#34;https://cloud.google.com/tpu/docs/kubernetes-engine-setup&#34;&gt;GKE TPU Guide&lt;/a&gt; to learn more about TPU settings.&lt;/p&gt;
+&lt;p&gt;See the &lt;a href=&#34;https://cloud.google.com/tpu/docs/kubernetes-engine-setup&#34;&gt;Google Kubernetes Engine TPU Guide&lt;/a&gt; to learn more about TPU settings.&lt;/p&gt;
 
       </description>
     </item>
@@ -519,7 +519,7 @@ in your cluster that contains preemptible VMs.&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Where:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;PREEMPTIBLE_CPU_POOL&lt;/code&gt; is the name of the node pool.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;KF_NAME&lt;/code&gt; is the name of the Kubeflow GKE cluster.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;KF_NAME&lt;/code&gt; is the name of the Kubeflow Google Kubernetes Engine cluster.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;KF_PROJECT&lt;/code&gt; is the name of your Kubeflow Google Cloud project.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;LOCATION&lt;/code&gt; is the region of this nodepool, for example: us-west1-b.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;KF_NAME-vm@KF_PROJECT.iam.gserviceaccount.com&lt;/code&gt; is your service account, replace the &lt;code&gt;KF_NAME&lt;/code&gt; and &lt;code&gt;KF_PROJECT&lt;/code&gt; using the value above  in this pattern, you can get vm service account you have already created in Kubeflow cluster deployment&lt;/li&gt;
@@ -603,7 +603,7 @@ summary, the steps to schedule a pipeline to run with
 are as follows:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Make sure you have enough GPU quota.&lt;/li&gt;
-&lt;li&gt;Create a node pool in your GKE cluster that contains preemptible VMs with
+&lt;li&gt;Create a node pool in your Google Kubernetes Engine cluster that contains preemptible VMs with
 preemptible GPUs.&lt;/li&gt;
 &lt;li&gt;Configure your pipelines to run on the preemptible VMs with preemptible
 GPUs.&lt;/li&gt;
@@ -656,7 +656,7 @@ Console.&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Where:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;PREEMPTIBLE_CPU_POOL&lt;/code&gt; is the name of the node pool.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;KF_NAME&lt;/code&gt; is the name of the Kubeflow GKE cluster.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;KF_NAME&lt;/code&gt; is the name of the Kubeflow Google Kubernetes Engine cluster.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;KF_PROJECT&lt;/code&gt; is the name of your Kubeflow Google Cloud project.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;LOCATION&lt;/code&gt; is the region of this nodepool, for example: us-west1-b.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;KF_NAME-vm@KF_PROJECT.iam.gserviceaccount.com&lt;/code&gt; is your service account, replace the &lt;code&gt;KF_NAME&lt;/code&gt; and &lt;code&gt;KF_PROJECT&lt;/code&gt; using the value above  in this pattern, you can get vm service account you have already created in Kubeflow cluster deployment.&lt;/li&gt;

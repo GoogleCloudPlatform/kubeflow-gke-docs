@@ -328,7 +328,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3: <a href="#pg-0d94edcf690e8a4204c514d9d35c3f61">Customize Kubeflow on GKE</a></li>
+<li>3: <a href="#pg-0d94edcf690e8a4204c514d9d35c3f61">Customize Kubeflow on Google Cloud</a></li>
 
 
     
@@ -360,7 +360,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>7: <a href="#pg-2ff67fee0173608876ccc012bf3ff6ce">Troubleshooting Deployments on GKE</a></li>
+<li>7: <a href="#pg-2ff67fee0173608876ccc012bf3ff6ce">Troubleshooting Deployments on Google Cloud</a></li>
 
 
     
@@ -451,7 +451,7 @@ This is the multi-page printable view of this section.
 <h2 id="features">Features</h2>
 <p>Kubeflow deployed on Google Cloud includes the following:</p>
 <ol>
-<li>Full-fledged multi-user Kubeflow running on GKE.</li>
+<li>Full-fledged multi-user Kubeflow running on Google Kubernetes Engine.</li>
 <li><a href="https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler">Cluster Autoscaler</a>
 with automatic resizing of the node pool.</li>
 <li><a href="https://cloud.google.com/endpoints/docs">Cloud Endpoint</a> integrated with <a href="https://cloud.google.com/iap">Identity-aware Proxy (IAP)</a>.</li>
@@ -497,7 +497,7 @@ and debugging approaches. If the issue isn’t included in the list of commonly 
     
 	<h1 id="pg-4007501063b92f590822dfd88381b1a3">1.2 - Setting up GCP Project</h1>
     <div class="lead">Creating a Google Cloud project for your Kubeflow deployment</div>
-	<p>In order to deploy Kubeflow on GCP, you need to set up a Google Cloud project and enable necessary APIs for the deployment.</p>
+	<p>In order to deploy Kubeflow on Google Cloud, you need to set up a Google Cloud project and enable necessary APIs for the deployment.</p>
 <h2 id="setting-up-a-project">Setting up a project</h2>
 <p>Follow these steps to set up your Google Cloud project:</p>
 <ul>
@@ -586,7 +586,7 @@ be needed for projects that haven&rsquo;t had a cluster set up beforehand.</li>
 </ul>
 </li>
 </ul>
-<p>You do not need a running GKE cluster. The deployment process creates a
+<p>You do not need a running Google Kubernetes Engine cluster. The deployment process creates a
 cluster for you.</p>
 <h2 id="next-steps">Next steps</h2>
 <ul>
@@ -844,7 +844,7 @@ allow Config Controller to manage Google Cloud resources. Refer to <a href="http
 <p>This section gives you more details about the configuration and
 deployment process, so that you can customize your management cluster if necessary.</p>
 <h3 id="config-controller">Config Controller</h3>
-<p>Management cluster is a tool for managing Google Cloud services like KRM, for example: GKE container cluster, MySQL database, etc.
+<p>Management cluster is a tool for managing Google Cloud services like KRM, for example: Google Kubernetes Engine container cluster, MySQL database, etc.
 And you can use one Management cluster for multiple Kubeflow clusters, across multiple Google Cloud projects.
 This capability is offered by <a href="https://cloud.google.com/config-connector/docs/how-to/getting-started">Config Connector</a>.</p>
 <p>Starting with Kubeflow 1.5, we leveraged the managed version of Config Connector, which is called <a href="https://cloud.google.com/anthos-config-management/docs/concepts/config-controller-overview">Config Controller</a>.
@@ -935,7 +935,7 @@ described in the [project setup guide](/{{ .Site.Params.version_url_prefix }}doc
 to create OAuth credentials for <a href="https://cloud.google.com/iap/docs/">Cloud Identity-Aware Proxy (Cloud
 IAP)</a>.</p>
 <ul>
-<li>Unfortunately <a href="https://cloud.google.com/kubernetes-engine/docs/concepts/backendconfig">GKE&rsquo;s BackendConfig</a>
+<li>Unfortunately <a href="https://cloud.google.com/kubernetes-engine/docs/concepts/backendconfig">Google Kubernetes Engine&rsquo;s BackendConfig</a>
 currently doesn&rsquo;t support creating <a href="https://cloud.google.com/iap/docs/programmatic-oauth-clients">IAP OAuth clients programmatically</a>.</li>
 </ul>
 </li>
@@ -1060,7 +1060,7 @@ This issue is expected and can happen multiple times for different kinds of reso
 <code>kubeflow</code> in your new cluster.  To do this from the command line, first set
 your <code>kubectl</code> credentials to point to the new cluster:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcloud container clusters get-credentials <span class="s2">&#34;</span><span class="si">${</span><span class="nv">KF_NAME</span><span class="si">}</span><span class="s2">&#34;</span> --zone <span class="s2">&#34;</span><span class="si">${</span><span class="nv">ZONE</span><span class="si">}</span><span class="s2">&#34;</span> --project <span class="s2">&#34;</span><span class="si">${</span><span class="nv">KF_PROJECT</span><span class="si">}</span><span class="s2">&#34;</span>
-</span></span></code></pre></div><p>Then, check what&rsquo;s installed in the <code>kubeflow</code> namespace of your GKE cluster:</p>
+</span></span></code></pre></div><p>Then, check what&rsquo;s installed in the <code>kubeflow</code> namespace of your Google Kubernetes Engine cluster:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl -n kubeflow get all
 </span></span></code></pre></div></li>
 </ol>
@@ -1147,9 +1147,9 @@ account has the minimal permissions needed to send metrics and logs to
 <a href="https://github.com/kubeflow/examples/tree/master/github_issue_summarization/pipelines">GitHub issue summarization Pipelines
 example</a>.</li>
 <li>Learn how to [delete your Kubeflow deployment using the CLI](/{{ .Site.Params.version_url_prefix }}docs/deploy/delete-cli/).</li>
-<li>To add users to Kubeflow, go to [a dedicated section in Customizing Kubeflow on GKE](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke/#add-users-to-kubeflow).</li>
-<li>To taylor your Kubeflow deployment on GKE, go to [Customizing Kubeflow on GKE](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke/).</li>
-<li>For troubleshooting Kubeflow deployments on GKE, go to the [Troubleshooting deployments](/{{ .Site.Params.version_url_prefix }}docs/troubleshooting-gke/) guide.</li>
+<li>To add users to Kubeflow, go to [a dedicated section in Customizing Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke/#add-users-to-kubeflow).</li>
+<li>To taylor your Kubeflow deployment on Google Cloud, go to [Customizing Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke/).</li>
+<li>For troubleshooting Kubeflow deployments on Google Cloud, go to the [Troubleshooting deployments](/{{ .Site.Params.version_url_prefix }}docs/troubleshooting-gke/) guide.</li>
 </ul>
 
 </div>
@@ -1373,7 +1373,7 @@ reconfigure the context by:</p>
 <h3 id="upgrade-kubeflow-cluster-to-v16">Upgrade Kubeflow cluster to v1.6</h3>
 <p>Starting from Kubeflow v1.6.0:</p>
 <ul>
-<li>Component with deprecated API versions were upgraded to support GKE v1.22. If you would like to upgrade your GKE cluster, follow <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/upgrading-a-cluster">GCP instructions</a>.</li>
+<li>Component with deprecated API versions were upgraded to support Google Kubernetes Engine v1.22. If you would like to upgrade your Google Kubernetes Engine cluster, follow <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/upgrading-a-cluster">GCP instructions</a>.</li>
 <li>ASM was upgraded to v1.14. Follow the instructions on how to <a href="#upgrade-asm-anthos-service-mesh">upgrade ASM (Anthos Service Mesh)</a>. If you want to use ASM version prior to 1.11, refer to <a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/asm/deprecated/README.md">the legacy instructions</a>.</li>
 <li>Knative was upgraded to v1.2. Follow <a href="https://knative.dev/docs/install/upgrade/upgrade-installation/">Knative instructions</a> to check current version and see if the update includes any breaking changes.</li>
 <li>Cert-manager was upgraded to v1.5. To check your current version and see if the update includes any breaking changes, follow the <a href="https://cert-manager.io/docs/installation/upgrading/">cert-manager instructions</a>.</li>
@@ -1597,7 +1597,7 @@ authorized URIs. For more information, read the guide to
 </ol>
 <h2 id="next-steps">Next steps</h2>
 <ul>
-<li>The [GKE troubleshooting guide](/{{ .Site.Params.version_url_prefix }}docs/troubleshooting/) for Kubeflow.</li>
+<li>The [Google Kubernetes Engine troubleshooting guide](/{{ .Site.Params.version_url_prefix }}docs/troubleshooting/) for Kubeflow.</li>
 <li>Guide to [sharing cluster access](/{{ .Site.Params.version_url_prefix }}docs/components/multi-tenancy/getting-started).</li>
 <li>Google Cloud guide to <a href="https://cloud.google.com/iap/docs/">Cloud IAP</a>.</li>
 </ul>
@@ -1840,7 +1840,7 @@ Available options listed below have different tradeoffs. You should choose the o
 <ul>
 <li>Configuring your cluster to access Google Cloud using <a href="#compute-engine-default-service-account">Compute Engine default service account</a> with the &ldquo;cloud-platform&rdquo; scope is easier to set up than the other options. However, this approach grants excessive permissions. Therefore, it is not suitable if you need workload permission separation.</li>
 <li><a href="#workload-identity">Workload Identity</a> takes more efforts to set up, but allows fine-grained permission control. It is recommended for production use-cases.</li>
-<li><a href="#google-service-account-keys-stored-as-kubernetes-secrets">Google service account keys stored as Kubernetes secrets</a> is the legacy approach and no longer recommended in GKE. However, it&rsquo;s the only option to use Google Cloud APIs when your cluster is an <a href="https://cloud.google.com/anthos">anthos</a> or on-prem cluster.</li>
+<li><a href="#google-service-account-keys-stored-as-kubernetes-secrets">Google service account keys stored as Kubernetes secrets</a> is the legacy approach and no longer recommended in Google Kubernetes Engine. However, it&rsquo;s the only option to use Google Cloud APIs when your cluster is an <a href="https://cloud.google.com/anthos">anthos</a> or on-prem cluster.</li>
 </ul>
 <h2 id="before-you-begin">Before you begin</h2>
 <p>There are various options on how to install Kubeflow Pipelines in the <a href="https://www.kubeflow.org/docs/components/pipelines/installation/overview/">Installation Options for Kubeflow Pipelines</a> guide.
@@ -1863,9 +1863,9 @@ Be aware that authentication support and cluster setup instructions will vary de
 </div>
 
 <h3 id="cluster-setup-to-use-compute-engine-default-service-account">Cluster setup to use Compute Engine default service account</h3>
-<p>By default, your GKE nodes use <a href="https://cloud.google.com/compute/docs/access/service-accounts#default_service_account">Compute Engine default service account</a>. If you allowed <code>cloud-platform</code> scope when creating the cluster,
+<p>By default, your Google Kubernetes Engine nodes use <a href="https://cloud.google.com/compute/docs/access/service-accounts#default_service_account">Compute Engine default service account</a>. If you allowed <code>cloud-platform</code> scope when creating the cluster,
 Kubeflow Pipelines can authenticate to Google Cloud and manage resources in your project without further configuration.</p>
-<p>Use one of the following options to create a GKE cluster that uses the Compute Engine default service account:</p>
+<p>Use one of the following options to create a Google Kubernetes Engine cluster that uses the Compute Engine default service account:</p>
 <ul>
 <li>If you followed instructions in <a href="https://cloud.google.com/ai-platform/pipelines/docs/setting-up">Setting up AI Platform Pipelines</a> and checked <code>Allow access to the following Cloud APIs</code>, your cluster is already using Compute Engine default service account.</li>
 <li>In Google Cloud Console UI, you can enable it in <code>Create a Kubernetes cluster -&gt; default-pool -&gt; Security -&gt; Access Scopes -&gt; Allow full access to all Cloud APIs</code> like the following:
@@ -1881,7 +1881,7 @@ Kubeflow Pipelines can authenticate to Google Cloud and manage resources in your
 <h2 id="securing-the-cluster-with-fine-grained-google-cloud-permission-control">Securing the cluster with fine-grained Google Cloud permission control</h2>
 <h3 id="workload-identity">Workload Identity</h3>
 <blockquote>
-<p>Workload Identity is the recommended way for your GKE applications to consume services provided by Google APIs. You accomplish this by configuring a <a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/">Kubernetes service account</a> to act as a <a href="https://cloud.google.com/iam/docs/service-accounts">Google service account</a>. Any Pods running as the Kubernetes service account then use the Google service account to authenticate to cloud services.</p>
+<p>Workload Identity is the recommended way for your Google Kubernetes Engine applications to consume services provided by Google APIs. You accomplish this by configuring a <a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/">Kubernetes service account</a> to act as a <a href="https://cloud.google.com/iam/docs/service-accounts">Google service account</a>. Any Pods running as the Kubernetes service account then use the Google service account to authenticate to cloud services.</p>
 </blockquote>
 <p>Referenced from <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity">Workload Identity Documentation</a>. Please read this doc for:</p>
 <ul>
@@ -2103,11 +2103,11 @@ Because data is deleted by default when a Kubeflow Pipelines Standalone deployme
     
 	<h1 id="pg-d79816c8e6fac2f07383ee4b56fd17de">2.4 - Enabling GPU and TPU</h1>
     <div class="lead">Enable GPU and TPU for Kubeflow Pipelines on Google Kubernetes Engine (GKE)</div>
-	<p>This page describes how to enable GPU or TPU for a pipeline on GKE by using the Pipelines
+	<p>This page describes how to enable GPU or TPU for a pipeline on Google Kubernetes Engine by using the Pipelines
 DSL language.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>To enable GPU and TPU on your Kubeflow cluster, follow the instructions on how to
-[customize](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke#common-customizations) the GKE cluster for Kubeflow before
+[customize](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke#common-customizations) the Google Kubernetes Engine cluster for Kubeflow before
 setting up the cluster.</p>
 <h2 id="configure-containerop-to-consume-gpus">Configure ContainerOp to consume GPUs</h2>
 <p>After enabling the GPU, the Kubeflow setup script installs a default GPU pool with type nvidia-tesla-k80 with auto-scaling enabled.
@@ -2133,9 +2133,9 @@ The following code consumes 2 GPUs in a ContainerOp.</p>
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">nodeSelector</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">cloud.google.com/gke-accelerator</span><span class="p">:</span><span class="w"> </span><span class="l">nvidia-tesla-p4</span><span class="w">
 </span></span></span></code></pre></div><p>See <a href="https://github.com/kubeflow/pipelines/tree/sdk/release-1.8/samples/tutorials/gpu">GPU tutorial</a> for a complete example to build a Kubeflow pipeline that uses GPUs.</p>
-<p>Check the <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/gpus">GKE GPU guide</a> to learn more about GPU settings.</p>
+<p>Check the <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/gpus">Google Kubernetes Engine GPU guide</a> to learn more about GPU settings.</p>
 <h2 id="configure-containerop-to-consume-tpus">Configure ContainerOp to consume TPUs</h2>
-<p>Use the following code to configure ContainerOp to consume TPUs on GKE:</p>
+<p>Use the following code to configure ContainerOp to consume TPUs on Google Kubernetes Engine:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">kfp.dsl</span> <span class="k">as</span> <span class="nn">dsl</span>
 </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">kfp.gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
 </span></span><span class="line"><span class="cl"><span class="n">tpu_op</span> <span class="o">=</span> <span class="n">dsl</span><span class="o">.</span><span class="n">ContainerOp</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;tpu-op&#39;</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">gcp</span><span class="o">.</span><span class="n">use_tpu</span><span class="p">(</span>
@@ -2150,7 +2150,7 @@ The following code consumes 2 GPUs in a ContainerOp.</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">annotations</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">tf-version.cloud-tpus.google.com</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;1.12&#34;</span><span class="w">
 </span></span></span></code></pre></div><p>To learn more, see an <a href="https://github.com/kubeflow/pipelines/blob/sdk/release-1.8/samples/core/preemptible_tpu_gpu/preemptible_tpu_gpu.py">example pipeline that uses a preemptible node pool with TPU or GPU.</a>.</p>
-<p>See the <a href="https://cloud.google.com/tpu/docs/kubernetes-engine-setup">GKE TPU Guide</a> to learn more about TPU settings.</p>
+<p>See the <a href="https://cloud.google.com/tpu/docs/kubernetes-engine-setup">Google Kubernetes Engine TPU Guide</a> to learn more about TPU settings.</p>
 
 </div>
 
@@ -2241,7 +2241,7 @@ in your cluster that contains preemptible VMs.</li>
 </span></span></code></pre></div><p>Where:</p>
 <ul>
 <li><code>PREEMPTIBLE_CPU_POOL</code> is the name of the node pool.</li>
-<li><code>KF_NAME</code> is the name of the Kubeflow GKE cluster.</li>
+<li><code>KF_NAME</code> is the name of the Kubeflow Google Kubernetes Engine cluster.</li>
 <li><code>KF_PROJECT</code> is the name of your Kubeflow Google Cloud project.</li>
 <li><code>LOCATION</code> is the region of this nodepool, for example: us-west1-b.</li>
 <li><code>KF_NAME-vm@KF_PROJECT.iam.gserviceaccount.com</code> is your service account, replace the <code>KF_NAME</code> and <code>KF_PROJECT</code> using the value above  in this pattern, you can get vm service account you have already created in Kubeflow cluster deployment</li>
@@ -2325,7 +2325,7 @@ summary, the steps to schedule a pipeline to run with
 are as follows:</p>
 <ol>
 <li>Make sure you have enough GPU quota.</li>
-<li>Create a node pool in your GKE cluster that contains preemptible VMs with
+<li>Create a node pool in your Google Kubernetes Engine cluster that contains preemptible VMs with
 preemptible GPUs.</li>
 <li>Configure your pipelines to run on the preemptible VMs with preemptible
 GPUs.</li>
@@ -2378,7 +2378,7 @@ Console.</p>
 </span></span></code></pre></div><p>Where:</p>
 <ul>
 <li><code>PREEMPTIBLE_CPU_POOL</code> is the name of the node pool.</li>
-<li><code>KF_NAME</code> is the name of the Kubeflow GKE cluster.</li>
+<li><code>KF_NAME</code> is the name of the Kubeflow Google Kubernetes Engine cluster.</li>
 <li><code>KF_PROJECT</code> is the name of your Kubeflow Google Cloud project.</li>
 <li><code>LOCATION</code> is the region of this nodepool, for example: us-west1-b.</li>
 <li><code>KF_NAME-vm@KF_PROJECT.iam.gserviceaccount.com</code> is your service account, replace the <code>KF_NAME</code> and <code>KF_PROJECT</code> using the value above  in this pattern, you can get vm service account you have already created in Kubeflow cluster deployment.</li>
@@ -2482,8 +2482,8 @@ if __name__ == '__main__':
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-0d94edcf690e8a4204c514d9d35c3f61">3 - Customize Kubeflow on GKE</h1>
-    <div class="lead">Tailoring a GKE deployment of Kubeflow</div>
+	<h1 id="pg-0d94edcf690e8a4204c514d9d35c3f61">3 - Customize Kubeflow on Google Cloud</h1>
+    <div class="lead">Tailoring a Google Kubernetes Engine deployment of Kubeflow</div>
 	<p>This guide describes how to customize your deployment of Kubeflow on Google
 Kubernetes Engine (GKE) on Google Cloud.</p>
 <h2 id="before-you-start">Before you start</h2>
@@ -2497,7 +2497,7 @@ Kubeflow cluster.</p>
 <p>You can also customize an existing Kubeflow deployment. In that case, this
 guide assumes that you have already followed the guide to
 [deploying Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli/) and have deployed
-Kubeflow to a GKE cluster.</p>
+Kubeflow to a Google Kubernetes Engine cluster.</p>
 <h2 id="before-you-start-1">Before you start</h2>
 <p>This guide assumes the following settings:</p>
 <ul>
@@ -2662,7 +2662,7 @@ to <code>false</code>:</p>
 </span></span><span class="line"><span class="cl">      autoProvisioningDefaults:
 </span></span><span class="line"><span class="cl">    ...
 </span></span></code></pre></div><h3 id="add-cloud-tpus-to-your-cluster">Add Cloud TPUs to your cluster</h3>
-<p>Note: The following instruction should be used when creating GKE cluster, because the TPU enablement flag <code>enableTpu</code> is immutable once cluster is created. You need to create new cluster if existing cluster doesn&rsquo;t have TPU enabled.</p>
+<p>Note: The following instruction should be used when creating Google Kubernetes Engine cluster, because the TPU enablement flag <code>enableTpu</code> is immutable once cluster is created. You need to create new cluster if existing cluster doesn&rsquo;t have TPU enabled.</p>
 <p>Set <a href="https://cloud.google.com/config-connector/docs/reference/resource-docs/container/containercluster"><code>enableTpu:true</code></a>
 in <code>${KF_DIR}/common/cluster/upstream/cluster.yaml</code> and enable alias IP (VPC-native traffic routing):</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apiVersion: container.cnrm.cloud.google.com/v1beta1
@@ -2724,7 +2724,7 @@ including [using your own domain](/{{ .Site.Params.version_url_prefix }}docs/cus
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-969055f2547f60f12c1c4256f95b4eeb">4 - Using Your Own Domain</h1>
-    <div class="lead">Using a custom domain with Kubeflow on GKE</div>
+    <div class="lead">Using a custom domain with Kubeflow on Google Cloud</div>
 	<p>This guide assumes you have already set up Kubeflow on Google Cloud. If you haven&rsquo;t done
 so, follow the guide to
 [getting started with Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/deploy/).</p>
@@ -2783,8 +2783,8 @@ so, follow the guide to
 The <code>kubeflow</code> namespace is only for running Kubeflow system components. Individual jobs and model deployments
 run in separate namespaces.</p>
 <h3 id="google-kubernetes-engine-gke-workload-identity">Google Kubernetes Engine (GKE) workload identity</h3>
-<p>Starting in v0.7, Kubeflow uses the new GKE feature: <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity">workload identity</a>.
-This is the recommended way to access Google Cloud APIs from your GKE cluster.
+<p>Starting in v0.7, Kubeflow uses the new Google Kubernetes Engine feature: <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity">workload identity</a>.
+This is the recommended way to access Google Cloud APIs from your Google Kubernetes Engine cluster.
 You can configure a Kubernetes service account (KSA) to act as a Google Cloud service account (GSA).</p>
 <p>If you deployed Kubeflow following the Google Cloud instructions, then the profiler controller automatically binds the &ldquo;default-editor&rdquo; service account for every profile namespace to a default Google Cloud service account created during kubeflow deployment.
 The Kubeflow deployment process also creates a default profile for the cluster admin.</p>
@@ -2845,7 +2845,7 @@ When creating a profile, you can specify a custom Google Cloud service account f
 </span></span></span></code></pre></div><p><strong>Note:</strong>
 The profile controller currently doesn&rsquo;t perform any access control checks to see whether the user creating the profile should be able to use the Google Cloud service account.
 As a result, any user who can create a profile can get access to any service account for which the admin controller has owner permissions. We will improve this in subsequent releases.</p>
-<p>You can find more details on workload identity in the <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity">GKE documentation</a>.</p>
+<p>You can find more details on workload identity in the <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity">Google Kubernetes Engine documentation</a>.</p>
 <h3 id="authentication-from-kubeflow-pipelines">Authentication from Kubeflow Pipelines</h3>
 <p>Starting from Kubeflow v1.1, Kubeflow Pipelines supports multi-user isolation. Therefore, pipeline runs are executed in user namespaces also using the <code>default-editor</code> KSA.</p>
 <p>Additionally, the Kubeflow Pipelines UI, visualization, and TensorBoard server instances are deployed in your user namespace using the <code>default-editor</code> KSA. Therefore, to visualize results in the Pipelines UI, they can fetch artifacts in Google Cloud Storage using permissions of the same GSA you configured for this namespace.</p>
@@ -2894,7 +2894,7 @@ you can check which roles were assigned to your account using the following gclo
 <h3 id="kubectl">kubectl</h3>
 <p>The <a href="https://kubernetes.io/docs/reference/kubectl/overview/"><code>kubectl</code> tool</a> is used for interacting with a Kubernetes cluster through the command line.</p>
 <h5 id="connecting-to-a-cluster-using-a-google-cloud-account">Connecting to a cluster using a Google Cloud account</h5>
-<p>If you set up your Kubernetes cluster using GKE, you can authenticate with the cluster using a Google Cloud account.
+<p>If you set up your Kubernetes cluster using Google Kubernetes Engine, you can authenticate with the cluster using a Google Cloud account.
 The following commands fetch the credentials for your cluster and save them to your local
 <a href="https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/"><code>kubeconfig</code> file</a>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">CLUSTER_NAME=your-gke-cluster
@@ -2953,8 +2953,8 @@ Kubernetes resources.</p>
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-c89dbb2f91c73dbff2bd78b4bc0de1d4">6 - Securing Your Clusters</h1>
-    <div class="lead">How to secure Kubeflow clusters using private GKE</div>
-	<p>Currently we are collecting interest for supporting private Kubeflow cluster deployment. Please upvote to <a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/267">Support private GKE cluster on Google Cloud</a> feature request if it fits your use case.</p>
+    <div class="lead">How to secure Kubeflow clusters using private Google Kubernetes Engine</div>
+	<p>Currently we are collecting interest for supporting private Kubeflow cluster deployment. Please upvote to <a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/267">Support private Google Kubernetes Engine cluster on Google Cloud</a> feature request if it fits your use case.</p>
 
 </div>
 
@@ -2970,8 +2970,8 @@ Kubernetes resources.</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-2ff67fee0173608876ccc012bf3ff6ce">7 - Troubleshooting Deployments on GKE</h1>
-    <div class="lead">Help fixing problems on GKE and Google Cloud</div>
+	<h1 id="pg-2ff67fee0173608876ccc012bf3ff6ce">7 - Troubleshooting Deployments on Google Cloud</h1>
+    <div class="lead">Help fixing problems on Google Kubernetes Engine and Google Cloud</div>
 	
 
 <div class="alert alert-warning" role="alert">
@@ -3268,7 +3268,7 @@ usually indicates the loadbalancer doesn&rsquo;t think any backends are healthy.
 <h3 id="gke-certificate-fails-to-be-provisioned">GKE Certificate Fails To Be Provisioned</h3>
 <p>A common symptom of your certificate failing to be provisioned is SSL errors like <code>ERR_SSL_VERSION_OR_CIPHER_MISMATCH</code> when
 you try to access the Kubeflow https endpoint.</p>
-<p>To troubleshoot check the status of your GKE managed certificate</p>
+<p>To troubleshoot check the status of your Google Kubernetes Engine managed certificate</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">kubectl -n istio-system describe managedcertificate
 </span></span></code></pre></div><p>If the certificate is in status <code>FailedNotVisible</code> then it means Google Cloud failed to provision the certificate
 because it could not verify that you owned the domain by doing an ACME challenge. In order for Google Cloud to provision your certificate</p>
@@ -3321,7 +3321,7 @@ generated.</p>
 </span></span></code></pre></div></li>
 </ol>
 <h3 id="problems-with-ssl-certificate-from-lets-encrypt">Problems with SSL certificate from Let&rsquo;s Encrypt</h3>
-<p>As of Kubeflow 1.0, Kubeflow should be using GKE Managed Certificates and no longer using Let&rsquo;s Encrypt.</p>
+<p>As of Kubeflow 1.0, Kubeflow should be using Google Kubernetes Engine Managed Certificates and no longer using Let&rsquo;s Encrypt.</p>
 <p>See the guide to
 [monitoring your Cloud IAP setup](/{{ .Site.Params.version_url_prefix }}docs/gke/deploy/monitor-iap-setup/).</p>
 <h2 id="envoy-pods-crash-looping-root-cause-is-backend-quota-exceeded">Envoy pods crash-looping: root cause is backend quota exceeded</h2>
@@ -3358,8 +3358,8 @@ screen.</li>
 <li>Follow the form instructions to apply for more quota.</li>
 </ol>
 <h2 id="legacy-networks-are-not-supported">Legacy networks are not supported</h2>
-<p>Cloud Filestore and GKE try to use the network named <code>default</code> by default. For older projects,
-this will be a legacy network which is incompatible with Cloud Filestore and newer GKE features
+<p>Cloud Filestore and Google Kubernetes Engine try to use the network named <code>default</code> by default. For older projects,
+this will be a legacy network which is incompatible with Cloud Filestore and newer Google Kubernetes Engine features
 like private clusters. This will
 manifest as the error <strong>&ldquo;default is invalid; legacy networks are not supported&rdquo;</strong> when
 deploying Kubeflow.</p>
@@ -3460,10 +3460,10 @@ application platform developed and supported by Google. Anthos is built on
 open source technologies, including Kubernetes, Istio, and Knative.</p>
 <p>Using Anthos, you can create a consistent setup across your on-premises and
 cloud environments, helping you to automate policy and security at scale.</p>
-<p>We are collecting interest for Kubeflow on GKE On Prem. You can subscribe
+<p>We are collecting interest for Kubeflow on Google Cloud On Prem. You can subscribe
 to the GitHub issue <a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/138">GoogleCloudPlatform/kubeflow-distribution#138</a>.</p>
 <h2 id="next-steps">Next steps</h2>
-<p>While waiting for a response from the support team, you may like to [deploy Kubeflow on GKE](/{{ .Site.Params.version_url_prefix }}docs/deploy/).</p>
+<p>While waiting for a response from the support team, you may like to [deploy Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/deploy/).</p>
 
 </div>
 
@@ -3480,7 +3480,7 @@ to the GitHub issue <a href="https://github.com/GoogleCloudPlatform/kubeflow-dis
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-d9ec0777c4f7a8a41476a65f2ecca6f7">9 - Changelog</h1>
-    <div class="lead">Kubeflow on GCP Changelog</div>
+    <div class="lead">Kubeflow on Google Cloud Changelog</div>
 	<h2 id="161">1.6.1</h2>
 <p><a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/releases/tag/v1.6.1">Release notes</a></p>
 <h3 id="changes">Changes:</h3>
@@ -3616,7 +3616,7 @@ to the GitHub issue <a href="https://github.com/GoogleCloudPlatform/kubeflow-dis
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2022 Kubeflow on GCP authors | Documentation Distributed under CC BY 4.0</small>
+        <small class="text-white">&copy; 2022 The Kubeflow Authors. | Documentation Distributed under CC BY 4.0</small>
         <p><small class="ml-1"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></small></p>
 	
 		
