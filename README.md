@@ -41,15 +41,17 @@ Before contributing, please read [these guidelines](./CONTRIBUTING.md).
 
 Contributions are very welcome! Please, follow these simple steps:
 
+1. Review [CONTRIBUTING.md](https://github.com/googlestaging/kubeflow-gke-docs/blob/main/CONTRIBUTING.md).
+
 1. Fork the [repo](https://github.com/gkcalat/kubeflow-docs) on GitHub.
 
-2. Make your changes and send a pull request (PR) with a few sentences describing your changes. Merge into:
+1. Make your changes and send a pull request (PR) with a few sentences describing your changes. Merge into:
    * `main` branch, if the changes are related to the latest released Kubeflow on GCP.
    * `dev` branch if the changes are related to the unreleased ([master branch](https://github.com/GoogleCloudPlatform/kubeflow-distribution)) version of Kubeflow on GCP.
    * `v*-release` if the changes are related to `v*` release of Kubeflow on GCP.
 
 
-3. Assign one of the [reviewers](https://github.com/kubeflow/website/edit/main/OWNERS.md) to the PR.
+1. Assign one of the [reviewers](https://github.com/kubeflow/website/edit/main/OWNERS.md) to the PR.
 
 ## Releasing
 
