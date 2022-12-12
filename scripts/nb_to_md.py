@@ -1,5 +1,5 @@
 # This script creates and updates Markdown versions of Notebook files
-# for publication on Kubeflow on GCP using Hugo/Docsy.
+# for publication on Kubeflow on Google Cloud using Hugo/Docsy.
 #
 # Hugo Markdown files have a metadata section at the top of the page for the
 # Front Matter. The Front Matter specifies the page Title, Description, and
@@ -254,7 +254,7 @@ class NotebookFile:
   
 
 def main(argv):
-  """[nb_to_md.py] Publish Jupyter notebooks as a Kubeflow on GCP Markdown page"""
+  """[nb_to_md.py] Publish Jupyter notebooks as a Kubeflow on Google Cloud Markdown page"""
   
   if FLAGS.notebook is not None:
     notebook = NotebookFile(FLAGS.notebook)

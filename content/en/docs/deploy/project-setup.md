@@ -4,7 +4,7 @@ description = "Creating a Google Cloud project for your Kubeflow deployment"
 weight = 2
 +++
 
-In order to deploy Kubeflow on GCP, you need to set up a Google Cloud project and enable necessary APIs for the deployment.
+In order to deploy Kubeflow on Google Cloud, you need to set up a Google Cloud project and enable necessary APIs for the deployment.
 
 ## Setting up a project
 

@@ -47,9 +47,9 @@ Contributions are very welcome! Please, follow these simple steps:
 1. Fork this repository on GitHub.
 
 1. Make your changes and send a pull request (PR) with a few sentences describing your changes. Merge into:
-   * `main` branch, if the changes are related to the latest released Kubeflow on GCP.
-   * `dev` branch if the changes are related to the unreleased ([master branch](https://github.com/GoogleCloudPlatform/kubeflow-distribution)) version of Kubeflow on GCP.
-   * `v*-release` if the changes are related to `v*` release of Kubeflow on GCP.
+   * `main` branch, if the changes are related to the latest released Kubeflow on Google Cloud.
+   * `dev` branch if the changes are related to the unreleased ([master branch](https://github.com/GoogleCloudPlatform/kubeflow-distribution)) version of Kubeflow on Google Cloud.
+   * `v*-release` if the changes are related to `v*` release of Kubeflow on Google Cloud.
 
 1. Assign one of the [reviewers](https://github.com/googlestaging/kubeflow-gke-docs/blob/main/OWNERS) to the PR.
 

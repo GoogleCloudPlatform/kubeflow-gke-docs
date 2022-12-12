@@ -1,6 +1,6 @@
 +++
 title = "Changelog"
-description = "Kubeflow on GCP Changelog"
+description = "Kubeflow on Google Cloud Changelog"
 weight = 300
 +++
 
