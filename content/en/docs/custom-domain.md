@@ -1,6 +1,6 @@
 +++
 title = "Using Your Own Domain"
-description = "Using a custom domain with Kubeflow on GKE"
+description = "Using a custom domain with Kubeflow on Google Cloud"
 weight = 30
 +++
 

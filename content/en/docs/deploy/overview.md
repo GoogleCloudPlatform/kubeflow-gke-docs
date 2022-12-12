@@ -12,7 +12,7 @@ This guide describes how to deploy Kubeflow and a series of Kubeflow components 
 
 Kubeflow deployed on Google Cloud includes the following:
 
-1. Full-fledged multi-user Kubeflow running on GKE.
+1. Full-fledged multi-user Kubeflow running on Google Kubernetes Engine.
 1. [Cluster Autoscaler](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler)
     with automatic resizing of the node pool.
 1. [Cloud Endpoint](https://cloud.google.com/endpoints/docs) integrated with [Identity-aware Proxy (IAP)](https://cloud.google.com/iap).

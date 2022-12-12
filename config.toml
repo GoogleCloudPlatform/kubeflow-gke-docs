@@ -2,7 +2,7 @@
 ##########################################################
 baseURL = "https://gkcalat.github.io/kubeflow-docs"
 title = "Kubeflow on Google Cloud Platform"
-description = "Open-source machine learning platform running on GKE"
+description = "Open-source machine learning platform running on Google Kubernetes Engine"
 
 # Language settings
 contentDir = "content/en"
@@ -122,7 +122,7 @@ relativeURLs = true
 [languages]
   [languages.en]
     title = "Kubeflow on Google Cloud Platform"
-    description = "Open-source machine learning platform running on GKE"
+    description = "Open-source machine learning platform running on Google Kubernetes Engine"
     languageName ="English"
     # Weight used for sorting.
     weight = 1
@@ -265,7 +265,7 @@ relativeURLs = true
       name = "GitHub"
       url = "https://github.com/GoogleCloudPlatform/kubeflow-distribution"
       icon = "fab fa-github"
-      desc = "Kubeflow on GKE repo"
+      desc = "Kubeflow on Google Cloud repo"
     [[params.links.developer]]
       name = "Kubeflow community calendar"
       url = "https://www.kubeflow.org/docs/about/community/#kubeflow-community-calendars"

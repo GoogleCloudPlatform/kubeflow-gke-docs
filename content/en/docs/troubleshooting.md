@@ -1,6 +1,6 @@
 +++
-title = "Troubleshooting Deployments on GKE"
-description = "Help fixing problems on GKE and Google Cloud"
+title = "Troubleshooting Deployments on Google Cloud"
+description = "Help fixing problems on Google Kubernetes Engine and Google Cloud"
 weight = 80
                     
 +++
@@ -303,7 +303,7 @@ usually indicates the loadbalancer doesn't think any backends are healthy.
 A common symptom of your certificate failing to be provisioned is SSL errors like `ERR_SSL_VERSION_OR_CIPHER_MISMATCH` when
 you try to access the Kubeflow https endpoint.
 
-To troubleshoot check the status of your GKE managed certificate
+To troubleshoot check the status of your Google Kubernetes Engine managed certificate
 
 ```
 kubectl -n istio-system describe managedcertificate
@@ -369,7 +369,7 @@ You can fix the certificate by performing the following steps to delete the exis
 
 ### Problems with SSL certificate from Let's Encrypt
 
-As of Kubeflow 1.0, Kubeflow should be using GKE Managed Certificates and no longer using Let's Encrypt.
+As of Kubeflow 1.0, Kubeflow should be using Google Kubernetes Engine Managed Certificates and no longer using Let's Encrypt.
 
 See the guide to
 [monitoring your Cloud IAP setup](/{{ .Site.Params.version_url_prefix }}docs/gke/deploy/monitor-iap-setup/).
@@ -432,8 +432,8 @@ Alternatively, you can request more backend services quota on the Google Cloud C
 
 ## Legacy networks are not supported
 
-Cloud Filestore and GKE try to use the network named `default` by default. For older projects,
-this will be a legacy network which is incompatible with Cloud Filestore and newer GKE features
+Cloud Filestore and Google Kubernetes Engine try to use the network named `default` by default. For older projects,
+this will be a legacy network which is incompatible with Cloud Filestore and newer Google Kubernetes Engine features
 like private clusters. This will
 manifest as the error **"default is invalid; legacy networks are not supported"** when
 deploying Kubeflow.

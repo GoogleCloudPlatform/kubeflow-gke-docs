@@ -146,7 +146,7 @@ deployment process, so that you can customize your management cluster if necessa
 
 ### Config Controller
 
-Management cluster is a tool for managing Google Cloud services like KRM, for example: GKE container cluster, MySQL database, etc. 
+Management cluster is a tool for managing Google Cloud services like KRM, for example: Google Kubernetes Engine container cluster, MySQL database, etc. 
 And you can use one Management cluster for multiple Kubeflow clusters, across multiple Google Cloud projects.
 This capability is offered by [Config Connector](https://cloud.google.com/config-connector/docs/how-to/getting-started). 
 

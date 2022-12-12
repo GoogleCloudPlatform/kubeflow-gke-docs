@@ -28,7 +28,7 @@ Before installing Kubeflow on the command line:
   [setting up OAuth credentials](/{{ .Site.Params.version_url_prefix }}docs/deploy/oauth-setup/)
   to create OAuth credentials for [Cloud Identity-Aware Proxy (Cloud
   IAP)](https://cloud.google.com/iap/docs/).
-    * Unfortunately [GKE's BackendConfig](https://cloud.google.com/kubernetes-engine/docs/concepts/backendconfig)
+    * Unfortunately [Google Kubernetes Engine's BackendConfig](https://cloud.google.com/kubernetes-engine/docs/concepts/backendconfig)
   currently doesn't support creating [IAP OAuth clients programmatically](https://cloud.google.com/iap/docs/programmatic-oauth-clients).
 
 ### Install the required tools
@@ -188,7 +188,7 @@ Follow these steps to verify the deployment:
     gcloud container clusters get-credentials "${KF_NAME}" --zone "${ZONE}" --project "${KF_PROJECT}"
     ```
 
-    Then, check what's installed in the `kubeflow` namespace of your GKE cluster:
+    Then, check what's installed in the `kubeflow` namespace of your Google Kubernetes Engine cluster:
 
     ```bash
     kubectl -n kubeflow get all
@@ -288,6 +288,6 @@ Refer to [Upgrading Kubeflow cluster](/{{ .Site.Params.version_url_prefix }}docs
   [GitHub issue summarization Pipelines
   example](https://github.com/kubeflow/examples/tree/master/github_issue_summarization/pipelines).
 * Learn how to [delete your Kubeflow deployment using the CLI](/{{ .Site.Params.version_url_prefix }}docs/deploy/delete-cli/).
-* To add users to Kubeflow, go to [a dedicated section in Customizing Kubeflow on GKE](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke/#add-users-to-kubeflow).
-* To taylor your Kubeflow deployment on GKE, go to [Customizing Kubeflow on GKE](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke/).
-* For troubleshooting Kubeflow deployments on GKE, go to the [Troubleshooting deployments](/{{ .Site.Params.version_url_prefix }}docs/troubleshooting-gke/) guide.
+* To add users to Kubeflow, go to [a dedicated section in Customizing Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke/#add-users-to-kubeflow).
+* To taylor your Kubeflow deployment on Google Cloud, go to [Customizing Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke/).
+* For troubleshooting Kubeflow deployments on Google Cloud, go to the [Troubleshooting deployments](/{{ .Site.Params.version_url_prefix }}docs/troubleshooting-gke/) guide.

@@ -146,6 +146,6 @@ problems:
     [setting up OAuth for Cloud IAP](/{{ .Site.Params.version_url_prefix }}docs/deploy/oauth-setup/).	
 
 ## Next steps
-* The [GKE troubleshooting guide](/{{ .Site.Params.version_url_prefix }}docs/troubleshooting/) for Kubeflow.
+* The [Google Kubernetes Engine troubleshooting guide](/{{ .Site.Params.version_url_prefix }}docs/troubleshooting/) for Kubeflow.
 * Guide to [sharing cluster access](/{{ .Site.Params.version_url_prefix }}docs/components/multi-tenancy/getting-started).
 * Google Cloud guide to [Cloud IAP](https://cloud.google.com/iap/docs/).

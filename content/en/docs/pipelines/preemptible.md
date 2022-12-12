@@ -95,7 +95,7 @@ spec:
 Where:
 
 +   `PREEMPTIBLE_CPU_POOL` is the name of the node pool. 
-+   `KF_NAME` is the name of the Kubeflow GKE cluster.
++   `KF_NAME` is the name of the Kubeflow Google Kubernetes Engine cluster.
 +   `KF_PROJECT` is the name of your Kubeflow Google Cloud project. 
 +   `LOCATION` is the region of this nodepool, for example: us-west1-b.
 +   `KF_NAME-vm@KF_PROJECT.iam.gserviceaccount.com` is your service account, replace the `KF_NAME` and `KF_PROJECT` using the value above  in this pattern, you can get vm service account you have already created in Kubeflow cluster deployment
@@ -198,7 +198,7 @@ summary, the steps to schedule a pipeline to run with
 are as follows: 
 
 1.  Make sure you have enough GPU quota.
-1.  Create a node pool in your GKE cluster that contains preemptible VMs with
+1.  Create a node pool in your Google Kubernetes Engine cluster that contains preemptible VMs with
     preemptible GPUs. 
 1.  Configure your pipelines to run on the preemptible VMs with preemptible
     GPUs.
@@ -259,7 +259,7 @@ spec:
 Where:
 
 +   `PREEMPTIBLE_CPU_POOL` is the name of the node pool. 
-+   `KF_NAME` is the name of the Kubeflow GKE cluster.
++   `KF_NAME` is the name of the Kubeflow Google Kubernetes Engine cluster.
 +   `KF_PROJECT` is the name of your Kubeflow Google Cloud project. 
 +   `LOCATION` is the region of this nodepool, for example: us-west1-b.
 +   `KF_NAME-vm@KF_PROJECT.iam.gserviceaccount.com` is your service account, replace the `KF_NAME` and `KF_PROJECT` using the value above  in this pattern, you can get vm service account you have already created in Kubeflow cluster deployment.

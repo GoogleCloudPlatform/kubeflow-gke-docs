@@ -1,6 +1,6 @@
 +++
-title = "Customize Kubeflow on GKE"
-description = "Tailoring a GKE deployment of Kubeflow"
+title = "Customize Kubeflow on Google Cloud"
+description = "Tailoring a Google Kubernetes Engine deployment of Kubeflow"
 weight = 20
 +++
 
@@ -25,7 +25,7 @@ Follow the guide to [deploying Kubeflow on Google Cloud](/{{ .Site.Params.versio
 You can also customize an existing Kubeflow deployment. In that case, this 
 guide assumes that you have already followed the guide to 
 [deploying Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli/) and have deployed
-Kubeflow to a GKE cluster.
+Kubeflow to a Google Kubernetes Engine cluster.
 
 ## Before you start
 
@@ -228,7 +228,7 @@ to `false`:
 
 ### Add Cloud TPUs to your cluster
 
-Note: The following instruction should be used when creating GKE cluster, because the TPU enablement flag `enableTpu` is immutable once cluster is created. You need to create new cluster if existing cluster doesn't have TPU enabled.
+Note: The following instruction should be used when creating Google Kubernetes Engine cluster, because the TPU enablement flag `enableTpu` is immutable once cluster is created. You need to create new cluster if existing cluster doesn't have TPU enabled.
 
 Set [`enableTpu:true`](https://cloud.google.com/config-connector/docs/reference/resource-docs/container/containercluster)
 in `${KF_DIR}/common/cluster/upstream/cluster.yaml` and enable alias IP (VPC-native traffic routing):

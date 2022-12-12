@@ -98,7 +98,7 @@ Follow these steps to set up your Google Cloud project:
     describes that creating and then removing a temporary Kubernetes cluster may
     be needed for projects that haven't had a cluster set up beforehand.
 
-You do not need a running GKE cluster. The deployment process creates a
+You do not need a running Google Kubernetes Engine cluster. The deployment process creates a
 cluster for you.
 
 ## Next steps
