@@ -6,7 +6,7 @@ weight = 300
 
 ## 1.6.1
 
-[Release notes](https://github.com/GoogleCloudPlatform/kubeflow-distribution/releases/tag/v1.6.1)
+[Release notes](https://github.com/googlecloudplatform/kubeflow-distribution/releases/tag/v1.6.1)
 
 ### Changes:
 
@@ -19,7 +19,7 @@ weight = 300
 
 ## 1.6.0:
 
-[Release notes](https://github.com/GoogleCloudPlatform/kubeflow-distribution/releases/tag/v1.6.0)
+[Release notes](https://github.com/googlecloudplatform/kubeflow-distribution/releases/tag/v1.6.0)
 
 ### Changes:
 
@@ -35,7 +35,7 @@ weight = 300
 
 ## 1.5.1
 
-[Release notes](https://github.com/GoogleCloudPlatform/kubeflow-distribution/releases/tag/v1.5.1)
+[Release notes](https://github.com/googlecloudplatform/kubeflow-distribution/releases/tag/v1.5.1)
 
 ### Changes:
 
@@ -47,7 +47,7 @@ weight = 300
 
 ## 1.5.0:
 
-[Release notes](https://github.com/GoogleCloudPlatform/kubeflow-distribution/releases/tag/v1.5.0)
+[Release notes](https://github.com/googlecloudplatform/kubeflow-distribution/releases/tag/v1.5.0)
 
 ### Changes:
 
@@ -59,7 +59,7 @@ weight = 300
 
 ## 1.4.1
 
-[Release notes](https://github.com/GoogleCloudPlatform/kubeflow-distribution/releases/tag/v1.4.1)
+[Release notes](https://github.com/googlecloudplatform/kubeflow-distribution/releases/tag/v1.4.1)
 
 ### Changes:
 
@@ -71,7 +71,7 @@ Changes on top of v1.4.0:
 
 ## 1.4.0:
 
-[Release notes](https://github.com/GoogleCloudPlatform/kubeflow-distribution/releases/tag/v1.4.0)
+[Release notes](https://github.com/googlecloudplatform/kubeflow-distribution/releases/tag/v1.4.0)
 
 ### Changes:
 

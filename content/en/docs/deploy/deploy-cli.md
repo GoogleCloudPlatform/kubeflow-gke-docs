@@ -44,17 +44,17 @@ Before installing Kubeflow on the command line:
 
     You can install specific version of kubectl by following instruction (Example: [Install kubectl on Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)). Latest patch version of kubectl from `v1.17` to `v1.19` works well too.
 
-    Note: Starting from Kubeflow 1.4, it requires `kpt v1.0.0-beta.6` or above to operate in `GoogleCloudPlatform/kubeflow-distribution` repository. gcloud hasn't caught up with this kpt version yet, [install kpt](https://kpt.dev/installation/) separately from https://github.com/GoogleContainerTools/kpt/tags for now. Note that kpt requires docker to be installed.
+    Note: Starting from Kubeflow 1.4, it requires `kpt v1.0.0-beta.6` or above to operate in `googlecloudplatform/kubeflow-distribution` repository. gcloud hasn't caught up with this kpt version yet, [install kpt](https://kpt.dev/installation/) separately from https://github.com/GoogleContainerTools/kpt/tags for now. Note that kpt requires docker to be installed.
 
     Note: You also need to [install required tools](https://cloud.google.com/service-mesh/v1.10/docs/scripted-install/asm-onboarding#installing_required_tools) for ASM installation tool `install_asm`.
 
-### Fetch GoogleCloudPlatform/kubeflow-distribution and upstream packages
+### Fetch googlecloudplatform/kubeflow-distribution and upstream packages
 
-1. If you have already installed Management cluster, you have `GoogleCloudPlatform/kubeflow-distribution` locally. You just need to run `cd kubeflow` to access Kubeflow cluster manifests. Otherwise, you can run the following commands:
+1. If you have already installed Management cluster, you have `googlecloudplatform/kubeflow-distribution` locally. You just need to run `cd kubeflow` to access Kubeflow cluster manifests. Otherwise, you can run the following commands:
 
     ```bash
     # Check out Kubeflow v{{% latest-version %}} blueprints
-    git clone https://github.com/GoogleCloudPlatform/kubeflow-distribution.git 
+    git clone https://github.com/googlecloudplatform/kubeflow-distribution.git 
     cd kubeflow-distribution
     git checkout tags/v{{% latest-version %}} -b v{{% latest-version %}}
     ```
@@ -63,7 +63,7 @@ Before installing Kubeflow on the command line:
 
     ```bash
     # Check out Kubeflow v{{% latest-version %}} blueprints
-    kpt pkg get https://github.com/GoogleCloudPlatform/kubeflow-distribution.git@v{{% latest-version %}} kubeflow-distribution
+    kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@v{{% latest-version %}} kubeflow-distribution
     cd kubeflow-distribution
     ```
 
@@ -160,7 +160,7 @@ make apply
 
 * If deployment returns an error due to missing resources in `serving.kserve.io` API group, rerun `make apply`. This is due to a race condition between CRD and runtime resources in KServe.
 
-  * This issue is being tracked in [GoogleCloudPlatform/kubeflow-distribution#384](https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/384)
+  * This issue is being tracked in [googlecloudplatform/kubeflow-distribution#384](https://github.com/googlecloudplatform/kubeflow-distribution/issues/384)
 
 * If resources can't be created because `webhook.cert-manager.io` is unavailable wait and
   then rerun `make apply`
@@ -247,9 +247,9 @@ directories:
 
 * **apps**, **common**, **contrib** are a series of independent components  directory containing kustomize packages for deploying Kubeflow components. The structure is to align with upstream [kubeflow/manifests](https://github.com/kubeflow/manifests).
 
-  * [GoogleCloudPlatform/kubeflow-distribution](https://github.com/GoogleCloudPlatform/kubeflow-distribution) repository only stores `kustomization.yaml` and `patches` for Google Cloud specific resources.
+  * [googlecloudplatform/kubeflow-distribution](https://github.com/googlecloudplatform/kubeflow-distribution) repository only stores `kustomization.yaml` and `patches` for Google Cloud specific resources.
 
-  * `./pull_upstream.sh` will pull `kubeflow/manifests` and store manifests in `upstream` folder of each component in this guide. [GoogleCloudPlatform/kubeflow-distribution](https://github.com/GoogleCloudPlatform/kubeflow-distribution) repository doesn't store the copy of upstream manifests.
+  * `./pull_upstream.sh` will pull `kubeflow/manifests` and store manifests in `upstream` folder of each component in this guide. [googlecloudplatform/kubeflow-distribution](https://github.com/googlecloudplatform/kubeflow-distribution) repository doesn't store the copy of upstream manifests.
 
 * **build** is a directory that will contain the hydrated manifests outputted by
   the `make` rules, each component will have its own **build** directory. You can customize the **build** path when calling `make` command.
