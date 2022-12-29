@@ -1,6 +1,6 @@
 # Contributing to this repository
 
-Welcome, Kubeflow users! This website contains the latest documentation for Kubeflow on Google Cloud. It is hosted at https://gkcalat.github.io/kubeflow-docs. 
+Welcome, Kubeflow users! This website contains the latest documentation for Kubeflow on Google Cloud. It is hosted at https://googlecloudplatform.github.io/kubeflow-gke-docs. 
 Before contributing, please read [these guidelines](./CONTRIBUTING.md).
 
 ## Running locally
@@ -39,8 +39,8 @@ Before contributing, please read [these guidelines](./CONTRIBUTING.md).
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/googlestaging/kubeflow-gke-docs/blob/main/CONTRIBUTING.md).
+See [CONTRIBUTING.md](https://github.com/googlecloudplatform/kubeflow-gke-docs/blob/main/CONTRIBUTING.md).
 
 ## Releasing a new version
 
-See [RELEASE.md](https://github.com/googlestaging/kubeflow-gke-docs/blob/main/RELEASE.md).
+See [RELEASE.md](https://github.com/googlecloudplatform/kubeflow-gke-docs/blob/main/RELEASE.md).

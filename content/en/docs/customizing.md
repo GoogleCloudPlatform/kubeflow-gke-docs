@@ -9,7 +9,7 @@ Kubernetes Engine (GKE) on Google Cloud.
 
 ## Before you start
 
-The variables defined in this page can be found in [kubeflow-distribution/kubeflow/env.sh](https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/env.sh). They are the same value as you set based on your [Kubeflow deployment](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli/#environment-variables). 
+The variables defined in this page can be found in [kubeflow-distribution/kubeflow/env.sh](https://github.com/googlecloudplatform/kubeflow-distribution/blob/master/kubeflow/env.sh). They are the same value as you set based on your [Kubeflow deployment](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli/#environment-variables). 
 
 ## Customizing Kubeflow before deployment
 
@@ -17,7 +17,7 @@ The Kubeflow deployment process is divided into two steps, **hydrate** and
 **apply**, so that you can modify your configuration before deploying your 
 Kubeflow cluster.
 
-Follow the guide to [deploying Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli/). You can add your patches in corresponding component folder, and include those patches in `kustomization.yaml` file. Learn more about the usage of [kustomize](https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/). You can also find the existing kustomization in [GoogleCloudPlatform/kubeflow-distribution](https://github.com/GoogleCloudPlatform/kubeflow-distribution) as example. After adding the patches, you can run `make hydrate` to validate the resulting resources. Finally, you can run `make apply` to deploy the customized Kubeflow.
+Follow the guide to [deploying Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli/). You can add your patches in corresponding component folder, and include those patches in `kustomization.yaml` file. Learn more about the usage of [kustomize](https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/). You can also find the existing kustomization in [googlecloudplatform/kubeflow-distribution](https://github.com/googlecloudplatform/kubeflow-distribution) as example. After adding the patches, you can run `make hydrate` to validate the resulting resources. Finally, you can run `make apply` to deploy the customized Kubeflow.
 
 
 ## Customizing an existing deployment
@@ -209,12 +209,12 @@ After adding GPU nodes to your cluster, you need to install NVIDIA's device driv
 To deploy the installation DaemonSet, run the following command:
 
 ```bash
-kubectl --context="${KF_NAME}" apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/container-engine-accelerators/master/nvidia-driver-installer/cos/daemonset-preloaded.yaml
+kubectl --context="${KF_NAME}" apply -f https://raw.githubusercontent.com/googlecloudplatform/container-engine-accelerators/master/nvidia-driver-installer/cos/daemonset-preloaded.yaml
 ```
 
 
 To disable node-autoprovisioning, edit `${KF_DIR}/common/cluster/upstream/cluster.yaml` to set
-[`enabled`](https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/v1.3.0/kubeflow/common/cluster/upstream/cluster.yaml#L30) 
+[`enabled`](https://github.com/googlecloudplatform/kubeflow-distribution/blob/v1.3.0/kubeflow/common/cluster/upstream/cluster.yaml#L30) 
 to `false`:
 
 ```

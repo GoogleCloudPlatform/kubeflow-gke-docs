@@ -40,7 +40,7 @@ To set up a Kubeflow environment on Google Cloud, complete these steps:
 4. [Deploy Kubeflow cluster](../deploy-cli/).
 
 For debugging approaches to common issues encountered during these deployment steps, see [troubleshooting deployments](../../troubleshooting/) to find common issues
-and debugging approaches. If the issue isn’t included in the list of commonly encountered issues, report a bug at [GoogleCloudPlatform/kubeflow-distribution](https://github.com/GoogleCloudPlatform/kubeflow-distribution).
+and debugging approaches. If the issue isn’t included in the list of commonly encountered issues, report a bug at [googlecloudplatform/kubeflow-distribution](https://github.com/googlecloudplatform/kubeflow-distribution).
 
 ## Next steps
 

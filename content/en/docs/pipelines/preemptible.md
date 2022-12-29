@@ -33,7 +33,7 @@ follow the guide to [deploying Kubeflow on Google Cloud](/{{ .Site.Params.versio
 
 ## Before you start
 
-The variables defined in this page can be found in [kubeflow-distribution/kubeflow/env.sh](https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/env.sh). They are the same value as you set based on your [Kubeflow deployment](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli/#environment-variables). 
+The variables defined in this page can be found in [kubeflow-distribution/kubeflow/env.sh](https://github.com/googlecloudplatform/kubeflow-distribution/blob/master/kubeflow/env.sh). They are the same value as you set based on your [Kubeflow deployment](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli/#environment-variables). 
 
 ## Using preemptible VMs with Kubeflow Pipelines
 

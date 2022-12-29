@@ -1,20 +1,20 @@
 # Releasing
 
-Kubeflow gets minor releases twice a year. [Kubeflow on Google Cloud](https://github.com/GoogleCloudPlatform/kubeflow-distribution) follows the same cadence, but may also have patch releases in-between. Patch releases typically contain bug fixes, while minor releases include new features. Documentation (this repository) should stay in sync with the latest version of Kubeflow on Google Cloud.
+Kubeflow gets minor releases twice a year. [Kubeflow on Google Cloud](https://github.com/googlecloudplatform/kubeflow-distribution) follows the same cadence, but may also have patch releases in-between. Patch releases typically contain bug fixes, while minor releases include new features. Documentation (this repository) should stay in sync with the latest version of Kubeflow on Google Cloud.
 
 For each minor release, we create a new branch for the relevant documentation (e.g. `v1.6-release`). When a new version is released, we create a new branch of the previous version and the `main` branch is updated with the content for the new version.
 
 The versioned sites follow this convention:
 
-* `gkcalat.github.io/kubeflow-docs` is deployed from `gh-pages` branch, which is automatically updated once new changes are pushed to `main` or `v*-release` branches.
-* Changes to `main` branch are pushed to the `./dev` directory of `gh-pages` branch, which is then reflected on `gkcalat.github.io/kubeflow-docs/dev`.
-* Changes to `v*-release` branches are pushed to `./v*` subdirectories of `gh-pages` branch, which are then reflected on `gkcalat.github.io/kubeflow-docs/v*`.
-* Changes to the latest `v*-release` branch are pushed to `./` subdirectory of `gh-pages` branch, which is then reflected on `gkcalat.github.io/kubeflow-docs/`. One need to keep this logic when releasing a minor version of Kubeflow on Google Cloud.
+* `googlecloudplatform.github.io/kubeflow-gke-docs` is deployed from `gh-pages` branch, which is automatically updated once new changes are pushed to `main` or `v*-release` branches.
+* Changes to `main` branch are pushed to the `./dev` directory of `gh-pages` branch, which is then reflected on `googlecloudplatform.github.io/kubeflow-gke-docs/dev`.
+* Changes to `v*-release` branches are pushed to `./v*` subdirectories of `gh-pages` branch, which are then reflected on `googlecloudplatform.github.io/kubeflow-gke-docs/v*`.
+* Changes to the latest `v*-release` branch are pushed to `./` subdirectory of `gh-pages` branch, which is then reflected on `googlecloudplatform.github.io/kubeflow-gke-docs/`. One need to keep this logic when releasing a minor version of Kubeflow on Google Cloud.
 
 Whenever any documents reference any source code, you should use the version shortcode in the links, like so:
 
 ```
-https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/{{< params "githubbranch" >}}/...
+https://github.com/googlecloudplatform/kubeflow-distribution/blob/{{< params "githubbranch" >}}/...
 ```
 
 This ensures that all the links in a versioned webpage point to the correct branch.

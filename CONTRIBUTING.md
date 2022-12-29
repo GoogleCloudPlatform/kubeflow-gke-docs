@@ -48,15 +48,15 @@ Contributions are very welcome! Please, follow these simple steps:
 
 1. Make your changes and send a pull request (PR) with a few sentences describing your changes. Merge into:
    * `main` branch, if the changes are related to the latest released Kubeflow on Google Cloud.
-   * `dev` branch if the changes are related to the unreleased ([master branch](https://github.com/GoogleCloudPlatform/kubeflow-distribution)) version of Kubeflow on Google Cloud.
+   * `dev` branch if the changes are related to the unreleased ([master branch](https://github.com/googlecloudplatform/kubeflow-distribution)) version of Kubeflow on Google Cloud.
    * `v*-release` if the changes are related to `v*` release of Kubeflow on Google Cloud.
 
-1. Assign one of the [reviewers](https://github.com/googlestaging/kubeflow-gke-docs/blob/main/OWNERS) to the PR.
+1. Assign one of the [reviewers](https://github.com/googlecloudplatform/kubeflow-gke-docs/blob/main/OWNERS) to the PR.
 
 
 ### Styling your content
 
-The theme holds its styles in the [`assets/scss` directory](https://github.com/googlestaging/kubeflow-gke-docs/tree/main/themes/docsy/assets/scss).
+The theme holds its styles in the [`assets/scss` directory](https://github.com/googlecloudplatform/kubeflow-gke-docs/tree/main/themes/docsy/assets/scss).
 
 **Do not change these files**, they are not actually inside this repo, but are part of the [google/docsy](https://github.com/google/docsy) repo. To update referenced docsy commit, run the following command at the root of the repo:
 
@@ -64,11 +64,11 @@ The theme holds its styles in the [`assets/scss` directory](https://github.com/g
 git submodule update --remote
 ```
 
-The site's [front page](https://gkcalat.github.io/kubeflow-docs):
+The site's [front page](https://googlecloudplatform.github.io/kubeflow-gke-docs):
 
-* See the [page source](https://github.com/googlestaging/kubeflow-gke-docs/blob/main/content/en/_index.html).
+* See the [page source](https://github.com/googlecloudplatform/kubeflow-gke-docs/blob/main/content/en/_index.html).
 
-* The CSS styles are in the [project variables file](https://github.com/googlestaging/kubeflow-gke-docs/blob/main/assets/scss/_variables_project.scss).
+* The CSS styles are in the [project variables file](https://github.com/googlecloudplatform/kubeflow-gke-docs/blob/main/assets/scss/_variables_project.scss).
 
 * The page uses the [cover block](https://www.docsy.dev/docs/adding-content/shortcodes/#blocks-cover) defined by the theme.
 
