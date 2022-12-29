@@ -10,7 +10,7 @@ Available options listed below have different tradeoffs. You should choose the o
 
 * Configuring your cluster to access Google Cloud using [Compute Engine default service account](#compute-engine-default-service-account) with the "cloud-platform" scope is easier to set up than the other options. However, this approach grants excessive permissions. Therefore, it is not suitable if you need workload permission separation.
 * [Workload Identity](#workload-identity) takes more efforts to set up, but allows fine-grained permission control. It is recommended for production use-cases.
-* [Google service account keys stored as Kubernetes secrets](#google-service-account-keys-stored-as-kubernetes-secrets) is the legacy approach and no longer recommended in GKE. However, it's the only option to use Google Cloud APIs when your cluster is an [anthos](https://cloud.google.com/anthos) or on-prem cluster.
+* [Google service account keys stored as Kubernetes secrets](#google-service-account-keys-stored-as-kubernetes-secrets) is the legacy approach and no longer recommended in Google Kubernetes Engine. However, it's the only option to use Google Cloud APIs when your cluster is an [anthos](https://cloud.google.com/anthos) or on-prem cluster.
 
 ## Before you begin
 There are various options on how to install Kubeflow Pipelines in the [Installation Options for Kubeflow Pipelines](https://www.kubeflow.org/docs/components/pipelines/installation/overview/) guide.
@@ -32,14 +32,14 @@ However, it does not support permission separation for workloads in the cluster.
 
 ### Cluster setup to use Compute Engine default service account
 
-By default, your GKE nodes use [Compute Engine default service account](https://cloud.google.com/compute/docs/access/service-accounts#default_service_account). If you allowed `cloud-platform` scope when creating the cluster,
+By default, your Google Kubernetes Engine nodes use [Compute Engine default service account](https://cloud.google.com/compute/docs/access/service-accounts#default_service_account). If you allowed `cloud-platform` scope when creating the cluster,
 Kubeflow Pipelines can authenticate to Google Cloud and manage resources in your project without further configuration.
 
-Use one of the following options to create a GKE cluster that uses the Compute Engine default service account:
+Use one of the following options to create a Google Kubernetes Engine cluster that uses the Compute Engine default service account:
 
 * If you followed instructions in [Setting up AI Platform Pipelines](https://cloud.google.com/ai-platform/pipelines/docs/setting-up) and checked `Allow access to the following Cloud APIs`, your cluster is already using Compute Engine default service account.
 * In Google Cloud Console UI, you can enable it in `Create a Kubernetes cluster -> default-pool -> Security -> Access Scopes -> Allow full access to all Cloud APIs` like the following:
-<img src="/docs/images/pipelines/v1/gke-allow-full-access.png">
+<img src="/{{ .Site.Params.version_url_prefix }}docs/images/pipelines/v1/gke-allow-full-access.png">
 * Using `gcloud` CLI, you can enable it with `--scopes cloud-platform` like the following:
 ```bash
 gcloud container clusters create <cluster-name> \
@@ -58,7 +58,7 @@ However, you must update existing pipelines that use the [use_gcp_secret kfp sdk
 
 ### Workload Identity
 
-> Workload Identity is the recommended way for your GKE applications to consume services provided by Google APIs. You accomplish this by configuring a [Kubernetes service account](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/) to act as a [Google service account](https://cloud.google.com/iam/docs/service-accounts). Any Pods running as the Kubernetes service account then use the Google service account to authenticate to cloud services.
+> Workload Identity is the recommended way for your Google Kubernetes Engine applications to consume services provided by Google APIs. You accomplish this by configuring a [Kubernetes service account](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/) to act as a [Google service account](https://cloud.google.com/iam/docs/service-accounts). Any Pods running as the Kubernetes service account then use the Google service account to authenticate to cloud services.
 
 Referenced from [Workload Identity Documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity). Please read this doc for:
 
@@ -81,7 +81,7 @@ You can also continue to use `use_gcp_secret` in a cluster with Workload Identit
 
 Starting from Kubeflow 1.1, Kubeflow Pipelines supports multi-user isolation. Therefore, pipeline runs are executed in user namespaces using the `default-editor` KSA. The `default-editor` KSA is auto-bound to the GSA specified in the user profile, which defaults to a shared GSA `${KFNAME}-user@${PROJECT}.iam.gserviceaccount.com`.
 
-If you want to bind the `default-editor` KSA with a different GSA for a specific namespace, refer to the [In-cluster authentication to Google Cloud](/docs/authentication/#in-cluster-authentication) guide.
+If you want to bind the `default-editor` KSA with a different GSA for a specific namespace, refer to the [In-cluster authentication to Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/authentication/#in-cluster-authentication) guide.
 
 Additionally, the Kubeflow Pipelines UI, visualization, and TensorBoard server instances are deployed in your user namespace using the `default-editor` KSA. Therefore, to visualize results in the Pipelines UI, they can fetch artifacts in Google Cloud Storage using permissions of the same GSA you configured for this namespace.
 
@@ -90,7 +90,7 @@ Additionally, the Kubeflow Pipelines UI, visualization, and TensorBoard server i
 ##### 1. Create your cluster with Workload Identity enabled
 
 * In Google Cloud Console UI, you can enable Workload Identity in `Create a Kubernetes cluster -> Security -> Enable Workload Identity` like the following:
-<img src="/docs/images/pipelines/v1/gke-enable-workload-identity.png">
+<img src="/{{ .Site.Params.version_url_prefix }}docs/images/pipelines/v1/gke-enable-workload-identity.png">
 
 * Using `gcloud` CLI, you can enable it with:
 ```bash

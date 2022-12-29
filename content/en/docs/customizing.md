@@ -1,6 +1,6 @@
 +++
-title = "Customize Kubeflow on GKE"
-description = "Tailoring a GKE deployment of Kubeflow"
+title = "Customize Kubeflow on Google Cloud"
+description = "Tailoring a Google Kubernetes Engine deployment of Kubeflow"
 weight = 20
 +++
 
@@ -9,7 +9,7 @@ Kubernetes Engine (GKE) on Google Cloud.
 
 ## Before you start
 
-The variables defined in this page can be found in [kubeflow-distribution/kubeflow/env.sh](https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/env.sh). They are the same value as you set based on your [Kubeflow deployment](/docs/deploy/deploy-cli/#environment-variables). 
+The variables defined in this page can be found in [kubeflow-distribution/kubeflow/env.sh](https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/env.sh). They are the same value as you set based on your [Kubeflow deployment](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli/#environment-variables). 
 
 ## Customizing Kubeflow before deployment
 
@@ -17,15 +17,15 @@ The Kubeflow deployment process is divided into two steps, **hydrate** and
 **apply**, so that you can modify your configuration before deploying your 
 Kubeflow cluster.
 
-Follow the guide to [deploying Kubeflow on Google Cloud](/docs/deploy/deploy-cli/). You can add your patches in corresponding component folder, and include those patches in `kustomization.yaml` file. Learn more about the usage of [kustomize](https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/). You can also find the existing kustomization in [GoogleCloudPlatform/kubeflow-distribution](https://github.com/GoogleCloudPlatform/kubeflow-distribution) as example. After adding the patches, you can run `make hydrate` to validate the resulting resources. Finally, you can run `make apply` to deploy the customized Kubeflow.
+Follow the guide to [deploying Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli/). You can add your patches in corresponding component folder, and include those patches in `kustomization.yaml` file. Learn more about the usage of [kustomize](https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/). You can also find the existing kustomization in [GoogleCloudPlatform/kubeflow-distribution](https://github.com/GoogleCloudPlatform/kubeflow-distribution) as example. After adding the patches, you can run `make hydrate` to validate the resulting resources. Finally, you can run `make apply` to deploy the customized Kubeflow.
 
 
 ## Customizing an existing deployment
 
 You can also customize an existing Kubeflow deployment. In that case, this 
 guide assumes that you have already followed the guide to 
-[deploying Kubeflow on Google Cloud](/docs/deploy/deploy-cli/) and have deployed
-Kubeflow to a GKE cluster.
+[deploying Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli/) and have deployed
+Kubeflow to a Google Kubernetes Engine cluster.
 
 ## Before you start
 
@@ -41,7 +41,7 @@ This guide assumes the following settings:
   ``` 
 
 * Make sure your environment variables are set up for the Kubeflow cluster you want to customize. For further background about the settings, see the guide to
-  [deploying Kubeflow with the CLI](/docs/deploy/deploy-cli).
+  [deploying Kubeflow with the CLI](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli).
 
 
 ## Customizing Google Cloud resources
@@ -159,7 +159,7 @@ command:
 gcloud compute accelerator-types list
 ```
  
-Create the [ContainerNodePool](https://cloud.google.com/config-connector/docs/reference/resource-docs/container/containernodepool) resource adopting GPU, for exmaple, create a new file `containernodepool-gpu.yaml` file and fulfill the value `KUBEFLOW-NAME`, `KF-PROJECT`, `LOCATION` based on your [Kubeflow deployment](/docs/deploy/deploy-cli/#environment-variables):
+Create the [ContainerNodePool](https://cloud.google.com/config-connector/docs/reference/resource-docs/container/containernodepool) resource adopting GPU, for exmaple, create a new file `containernodepool-gpu.yaml` file and fulfill the value `KUBEFLOW-NAME`, `KF-PROJECT`, `LOCATION` based on your [Kubeflow deployment](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli/#environment-variables):
 
 ```
 apiVersion: container.cnrm.cloud.google.com/v1beta1
@@ -228,7 +228,7 @@ to `false`:
 
 ### Add Cloud TPUs to your cluster
 
-Note: The following instruction should be used when creating GKE cluster, because the TPU enablement flag `enableTpu` is immutable once cluster is created. You need to create new cluster if existing cluster doesn't have TPU enabled.
+Note: The following instruction should be used when creating Google Kubernetes Engine cluster, because the TPU enablement flag `enableTpu` is immutable once cluster is created. You need to create new cluster if existing cluster doesn't have TPU enabled.
 
 Set [`enableTpu:true`](https://cloud.google.com/config-connector/docs/reference/resource-docs/container/containercluster)
 in `${KF_DIR}/common/cluster/upstream/cluster.yaml` and enable alias IP (VPC-native traffic routing):
@@ -281,4 +281,4 @@ You can learn more at [Creating a new cluster with Cloud TPU support](https://cl
 ## More customizations
 
 Refer to the navigation panel on the left of these docs for more customizations,
-including [using your own domain](/docs/custom-domain) and more.
+including [using your own domain](/{{ .Site.Params.version_url_prefix }}docs/custom-domain) and more.

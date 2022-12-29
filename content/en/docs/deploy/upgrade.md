@@ -9,15 +9,15 @@ weight = 6
 
 To better understand upgrade process, you should read the following sections first:
 
-* [Understanding the deployment process for management cluster](/docs/deploy/management-setup#understanding-the-deployment-process)
-* [Understanding the deployment process for Kubeflow cluster](/docs/deploy/deploy-cli#understanding-the-deployment-process)
+* [Understanding the deployment process for management cluster](/{{ .Site.Params.version_url_prefix }}docs/deploy/management-setup#understanding-the-deployment-process)
+* [Understanding the deployment process for Kubeflow cluster](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli#understanding-the-deployment-process)
 
 This guide assumes the following settings:
 
 * The `${MGMT_DIR}` and `${MGMT_NAME}` environment variables
-  are the same as in [Management cluster setup](/docs/deploy/management-setup#configure-environment-variables).
+  are the same as in [Management cluster setup](/{{ .Site.Params.version_url_prefix }}docs/deploy/management-setup#configure-environment-variables).
 * The `${KF_NAME}`, `${CLIENT_ID}` and `${CLIENT_SECRET}` environment variables
-  are the same as in [Deploy using kubectl and kpt](/docs/deploy/deploy-cli#environment-variables).
+  are the same as in [Deploy using kubectl and kpt](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli#environment-variables).
 * The `${KF_DIR}` environment variable contains the path to
   your Kubeflow application directory, which holds your Kubeflow configuration 
   files. For example, `/opt/kubeflow-distribution/kubeflow/`.
@@ -259,7 +259,7 @@ Kubeflow on Google Cloud doesn't guarantee the upgrade for each Kubeflow compone
 ### Upgrade Kubeflow cluster to v1.6
 
 Starting from Kubeflow v1.6.0:
-* Component with deprecated API versions were upgraded to support GKE v1.22. If you would like to upgrade your GKE cluster, follow [GCP instructions](https://cloud.google.com/kubernetes-engine/docs/how-to/upgrading-a-cluster).
+* Component with deprecated API versions were upgraded to support Google Kubernetes Engine v1.22. If you would like to upgrade your Google Kubernetes Engine cluster, follow [GCP instructions](https://cloud.google.com/kubernetes-engine/docs/how-to/upgrading-a-cluster).
 * ASM was upgraded to v1.14. Follow the instructions on how to [upgrade ASM (Anthos Service Mesh)](#upgrade-asm-anthos-service-mesh). If you want to use ASM version prior to 1.11, refer to [the legacy instructions](https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/asm/deprecated/README.md). 
 * Knative was upgraded to v1.2. Follow [Knative instructions](https://knative.dev/docs/install/upgrade/upgrade-installation/) to check current version and see if the update includes any breaking changes.
 * Cert-manager was upgraded to v1.5. To check your current version and see if the update includes any breaking changes, follow the [cert-manager instructions](https://cert-manager.io/docs/installation/upgrading/). 

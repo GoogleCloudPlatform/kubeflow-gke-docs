@@ -29,11 +29,11 @@ In addition to using preemptible VMs, your Google Kubernetes Engine (GKE)
 cluster can autoscale based on current workloads.
 
 This guide assumes that you have already deployed Kubeflow Pipelines. If not,
-follow the guide to [deploying Kubeflow on Google Cloud](/docs/deploy/).
+follow the guide to [deploying Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/deploy/).
 
 ## Before you start
 
-The variables defined in this page can be found in [kubeflow-distribution/kubeflow/env.sh](https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/env.sh). They are the same value as you set based on your [Kubeflow deployment](/docs/deploy/deploy-cli/#environment-variables). 
+The variables defined in this page can be found in [kubeflow-distribution/kubeflow/env.sh](https://github.com/GoogleCloudPlatform/kubeflow-distribution/blob/master/kubeflow/env.sh). They are the same value as you set based on your [Kubeflow deployment](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli/#environment-variables). 
 
 ## Using preemptible VMs with Kubeflow Pipelines
 
@@ -95,7 +95,7 @@ spec:
 Where:
 
 +   `PREEMPTIBLE_CPU_POOL` is the name of the node pool. 
-+   `KF_NAME` is the name of the Kubeflow GKE cluster.
++   `KF_NAME` is the name of the Kubeflow Google Kubernetes Engine cluster.
 +   `KF_PROJECT` is the name of your Kubeflow Google Cloud project. 
 +   `LOCATION` is the region of this nodepool, for example: us-west1-b.
 +   `KF_NAME-vm@KF_PROJECT.iam.gserviceaccount.com` is your service account, replace the `KF_NAME` and `KF_PROJECT` using the value above  in this pattern, you can get vm service account you have already created in Kubeflow cluster deployment
@@ -198,7 +198,7 @@ summary, the steps to schedule a pipeline to run with
 are as follows: 
 
 1.  Make sure you have enough GPU quota.
-1.  Create a node pool in your GKE cluster that contains preemptible VMs with
+1.  Create a node pool in your Google Kubernetes Engine cluster that contains preemptible VMs with
     preemptible GPUs. 
 1.  Configure your pipelines to run on the preemptible VMs with preemptible
     GPUs.
@@ -259,7 +259,7 @@ spec:
 Where:
 
 +   `PREEMPTIBLE_CPU_POOL` is the name of the node pool. 
-+   `KF_NAME` is the name of the Kubeflow GKE cluster.
++   `KF_NAME` is the name of the Kubeflow Google Kubernetes Engine cluster.
 +   `KF_PROJECT` is the name of your Kubeflow Google Cloud project. 
 +   `LOCATION` is the region of this nodepool, for example: us-west1-b.
 +   `KF_NAME-vm@KF_PROJECT.iam.gserviceaccount.com` is your service account, replace the `KF_NAME` and `KF_PROJECT` using the value above  in this pattern, you can get vm service account you have already created in Kubeflow cluster deployment.
@@ -294,7 +294,7 @@ gcloud container node-pools create preemptible-gpu-pool \
 
 ### 3. Schedule your pipeline to run on the preemptible VMs with preemptible GPUs
 
-In the [DSL code](/docs/components/pipelines/sdk/sdk-overview/) for
+In the [DSL code](/{{ .Site.Params.version_url_prefix }}docs/components/pipelines/sdk/sdk-overview/) for
 your pipeline, add the following to the `ContainerOp` instance:
 
     .apply(gcp.use_preemptible_nodepool()
@@ -361,5 +361,5 @@ kubectl --context=${MGMTCTXT} --namespace=${KF_PROJECT} describe containernodepo
 
 ## Next steps
 
-* Explore further options for [customizing Kubeflow on Google Cloud](/docs/).
+* Explore further options for [customizing Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/).
 * See how to [build pipelines with the SDK](https://kubeflow.org/docs/components/pipelines/sdk/).
