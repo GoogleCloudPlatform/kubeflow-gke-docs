@@ -1,0 +1,991 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.105.0">
+<meta name="robots" content="index, follow">
+
+<script type="application/ld+json">
+  {
+      "@context" : "http://schema.org",
+      "@type" : "WebSite",
+      "mainEntityOfPage": {
+           "@type": "WebPage",
+           "@id": "https:\/\/gkcalat.github.io\/kubeflow-docs"
+      },
+      "articleSection" : "docs",
+      "name" : "Troubleshooting Deployments on Google Cloud",
+      "headline" : "Troubleshooting Deployments on Google Cloud",
+      "description" : "Help fixing problems on Google Kubernetes Engine and Google Cloud",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "0001",
+      "datePublished": "0001-01-01 00:00:00 \u002b0000 UTC",
+      "dateModified" : "0001-01-01 00:00:00 \u002b0000 UTC",
+      "url" : "https:\/\/gkcalat.github.io\/kubeflow-docs\/docs\/troubleshooting\/",
+      "wordCount" : "2364",
+      "keywords" : [ "Kubeflow on GCP" ]
+  }
+  </script>
+
+<link rel="shortcut icon" href="../../kubeflow-docs/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="../../kubeflow-docs/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="../../kubeflow-docs/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="../../kubeflow-docs/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="manifest" href="../../kubeflow-docs/favicons/manifest.json">
+<meta name="msapplication-config" content="/kubeflow-docs/favicons/browserconfig.xml" />
+<meta name="msapplication-TileColor" content="#4279f4">
+<meta name="theme-color" content="#4279f4">
+
+<title>Troubleshooting Deployments on Google Cloud | Kubeflow on Google Cloud Platform</title>
+<meta name="description" content="Help fixing problems on Google Kubernetes Engine and Google Cloud">
+<meta property="og:title" content="Troubleshooting Deployments on Google Cloud" />
+<meta property="og:description" content="Help fixing problems on Google Kubernetes Engine and Google Cloud" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gkcalat.github.io/kubeflow-docs/docs/troubleshooting/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2022-12-12T23:32:20+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+
+<meta itemprop="name" content="Troubleshooting Deployments on Google Cloud">
+<meta itemprop="description" content="Help fixing problems on Google Kubernetes Engine and Google Cloud">
+<meta itemprop="dateModified" content="2022-12-12T23:32:20+00:00" />
+<meta itemprop="wordCount" content="2364">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Troubleshooting Deployments on Google Cloud"/>
+<meta name="twitter:description" content="Help fixing problems on Google Kubernetes Engine and Google Cloud"/>
+
+
+
+
+<link rel="preload" href="../../kubeflow-docs/scss/main.min.5006b434b14f73c3d5537a7ba4c8ecef723ddc93f3a3c8530e19d24f75486ea9.css" as="style">
+<link href="../../kubeflow-docs/scss/main.min.5006b434b14f73c3d5537a7ba4c8ecef723ddc93f3a3c8530e19d24f75486ea9.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GK9XL47N6S"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-GK9XL47N6S', { 'anonymize_ip': false });
+}
+</script>
+
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand-md navbar-dark  td-navbar">
+        <a class="navbar-brand" href="../../kubeflow-docs/">
+		<span class="navbar-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 276.93 274.55"><g data-name="Layer 2"><g data-name="Layer 1"><path d="M95.9 62.15l4.1 102.1 73.75-94.12a6.79 6.79.0 019.6-1.11l46 36.92-15-65.61z" fill="#4279f4"/><path fill="#0028aa" d="M102.55 182.98h65.42l-40.17-32.23-25.25 32.23z"/><path fill="#014bd1" d="M180.18 83.92l-44 56.14 46.88 37.61 44.47-55.76-47.35-37.99z"/><path fill="#bedcff" d="M83.56 52.3l.01-.01 38.69-48.52-62.39 30.05-15.41 67.51 39.1-49.03z"/><path fill="#6ca1ff" d="M45.32 122.05l41.44 51.96-3.95-98.98-37.49 47.02z"/><path fill="#a1c3ff" d="M202.31 28.73 142.65.0l-37.13 46.56 96.79-17.83z"/><path d="M1.6 272v-44.78h5.74v23.41l20.48-23.41h6.4l-17.39 19.7 19 25.07H29.1l-15.92-20.8-5.84 6.65V272zm40.02-9.79V240h5.43v22.39a4.67 4.67.0 002.35 4.19 11 11 0 0011 0 4.69 4.69.0 002.33-4.19V240h5.43v22.19a9.08 9.08.0 01-4.1 7.87 16.2 16.2.0 01-18.37.0 9.07 9.07.0 01-4.07-7.85zM77.46 272v-48h5.43v16.81a29.29 29.29.0 019.32-1.73 13.1 13.1.0 016.2 1.41 10.71 10.71.0 014.18 3.74 18.07 18.07.0 012.23 5.06 21.26 21.26.0 01.73 5.58q0 8.43-4.38 12.79T87.35 272zm5.43-4.87h4.55q6.77.0 9.72-2.95t3-9.51a14.21 14.21.0 00-2-7.52 6.55 6.55.0 00-6-3.22 24.73 24.73.0 00-9.25 1.54zm29.47-11.19q0-7.71 4.09-12.3a13.75 13.75.0 0110.8-4.59q13.35.0 13.36 18.86h-22.82a12.3 12.3.0 002.9 7.07q2.59 3.11 7.9 3.1a24.92 24.92.0 0010.55-2v5a27.74 27.74.0 01-9.86 1.87 19.83 19.83.0 01-7.7-1.37 13.31 13.31.0 01-5.28-3.76 16.21 16.21.0 01-3-5.38 20.84 20.84.0 01-.94-6.5zm5.62-2.12h17.26a14.91 14.91.0 00-2.37-7.12 6.44 6.44.0 00-5.62-2.78 8.2 8.2.0 00-6.21 2.72 12.07 12.07.0 00-3.04 7.18z" fill="#4279f4" stroke="#4279f4" stroke-miterlimit="10" stroke-width="3.2"/><path d="M147.32 244.89V240h5v-7.59a8.14 8.14.0 012.31-6.05 7.79 7.79.0 015.69-2.28h7.86V229h-5c-2.21.0-3.67.45-4.37 1.34s-1.06 2.55-1.06 5V240h8.46v4.87h-8.46V272h-5.44v-27.1zM175.26 272v-48h5.43v48zm19.15-3.95a17.86 17.86.0 1112.33 4.9 16.57 16.57.0 01-12.33-4.9zm3.84-20.65a13.16 13.16.0 000 17.2 12.07 12.07.0 0017 0 13.09 13.09.0 000-17.2 12.07 12.07.0 00-17 0zm30.2-7.4h5.75l7.3 25.32 7.43-25.32h5.36l7.34 25.34L269 240h5.74l-10.04 32h-6.12l-6.83-24.58L245 272h-6.47z" fill="#0028aa" stroke="#0028aa" stroke-miterlimit="10" stroke-width="3.2"/></g></g></svg></span><span class="text-uppercase font-weight-bold">Kubeflow on Google Cloud Platform</span>
+	</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_navbar" aria-controls="main_navbar" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav ml-auto pt-4 pt-md-0 my-2 my-md-1">
+			
+			
+			<li class="nav-item mr-2 mr-lg-4 mt-1 mt-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="../../kubeflow-docs/docs/" ><span>Docs</span></a>
+			</li>
+			
+			<li class="nav-item mr-2 mr-lg-4 mt-1 mt-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="../../kubeflow-docs/news/" ><span>News</span></a>
+			</li>
+			
+			<li class="nav-item mr-2 mr-lg-4 mt-1 mt-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://github.com/GoogleCloudPlatform/kubeflow-distribution" target="_blank" ><i class='fa-brands fa-github pr-2'></i><span>Manifests</span></a>
+			</li>
+			
+			
+			<li class="nav-item dropdown mt-1 mt-lg-0 mr-2">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	v1.6 (latest)
+</a>
+<div class="dropdown-menu dropdown-menu-md-right dropdown-menu-lg-left" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="https://gkcalat.github.io/kubeflow-docs/docs">v1.6 (latest)</a>
+	
+	<a class="dropdown-item" href="https://gkcalat.github.io/kubeflow-docs/v1.5/docs">v1.5</a>
+	
+	<a class="dropdown-item" href="https://gkcalat.github.io/kubeflow-docs/v1.4/docs">v1.4</a>
+	
+	<a class="dropdown-item" href="https://gkcalat.github.io/kubeflow-docs/dev/docs">dev</a>
+	
+</div>
+
+			</li>
+			
+			
+		</ul>
+	</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="collapse td-sidebar-nav foldable-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pr-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-kubeflow-docsdocs-li">
+  <a href="../../kubeflow-docs/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-kubeflow-docsdocs"><span class="">Kubeflow on Google Cloud</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-kubeflow-docsdocsdeploy-li">
+  <input type="checkbox" id="m-kubeflow-docsdocsdeploy-check"/>
+  <label for="m-kubeflow-docsdocsdeploy-check"><a href="../../kubeflow-docs/docs/deploy/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-kubeflow-docsdocsdeploy"><span class="">Deployment</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeployoverview-li">
+  <input type="checkbox" id="m-kubeflow-docsdocsdeployoverview-check"/>
+  <label for="m-kubeflow-docsdocsdeployoverview-check"><a href="../../kubeflow-docs/docs/deploy/overview/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeployoverview"><span class="">Overview</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeployproject-setup-li">
+  <input type="checkbox" id="m-kubeflow-docsdocsdeployproject-setup-check"/>
+  <label for="m-kubeflow-docsdocsdeployproject-setup-check"><a href="../../kubeflow-docs/docs/deploy/project-setup/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeployproject-setup"><span class="">Setting up GCP Project</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeployoauth-setup-li">
+  <input type="checkbox" id="m-kubeflow-docsdocsdeployoauth-setup-check"/>
+  <label for="m-kubeflow-docsdocsdeployoauth-setup-check"><a href="../../kubeflow-docs/docs/deploy/oauth-setup/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeployoauth-setup"><span class="">Setting up OAuth client</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeploymanagement-setup-li">
+  <input type="checkbox" id="m-kubeflow-docsdocsdeploymanagement-setup-check"/>
+  <label for="m-kubeflow-docsdocsdeploymanagement-setup-check"><a href="../../kubeflow-docs/docs/deploy/management-setup/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeploymanagement-setup"><span class="">Deploying Management cluster</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeploydeploy-cli-li">
+  <input type="checkbox" id="m-kubeflow-docsdocsdeploydeploy-cli-check"/>
+  <label for="m-kubeflow-docsdocsdeploydeploy-cli-check"><a href="../../kubeflow-docs/docs/deploy/deploy-cli/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeploydeploy-cli"><span class="">Deploying Kubeflow cluster</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeployupgrade-li">
+  <input type="checkbox" id="m-kubeflow-docsdocsdeployupgrade-check"/>
+  <label for="m-kubeflow-docsdocsdeployupgrade-check"><a href="../../kubeflow-docs/docs/deploy/upgrade/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeployupgrade"><span class="">Upgrade Kubeflow</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeploymonitor-iap-setup-li">
+  <input type="checkbox" id="m-kubeflow-docsdocsdeploymonitor-iap-setup-check"/>
+  <label for="m-kubeflow-docsdocsdeploymonitor-iap-setup-check"><a href="../../kubeflow-docs/docs/deploy/monitor-iap-setup/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeploymonitor-iap-setup"><span class="">Monitoring Cloud IAP Setup</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsdeploydelete-cli-li">
+  <input type="checkbox" id="m-kubeflow-docsdocsdeploydelete-cli-check"/>
+  <label for="m-kubeflow-docsdocsdeploydelete-cli-check"><a href="../../kubeflow-docs/docs/deploy/delete-cli/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsdeploydelete-cli"><span class="">Deleting Kubeflow</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-kubeflow-docsdocspipelines-li">
+  <input type="checkbox" id="m-kubeflow-docsdocspipelines-check"/>
+  <label for="m-kubeflow-docsdocspipelines-check"><a href="../../kubeflow-docs/docs/pipelines/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-kubeflow-docsdocspipelines"><span class="">Pipelines on Google Cloud</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocspipelinesauthentication-sdk-li">
+  <input type="checkbox" id="m-kubeflow-docsdocspipelinesauthentication-sdk-check"/>
+  <label for="m-kubeflow-docsdocspipelinesauthentication-sdk-check"><a href="../../kubeflow-docs/docs/pipelines/authentication-sdk/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesauthentication-sdk"><span class="">Connecting to Kubeflow Pipelines on Google Cloud using the SDK</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocspipelinesauthentication-pipelines-li">
+  <input type="checkbox" id="m-kubeflow-docsdocspipelinesauthentication-pipelines-check"/>
+  <label for="m-kubeflow-docsdocspipelinesauthentication-pipelines-check"><a href="../../kubeflow-docs/docs/pipelines/authentication-pipelines/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesauthentication-pipelines"><span class="">Authenticating Pipelines to Google Cloud</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocspipelinesupgrade-li">
+  <input type="checkbox" id="m-kubeflow-docsdocspipelinesupgrade-check"/>
+  <label for="m-kubeflow-docsdocspipelinesupgrade-check"><a href="../../kubeflow-docs/docs/pipelines/upgrade/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesupgrade"><span class="">Upgrading</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocspipelinesenable-gpu-and-tpu-li">
+  <input type="checkbox" id="m-kubeflow-docsdocspipelinesenable-gpu-and-tpu-check"/>
+  <label for="m-kubeflow-docsdocspipelinesenable-gpu-and-tpu-check"><a href="../../kubeflow-docs/docs/pipelines/enable-gpu-and-tpu/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinesenable-gpu-and-tpu"><span class="">Enabling GPU and TPU</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocspipelinespreemptible-li">
+  <input type="checkbox" id="m-kubeflow-docsdocspipelinespreemptible-check"/>
+  <label for="m-kubeflow-docsdocspipelinespreemptible-check"><a href="../../kubeflow-docs/docs/pipelines/preemptible/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocspipelinespreemptible"><span class="">Using Preemptible VMs and GPUs on Google Cloud</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocscustomizing-li">
+  <input type="checkbox" id="m-kubeflow-docsdocscustomizing-check"/>
+  <label for="m-kubeflow-docsdocscustomizing-check"><a href="../../kubeflow-docs/docs/customizing/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocscustomizing"><span class="">Customize Kubeflow on Google Cloud</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocscustom-domain-li">
+  <input type="checkbox" id="m-kubeflow-docsdocscustom-domain-check"/>
+  <label for="m-kubeflow-docsdocscustom-domain-check"><a href="../../kubeflow-docs/docs/custom-domain/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocscustom-domain"><span class="">Using Your Own Domain</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsauthentication-li">
+  <input type="checkbox" id="m-kubeflow-docsdocsauthentication-check"/>
+  <label for="m-kubeflow-docsdocsauthentication-check"><a href="../../kubeflow-docs/docs/authentication/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsauthentication"><span class="">Authenticating Kubeflow to Google Cloud</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsprivate-clusters-li">
+  <input type="checkbox" id="m-kubeflow-docsdocsprivate-clusters-check"/>
+  <label for="m-kubeflow-docsdocsprivate-clusters-check"><a href="../../kubeflow-docs/docs/private-clusters/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsprivate-clusters"><span class="">Securing Your Clusters</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-kubeflow-docsdocstroubleshooting-li">
+  <input type="checkbox" id="m-kubeflow-docsdocstroubleshooting-check" checked/>
+  <label for="m-kubeflow-docsdocstroubleshooting-check"><a href="../../kubeflow-docs/docs/troubleshooting/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocstroubleshooting"><span class="td-sidebar-nav-active-item">Troubleshooting Deployments on Google Cloud</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocsanthos-li">
+  <input type="checkbox" id="m-kubeflow-docsdocsanthos-check"/>
+  <label for="m-kubeflow-docsdocsanthos-check"><a href="../../kubeflow-docs/docs/anthos/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-kubeflow-docsdocsanthos"><span class="">Kubeflow On-premises on Anthos</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-kubeflow-docsdocschangelog-li">
+  <input type="checkbox" id="m-kubeflow-docsdocschangelog-check"/>
+  <label for="m-kubeflow-docsdocschangelog-check"><a href="../../kubeflow-docs/docs/changelog/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-kubeflow-docsdocschangelog"><span class="">Changelog</span></a></label>
+  
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+<a id="print" href="https://gkcalat.github.io/kubeflow-docs/docs/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
+
+</div>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#before-you-start">Before you start</a></li>
+    <li><a href="#troubleshooting-kubeflow-deployment-on-google-cloud">Troubleshooting Kubeflow deployment on Google Cloud</a>
+      <ul>
+        <li><a href="#dns-name-not-registered">DNS name not registered</a></li>
+        <li><a href="#404-page-not-found-when-accessing-central-dashboard">404 Page Not Found When Accessing Central Dashboard</a></li>
+        <li><a href="#502-server-error">502 Server Error</a></li>
+        <li><a href="#gke-certificate-fails-to-be-provisioned">GKE Certificate Fails To Be Provisioned</a></li>
+        <li><a href="#problems-with-ssl-certificate-from-lets-encrypt">Problems with SSL certificate from Let&rsquo;s Encrypt</a></li>
+      </ul>
+    </li>
+    <li><a href="#envoy-pods-crash-looping-root-cause-is-backend-quota-exceeded">Envoy pods crash-looping: root cause is backend quota exceeded</a>
+      <ul>
+        <li><a href="#the-error">The error</a></li>
+        <li><a href="#diagnosing-the-cause">Diagnosing the cause</a></li>
+        <li><a href="#fixing-the-problem">Fixing the problem</a></li>
+      </ul>
+    </li>
+    <li><a href="#legacy-networks-are-not-supported">Legacy networks are not supported</a></li>
+    <li><a href="#changing-the-oauth-client-used-by-iap">Changing the OAuth client used by IAP</a></li>
+    <li><a href="#troubleshooting-ssl-certificate-errors">Troubleshooting SSL certificate errors</a></li>
+  </ul>
+</nav>
+      </div>
+    
+            
+
+	
+		
+			
+				
+			
+			
+
+
+
+  
+  
+
+		
+			
+				
+			
+			
+
+
+
+  
+  
+
+		
+	
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="https://gkcalat.github.io/kubeflow-docs/docs/">Kubeflow on Google Cloud</a>
+  </li>
+  <li class="breadcrumb-item active" aria-current="page">
+    <a href="https://gkcalat.github.io/kubeflow-docs/docs/troubleshooting/" aria-disabled="true" class="btn-link disabled">Troubleshooting Deployments on Google Cloud</a>
+  </li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Troubleshooting Deployments on Google Cloud</h1>
+	<div class="lead">Help fixing problems on Google Kubernetes Engine and Google Cloud</div>
+	<header class="article-meta">
+		
+
+  
+    
+      
+
+
+    
+      
+
+
+    
+  
+
+		
+			<p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 12 minute read &nbsp;</p>
+
+		
+	</header>    
+	
+
+<div class="alert alert-warning" role="alert">
+<h4 class="alert-heading">Out of date</h4>
+
+    This guide contains outdated information pertaining to Kubeflow 1.0. This guide
+needs to be updated for Kubeflow 1.1.
+
+</div>
+
+<p>This guide helps diagnose and fix issues you may encounter with Kubeflow on
+Google Kubernetes Engine (GKE) and Google Cloud.</p>
+<h2 id="before-you-start">Before you start</h2>
+<p>This guide covers troubleshooting specifically for
+[Kubeflow deployments on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/gke/deploy/).</p>
+<p>For more help, try the
+[general Kubeflow troubleshooting guide](/{{ .Site.Params.version_url_prefix }}docs/other-guides/troubleshooting).</p>
+<p>This guide assumes the following settings:</p>
+<ul>
+<li>
+<p>The <code>${KF_DIR}</code> environment variable contains the path to
+your Kubeflow application directory, which holds your Kubeflow configuration
+files. For example, <code>/opt/kubeflow-distribution/kubeflow/</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">export KF_DIR=&lt;path to your Kubeflow application directory&gt;
+</span></span></code></pre></div></li>
+<li>
+<p>The <code>${CONFIG_FILE}</code> environment variable contains the path to your
+Kubeflow configuration file.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">export CONFIG_FILE=${KF_DIR}/kfctl_gcp_iap.v1.0.2.yaml
+</span></span></code></pre></div><p>Or:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">export CONFIG_FILE=${KF_DIR}/kfctl_gcp_basic_auth.v1.0.2.yaml
+</span></span></code></pre></div></li>
+<li>
+<p>The <code>${KF_NAME}</code> environment variable contains the name of your Kubeflow
+deployment. You can find the name in your <code>${CONFIG_FILE}</code>
+configuration file, as the value for the <code>metadata.name</code> key.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">export KF_NAME=&lt;the name of your Kubeflow deployment&gt;
+</span></span></code></pre></div></li>
+<li>
+<p>The <code>${PROJECT}</code> environment variable contains the ID of your Google Cloud project.
+You can find the project ID in
+your <code>${CONFIG_FILE}</code> configuration file, as the value for the <code>project</code> key.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">export PROJECT=&lt;your Google Cloud project ID&gt;
+</span></span></code></pre></div></li>
+<li>
+<p>The <code>${ZONE}</code> environment variable contains the Google Cloud zone where your
+Kubeflow resources are deployed.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">export ZONE=&lt;your Google Cloud zone&gt;
+</span></span></code></pre></div></li>
+<li>
+<p>For further background about the above settings, see the guide to
+[deploying Kubeflow with the CLI](/{{ .Site.Params.version_url_prefix }}docs/gke/deploy/deploy-cli).</p>
+</li>
+</ul>
+<h2 id="troubleshooting-kubeflow-deployment-on-google-cloud">Troubleshooting Kubeflow deployment on Google Cloud</h2>
+<p>Here are some tips for troubleshooting Google Cloud.</p>
+<ul>
+<li>Make sure you are a Google Cloud project owner.</li>
+<li>Make sure you are using HTTPS.</li>
+<li>Check project <a href="https://console.cloud.google.com/iam-admin/quotas">quota page</a> to see if any service&rsquo;s current usage reached quota limit, increase them as needed.</li>
+<li>Check <a href="https://console.cloud.google.com/deployments">deployment manager page</a> and see if there’s a failed deployment.</li>
+<li>Check if endpoint is up: do <a href="https://mxtoolbox.com/DNSLookup.aspx">DNS lookup</a> against your Cloud Identity-Aware Proxy (Cloud IAP) URL and see if it resolves to the correct IP address.</li>
+<li>Check if certificate succeeded: <code>kubectl describe certificates -n istio-system</code> should give you certificate status.</li>
+<li>Check ingress status: <code>kubectl describe ingress -n istio-system</code></li>
+<li>Check if <a href="https://console.cloud.google.com/endpoints">endpoint entry</a> is created. There should be one entry with name <code>&lt;deployment&gt;.endpoints.&lt;project&gt;.cloud.goog</code>
+<ul>
+<li>If endpoint entry doesn&rsquo;t exist, check <code>kubectl describe cloudendpoint -n istio-system</code></li>
+</ul>
+</li>
+<li>If using IAP: make sure you [added](/{{ .Site.Params.version_url_prefix }}docs/gke/deploy/oauth-setup/) <code>https://&lt;deployment&gt;.endpoints.&lt;project&gt;.cloud.goog/_gcp_gatekeeper/authenticate</code>
+as an authorized redirect URI for the OAUTH credentials used to create the deployment.</li>
+<li>If using IAP: see the guide to
+[monitoring your Cloud IAP setup](/{{ .Site.Params.version_url_prefix }}docs/gke/deploy/monitor-iap-setup/).</li>
+<li>See the sections below for troubleshooting specific problems.</li>
+<li>Please <a href="https://github.com/kubeflow/kubeflow/issues/new?template=bug_report.md">report a bug</a> if you can&rsquo;t resolve the problem by following the above steps.</li>
+</ul>
+<h3 id="dns-name-not-registered">DNS name not registered</h3>
+<p>This section provides troubleshooting information for problems creating a DNS entry for your <a href="https://kubernetes.io/docs/concepts/services-networking/ingress/">ingress</a>. The ingress is a K8s resource
+that creates a Google Cloud loadbalancer to enable http(s) access to Kubeflow web services from outside
+the cluster. This section assumes
+you are using <a href="https://cloud.google.com/endpoints/">Cloud Endpoints</a> and a DNS name of the following pattern</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://${KF_NAME}.endpoints.${PROJECT}.cloud.goog
+</span></span></code></pre></div><p>Symptoms:</p>
+<ul>
+<li>
+<p>When you access the URL in Chrome you get the error: <strong>server IP address could not be found</strong></p>
+</li>
+<li>
+<p>nslookup for the domain name doesn&rsquo;t return the IP address associated with the ingress</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">nslookup ${KF_NAME}.endpoints.${PROJECT}.cloud.goog
+</span></span><span class="line"><span class="cl">Server:   127.0.0.1
+</span></span><span class="line"><span class="cl">Address:  127.0.0.1#53
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">** server can&#39;t find ${KF_NAME}.endpoints.${PROJECT}.cloud.goog: NXDOMAIN
+</span></span></code></pre></div></li>
+</ul>
+<p>Troubleshooting</p>
+<ol>
+<li>
+<p>Check the <code>cloudendpoints</code> resource</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">kubectl get cloudendpoints -o yaml ${KF_NAME}
+</span></span><span class="line"><span class="cl">kubectl describe cloudendpoints ${KF_NAME}
+</span></span></code></pre></div><ul>
+<li>Check if there are errors indicating problems creating the endpoint</li>
+</ul>
+</li>
+<li>
+<p>The status of the <code>cloudendpoints</code> object will contain the cloud operation used to register the operation</p>
+<ul>
+<li>
+<p>For example</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> status:
+</span></span><span class="line"><span class="cl">   config: &#34;&#34;
+</span></span><span class="line"><span class="cl">   configMapHash: &#34;&#34;
+</span></span><span class="line"><span class="cl">   configSubmit: operations/serviceConfigs.jlewi-1218-001.endpoints.cloud-ml-dev.cloud.goog:43fe6c6f-eb9c-41d0-ac85-b547fc3e6e38
+</span></span><span class="line"><span class="cl">   endpoint: jlewi-1218-001.endpoints.cloud-ml-dev.cloud.goog
+</span></span><span class="line"><span class="cl">   ingressIP: 35.227.243.83
+</span></span><span class="line"><span class="cl">   jwtAudiences: null
+</span></span><span class="line"><span class="cl">   lastAppliedSig: 4f3b903a06a683b380bf1aac1deca72792472429
+</span></span><span class="line"><span class="cl">   observedGeneration: 1
+</span></span><span class="line"><span class="cl">   stateCurrent: ENDPOINT_SUBMIT_PENDING
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>
+<p>You can check the status of the operation by running:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">gcloud --project=${PROJECT} endpoints operations describe ${OPERATION}
+</span></span></code></pre></div><ul>
+<li>Operation is everything after <code>operations/</code> in the <code>configSubmit</code> field</li>
+</ul>
+</li>
+</ul>
+<h3 id="404-page-not-found-when-accessing-central-dashboard">404 Page Not Found When Accessing Central Dashboard</h3>
+<p>This section provides troubleshooting information for 404s, page not found, being return by the central dashboard which is served at</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://${KUBEFLOW_FQDN}/
+</span></span></code></pre></div><ul>
+<li><em><strong>KUBEFLOW_FQDN</strong></em> is your project&rsquo;s OAuth web app URI domain name <code>&lt;name&gt;.endpoints.&lt;project&gt;.cloud.goog</code></li>
+<li>Since we were able to sign in this indicates the Ambassador reverse proxy is up and healthy we can confirm this is the case by running the following command</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">kubectl -n ${NAMESPACE} get pods -l service=envoy
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">NAME                     READY     STATUS    RESTARTS   AGE
+</span></span><span class="line"><span class="cl">envoy-76774f8d5c-lx9bd   2/2       Running   2          4m
+</span></span><span class="line"><span class="cl">envoy-76774f8d5c-ngjnr   2/2       Running   2          4m
+</span></span><span class="line"><span class="cl">envoy-76774f8d5c-sg555   2/2       Running   2          4m
+</span></span></code></pre></div><ul>
+<li>
+<p>Try other services to see if they&rsquo;re accessible for example</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://${KUBEFLOW_FQDN}/whoami
+</span></span><span class="line"><span class="cl">https://${KUBEFLOW_FQDN}/tfjobs/ui
+</span></span><span class="line"><span class="cl">https://${KUBEFLOW_FQDN}/hub
+</span></span></code></pre></div></li>
+<li>
+<p>If other services are accessible then we know its a problem specific to the central dashboard and not ingress</p>
+</li>
+<li>
+<p>Check that the centraldashboard is running</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">kubectl get pods -l app=centraldashboard
+</span></span><span class="line"><span class="cl">NAME                                READY     STATUS    RESTARTS   AGE
+</span></span><span class="line"><span class="cl">centraldashboard-6665fc46cb-592br   1/1       Running   0          7h
+</span></span></code></pre></div></li>
+<li>
+<p>Check a service for the central dashboard exists</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">kubectl get service -o yaml centraldashboard
+</span></span></code></pre></div></li>
+<li>
+<p>Check that an Ambassador route is properly defined</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">kubectl get service centraldashboard -o jsonpath=&#39;{.metadata.annotations.getambassador\.io/config}&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">apiVersion: ambassador/v0
+</span></span><span class="line"><span class="cl">  kind:  Mapping
+</span></span><span class="line"><span class="cl">  name: centralui-mapping
+</span></span><span class="line"><span class="cl">  prefix: /
+</span></span><span class="line"><span class="cl">  rewrite: /
+</span></span><span class="line"><span class="cl">  service: centraldashboard.kubeflow,
+</span></span></code></pre></div></li>
+<li>
+<p>Check the logs of Ambassador for errors. See if there are errors like the following indicating
+an error parsing the route.If you are using the new Stackdriver Kubernetes monitoring you can use the following filter in the <a href="https://console.cloud.google.com/logs/viewer">stackdriver console</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> resource.type=&#34;k8s_container&#34;
+</span></span><span class="line"><span class="cl"> resource.labels.location=${ZONE}
+</span></span><span class="line"><span class="cl"> resource.labels.cluster_name=${CLUSTER}
+</span></span><span class="line"><span class="cl"> metadata.userLabels.service=&#34;ambassador&#34;
+</span></span><span class="line"><span class="cl">&#34;could not parse YAML&#34;
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="502-server-error">502 Server Error</h3>
+<p>A 502 usually means traffic isn&rsquo;t even making it to the envoy reverse proxy. And it
+usually indicates the loadbalancer doesn&rsquo;t think any backends are healthy.</p>
+<ul>
+<li>In Cloud Console select Network Services -&gt; Load Balancing
+<ul>
+<li>
+<p>Click on the load balancer (the name should contain the name of the ingress)</p>
+</li>
+<li>
+<p>The exact name can be found by looking at the <code>ingress.kubernetes.io/url-map</code> annotation on your ingress object</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">URLMAP=$(kubectl --namespace=${NAMESPACE} get ingress envoy-ingress -o jsonpath=&#39;{.metadata.annotations.ingress\.kubernetes\.io/url-map}&#39;)
+</span></span><span class="line"><span class="cl">echo ${URLMAP}
+</span></span></code></pre></div></li>
+<li>
+<p>Click on your loadbalancer</p>
+</li>
+<li>
+<p>This will show you the backend services associated with the load balancer</p>
+<ul>
+<li>
+<p>There is 1 backend service for each K8s service the ingress rule routes traffic too</p>
+</li>
+<li>
+<p>The named port will correspond to the NodePort a service is using</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">NODE_PORT=$(kubectl --namespace=${NAMESPACE} get svc envoy -o jsonpath=&#39;{.spec.ports[0].nodePort}&#39;)
+</span></span><span class="line"><span class="cl">BACKEND_NAME=$(gcloud compute --project=${PROJECT} backend-services list --filter=name~k8s-be-${NODE_PORT}- --format=&#39;value(name)&#39;)
+</span></span><span class="line"><span class="cl">gcloud compute --project=${PROJECT} backend-services get-health --global ${BACKEND_NAME}
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>Make sure the load balancer reports the backends as healthy</p>
+<ul>
+<li>
+<p>If the backends aren&rsquo;t reported as healthy check that the pods associated with the K8s service are up and running</p>
+</li>
+<li>
+<p>Check that health checks are properly configured</p>
+<ul>
+<li>Click on the health check associated with the backend service for envoy</li>
+<li>Check that the path is /healthz and corresponds to the path of the readiness probe on the envoy pods</li>
+<li>See <a href="https://github.com/kubernetes-retired/contrib/tree/master/ingress/controllers/gce/examples/health_checks">K8s docs</a> for important information about how health checks are determined from readiness probes.</li>
+</ul>
+</li>
+<li>
+<p>Check firewall rules to ensure traffic isn&rsquo;t blocked from the Google Cloud loadbalancer</p>
+<ul>
+<li>
+<p>The firewall rule should be added automatically by the ingress but its possible it got deleted if you have some automatic firewall policy enforcement. You can recreate the firewall rule if needed with a rule like this</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">gcloud compute firewall-rules create $NAME \
+</span></span><span class="line"><span class="cl">--project $PROJECT \
+</span></span><span class="line"><span class="cl">--allow tcp:$PORT \
+</span></span><span class="line"><span class="cl">--target-tags $NODE_TAG \
+</span></span><span class="line"><span class="cl">--source-ranges 130.211.0.0/22,35.191.0.0/16
+</span></span></code></pre></div></li>
+<li>
+<p>To get the node tag</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># From the Kubernetes Engine cluster get the name of the managed instance group
+</span></span><span class="line"><span class="cl">gcloud --project=$PROJECT container clusters --zone=$ZONE describe $CLUSTER
+</span></span><span class="line"><span class="cl"># Get the template associated with the MIG
+</span></span><span class="line"><span class="cl">gcloud --project=kubeflow-rl compute instance-groups managed describe --zone=${ZONE} ${MIG_NAME}
+</span></span><span class="line"><span class="cl"># Get the instance tags from the template
+</span></span><span class="line"><span class="cl">gcloud --project=kubeflow-rl compute instance-templates describe ${TEMPLATE_NAME}
+</span></span></code></pre></div><p>For more info <a href="https://cloud.google.com/compute/docs/load-balancing/health-checks">see Google Cloud HTTP health check docs</a></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>In Stackdriver Logging look at the Cloud Http Load Balancer logs</p>
+<ul>
+<li>Logs are labeled with the forwarding rule</li>
+<li>The forwarding rules are available via the annotations on the ingress
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ingress.kubernetes.io/forwarding-rule
+</span></span><span class="line"><span class="cl">ingress.kubernetes.io/https-forwarding-rule
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>Verify that requests are being properly routed within the cluster</p>
+</li>
+<li>
+<p>Connect to one of the envoy proxies</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">kubectl exec -ti `kubectl get pods --selector=service=envoy -o jsonpath=&#39;{.items[0].metadata.name}&#39;` /bin/bash
+</span></span></code></pre></div></li>
+<li>
+<p>Install curl in the pod</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt-get update &amp;&amp; apt-get install -y curl
+</span></span></code></pre></div></li>
+<li>
+<p>Verify access to the whoami app</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">curl -L -s -i http://envoy:8080/noiap/whoami
+</span></span></code></pre></div></li>
+<li>
+<p>If this doesn&rsquo;t return a 200 OK response; then there is a problem with the K8s resources</p>
+<ul>
+<li>Check the pods are running</li>
+<li>Check services are pointing at the points (look at the endpoints for the various services)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="gke-certificate-fails-to-be-provisioned">GKE Certificate Fails To Be Provisioned</h3>
+<p>A common symptom of your certificate failing to be provisioned is SSL errors like <code>ERR_SSL_VERSION_OR_CIPHER_MISMATCH</code> when
+you try to access the Kubeflow https endpoint.</p>
+<p>To troubleshoot check the status of your Google Kubernetes Engine managed certificate</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">kubectl -n istio-system describe managedcertificate
+</span></span></code></pre></div><p>If the certificate is in status <code>FailedNotVisible</code> then it means Google Cloud failed to provision the certificate
+because it could not verify that you owned the domain by doing an ACME challenge. In order for Google Cloud to provision your certificate</p>
+<ol>
+<li>Your ingress must be created in order to associated a Google Cloud Load Balancer(GCLB) with the IP address for your endpoint</li>
+<li>There must be a DNS entry mapping your domain name to the IP.</li>
+</ol>
+<p>If there is a problem preventing either of the above then Google Cloud will be unable to provision your certificate
+and eventually enter the permanent failure state <code>FailedNotVisible</code> indicating your endpoint isn&rsquo;t accessible. The most common
+cause is the ingress can&rsquo;t be created because the K8s secret containing OAuth credentials doesn&rsquo;t
+exist.</p>
+<p>To fix this you must first resolve the underlying problems preventing your ingress or DNS entry from being created.
+Once the underlying problem has been fixed you can follow the steps below to force a new certificate to be
+generated.</p>
+<p>You can fix the certificate by performing the following steps to delete the existing certificate and create a new one.</p>
+<ol>
+<li>
+<p>Get the name of the Google Cloud certificate</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">kubectl -n istio-system describe managedcertificate gke-certificate
+</span></span></code></pre></div><ul>
+<li>The status will contain <code>Certificate Name</code> which will start with <code>mcrt</code> make a note of this.</li>
+</ul>
+</li>
+<li>
+<p>Delete the ingress</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">kubectl -n istio-system delete ingress envoy-ingress
+</span></span></code></pre></div></li>
+<li>
+<p>Ensure the certificate was deleted</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">gcloud --project=${PROJECT} compute ssl-certificates list
+</span></span></code></pre></div><ul>
+<li>Make sure the certificate obtained in the first step no longer exists</li>
+</ul>
+</li>
+<li>
+<p>Reapply kubeflow in order to recreate the ingress and certificate</p>
+<ul>
+<li>If you deployed with <code>kfctl</code> rerun <code>kfctl apply</code></li>
+<li>If you deployed using the Google Cloud blueprint rerun <code>make apply-kubeflow</code></li>
+</ul>
+</li>
+<li>
+<p>Monitor the certificate to make sure it can be provisioned</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">kubectl --context=gcp-private-0527 -n istio-system describe managedcertificate gke-certificate
+</span></span></code></pre></div></li>
+<li>
+<p>Since the ingress has been recreated we need to restart the pods that configure it</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">kubectl -n istio-system delete pods -l service=backend-updater
+</span></span><span class="line"><span class="cl">kubectl -n istio-system delete pods -l service=iap-enabler
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="problems-with-ssl-certificate-from-lets-encrypt">Problems with SSL certificate from Let&rsquo;s Encrypt</h3>
+<p>As of Kubeflow 1.0, Kubeflow should be using Google Kubernetes Engine Managed Certificates and no longer using Let&rsquo;s Encrypt.</p>
+<p>See the guide to
+[monitoring your Cloud IAP setup](/{{ .Site.Params.version_url_prefix }}docs/gke/deploy/monitor-iap-setup/).</p>
+<h2 id="envoy-pods-crash-looping-root-cause-is-backend-quota-exceeded">Envoy pods crash-looping: root cause is backend quota exceeded</h2>
+<p>If your logs show the
+<a href="https://istio.io/docs/concepts/what-is-istio/#envoy">Envoy</a> pods crash-looping,
+the root cause may be that you have exceeded your quota for some
+backend services such as loadbalancers.
+This is particularly likely if you have multiple, differently named deployments
+in the same Google Cloud project using <a href="https://cloud.google.com/iap/">Cloud IAP</a>.</p>
+<h3 id="the-error">The error</h3>
+<p>The error looks like this for the pod&rsquo;s Envoy container:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">kubectl logs -n kubeflow envoy-79ff8d86b-z2snp envoy
+</span></span><span class="line"><span class="cl">[2019-01-22 00:19:44.400][1][info][main] external/envoy/source/server/server.cc:184] initializing epoch 0 (hot restart version=9.200.16384.127.options=capacity=16384, num_slots=8209 hash=228984379728933363)
+</span></span><span class="line"><span class="cl">[2019-01-22 00:19:44.400][1][critical][main] external/envoy/source/server/server.cc:71] error initializing configuration &#39;/etc/envoy/envoy-config.json&#39;: unable to read file: /etc/envoy/envoy-config.json
+</span></span></code></pre></div><p>And the Cloud IAP container shows a message like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Waiting for backend id PROJECT=&lt;your-project&gt; NAMESPACE=kubeflow SERVICE=envoy filter=name~k8s-be-30352-...
+</span></span></code></pre></div><h3 id="diagnosing-the-cause">Diagnosing the cause</h3>
+<p>You can verify the cause of the problem by entering the following command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">kubectl -n istio-system describe ingress
+</span></span></code></pre></div><p>Look for something like this in the output:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Events:
+</span></span><span class="line"><span class="cl">  Type     Reason  Age                  From                     Message
+</span></span><span class="line"><span class="cl">  ----     ------  ----                 ----                     -------
+</span></span><span class="line"><span class="cl">  Warning  Sync    14m (x193 over 19h)  loadbalancer-controller  Error during sync: googleapi: Error 403: Quota &#39;BACKEND_SERVICES&#39; exceeded. Limit: 5.0 globally., quotaExceeded
+</span></span></code></pre></div><h3 id="fixing-the-problem">Fixing the problem</h3>
+<p>If you have any redundant Kubeflow deployments, you can delete them using
+the <a href="https://cloud.google.com/deployment-manager/docs/">Deployment Manager</a>.</p>
+<p>Alternatively, you can request more backend services quota on the Google Cloud Console.</p>
+<ol>
+<li>Go to the <a href="https://console.cloud.google.com/iam-admin/quotas?metric=Backend%20services">quota settings for backend services on the Google Cloud
+Console</a>.</li>
+<li>Click <strong>EDIT QUOTAS</strong>. A quota editing form opens on the right of the
+screen.</li>
+<li>Follow the form instructions to apply for more quota.</li>
+</ol>
+<h2 id="legacy-networks-are-not-supported">Legacy networks are not supported</h2>
+<p>Cloud Filestore and Google Kubernetes Engine try to use the network named <code>default</code> by default. For older projects,
+this will be a legacy network which is incompatible with Cloud Filestore and newer Google Kubernetes Engine features
+like private clusters. This will
+manifest as the error <strong>&ldquo;default is invalid; legacy networks are not supported&rdquo;</strong> when
+deploying Kubeflow.</p>
+<p>Here&rsquo;s an example error when deploying Cloud Filestore:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ERROR: (gcloud.deployment-manager.deployments.update) Error in Operation [operation-1533189457517-5726d7cfd19c9-e1b0b0b5-58ca11b8]: errors:
+</span></span><span class="line"><span class="cl">- code: RESOURCE_ERROR
+</span></span><span class="line"><span class="cl">  location: /deployments/jl-0801-b-gcfs/resources/filestore
+</span></span><span class="line"><span class="cl">  message: &#39;{&#34;ResourceType&#34;:&#34;gcp-types/file-v1beta1:projects.locations.instances&#34;,&#34;ResourceErrorCode&#34;:&#34;400&#34;,&#34;ResourceErrorMessage&#34;:{&#34;code&#34;:400,&#34;message&#34;:&#34;network
+</span></span><span class="line"><span class="cl">    default is invalid; legacy networks are not supported.&#34;,&#34;status&#34;:&#34;INVALID_ARGUMENT&#34;,&#34;statusMessage&#34;:&#34;Bad
+</span></span><span class="line"><span class="cl">    Request&#34;,&#34;requestPath&#34;:&#34;https://file.googleapis.com/v1beta1/projects/cloud-ml-dev/locations/us-central1-a/instances&#34;,&#34;httpMethod&#34;:&#34;POST&#34;}}&#39;
+</span></span></code></pre></div><p>To fix this we can create a new network:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd ${KF_DIR}
+</span></span><span class="line"><span class="cl">cp .cache/master/deployment/gke/deployment_manager_configs/network.* \
+</span></span><span class="line"><span class="cl">   ./gcp_config/
+</span></span></code></pre></div><p>Edit <code>network.yaml </code>to set the name for the network.</p>
+<p>Edit <code>gcfs.yaml</code> to use the name of the newly created network.</p>
+<p>Apply the changes.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd ${KF_DIR}
+</span></span><span class="line"><span class="cl">kfctl apply -V -f ${CONFIG}
+</span></span></code></pre></div><!-- ## CPU platform unavailable in requested zone
+
+By default, we set minCpuPlatform to `Intel Haswell` to make sure AVX2 is supported.
+See [troubleshooting](/{{ .Site.Params.version_url_prefix }}docs/other-guides/troubleshooting/) for more details.
+
+If you encounter this `CPU platform unavailable` error (might manifest as
+`Cluster is currently being created, deleted, updated or repaired and cannot be updated.`),
+you can change the [zone](https://github.com/kubeflow/manifests/tree/master/gcp/deployment_manager_configs/cluster-kubeflow.yaml#L31)
+or change the [minCpuPlatform](https://github.com/kubeflow/manifests/tree/master/gcp/deployment_manager_configs/cluster.jinja#L131).
+See [here](https://cloud.google.com/compute/docs/regions-zones/#available)
+for available zones and cpu platforms. -->
+<h2 id="changing-the-oauth-client-used-by-iap">Changing the OAuth client used by IAP</h2>
+<p>If you need to change the OAuth client used by IAP, you can run the following commands
+to replace the Kubernetes secret containing the ID and secret.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">kubectl -n kubeflow delete secret kubeflow-oauth
+</span></span><span class="line"><span class="cl">kubectl -n kubeflow create secret generic kubeflow-oauth \
+</span></span><span class="line"><span class="cl">       --from-literal=client_id=${CLIENT_ID} \
+</span></span><span class="line"><span class="cl">       --from-literal=client_secret=${CLIENT_SECRET}
+</span></span></code></pre></div><h2 id="troubleshooting-ssl-certificate-errors">Troubleshooting SSL certificate errors</h2>
+<p>This section describes how to enable service management API to avoid managed certificates failure.</p>
+<p>To check your certificate:</p>
+<ol>
+<li>
+<p>Run the following command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">kubectl -n istio-system describe managedcertificate gke-certificate
+</span></span></code></pre></div><p>Make sure the certificate status is either <code>Active</code> or <code>Provisioning</code> which means it is not ready. For more details on certificate status, refer to the <a href="https://cloud.google.com/load-balancing/docs/ssl-certificates?hl=en_US&amp;_ga=2.164380342.-821786221.1568995229#certificate-resource-status">certificate statuses descriptions</a> section. Also, make sure the domain name is correct.</p>
+</li>
+<li>
+<p>Run the following command to look for the errors using the certificate name from the previous step:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">gcloud beta --project=${PROJECT} compute ssl-certificates describe --global ${CERTIFICATE_NAME}
+</span></span></code></pre></div></li>
+<li>
+<p>Run the following command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">kubectl -n istio-system get ingress envoy-ingress -o yaml
+</span></span></code></pre></div><p>Make sure of the following:</p>
+<ul>
+<li>
+<p><code>networking.gke.io/managed-certificates</code> annotation value points to the name of the Kubernetes managed certificate resource and is <code>gke-certificate</code>;</p>
+</li>
+<li>
+<p>public IP address that is displayed in the status is assigned. See the example of IP address below:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">status:
+</span></span><span class="line"><span class="cl">  loadBalancer:
+</span></span><span class="line"><span class="cl">    ingress:
+</span></span><span class="line"><span class="cl">     - ip: 35.186.212.202
+</span></span></code></pre></div></li>
+<li>
+<p>DNS entry for the domain has propagated. To verify this, use the following <code>nslookup</code> command example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">`nslookup ${DOMAIN}`
+</span></span></code></pre></div></li>
+<li>
+<p>domain name is the fully qualified domain name which be the host value in the <a href="https://kubernetes.io/docs/concepts/services-networking/ingress/">ingress</a>. See the example below:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">${KF_APP_NAME}.endpoints.${PROJECT}.cloud.goog
+</span></span></code></pre></div></li>
+</ul>
+<p>Note that managed certificates cannot provision the certificate if the DNS lookup does not work properly.</p>
+</li>
+</ol>
+
+	
+		<style>
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<div class="card mt-4 col-12 col-sm-6">
+  <div class="card-body">
+    <h3 class="card-title">Feedback</h3>
+    <p class="card-text">Was this page helpful?</p>
+    <button class="btn btn-primary feedback--answer feedback--answer-yes" style="width: 5rem;">Yes</button>
+    <button class="btn btn-primary feedback--answer feedback--answer-no" style="width: 5rem;">No</button>
+    <p class="feedback--response feedback--response-yes">
+      Thank you! <a href="https://github.com/googlestaging/kubeflow-gke-docs/issues/new">Send your feedback to us</a>.
+    </p>
+    <p class="feedback--response feedback--response-no">
+      Sorry to hear that. Please <a href="https://github.com/googlestaging/kubeflow-gke-docs/issues/new">tell us how we can improve</a>.
+    </p>
+  </div>
+</div>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof ga !== 'function') return;
+    const args = {
+      command: 'send',
+      hitType: 'event',
+      category: 'Helpful',
+      action: 'click',
+      label: window.location.pathname,
+      value: value
+    };
+    ga(args.command, args.hitType, args.category, args.action, args.label, args.value);
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(1);
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+
+		<br />
+	
+	
+	
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark pt-3 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Kubeflow mailing list" aria-label="Kubeflow mailing list">
+    <a class="text-white" target="_blank" rel="noopener" href="https://www.kubeflow.org/docs/about/community/#kubeflow-mailing-list" aria-label="Kubeflow mailing list">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Slack" aria-label="Slack">
+    <a class="text-white" target="_blank" rel="noopener" href="https://www.kubeflow.org/docs/about/community/#kubeflow-slack" aria-label="Slack">
+      <i class="fab fa-slack"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Twitter" aria-label="Twitter">
+    <a class="text-white" target="_blank" rel="noopener" href="https://twitter.com/kubeflow" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Stack Overflow" aria-label="Stack Overflow">
+    <a class="text-white" target="_blank" rel="noopener" href="https://stackoverflow.com/questions/tagged/kubeflow" aria-label="Stack Overflow">
+      <i class="fab fa-stack-overflow"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2022 The Kubeflow Authors. | Documentation Distributed under CC BY 4.0</small>
+        <p><small class="ml-1"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></small></p>
+	
+		
+	
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
+    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/GoogleCloudPlatform/kubeflow-distribution" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Kubeflow community calendar" aria-label="Kubeflow community calendar">
+    <a class="text-white" target="_blank" rel="noopener" href="https://www.kubeflow.org/docs/about/community/#kubeflow-community-calendars" aria-label="Kubeflow community calendar">
+      <i class="fa fa-calendar"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="../../kubeflow-docs/js/main.min.301c0110334bec1b4445867d27dc7dd69b2df859154ccf252005508bc860cc5a.js" integrity="sha256-MBwBEDNL7BtERYZ9J9x91pst&#43;FkVTM8lIAVQi8hgzFo=" crossorigin="anonymous"></script>
+<script src='../../kubeflow-docs/js/tabpane-persist.js'></script>
+
+  </body>
+</html>
