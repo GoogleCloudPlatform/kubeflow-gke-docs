@@ -1,6 +1,6 @@
 # Base configuration
 ##########################################################
-baseURL = "https://googlecloudplatform.github.io/kubeflow-gke-docs"
+baseURL = "https://gkcalat.github.io/kubeflow-docs"
 title = "Kubeflow on Google Cloud Platform"
 description = "Open-source machine learning platform running on Google Kubernetes Engine"
 
@@ -115,7 +115,7 @@ relativeURLs = true
     name = "Manifests"
     weight = -99
     pre = "<i class='fa-brands fa-github pr-2'></i>"
-    url = "https://github.com/googlecloudplatform/kubeflow-distribution"
+    url = "https://github.com/GoogleCloudPlatform/kubeflow-distribution"
 ##########################################################
 # Language configuration
 ##########################################################
@@ -163,29 +163,29 @@ relativeURLs = true
   version_url_prefix = ""
   # A link to latest version of the docs. Used in the "version-banner" partial to
   # point people to the main doc site.
-  url_latest_version = "https://googlecloudplatform.github.io/kubeflow-gke-docs/docs"
+  url_latest_version = "https://gkcalat.github.io/kubeflow-docs/docs"
   
   # These entries appear in the drop-down menu at the top of the website.
   [[params.versions]]
     # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
     version = "v1.6 (latest)"
     githubbranch = "v1.6-release"
-    url = "https://googlecloudplatform.github.io/kubeflow-gke-docs/docs"
+    url = "https://gkcalat.github.io/kubeflow-docs/docs"
   [[params.versions]]
     version = "v1.5"
     githubbranch = "v1.5-release"
-    url = "https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.5/docs"
+    url = "https://gkcalat.github.io/kubeflow-docs/v1.5/docs"
   [[params.versions]]
     version = "v1.4"
     githubbranch = "v1.4-release"
-    url = "https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.4/docs"
+    url = "https://gkcalat.github.io/kubeflow-docs/v1.4/docs"
   [[params.versions]]
     version = "dev"
     githubbranch = "main"
-    url = "https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs"
+    url = "https://gkcalat.github.io/kubeflow-docs/dev/docs"
 
   # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-  github_repo = "https://github.com/googlecloudplatform/kubeflow-gke-docs"
+  github_repo = "https://github.com/googlestaging/kubeflow-gke-docs"
   # Specify a value here if your content directory is not in your repo's root directory
   # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
   # github_subdir = ""
@@ -194,7 +194,7 @@ relativeURLs = true
   gcs_engine_id = "b698ddb9e4f3e4c92"
 
   # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-  github_project_repo = "https://github.com/googlecloudplatform/kubeflow-distribution"
+  github_project_repo = "https://github.com/GoogleCloudPlatform/kubeflow-distribution"
 
   # Enable Algolia DocSearch
   algolia_docsearch = false
@@ -229,8 +229,8 @@ relativeURLs = true
       [params.ui.feedback]
         enable = true
         # The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
-        yes = 'Thank you! <a href="https://github.com/googlecloudplatform/kubeflow-gke-docs/issues/new">Send your feedback to us</a>.'
-        no = 'Sorry to hear that. Please <a href="https://github.com/googlecloudplatform/kubeflow-gke-docs/issues/new">tell us how we can improve</a>.'
+        yes = 'Thank you! <a href="https://github.com/googlestaging/kubeflow-gke-docs/issues/new">Send your feedback to us</a>.'
+        no = 'Sorry to hear that. Please <a href="https://github.com/googlestaging/kubeflow-gke-docs/issues/new">tell us how we can improve</a>.'
 
       # Adds a reading time to the top of each doc.
       # If you want this feature, but occasionally need to remove the Reading time from a single page, 
@@ -263,7 +263,7 @@ relativeURLs = true
     # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
     [[params.links.developer]]
       name = "GitHub"
-      url = "https://github.com/googlecloudplatform/kubeflow-distribution"
+      url = "https://github.com/GoogleCloudPlatform/kubeflow-distribution"
       icon = "fab fa-github"
       desc = "Kubeflow on Google Cloud repo"
     [[params.links.developer]]
