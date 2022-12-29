@@ -28,17 +28,17 @@ to manage Google Cloud infrastructure using GitOps.
 
     You can install specific version of kubectl by following instruction (Example: [Install kubectl on Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)). Latest patch version of kubectl from `v1.17` to `v1.19` works well too.
 
-    Note: Starting from Kubeflow 1.4, it requires `kpt v1.0.0-beta.6` or above to operate in `GoogleCloudPlatform/kubeflow-distribution` repository. gcloud hasn't caught up with this kpt version yet, [install kpt](https://kpt.dev/installation/) separately from https://github.com/GoogleContainerTools/kpt/tags for now. Note that kpt requires docker to be installed.
+    Note: Starting from Kubeflow 1.4, it requires `kpt v1.0.0-beta.6` or above to operate in `googlecloudplatform/kubeflow-distribution` repository. gcloud hasn't caught up with this kpt version yet, [install kpt](https://kpt.dev/installation/) separately from https://github.com/GoogleContainerTools/kpt/tags for now. Note that kpt requires docker to be installed.
 
 
-### Fetch GoogleCloudPlatform/kubeflow-distribution package
+### Fetch googlecloudplatform/kubeflow-distribution package
 
-The management cluster manifests live in GitHub repository [GoogleCloudPlatform/kubeflow-distribution](https://github.com/GoogleCloudPlatform/kubeflow-distribution/), use the following commands to pull Kubeflow manifests:
+The management cluster manifests live in GitHub repository [googlecloudplatform/kubeflow-distribution](https://github.com/googlecloudplatform/kubeflow-distribution/), use the following commands to pull Kubeflow manifests:
 
 1. Clone the GitHub repository and check out the v{{% latest-version %}} tag:
 
     ```bash
-    git clone https://github.com/GoogleCloudPlatform/kubeflow-distribution.git 
+    git clone https://github.com/googlecloudplatform/kubeflow-distribution.git 
     cd kubeflow-distribution
     git checkout tags/v{{% latest-version %}} -b v{{% latest-version %}}
     ```
@@ -47,7 +47,7 @@ The management cluster manifests live in GitHub repository [GoogleCloudPlatform/
 
     ```bash
     # Check out Kubeflow v{{% latest-version %}} blueprints
-    kpt pkg get https://github.com/GoogleCloudPlatform/kubeflow-distribution.git@v{{% latest-version %}} kubeflow-distribution
+    kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@v{{% latest-version %}} kubeflow-distribution
     cd kubeflow-distribution
     ```
 
@@ -146,7 +146,7 @@ deployment process, so that you can customize your management cluster if necessa
 
 ### Config Controller
 
-Management cluster is a tool for managing Google Cloud services like KRM, for example: GKE container cluster, MySQL database, etc. 
+Management cluster is a tool for managing Google Cloud services like KRM, for example: Google Kubernetes Engine container cluster, MySQL database, etc. 
 And you can use one Management cluster for multiple Kubeflow clusters, across multiple Google Cloud projects.
 This capability is offered by [Config Connector](https://cloud.google.com/config-connector/docs/how-to/getting-started). 
 
@@ -167,7 +167,7 @@ Inside the Config Controller, we manage Google Cloud resources in namespace mode
 within this project to manage Config Connector. It is the prerequisite for managing resources in other Google Cloud projects.
 
 `namespace with the same name as your Kubeflow clusters' Google Cloud project name` is the resource pool for Kubeflow cluster's Google Cloud project.
-For each Kubeflow Google Cloud project, you will have service account with pattern `kcc-<kf-project-name>@<management-project-name>.iam.gserviceaccount.com` in `config-control` namespace, and it needs to have owner permission to `${KF_PROJECT}`, you will perform this step during [Deploy Kubeflow cluster](/docs/deploy/deploy-cli/). After setup, your Google Cloud resources in Kubeflow cluster project will be deployed to the namespace with name `${KF_PROJECT}` in the management cluster.
+For each Kubeflow Google Cloud project, you will have service account with pattern `kcc-<kf-project-name>@<management-project-name>.iam.gserviceaccount.com` in `config-control` namespace, and it needs to have owner permission to `${KF_PROJECT}`, you will perform this step during [Deploy Kubeflow cluster](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli/). After setup, your Google Cloud resources in Kubeflow cluster project will be deployed to the namespace with name `${KF_PROJECT}` in the management cluster.
 
 Your management cluster directory contains the following file:
 
@@ -197,7 +197,7 @@ kubectl --context=${MGMT_NAME} get IAMServiceAccount <service-account-name> -n $
 
   The management cluster is very lightweight cluster that runs [Cloud Config Connector](https://cloud.google.com/config-connector/docs/overview). Cloud Config Connector makes it easier to configure Google Cloud resources using YAML and Kustomize.
 
-For a more detailed explanation of the drastic changes happened in Kubeflow v1.1 on Google Cloud, read [GoogleCloudPlatform/kubeflow-distribution #123](https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/123).
+For a more detailed explanation of the drastic changes happened in Kubeflow v1.1 on Google Cloud, read [googlecloudplatform/kubeflow-distribution #123](https://github.com/googlecloudplatform/kubeflow-distribution/issues/123).
 
 ## Next steps
-* [Deploy Kubeflow](/docs/deploy/deploy-cli) using kubectl, kustomize and kpt.
+* [Deploy Kubeflow](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli) using kubectl, kustomize and kpt.

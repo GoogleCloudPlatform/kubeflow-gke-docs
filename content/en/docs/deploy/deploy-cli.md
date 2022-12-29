@@ -15,20 +15,20 @@ Before installing Kubeflow on the command line:
 
 1. You must have created a management cluster and installed Config Connector.
 
-   * If you don't have a management cluster follow the [instructions](/docs/deploy/management-setup/)
+   * If you don't have a management cluster follow the [instructions](/{{ .Site.Params.version_url_prefix }}docs/deploy/management-setup/)
 
    * Your management cluster will need a namespace setup to administer the Google Cloud project where Kubeflow will be deployed. This step will be included in later step of current page.
 
 2. You need to use Linux or [Cloud Shell](https://cloud.google.com/shell/) for ASM installation. Currently ASM installation doesn't work on macOS because it [comes with an old version of bash](https://cloud.google.com/service-mesh/docs/scripted-install/asm-onboarding#installing_required_tools).
 
 3. Make sure that your Google Cloud project meets the minimum requirements
-  described in the [project setup guide](/docs/deploy/project-setup/).
+  described in the [project setup guide](/{{ .Site.Params.version_url_prefix }}docs/deploy/project-setup/).
 
 4. Follow the guide
-  [setting up OAuth credentials](/docs/deploy/oauth-setup/)
+  [setting up OAuth credentials](/{{ .Site.Params.version_url_prefix }}docs/deploy/oauth-setup/)
   to create OAuth credentials for [Cloud Identity-Aware Proxy (Cloud
   IAP)](https://cloud.google.com/iap/docs/).
-    * Unfortunately [GKE's BackendConfig](https://cloud.google.com/kubernetes-engine/docs/concepts/backendconfig)
+    * Unfortunately [Google Kubernetes Engine's BackendConfig](https://cloud.google.com/kubernetes-engine/docs/concepts/backendconfig)
   currently doesn't support creating [IAP OAuth clients programmatically](https://cloud.google.com/iap/docs/programmatic-oauth-clients).
 
 ### Install the required tools
@@ -44,17 +44,17 @@ Before installing Kubeflow on the command line:
 
     You can install specific version of kubectl by following instruction (Example: [Install kubectl on Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)). Latest patch version of kubectl from `v1.17` to `v1.19` works well too.
 
-    Note: Starting from Kubeflow 1.4, it requires `kpt v1.0.0-beta.6` or above to operate in `GoogleCloudPlatform/kubeflow-distribution` repository. gcloud hasn't caught up with this kpt version yet, [install kpt](https://kpt.dev/installation/) separately from https://github.com/GoogleContainerTools/kpt/tags for now. Note that kpt requires docker to be installed.
+    Note: Starting from Kubeflow 1.4, it requires `kpt v1.0.0-beta.6` or above to operate in `googlecloudplatform/kubeflow-distribution` repository. gcloud hasn't caught up with this kpt version yet, [install kpt](https://kpt.dev/installation/) separately from https://github.com/GoogleContainerTools/kpt/tags for now. Note that kpt requires docker to be installed.
 
     Note: You also need to [install required tools](https://cloud.google.com/service-mesh/v1.10/docs/scripted-install/asm-onboarding#installing_required_tools) for ASM installation tool `install_asm`.
 
-### Fetch GoogleCloudPlatform/kubeflow-distribution and upstream packages
+### Fetch googlecloudplatform/kubeflow-distribution and upstream packages
 
-1. If you have already installed Management cluster, you have `GoogleCloudPlatform/kubeflow-distribution` locally. You just need to run `cd kubeflow` to access Kubeflow cluster manifests. Otherwise, you can run the following commands:
+1. If you have already installed Management cluster, you have `googlecloudplatform/kubeflow-distribution` locally. You just need to run `cd kubeflow` to access Kubeflow cluster manifests. Otherwise, you can run the following commands:
 
     ```bash
     # Check out Kubeflow v{{% latest-version %}} blueprints
-    git clone https://github.com/GoogleCloudPlatform/kubeflow-distribution.git 
+    git clone https://github.com/googlecloudplatform/kubeflow-distribution.git 
     cd kubeflow-distribution
     git checkout tags/v{{% latest-version %}} -b v{{% latest-version %}}
     ```
@@ -63,7 +63,7 @@ Before installing Kubeflow on the command line:
 
     ```bash
     # Check out Kubeflow v{{% latest-version %}} blueprints
-    kpt pkg get https://github.com/GoogleCloudPlatform/kubeflow-distribution.git@v{{% latest-version %}} kubeflow-distribution
+    kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@v{{% latest-version %}} kubeflow-distribution
     cd kubeflow-distribution
     ```
 
@@ -124,7 +124,7 @@ You can learn more about `list-setters` in [kpt documentation](https://catalog.k
 
 #### Authorize Cloud Config Connector for each Kubeflow project
 
-In the [Management cluster deployment](/docs/deploy/management-setup/) we created the Google Cloud service account **serviceAccount:kcc-${KF_PROJECT}@${MGMT_PROJECT}.iam.gserviceaccount.com**
+In the [Management cluster deployment](/{{ .Site.Params.version_url_prefix }}docs/deploy/management-setup/) we created the Google Cloud service account **serviceAccount:kcc-${KF_PROJECT}@${MGMT_PROJECT}.iam.gserviceaccount.com**
 this is the service account that Config Connector will use to create any Google Cloud resources in `${KF_PROJECT}`. You need to grant this Google Cloud service account sufficient privileges to create the desired resources in Kubeflow project. 
 You only need to perform steps below once for each Kubeflow project, but make sure to do it even when KF_PROJECT and MGMT_PROJECT are the same project.
 
@@ -160,7 +160,7 @@ make apply
 
 * If deployment returns an error due to missing resources in `serving.kserve.io` API group, rerun `make apply`. This is due to a race condition between CRD and runtime resources in KServe.
 
-  * This issue is being tracked in [GoogleCloudPlatform/kubeflow-distribution#384](https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/384)
+  * This issue is being tracked in [googlecloudplatform/kubeflow-distribution#384](https://github.com/googlecloudplatform/kubeflow-distribution/issues/384)
 
 * If resources can't be created because `webhook.cert-manager.io` is unavailable wait and
   then rerun `make apply`
@@ -188,7 +188,7 @@ Follow these steps to verify the deployment:
     gcloud container clusters get-credentials "${KF_NAME}" --zone "${ZONE}" --project "${KF_PROJECT}"
     ```
 
-    Then, check what's installed in the `kubeflow` namespace of your GKE cluster:
+    Then, check what's installed in the `kubeflow` namespace of your Google Kubernetes Engine cluster:
 
     ```bash
     kubectl -n kubeflow get all
@@ -247,9 +247,9 @@ directories:
 
 * **apps**, **common**, **contrib** are a series of independent components  directory containing kustomize packages for deploying Kubeflow components. The structure is to align with upstream [kubeflow/manifests](https://github.com/kubeflow/manifests).
 
-  * [GoogleCloudPlatform/kubeflow-distribution](https://github.com/GoogleCloudPlatform/kubeflow-distribution) repository only stores `kustomization.yaml` and `patches` for Google Cloud specific resources.
+  * [googlecloudplatform/kubeflow-distribution](https://github.com/googlecloudplatform/kubeflow-distribution) repository only stores `kustomization.yaml` and `patches` for Google Cloud specific resources.
 
-  * `./pull_upstream.sh` will pull `kubeflow/manifests` and store manifests in `upstream` folder of each component in this guide. [GoogleCloudPlatform/kubeflow-distribution](https://github.com/GoogleCloudPlatform/kubeflow-distribution) repository doesn't store the copy of upstream manifests.
+  * `./pull_upstream.sh` will pull `kubeflow/manifests` and store manifests in `upstream` folder of each component in this guide. [googlecloudplatform/kubeflow-distribution](https://github.com/googlecloudplatform/kubeflow-distribution) repository doesn't store the copy of upstream manifests.
 
 * **build** is a directory that will contain the hydrated manifests outputted by
   the `make` rules, each component will have its own **build** directory. You can customize the **build** path when calling `make` command.
@@ -279,7 +279,7 @@ The service accounts are:
 
 ## Upgrade Kubeflow
 
-Refer to [Upgrading Kubeflow cluster](/docs/deploy/upgrade#upgrading-kubeflow-cluster).
+Refer to [Upgrading Kubeflow cluster](/{{ .Site.Params.version_url_prefix }}docs/deploy/upgrade#upgrading-kubeflow-cluster).
 
 ## Next steps
 
@@ -287,7 +287,7 @@ Refer to [Upgrading Kubeflow cluster](/docs/deploy/upgrade#upgrading-kubeflow-cl
   [end-to-end MNIST tutorial](https://github.com/kubeflow/examples/blob/master/mnist/mnist_gcp.ipynb) or the
   [GitHub issue summarization Pipelines
   example](https://github.com/kubeflow/examples/tree/master/github_issue_summarization/pipelines).
-* Learn how to [delete your Kubeflow deployment using the CLI](/docs/deploy/delete-cli/).
-* To add users to Kubeflow, go to [a dedicated section in Customizing Kubeflow on GKE](/docs/customizing-gke/#add-users-to-kubeflow).
-* To taylor your Kubeflow deployment on GKE, go to [Customizing Kubeflow on GKE](/docs/customizing-gke/).
-* For troubleshooting Kubeflow deployments on GKE, go to the [Troubleshooting deployments](/docs/troubleshooting-gke/) guide.
+* Learn how to [delete your Kubeflow deployment using the CLI](/{{ .Site.Params.version_url_prefix }}docs/deploy/delete-cli/).
+* To add users to Kubeflow, go to [a dedicated section in Customizing Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke/#add-users-to-kubeflow).
+* To taylor your Kubeflow deployment on Google Cloud, go to [Customizing Kubeflow on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/customizing-gke/).
+* For troubleshooting Kubeflow deployments on Google Cloud, go to the [Troubleshooting deployments](/{{ .Site.Params.version_url_prefix }}docs/troubleshooting-gke/) guide.
