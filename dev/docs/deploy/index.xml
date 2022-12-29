@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kubeflow on Google Cloud Platform – Deployment</title>
-    <link>https://gkcalat.github.io/kubeflow-docs/docs/deploy/</link>
+    <link>https://GoogleCloudPlatform.github.io/kubeflow-gke-docs/docs/deploy/</link>
     <description>Recent content in Deployment on Kubeflow on Google Cloud Platform</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="https://gkcalat.github.io/kubeflow-docs/docs/deploy/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://GoogleCloudPlatform.github.io/kubeflow-gke-docs/docs/deploy/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: Overview</title>
-      <link>https://gkcalat.github.io/kubeflow-docs/docs/deploy/overview/</link>
+      <link>https://GoogleCloudPlatform.github.io/kubeflow-gke-docs/docs/deploy/overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gkcalat.github.io/kubeflow-docs/docs/deploy/overview/</guid>
+      <guid>https://GoogleCloudPlatform.github.io/kubeflow-gke-docs/docs/deploy/overview/</guid>
       <description>
         
         
@@ -63,10 +63,10 @@ and debugging approaches. If the issue isn’t included in the list of commonly 
     
     <item>
       <title>Docs: Setting up GCP Project</title>
-      <link>https://gkcalat.github.io/kubeflow-docs/docs/deploy/project-setup/</link>
+      <link>https://GoogleCloudPlatform.github.io/kubeflow-gke-docs/docs/deploy/project-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gkcalat.github.io/kubeflow-docs/docs/deploy/project-setup/</guid>
+      <guid>https://GoogleCloudPlatform.github.io/kubeflow-gke-docs/docs/deploy/project-setup/</guid>
       <description>
         
         
@@ -176,10 +176,10 @@ to sensitive data.&lt;/li&gt;
     
     <item>
       <title>Docs: Setting up OAuth client</title>
-      <link>https://gkcalat.github.io/kubeflow-docs/docs/deploy/oauth-setup/</link>
+      <link>https://GoogleCloudPlatform.github.io/kubeflow-gke-docs/docs/deploy/oauth-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gkcalat.github.io/kubeflow-docs/docs/deploy/oauth-setup/</guid>
+      <guid>https://GoogleCloudPlatform.github.io/kubeflow-gke-docs/docs/deploy/oauth-setup/</guid>
       <description>
         
         
@@ -298,10 +298,10 @@ section of the Google Cloud Console. You need to retrieve the &lt;strong&gt;clie
     
     <item>
       <title>Docs: Deploying Management cluster</title>
-      <link>https://gkcalat.github.io/kubeflow-docs/docs/deploy/management-setup/</link>
+      <link>https://GoogleCloudPlatform.github.io/kubeflow-gke-docs/docs/deploy/management-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gkcalat.github.io/kubeflow-docs/docs/deploy/management-setup/</guid>
+      <guid>https://GoogleCloudPlatform.github.io/kubeflow-gke-docs/docs/deploy/management-setup/</guid>
       <description>
         
         
@@ -459,10 +459,10 @@ Learn more with &lt;a href=&#34;https://cloud.google.com/config-connector/docs/h
     
     <item>
       <title>Docs: Deploying Kubeflow cluster</title>
-      <link>https://gkcalat.github.io/kubeflow-docs/docs/deploy/deploy-cli/</link>
+      <link>https://GoogleCloudPlatform.github.io/kubeflow-gke-docs/docs/deploy/deploy-cli/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gkcalat.github.io/kubeflow-docs/docs/deploy/deploy-cli/</guid>
+      <guid>https://GoogleCloudPlatform.github.io/kubeflow-gke-docs/docs/deploy/deploy-cli/</guid>
       <description>
         
         
@@ -718,10 +718,10 @@ example&lt;/a&gt;.&lt;/li&gt;
     
     <item>
       <title>Docs: Upgrade Kubeflow</title>
-      <link>https://gkcalat.github.io/kubeflow-docs/docs/deploy/upgrade/</link>
+      <link>https://GoogleCloudPlatform.github.io/kubeflow-gke-docs/docs/deploy/upgrade/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gkcalat.github.io/kubeflow-docs/docs/deploy/upgrade/</guid>
+      <guid>https://GoogleCloudPlatform.github.io/kubeflow-gke-docs/docs/deploy/upgrade/</guid>
       <description>
         
         
@@ -1024,10 +1024,10 @@ of &lt;code&gt;.build&lt;/code&gt; with a historic version with tools like &lt;c
     
     <item>
       <title>Docs: Monitoring Cloud IAP Setup</title>
-      <link>https://gkcalat.github.io/kubeflow-docs/docs/deploy/monitor-iap-setup/</link>
+      <link>https://GoogleCloudPlatform.github.io/kubeflow-gke-docs/docs/deploy/monitor-iap-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gkcalat.github.io/kubeflow-docs/docs/deploy/monitor-iap-setup/</guid>
+      <guid>https://GoogleCloudPlatform.github.io/kubeflow-gke-docs/docs/deploy/monitor-iap-setup/</guid>
       <description>
         
         
@@ -1160,10 +1160,10 @@ authorized URIs. For more information, read the guide to
     
     <item>
       <title>Docs: Deleting Kubeflow</title>
-      <link>https://gkcalat.github.io/kubeflow-docs/docs/deploy/delete-cli/</link>
+      <link>https://GoogleCloudPlatform.github.io/kubeflow-gke-docs/docs/deploy/delete-cli/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gkcalat.github.io/kubeflow-docs/docs/deploy/delete-cli/</guid>
+      <guid>https://GoogleCloudPlatform.github.io/kubeflow-gke-docs/docs/deploy/delete-cli/</guid>
       <description>
         
         
