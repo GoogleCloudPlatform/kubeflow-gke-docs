@@ -1,48 +1,63 @@
-# This script creates and updates Markdown versions of Notebook files
-# for publication on Kubeflow on GCP using Hugo/Docsy.
-#
-# Hugo Markdown files have a metadata section at the top of the page for the
-# Front Matter. The Front Matter specifies the page Title, Description, and
-# Weight. These values are used to generate the left side navigation, index
-# pages, and some page content. 
-#
-# This script expects the Front Matter to be specified in the following format
-# in the first cell of a Jupyter notebook:
-#
-# # {Title}
-# > {Description}
-#
-# So, the Title is expected to be a Heading 1 and the Description is expected to
-# immediately follow it as a Blockquote. Currently, there is no Weight in the
-# notebook file.
-#
-# The script reads the Front Matter from the existing Markdown file,
-# or initializes default values, and then overrides the Markdown file's
-# Front Matter with values from the notebook. 
-#
-# * The Weight is always used from the Markdown file. If no Markdown file
-#   exists, this will default to `DEFAULT_WEIGHT`. Which should push doc to
-#   the end of the list. Edit the Markdown file to specify the correct Weight.
-# * If no Title is specified in the notebook, the Markdown file's
-#   front matter is used.
-# * If the Title is specified in the notebook and the Description is not,
-#   the notebook's Title is used and otherwise the Markdown file's front
-#   matter is used.
-#
-# To run this script, type the following on the command line:
-#   python3 scripts/nb_to_md.py --notebook /content/en/docs/path-to-notebook
-#
-# Input:
-#   The path to the notebook to convert to Markdown as `--notebook` command
-#   line flag.
-#
-# Output:
-#   STDOUT returns the status of the conversion process.
-#
-# Dependencies:
-#   This script depends on `absl`, `nbconvert`, `nbformat`, and `toml`. You
-#   may need to install these dependencies using a command like the following:
-#   pip3 install nbconvert
+"""Copyright 2018-2022 The Kubeflow Authors
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+This script creates and updates Markdown versions of Notebook files
+for publication on Kubeflow on Google Cloud using Hugo/Docsy.
+
+Hugo Markdown files have a metadata section at the top of the page for the
+Front Matter. The Front Matter specifies the page Title, Description, and
+Weight. These values are used to generate the left side navigation, index
+pages, and some page content. 
+
+This script expects the Front Matter to be specified in the following format
+in the first cell of a Jupyter notebook:
+
+# {Title}
+> {Description}
+
+So, the Title is expected to be a Heading 1 and the Description is expected to
+immediately follow it as a Blockquote. Currently, there is no Weight in the
+notebook file.
+
+The script reads the Front Matter from the existing Markdown file,
+or initializes default values, and then overrides the Markdown file's
+Front Matter with values from the notebook. 
+
+* The Weight is always used from the Markdown file. If no Markdown file
+  exists, this will default to `DEFAULT_WEIGHT`. Which should push doc to
+  the end of the list. Edit the Markdown file to specify the correct Weight.
+* If no Title is specified in the notebook, the Markdown file's
+  front matter is used.
+* If the Title is specified in the notebook and the Description is not,
+  the notebook's Title is used and otherwise the Markdown file's front
+  matter is used.
+
+To run this script, type the following on the command line:
+  python3 scripts/nb_to_md.py --notebook /content/en/docs/path-to-notebook
+
+Input:
+  The path to the notebook to convert to Markdown as `--notebook` command
+  line flag.
+
+Output:
+  STDOUT returns the status of the conversion process.
+
+Dependencies:
+  This script depends on `absl`, `nbconvert`, `nbformat`, and `toml`. You
+  may need to install these dependencies using a command like the following:
+  pip3 install nbconvert
+"""
 
 from pathlib import Path
 import re
@@ -254,7 +269,7 @@ class NotebookFile:
   
 
 def main(argv):
-  """[nb_to_md.py] Publish Jupyter notebooks as a Kubeflow on GCP Markdown page"""
+  """[nb_to_md.py] Publish Jupyter notebooks as a Kubeflow on Google Cloud Markdown page"""
   
   if FLAGS.notebook is not None:
     notebook = NotebookFile(FLAGS.notebook)

@@ -1,6 +1,6 @@
 +++
-title = "Troubleshooting Deployments on GKE"
-description = "Help fixing problems on GKE and Google Cloud"
+title = "Troubleshooting Deployments on Google Cloud"
+description = "Help fixing problems on Google Kubernetes Engine and Google Cloud"
 weight = 80
                     
 +++
@@ -15,10 +15,10 @@ Google Kubernetes Engine (GKE) and Google Cloud.
 ## Before you start
 
 This guide covers troubleshooting specifically for
-[Kubeflow deployments on Google Cloud](/docs/gke/deploy/).
+[Kubeflow deployments on Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/gke/deploy/).
 
 For more help, try the
-[general Kubeflow troubleshooting guide](/docs/other-guides/troubleshooting).
+[general Kubeflow troubleshooting guide](/{{ .Site.Params.version_url_prefix }}docs/other-guides/troubleshooting).
 
 This guide assumes the following settings:
 
@@ -67,7 +67,7 @@ This guide assumes the following settings:
   ```
 
 * For further background about the above settings, see the guide to
-  [deploying Kubeflow with the CLI](/docs/gke/deploy/deploy-cli).
+  [deploying Kubeflow with the CLI](/{{ .Site.Params.version_url_prefix }}docs/gke/deploy/deploy-cli).
 
 ## Troubleshooting Kubeflow deployment on Google Cloud
 
@@ -82,10 +82,10 @@ Here are some tips for troubleshooting Google Cloud.
 * Check ingress status: `kubectl describe ingress -n istio-system`
 * Check if [endpoint entry](https://console.cloud.google.com/endpoints) is created. There should be one entry with name `<deployment>.endpoints.<project>.cloud.goog`
   * If endpoint entry doesn't exist, check `kubectl describe cloudendpoint -n istio-system`
-* If using IAP: make sure you [added](/docs/gke/deploy/oauth-setup/) `https://<deployment>.endpoints.<project>.cloud.goog/_gcp_gatekeeper/authenticate`
+* If using IAP: make sure you [added](/{{ .Site.Params.version_url_prefix }}docs/gke/deploy/oauth-setup/) `https://<deployment>.endpoints.<project>.cloud.goog/_gcp_gatekeeper/authenticate`
 as an authorized redirect URI for the OAUTH credentials used to create the deployment.
 * If using IAP: see the guide to
-  [monitoring your Cloud IAP setup](/docs/gke/deploy/monitor-iap-setup/).
+  [monitoring your Cloud IAP setup](/{{ .Site.Params.version_url_prefix }}docs/gke/deploy/monitor-iap-setup/).
 * See the sections below for troubleshooting specific problems.
 * Please [report a bug](https://github.com/kubeflow/kubeflow/issues/new?template=bug_report.md) if you can't resolve the problem by following the above steps.
 
@@ -303,7 +303,7 @@ usually indicates the loadbalancer doesn't think any backends are healthy.
 A common symptom of your certificate failing to be provisioned is SSL errors like `ERR_SSL_VERSION_OR_CIPHER_MISMATCH` when
 you try to access the Kubeflow https endpoint.
 
-To troubleshoot check the status of your GKE managed certificate
+To troubleshoot check the status of your Google Kubernetes Engine managed certificate
 
 ```
 kubectl -n istio-system describe managedcertificate
@@ -369,10 +369,10 @@ You can fix the certificate by performing the following steps to delete the exis
 
 ### Problems with SSL certificate from Let's Encrypt
 
-As of Kubeflow 1.0, Kubeflow should be using GKE Managed Certificates and no longer using Let's Encrypt.
+As of Kubeflow 1.0, Kubeflow should be using Google Kubernetes Engine Managed Certificates and no longer using Let's Encrypt.
 
 See the guide to
-[monitoring your Cloud IAP setup](/docs/gke/deploy/monitor-iap-setup/).
+[monitoring your Cloud IAP setup](/{{ .Site.Params.version_url_prefix }}docs/gke/deploy/monitor-iap-setup/).
 
 ## Envoy pods crash-looping: root cause is backend quota exceeded
 
@@ -432,8 +432,8 @@ Alternatively, you can request more backend services quota on the Google Cloud C
 
 ## Legacy networks are not supported
 
-Cloud Filestore and GKE try to use the network named `default` by default. For older projects,
-this will be a legacy network which is incompatible with Cloud Filestore and newer GKE features
+Cloud Filestore and Google Kubernetes Engine try to use the network named `default` by default. For older projects,
+this will be a legacy network which is incompatible with Cloud Filestore and newer Google Kubernetes Engine features
 like private clusters. This will
 manifest as the error **"default is invalid; legacy networks are not supported"** when
 deploying Kubeflow.
@@ -472,7 +472,7 @@ kfctl apply -V -f ${CONFIG}
 <!-- ## CPU platform unavailable in requested zone
 
 By default, we set minCpuPlatform to `Intel Haswell` to make sure AVX2 is supported.
-See [troubleshooting](/docs/other-guides/troubleshooting/) for more details.
+See [troubleshooting](/{{ .Site.Params.version_url_prefix }}docs/other-guides/troubleshooting/) for more details.
 
 If you encounter this `CPU platform unavailable` error (might manifest as
 `Cluster is currently being created, deleted, updated or repaired and cannot be updated.`),

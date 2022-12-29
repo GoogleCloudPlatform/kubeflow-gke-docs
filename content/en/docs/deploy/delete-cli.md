@@ -12,10 +12,10 @@ Google Cloud.
 This guide assumes the following settings:
 
 * For Management cluster: The `${MGMT_PROJECT}`, `${MGMT_DIR}` and `${MGMT_NAME}` environment variables
-  are the same as in [Deploy Management cluster](/docs/deploy/management-setup#configure-environment-variables).
+  are the same as in [Deploy Management cluster](/{{ .Site.Params.version_url_prefix }}docs/deploy/management-setup#configure-environment-variables).
 
 * For Kubeflow cluster: The `${KF_PROJECT}`, `${KF_NAME}` and `${MGMTCTXT}` environment variables
-  are the same as in [Deploy Kubeflow cluster](/docs/deploy/deploy-cli#environment-variables).
+  are the same as in [Deploy Kubeflow cluster](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli#environment-variables).
   
 * The `${KF_DIR}` environment variable contains the path to
   your Kubeflow application directory, which holds your Kubeflow configuration 

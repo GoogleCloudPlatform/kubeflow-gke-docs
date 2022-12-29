@@ -15,8 +15,8 @@ run in separate namespaces.
 
 ### Google Kubernetes Engine (GKE) workload identity
 
-Starting in v0.7, Kubeflow uses the new GKE feature: [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity).
-This is the recommended way to access Google Cloud APIs from your GKE cluster.
+Starting in v0.7, Kubeflow uses the new Google Kubernetes Engine feature: [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity).
+This is the recommended way to access Google Cloud APIs from your Google Kubernetes Engine cluster.
 You can configure a Kubernetes service account (KSA) to act as a Google Cloud service account (GSA).
 
 If you deployed Kubeflow following the Google Cloud instructions, then the profiler controller automatically binds the "default-editor" service account for every profile namespace to a default Google Cloud service account created during kubeflow deployment. 
@@ -101,7 +101,7 @@ spec:
 The profile controller currently doesn't perform any access control checks to see whether the user creating the profile should be able to use the Google Cloud service account. 
 As a result, any user who can create a profile can get access to any service account for which the admin controller has owner permissions. We will improve this in subsequent releases.
 
-You can find more details on workload identity in the [GKE documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity).
+You can find more details on workload identity in the [Google Kubernetes Engine documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity).
 
 ### Authentication from Kubeflow Pipelines
 
@@ -109,7 +109,7 @@ Starting from Kubeflow v1.1, Kubeflow Pipelines supports multi-user isolation. T
 
 Additionally, the Kubeflow Pipelines UI, visualization, and TensorBoard server instances are deployed in your user namespace using the `default-editor` KSA. Therefore, to visualize results in the Pipelines UI, they can fetch artifacts in Google Cloud Storage using permissions of the same GSA you configured for this namespace.
 
-For more details, refer to [Authenticating Pipelines to Google Cloud](/docs/pipelines/authentication-pipelines/).
+For more details, refer to [Authenticating Pipelines to Google Cloud](/{{ .Site.Params.version_url_prefix }}docs/pipelines/authentication-pipelines/).
 
 ---
 
@@ -175,7 +175,7 @@ You can find more information about IAM in the
 The [`kubectl` tool](https://kubernetes.io/docs/reference/kubectl/overview/) is used for interacting with a Kubernetes cluster through the command line.
 
 ##### Connecting to a cluster using a Google Cloud account
-If you set up your Kubernetes cluster using GKE, you can authenticate with the cluster using a Google Cloud account. 
+If you set up your Kubernetes cluster using Google Kubernetes Engine, you can authenticate with the cluster using a Google Cloud account. 
 The following commands fetch the credentials for your cluster and save them to your local 
 [`kubeconfig` file](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/):
 
@@ -240,4 +240,4 @@ You can find more information in the
 
 ## Next steps
 
-See the [troubleshooting guide](/docs/troubleshooting/) for help with diagnosing and fixing issues you may encounter with Kubeflow on Google Cloud
+See the [troubleshooting guide](/{{ .Site.Params.version_url_prefix }}docs/troubleshooting/) for help with diagnosing and fixing issues you may encounter with Kubeflow on Google Cloud

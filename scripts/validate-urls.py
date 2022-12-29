@@ -1,22 +1,37 @@
-# This script finds .md files under a directory and its subdirectories, extracts
-# http/https URLs from .md files and validates them.
-#
-# This script can be run periodically on kubeflow/website source repository
-# to find outdated URLs, which indicate possible outdated document sections.
-#
-# To run this script, type the following on the command line:
-#   python3.8 validate-urls.py -d /path/to/kubeflow/website/content/docs
-#
-# Input:
-#   The path of a directory that contains .md files as `-d` command line flag.
-#
-# Output:
-#   STDOUT logs in the format of `<file>: <URL> , <status>` and a summary of all
-#   invalid URLs at the end.
-#
-# Dependency:
-#   You may need to install the `requests` Python package via command line:
-#   python3.8 -m pip install requests
+"""Copyright 2018-2022 The Kubeflow Authors
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+This script finds .md files under a directory and its subdirectories, extracts
+http/https URLs from .md files and validates them.
+
+This script can be run periodically on kubeflow/website source repository
+to find outdated URLs, which indicate possible outdated document sections.
+
+To run this script, type the following on the command line:
+  python3.8 validate-urls.py -d /path/to/kubeflow/website/content/docs
+
+Input:
+  The path of a directory that contains .md files as `-d` command line flag.
+
+Output:
+  STDOUT logs in the format of `<file>: <URL> , <status>` and a summary of all
+  invalid URLs at the end.
+
+Dependency:
+  You may need to install the `requests` Python package via command line:
+  python3.8 -m pip install requests
+"""
 
 import argparse
 import os
@@ -24,7 +39,7 @@ import re
 import requests
 
 parser = argparse.ArgumentParser(
-    description='Validate all URLs in the Kubeflow on GCP website'
+    description='Validate all URLs in the Kubeflow on Google Cloud website'
 )
 
 parser.add_argument(

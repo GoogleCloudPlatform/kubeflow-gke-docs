@@ -1,8 +1,8 @@
 # Base configuration
 ##########################################################
-baseURL = "https://gkcalat.github.io/kubeflow-docs"
+baseURL = "https://googlecloudplatform.github.io/kubeflow-gke-docs"
 title = "Kubeflow on Google Cloud Platform"
-description = "Open-source machine learning platform running on GKE"
+description = "Open-source machine learning platform running on Google Kubernetes Engine"
 
 # Language settings
 contentDir = "content/en"
@@ -24,6 +24,8 @@ pygmentsUseClassic = false
 #pygmentsOptions = "linenos=table"
 # See https://help.farbox.com/pygments.html
 pygmentsStyle = "tango"
+# Relative urls:
+relativeURLs = true
 
 # Image processing configuration.
 [imaging]
@@ -94,42 +96,46 @@ pygmentsStyle = "tango"
     taxonomyPageHeader = ["tags", "categories"] 
 ##########################################################
 # Menu header
+# Update when RELEASING a new minor version
 ##########################################################
 [menu]
   [[menu.main]]
     name = "Docs"
     weight = -101
     #pre = "<i class='fa-solid fa-books pr-2'></i>"
+    # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
     url = "./docs/"
   [[menu.main]]
     name = "News"
     weight = -100
     #pre = "<i class='fa-solid fa-rss pr-2'></i>"
+    # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
     url = "./news/"
   [[menu.main]]
     name = "Manifests"
     weight = -99
     pre = "<i class='fa-brands fa-github pr-2'></i>"
-    url = "https://github.com/GoogleCloudPlatform/kubeflow-distribution"
+    url = "https://github.com/googlecloudplatform/kubeflow-distribution"
 ##########################################################
 # Language configuration
 ##########################################################
 [languages]
   [languages.en]
     title = "Kubeflow on Google Cloud Platform"
-    description = "Open-source machine learning platform running on GKE"
+    description = "Open-source machine learning platform running on Google Kubernetes Engine"
     languageName ="English"
     # Weight used for sorting.
     weight = 1
 ##########################################################
 # Site Params
+# Update when RELEASING a new minor version
 ##########################################################
 # Comment out if you don't want the "print entire section" link enabled.
 [outputs]
   section = ["HTML", "print", "RSS"]
 
 [params]
-  copyright = "Kubeflow on GCP authors"
+  copyright = "The Kubeflow Authors."
   privacy_policy = "https://policies.google.com/privacy"
 
   # First one is picked as the Twitter card image if not set on page.
@@ -137,10 +143,12 @@ pygmentsStyle = "tango"
 
   # Menu title if your navbar has a versions selector to access old versions of your site.
   # This menu appears only if you have at least one [params.versions] set.
+  # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
   version_menu = "v1.5"
   # Flag used in the "version-banner" partial to decide whether to display a 
   # banner on every page indicating that this is an archived version of the docs.
   # Set this flag to "true" if you want to display the banner.
+  # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
   archived_version = true
   # Uncomment this if your GitHub repo does not have "main" as the default branch,
   # or specify a new value if you want to reference another branch in your GitHub links
@@ -148,39 +156,45 @@ pygmentsStyle = "tango"
   # The version number for the version of the docs represented in this doc set.
   # Used in the "version-banner" partial to display a version number for the 
   # current doc set.
+  # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
   version = "v1.5"
+  # URL prefix for this specific version
+  # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
+  version_url_prefix = "/v1.5"
   # A link to latest version of the docs. Used in the "version-banner" partial to
   # point people to the main doc site.
-  url_latest_version = "https://gkcalat.github.io/kubeflow-docs/docs"
-
+  url_latest_version = "https://googlecloudplatform.github.io/kubeflow-gke-docs/docs"
+  
   # These entries appear in the drop-down menu at the top of the website.
   [[params.versions]]
+    # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
     version = "v1.6 (latest)"
     githubbranch = "v1.6-release"
-    url = "https://gkcalat.github.io/kubeflow-docs/docs"
+    url = "https://googlecloudplatform.github.io/kubeflow-gke-docs/docs"
   [[params.versions]]
     version = "v1.5"
     githubbranch = "v1.5-release"
-    url = "https://gkcalat.github.io/kubeflow-docs/v1.5/docs"
+    url = "https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.5/docs"
   [[params.versions]]
     version = "v1.4"
     githubbranch = "v1.4-release"
-    url = "https://gkcalat.github.io/kubeflow-docs/v1.4/docs"
+    url = "https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.4/docs"
   [[params.versions]]
     version = "dev"
     githubbranch = "main"
-    url = "https://gkcalat.github.io/kubeflow-docs/dev/docs"
+    url = "https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs"
 
   # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-  github_repo = "https://github.com/gkcalat/kubeflow-docs"
+  github_repo = "https://github.com/googlecloudplatform/kubeflow-gke-docs"
   # Specify a value here if your content directory is not in your repo's root directory
-  # github_subdir = ""
+  # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
+  # github_subdir = "dev"
 
   # Google Custom Search Engine ID. Remove or comment out to disable search.
   gcs_engine_id = "b698ddb9e4f3e4c92"
 
   # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-  github_project_repo = "https://github.com/GoogleCloudPlatform/kubeflow-distribution"
+  github_project_repo = "https://github.com/googlecloudplatform/kubeflow-distribution"
 
   # Enable Algolia DocSearch
   algolia_docsearch = false
@@ -215,8 +229,8 @@ pygmentsStyle = "tango"
       [params.ui.feedback]
         enable = true
         # The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
-        yes = 'Thank you! <a href="https://github.com/gkcalat/kubeflow-docs/issues/new">Send your feedback to us</a>.'
-        no = 'Sorry to hear that. Please <a href="https://github.com/gkcalat/kubeflow-docs/issues/new">tell us how we can improve</a>.'
+        yes = 'Thank you! <a href="https://github.com/googlecloudplatform/kubeflow-gke-docs/issues/new">Send your feedback to us</a>.'
+        no = 'Sorry to hear that. Please <a href="https://github.com/googlecloudplatform/kubeflow-gke-docs/issues/new">tell us how we can improve</a>.'
 
       # Adds a reading time to the top of each doc.
       # If you want this feature, but occasionally need to remove the Reading time from a single page, 
@@ -249,9 +263,9 @@ pygmentsStyle = "tango"
     # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
     [[params.links.developer]]
       name = "GitHub"
-      url = "https://github.com/GoogleCloudPlatform/kubeflow-distribution"
+      url = "https://github.com/googlecloudplatform/kubeflow-distribution"
       icon = "fab fa-github"
-      desc = "Kubeflow on GKE repo"
+      desc = "Kubeflow on Google Cloud repo"
     [[params.links.developer]]
       name = "Kubeflow community calendar"
       url = "https://www.kubeflow.org/docs/about/community/#kubeflow-community-calendars"

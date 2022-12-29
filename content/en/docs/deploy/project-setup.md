@@ -4,7 +4,7 @@ description = "Creating a Google Cloud project for your Kubeflow deployment"
 weight = 2
 +++
 
-In order to deploy Kubeflow on GCP, you need to set up a Google Cloud project and enable necessary APIs for the deployment.
+In order to deploy Kubeflow on Google Cloud, you need to set up a Google Cloud project and enable necessary APIs for the deployment.
 
 ## Setting up a project
 
@@ -98,14 +98,14 @@ Follow these steps to set up your Google Cloud project:
     describes that creating and then removing a temporary Kubernetes cluster may
     be needed for projects that haven't had a cluster set up beforehand.
 
-You do not need a running GKE cluster. The deployment process creates a
+You do not need a running Google Kubernetes Engine cluster. The deployment process creates a
 cluster for you.
 
 ## Next steps
 
-* [Set up an OAuth credential](/docs/deploy/oauth-setup) to use 
+* [Set up an OAuth credential](/{{ .Site.Params.version_url_prefix }}docs/deploy/oauth-setup) to use 
   [Cloud Identity-Aware Proxy (Cloud IAP)](https://cloud.google.com/iap/docs/).
   Cloud IAP is recommended for production deployments or deployments with access 
   to sensitive data.
-* [Set up Management Cluster](/docs/deploy/management-setup) to deploy and manage Kubeflow clusters.
-* [Deploy Kubeflow](/docs/deploy/deploy-cli) using kubectl, kustomize and kpt.
+* [Set up Management Cluster](/{{ .Site.Params.version_url_prefix }}docs/deploy/management-setup) to deploy and manage Kubeflow clusters.
+* [Deploy Kubeflow](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli) using kubectl, kustomize and kpt.
