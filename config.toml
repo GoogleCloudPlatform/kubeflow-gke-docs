@@ -1,6 +1,7 @@
 # Base configuration
 ##########################################################
-baseURL = "https://googlecloudplatform.github.io/kubeflow-gke-docs"
+# <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version
+baseURL = "https://googlecloudplatform.github.io/kubeflow-gke-docs/dev"
 title = "Kubeflow on Google Cloud Platform"
 description = "Open-source machine learning platform running on Google Kubernetes Engine"
 
@@ -103,13 +104,11 @@ pygmentsStyle = "tango"
     name = "Docs"
     weight = -101
     #pre = "<i class='fa-solid fa-books pr-2'></i>"
-    # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
     url = "./docs/"
   [[menu.main]]
     name = "News"
     weight = -100
     #pre = "<i class='fa-solid fa-rss pr-2'></i>"
-    # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
     url = "./news/"
   [[menu.main]]
     name = "Manifests"

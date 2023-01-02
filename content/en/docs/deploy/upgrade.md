@@ -9,15 +9,15 @@ weight = 6
 
 To better understand upgrade process, you should read the following sections first:
 
-* [Understanding the deployment process for management cluster](/{{ .Site.Params.version_url_prefix }}docs/deploy/management-setup#understanding-the-deployment-process)
-* [Understanding the deployment process for Kubeflow cluster](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli#understanding-the-deployment-process)
+* [Understanding the deployment process for management cluster](./docs/deploy/management-setup#understanding-the-deployment-process)
+* [Understanding the deployment process for Kubeflow cluster](./docs/deploy/deploy-cli#understanding-the-deployment-process)
 
 This guide assumes the following settings:
 
 * The `${MGMT_DIR}` and `${MGMT_NAME}` environment variables
-  are the same as in [Management cluster setup](/{{ .Site.Params.version_url_prefix }}docs/deploy/management-setup#configure-environment-variables).
+  are the same as in [Management cluster setup](./docs/deploy/management-setup#configure-environment-variables).
 * The `${KF_NAME}`, `${CLIENT_ID}` and `${CLIENT_SECRET}` environment variables
-  are the same as in [Deploy using kubectl and kpt](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli#environment-variables).
+  are the same as in [Deploy using kubectl and kpt](./docs/deploy/deploy-cli#environment-variables).
 * The `${KF_DIR}` environment variable contains the path to
   your Kubeflow application directory, which holds your Kubeflow configuration 
   files. For example, `/opt/kubeflow-distribution/kubeflow/`.
