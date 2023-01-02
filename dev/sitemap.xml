@@ -3,136 +3,136 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/overview/</loc>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/deploy/overview/</loc>
     <lastmod>2022-12-29T22:11:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/project-setup/</loc>
-    <lastmod>2022-12-12T23:32:20+00:00</lastmod>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/deploy/project-setup/</loc>
+    <lastmod>2023-01-02T22:56:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/oauth-setup/</loc>
-    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/deploy/oauth-setup/</loc>
+    <lastmod>2023-01-02T22:56:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/management-setup/</loc>
-    <lastmod>2022-12-29T22:11:17+00:00</lastmod>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/deploy/management-setup/</loc>
+    <lastmod>2023-01-02T22:56:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/deploy-cli/</loc>
-    <lastmod>2022-12-29T22:11:17+00:00</lastmod>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/deploy/deploy-cli/</loc>
+    <lastmod>2023-01-02T22:56:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/upgrade/</loc>
-    <lastmod>2022-12-29T22:11:17+00:00</lastmod>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/deploy/upgrade/</loc>
+    <lastmod>2023-01-02T22:56:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/monitor-iap-setup/</loc>
-    <lastmod>2022-12-12T23:32:20+00:00</lastmod>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/deploy/monitor-iap-setup/</loc>
+    <lastmod>2023-01-02T22:56:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/delete-cli/</loc>
-    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/deploy/delete-cli/</loc>
+    <lastmod>2023-01-02T22:56:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/</loc>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/deploy/</loc>
     <lastmod>2022-11-09T21:46:30+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/pipelines/</loc>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/pipelines/</loc>
     <lastmod>2022-11-09T21:46:30+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/pipelines/authentication-sdk/</loc>
-    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/pipelines/authentication-sdk/</loc>
+    <lastmod>2023-01-02T22:56:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/customizing/</loc>
-    <lastmod>2022-12-29T22:11:17+00:00</lastmod>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/customizing/</loc>
+    <lastmod>2023-01-02T22:56:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/</loc>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/</loc>
     <lastmod>2022-11-09T21:43:22+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/custom-domain/</loc>
-    <lastmod>2022-12-12T23:32:20+00:00</lastmod>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/custom-domain/</loc>
+    <lastmod>2023-01-02T22:56:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/authentication/</loc>
-    <lastmod>2022-12-12T23:32:20+00:00</lastmod>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/authentication/</loc>
+    <lastmod>2023-01-02T22:56:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/pipelines/authentication-pipelines/</loc>
-    <lastmod>2022-12-12T23:32:20+00:00</lastmod>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/pipelines/authentication-pipelines/</loc>
+    <lastmod>2023-01-02T22:56:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/pipelines/upgrade/</loc>
-    <lastmod>2022-11-11T17:49:27+00:00</lastmod>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/pipelines/upgrade/</loc>
+    <lastmod>2023-01-02T22:56:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/pipelines/enable-gpu-and-tpu/</loc>
-    <lastmod>2022-12-12T23:32:20+00:00</lastmod>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/pipelines/enable-gpu-and-tpu/</loc>
+    <lastmod>2023-01-02T22:56:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/private-clusters/</loc>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/private-clusters/</loc>
     <lastmod>2022-12-29T22:11:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/troubleshooting/</loc>
-    <lastmod>2022-12-12T23:32:20+00:00</lastmod>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/troubleshooting/</loc>
+    <lastmod>2023-01-02T22:56:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/pipelines/preemptible/</loc>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/pipelines/preemptible/</loc>
+    <lastmod>2023-01-02T22:56:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/anthos/</loc>
+    <lastmod>2023-01-02T22:56:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/changelog/</loc>
     <lastmod>2022-12-29T22:11:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/anthos/</loc>
-    <lastmod>2022-12-29T22:11:17+00:00</lastmod>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/categories/</loc>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/changelog/</loc>
-    <lastmod>2022-12-29T22:11:17+00:00</lastmod>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/</loc>
+    <lastmod>2023-01-02T22:56:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/</loc>
-    <lastmod>2022-12-29T22:11:17+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/search/</loc>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/search/</loc>
     <lastmod>2022-11-11T00:17:54+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/tags/</loc>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/tags/</loc>
   </url>
   
 </urlset>
