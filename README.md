@@ -1,5 +1,4 @@
 ![Build v1.5](https://github.com/GoogleCloudPlatform/kubeflow-gke-docs/actions/workflows/hugo-build-deploy-on-push.yml/badge.svg?branch=v1.5-release)
-![Deploy v1.5](https://github.com/GoogleCloudPlatform/kubeflow-gke-docs/actions/workflows/pages-build-deployment/badge.svg?branch=v1.5-release)
 
 # Contributing to this repository
 
