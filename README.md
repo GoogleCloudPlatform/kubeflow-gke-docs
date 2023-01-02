@@ -1,3 +1,5 @@
+![Build v1.6](https://github.com/GoogleCloudPlatform/kubeflow-gke-docs/actions/workflows/hugo-build-deploy-on-push.yml/badge.svg?branch=v1.6-release)
+
 # Contributing to this repository
 
 Welcome, Kubeflow users! This website contains the latest documentation for Kubeflow on Google Cloud. It is hosted at https://googlecloudplatform.github.io/kubeflow-gke-docs. 
