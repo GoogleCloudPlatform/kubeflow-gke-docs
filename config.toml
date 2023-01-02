@@ -1,7 +1,7 @@
 # Base configuration
 ##########################################################
 # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version
-baseURL = "https://googlecloudplatform.github.io/kubeflow-gke-docs/dev"
+baseURL = "https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.4"
 title = "Kubeflow on Google Cloud Platform"
 description = "Open-source machine learning platform running on Google Kubernetes Engine"
 
@@ -159,7 +159,7 @@ pygmentsStyle = "tango"
   version = "v1.4"
   # URL prefix for this specific version
   # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
-  version_url_prefix = "/v1.4"
+  version_url_prefix = ""
   # A link to latest version of the docs. Used in the "version-banner" partial to
   # point people to the main doc site.
   url_latest_version = "https://googlecloudplatform.github.io/kubeflow-gke-docs/docs"
@@ -187,7 +187,7 @@ pygmentsStyle = "tango"
   github_repo = "https://github.com/googlecloudplatform/kubeflow-gke-docs"
   # Specify a value here if your content directory is not in your repo's root directory
   # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
-  # github_subdir = "dev"
+  # github_subdir = "v1.4"
 
   # Google Custom Search Engine ID. Remove or comment out to disable search.
   gcs_engine_id = "b698ddb9e4f3e4c92"
