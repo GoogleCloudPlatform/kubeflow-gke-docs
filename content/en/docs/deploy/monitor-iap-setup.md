@@ -15,7 +15,7 @@ unavailable.
 
 ## Introduction
 
-When deploying Kubeflow using the [command-line interface](/{{ .Site.Params.version_url_prefix }}docs/deploy/deploy-cli/),
+When deploying Kubeflow using the [command-line interface](./docs/deploy/deploy-cli/),
 you choose the authentication method you want to use. One of the options is
 Cloud IAP. This document assumes that you have already deployed Kubeflow.
 
@@ -113,7 +113,7 @@ problems:
     * `kubectl get pods -n istio-system`
     * The `istio-ingressgateway-XX` pods should be running
     * Check the logs of pod `backend-updater-0`, `iap-enabler-XX` to see if there is any error
-    * Follow the steps [here](/{{ .Site.Params.version_url_prefix }}docs/troubleshooting/#502-server-error) to check the load balancer and backend service on Google Cloud.
+    * Follow the steps [here](./docs/troubleshooting/#502-server-error) to check the load balancer and backend service on Google Cloud.
 
 
 2. Try accessing Cloud IAP at the fully qualified domain name in your web 
@@ -143,9 +143,9 @@ problems:
     Follow the link in the error message to find the OAuth credential being used	
     and add the redirect URI listed in the error message to the list of 	
     authorized URIs. For more information, read the guide to 	
-    [setting up OAuth for Cloud IAP](/{{ .Site.Params.version_url_prefix }}docs/deploy/oauth-setup/).	
+    [setting up OAuth for Cloud IAP](./docs/deploy/oauth-setup/).	
 
 ## Next steps
-* The [Google Kubernetes Engine troubleshooting guide](/{{ .Site.Params.version_url_prefix }}docs/troubleshooting/) for Kubeflow.
-* Guide to [sharing cluster access](/{{ .Site.Params.version_url_prefix }}docs/components/multi-tenancy/getting-started).
+* The [Google Kubernetes Engine troubleshooting guide](./docs/troubleshooting/) for Kubeflow.
+* Guide to [sharing cluster access](./docs/components/multi-tenancy/getting-started).
 * Google Cloud guide to [Cloud IAP](https://cloud.google.com/iap/docs/).
