@@ -1,7 +1,7 @@
 # Base configuration
 ##########################################################
 # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version
-baseURL = "https://gkcalat.github.io/kubeflow-docs"
+baseURL = "https://googlecloudplatform.github.io/kubeflow-gke-docs"
 title = "Kubeflow on Google Cloud Platform"
 description = "Open-source machine learning platform running on Google Kubernetes Engine"
 
@@ -162,26 +162,26 @@ pygmentsStyle = "tango"
   version_url_prefix = ""
   # A link to latest version of the docs. Used in the "version-banner" partial to
   # point people to the main doc site.
-  url_latest_version = "https://gkcalat.github.io/kubeflow-docs/docs"
+  url_latest_version = "https://googlecloudplatform.github.io/kubeflow-gke-docs/docs"
   
   # These entries appear in the drop-down menu at the top of the website.
   [[params.versions]]
     # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
     version = "v1.6 (latest)"
     githubbranch = "v1.6-release"
-    url = "https://gkcalat.github.io/kubeflow-docs/docs"
+    url = "https://googlecloudplatform.github.io/kubeflow-gke-docs/docs"
   [[params.versions]]
     version = "v1.5"
     githubbranch = "v1.5-release"
-    url = "https://gkcalat.github.io/kubeflow-docs/v1.5/docs"
+    url = "https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.5/docs"
   [[params.versions]]
     version = "v1.4"
     githubbranch = "v1.4-release"
-    url = "https://gkcalat.github.io/kubeflow-docs/v1.4/docs"
+    url = "https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.4/docs"
   [[params.versions]]
     version = "dev"
     githubbranch = "main"
-    url = "https://gkcalat.github.io/kubeflow-docs/dev/docs"
+    url = "https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs"
 
   # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
   github_repo = "https://github.com/googlestaging/kubeflow-gke-docs"
