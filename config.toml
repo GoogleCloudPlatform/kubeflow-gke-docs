@@ -25,7 +25,7 @@ pygmentsUseClassic = false
 # See https://help.farbox.com/pygments.html
 pygmentsStyle = "tango"
 # Relative urls:
-relativeURLs = true
+# relativeURLs = true
 
 # Image processing configuration.
 [imaging]
