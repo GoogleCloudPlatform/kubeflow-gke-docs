@@ -36,12 +36,12 @@ with automatic resizing of the node pool.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://cloud.google.com/logging/docs/&#34;&gt;Cloud Logging&lt;/a&gt; for easy debugging and troubleshooting.&lt;/li&gt;
 &lt;li&gt;Other managed services offered by Google Cloud, such as &lt;a href=&#34;https://cloud.google.com/storage&#34;&gt;Cloud Storage&lt;/a&gt;, &lt;a href=&#34;https://cloud.google.com/sql&#34;&gt;Cloud SQL&lt;/a&gt;, &lt;a href=&#34;https://cloud.google.com/anthos/service-mesh&#34;&gt;Anthos Service Mesh&lt;/a&gt;, &lt;a href=&#34;https://cloud.google.com/iam&#34;&gt;Identity and Access Management (IAM)&lt;/a&gt;, &lt;a href=&#34;https://cloud.google.com/anthos-config-management/docs/concepts/config-controller-overview&#34;&gt;Config Controller&lt;/a&gt;, and so on.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;../../images/gke/full-kf-home.png&#34; alt=&#34;Kubeflow on Google Cloud: central dashboard&#34;&gt;
-&lt;strong&gt;Figure 1.&lt;/strong&gt; User interface of full-fledged Kubeflow deployment on Google Cloud.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../images/gke/full-kf-home.png&#34; alt=&#34;Kubeflow on Google Cloud: central dashboard&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 1.&lt;/strong&gt; User interface of full-fledged Kubeflow deployment on Google Cloud.&lt;/p&gt;
 &lt;h2 id=&#34;management-cluster&#34;&gt;Management cluster&lt;/h2&gt;
 &lt;p&gt;Kubeflow on Google Cloud employs a management cluster, which lets you manage Google Cloud resources via &lt;a href=&#34;https://cloud.google.com/anthos-config-management/docs/concepts/config-controller-overview&#34;&gt;Config Controller&lt;/a&gt;. The management cluster is independent from the Kubeflow cluster and manages Kubeflow clusters. You can also use a management cluster from a different Google Cloud project, by assigning owner permissions to the associated service account.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../../images/gke/full-deployment-structure.png&#34; alt=&#34;Kubeflow on Google Cloud: clusters hierarchy&#34;&gt;
-&lt;strong&gt;Figure 2.&lt;/strong&gt; Example of Kubeflow on Google Cloud deployment.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../images/gke/full-deployment-structure.png&#34; alt=&#34;Kubeflow on Google Cloud: clusters hierarchy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 2.&lt;/strong&gt; Example of Kubeflow on Google Cloud deployment.&lt;/p&gt;
 &lt;h2 id=&#34;deployment-process&#34;&gt;Deployment process&lt;/h2&gt;
 &lt;p&gt;To set up a Kubeflow environment on Google Cloud, complete these steps:&lt;/p&gt;
 &lt;ol&gt;
@@ -273,8 +273,8 @@ need to modify the redirect URIs.&lt;/li&gt;
 &lt;p&gt;Press &lt;strong&gt;Enter/Return&lt;/strong&gt; to add the URI. Check that the URI now appears as
 a confirmed item under &lt;strong&gt;Authorized redirect URIs&lt;/strong&gt;. (The URI should no longer be
 editable.)&lt;/p&gt;
-&lt;p&gt;Here&amp;rsquo;s an example of the completed form:
-&lt;img src=&#34;../../images/gke/oauth-credential.png&#34; 
+&lt;p&gt;Here&amp;rsquo;s an example of the completed form:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../images/gke/oauth-credential.png&#34;
 alt=&#34;OAuth credentials&#34;
 class=&#34;mt-3 mb-3 p-3 border border-info rounded&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;

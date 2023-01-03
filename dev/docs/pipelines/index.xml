@@ -739,7 +739,7 @@ if __name__ == &#39;__main__&#39;:
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;next-steps&#34;&gt;Next steps&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Explore further options for &lt;a href=&#34;../../&#34;&gt;customizing Kubeflow on Google Cloud&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;See how to &lt;a href=&#34;https://kubeflow.org/docs/components/pipelines/sdk/&#34;&gt;build pipelines with the SDK&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;See how to &lt;a href=&#34;https://kubeflow.org/docs/components/pipelines/sdk/build-pipeline/&#34;&gt;build pipelines with the SDK&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
