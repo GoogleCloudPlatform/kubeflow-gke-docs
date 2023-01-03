@@ -109,7 +109,7 @@ Starting from Kubeflow v1.1, Kubeflow Pipelines supports multi-user isolation. T
 
 Additionally, the Kubeflow Pipelines UI, visualization, and TensorBoard server instances are deployed in your user namespace using the `default-editor` KSA. Therefore, to visualize results in the Pipelines UI, they can fetch artifacts in Google Cloud Storage using permissions of the same GSA you configured for this namespace.
 
-For more details, refer to [Authenticating Pipelines to Google Cloud](./docs/pipelines/authentication-pipelines/).
+For more details, refer to [Authenticating Pipelines to Google Cloud](../pipelines/authentication-pipelines/).
 
 ---
 
@@ -240,4 +240,4 @@ You can find more information in the
 
 ## Next steps
 
-See the [troubleshooting guide](./docs/troubleshooting/) for help with diagnosing and fixing issues you may encounter with Kubeflow on Google Cloud
+See the [troubleshooting guide](../troubleshooting/) for help with diagnosing and fixing issues you may encounter with Kubeflow on Google Cloud
