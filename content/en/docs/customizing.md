@@ -9,7 +9,7 @@ Kubernetes Engine (GKE) on Google Cloud.
 
 ## Before you start
 
-The variables defined in this page can be found in [kubeflow-distribution/kubeflow/env.sh](https://github.com/googlecloudplatform/kubeflow-distribution/blob/master/kubeflow/env.sh). They are the same value as you set based on your [Kubeflow deployment](./docs/deploy/deploy-cli/#environment-variables). 
+The variables defined in this page can be found in [kubeflow-distribution/kubeflow/env.sh](https://github.com/googlecloudplatform/kubeflow-distribution/blob/master/kubeflow/env.sh). They are the same value as you set based on your [Kubeflow deployment](../deploy/deploy-cli/#environment-variables). 
 
 ## Customizing Kubeflow before deployment
 
@@ -17,14 +17,14 @@ The Kubeflow deployment process is divided into two steps, **hydrate** and
 **apply**, so that you can modify your configuration before deploying your 
 Kubeflow cluster.
 
-Follow the guide to [deploying Kubeflow on Google Cloud](./docs/deploy/deploy-cli/). You can add your patches in corresponding component folder, and include those patches in `kustomization.yaml` file. Learn more about the usage of [kustomize](https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/). You can also find the existing kustomization in [googlecloudplatform/kubeflow-distribution](https://github.com/googlecloudplatform/kubeflow-distribution) as example. After adding the patches, you can run `make hydrate` to validate the resulting resources. Finally, you can run `make apply` to deploy the customized Kubeflow.
+Follow the guide to [deploying Kubeflow on Google Cloud](../deploy/deploy-cli/). You can add your patches in corresponding component folder, and include those patches in `kustomization.yaml` file. Learn more about the usage of [kustomize](https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/). You can also find the existing kustomization in [googlecloudplatform/kubeflow-distribution](https://github.com/googlecloudplatform/kubeflow-distribution) as example. After adding the patches, you can run `make hydrate` to validate the resulting resources. Finally, you can run `make apply` to deploy the customized Kubeflow.
 
 
 ## Customizing an existing deployment
 
 You can also customize an existing Kubeflow deployment. In that case, this 
 guide assumes that you have already followed the guide to 
-[deploying Kubeflow on Google Cloud](./docs/deploy/deploy-cli/) and have deployed
+[deploying Kubeflow on Google Cloud](../deploy/deploy-cli/) and have deployed
 Kubeflow to a Google Kubernetes Engine cluster.
 
 ## Before you start
@@ -41,7 +41,7 @@ This guide assumes the following settings:
   ``` 
 
 * Make sure your environment variables are set up for the Kubeflow cluster you want to customize. For further background about the settings, see the guide to
-  [deploying Kubeflow with the CLI](./docs/deploy/deploy-cli).
+  [deploying Kubeflow with the CLI](../deploy/deploy-cli).
 
 
 ## Customizing Google Cloud resources
@@ -159,7 +159,7 @@ command:
 gcloud compute accelerator-types list
 ```
  
-Create the [ContainerNodePool](https://cloud.google.com/config-connector/docs/reference/resource-docs/container/containernodepool) resource adopting GPU, for exmaple, create a new file `containernodepool-gpu.yaml` file and fulfill the value `KUBEFLOW-NAME`, `KF-PROJECT`, `LOCATION` based on your [Kubeflow deployment](./docs/deploy/deploy-cli/#environment-variables):
+Create the [ContainerNodePool](https://cloud.google.com/config-connector/docs/reference/resource-docs/container/containernodepool) resource adopting GPU, for exmaple, create a new file `containernodepool-gpu.yaml` file and fulfill the value `KUBEFLOW-NAME`, `KF-PROJECT`, `LOCATION` based on your [Kubeflow deployment](../deploy/deploy-cli/#environment-variables):
 
 ```
 apiVersion: container.cnrm.cloud.google.com/v1beta1
@@ -281,4 +281,4 @@ You can learn more at [Creating a new cluster with Cloud TPU support](https://cl
 ## More customizations
 
 Refer to the navigation panel on the left of these docs for more customizations,
-including [using your own domain](./docs/custom-domain) and more.
+including [using your own domain](../custom-domain) and more.

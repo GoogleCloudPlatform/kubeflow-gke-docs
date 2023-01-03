@@ -39,30 +39,31 @@ address to verify the user's identity.
           need to set.        
    * Click **Save**.
    * Here's an example of the completed form:   
-    <img src="/docs/images/consent-screen.png" 
+  
+    <img src="../../images/gke/consent-screen.png" 
       alt="OAuth consent screen"
       class="mt-3 mb-3 p-3 border border-info rounded">
 
-1. On the [credentials screen](https://console.cloud.google.com/apis/credentials):
+2. On the [credentials screen](https://console.cloud.google.com/apis/credentials):
    * Click **Create credentials**, and then click **OAuth client ID**.
    * Under **Application type**, select **Web application**.
    * In the **Name** box enter any name for your OAuth client ID. This is *not*
      the name of your application nor the name of your Kubeflow deployment. It's
      just a way to help you identify the OAuth client ID.
 
-1. Click **Create**. A dialog box appears, like the one below:
+3. Click **Create**. A dialog box appears, like the one below:
 
-     <img src="/docs/images/new-oauth.png" 
+     <img src="../../images/gke/new-oauth.png" 
       alt="OAuth consent screen"
       class="mt-3 mb-3 p-3 border border-info rounded">
 
-1. Copy the **client ID** shown in the dialog box, because you need the client
+4. Copy the **client ID** shown in the dialog box, because you need the client
   ID in the next step.
 
 1. On the **Create credentials** screen, find your newly created OAuth 
   credential and click the pencil icon to edit it:
    
-    <img src="/docs/images/oauth-edit.png" 
+    <img src="../../images/gke/oauth-edit.png" 
      alt="OAuth consent screen"
      class="mt-3 mb-3 p-3 border border-info rounded">
 
@@ -84,7 +85,8 @@ address to verify the user's identity.
   editable.)
 
     Here's an example of the completed form:
-    <img src="/docs/images/oauth-credential.png" 
+
+    <img src="../../images/gke/oauth-credential.png" 
       alt="OAuth credentials"
       class="mt-3 mb-3 p-3 border border-info rounded">
 

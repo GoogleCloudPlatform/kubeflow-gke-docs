@@ -11,7 +11,7 @@ DSL language.
 ## Prerequisites
 
 To enable GPU and TPU on your Kubeflow cluster, follow the instructions on how to 
-[customize](./docs/customizing-gke#common-customizations) the Google Kubernetes Engine cluster for Kubeflow before
+[customize](../../customizing#common-customizations) the Google Kubernetes Engine cluster for Kubeflow before
 setting up the cluster.
 
 ## Configure ContainerOp to consume GPUs

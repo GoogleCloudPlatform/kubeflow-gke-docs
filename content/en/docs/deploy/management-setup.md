@@ -167,7 +167,7 @@ Inside the Config Controller, we manage Google Cloud resources in namespace mode
 within this project to manage Config Connector. It is the prerequisite for managing resources in other Google Cloud projects.
 
 `namespace with the same name as your Kubeflow clusters' Google Cloud project name` is the resource pool for Kubeflow cluster's Google Cloud project.
-For each Kubeflow Google Cloud project, you will have service account with pattern `kcc-<kf-project-name>@<management-project-name>.iam.gserviceaccount.com` in `config-control` namespace, and it needs to have owner permission to `${KF_PROJECT}`, you will perform this step during [Deploy Kubeflow cluster](./docs/deploy/deploy-cli/). After setup, your Google Cloud resources in Kubeflow cluster project will be deployed to the namespace with name `${KF_PROJECT}` in the management cluster.
+For each Kubeflow Google Cloud project, you will have service account with pattern `kcc-<kf-project-name>@<management-project-name>.iam.gserviceaccount.com` in `config-control` namespace, and it needs to have owner permission to `${KF_PROJECT}`, you will perform this step during [Deploy Kubeflow cluster](../deploy-cli/). After setup, your Google Cloud resources in Kubeflow cluster project will be deployed to the namespace with name `${KF_PROJECT}` in the management cluster.
 
 Your management cluster directory contains the following file:
 
@@ -200,4 +200,4 @@ kubectl --context=${MGMT_NAME} get IAMServiceAccount <service-account-name> -n $
 For a more detailed explanation of the drastic changes happened in Kubeflow v1.1 on Google Cloud, read [googlecloudplatform/kubeflow-distribution #123](https://github.com/googlecloudplatform/kubeflow-distribution/issues/123).
 
 ## Next steps
-* [Deploy Kubeflow](./docs/deploy/deploy-cli) using kubectl, kustomize and kpt.
+* [Deploy Kubeflow](../deploy-cli) using kubectl, kustomize and kpt.
