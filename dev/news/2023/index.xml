@@ -1,0 +1,17 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubeflow on Google Cloud Platform – Kubeflow on Google Cloud</title>
+    <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/2023/</link>
+    <description>Recent content in Kubeflow on Google Cloud on Kubeflow on Google Cloud Platform</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/2023/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

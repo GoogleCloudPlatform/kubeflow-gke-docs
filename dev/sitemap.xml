@@ -68,8 +68,18 @@
   </url>
   
   <url>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/2022/</loc>
+    <lastmod>2023-01-03T01:30:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/2023/</loc>
+    <lastmod>2023-01-03T01:30:59+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/</loc>
-    <lastmod>2023-01-03T01:22:11+00:00</lastmod>
+    <lastmod>2023-01-03T01:30:59+00:00</lastmod>
   </url>
   
   <url>
