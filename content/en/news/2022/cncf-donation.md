@@ -2,7 +2,7 @@
 +++
 title = "Kubeflow applied to CNCF incubating"
 description = "Kubeflow has applied to become a CNCF incubating project"
-weight = 30
+weight = 1
 +++
 
 **Source:** [Kubeflow's blog](https://blog.kubeflow.org/kubeflow-applied-cncf-incubating/).

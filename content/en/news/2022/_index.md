@@ -1,5 +1,5 @@
 +++
 title = "Kubeflow on Google Cloud"
-description = "Recent news and updates"
-weight = 20
+description = "News and updates in 2022"
+weight = 10
 +++

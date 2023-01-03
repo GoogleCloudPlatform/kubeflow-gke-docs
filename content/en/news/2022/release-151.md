@@ -1,7 +1,7 @@
 +++
 title = "Kubeflow on Google Cloud v1.5.1"
 description = "A new patch release of Kubeflow 1.5"
-weight = 60
+weight = 4
 +++
 
 A new version of Kubeflow on Google Cloud has been released! See the updated instructions on how to [deploy](https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/) to a new cluster and [upgrade](https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/upgrade/) an existing deployment.
