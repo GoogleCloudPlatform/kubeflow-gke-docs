@@ -289,7 +289,7 @@ section of the Google Cloud Console. You need to retrieve the &lt;strong&gt;clie
 &lt;/ol&gt;
 &lt;h2 id=&#34;next-steps&#34;&gt;Next steps&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;./docs/deploy/management-setup/&#34;&gt;Set up your management cluster&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../management-setup/&#34;&gt;Set up your management cluster&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://cloud.google.com/iam/docs/granting-changing-revoking-access#granting-console&#34;&gt;Grant your users the IAP-secured Web App User IAM role&lt;/a&gt; so they can access the Kubeflow console through IAP.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1174,11 +1174,11 @@ Google Cloud.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;For Management cluster: The &lt;code&gt;${MGMT_PROJECT}&lt;/code&gt;, &lt;code&gt;${MGMT_DIR}&lt;/code&gt; and &lt;code&gt;${MGMT_NAME}&lt;/code&gt; environment variables
-are the same as in &lt;a href=&#34;./docs/deploy/management-setup#configure-environment-variables&#34;&gt;Deploy Management cluster&lt;/a&gt;.&lt;/p&gt;
+are the same as in &lt;a href=&#34;../management-setup#configure-environment-variables&#34;&gt;Deploy Management cluster&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;For Kubeflow cluster: The &lt;code&gt;${KF_PROJECT}&lt;/code&gt;, &lt;code&gt;${KF_NAME}&lt;/code&gt; and &lt;code&gt;${MGMTCTXT}&lt;/code&gt; environment variables
-are the same as in &lt;a href=&#34;./docs/deploy/deploy-cli#environment-variables&#34;&gt;Deploy Kubeflow cluster&lt;/a&gt;.&lt;/p&gt;
+are the same as in &lt;a href=&#34;../deploy-cli#environment-variables&#34;&gt;Deploy Kubeflow cluster&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The &lt;code&gt;${KF_DIR}&lt;/code&gt; environment variable contains the path to

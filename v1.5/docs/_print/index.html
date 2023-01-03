@@ -710,7 +710,7 @@ section of the Google Cloud Console. You need to retrieve the <strong>client ID<
 </ol>
 <h2 id="next-steps">Next steps</h2>
 <ul>
-<li><a href="./docs/deploy/management-setup/">Set up your management cluster</a>.</li>
+<li><a href="../management-setup/">Set up your management cluster</a>.</li>
 <li><a href="https://cloud.google.com/iam/docs/granting-changing-revoking-access#granting-console">Grant your users the IAP-secured Web App User IAM role</a> so they can access the Kubeflow console through IAP.</li>
 </ul>
 
@@ -1615,11 +1615,11 @@ Google Cloud.</p>
 <ul>
 <li>
 <p>For Management cluster: The <code>${MGMT_PROJECT}</code>, <code>${MGMT_DIR}</code> and <code>${MGMT_NAME}</code> environment variables
-are the same as in <a href="./docs/deploy/management-setup#configure-environment-variables">Deploy Management cluster</a>.</p>
+are the same as in <a href="../management-setup#configure-environment-variables">Deploy Management cluster</a>.</p>
 </li>
 <li>
 <p>For Kubeflow cluster: The <code>${KF_PROJECT}</code>, <code>${KF_NAME}</code> and <code>${MGMTCTXT}</code> environment variables
-are the same as in <a href="./docs/deploy/deploy-cli#environment-variables">Deploy Kubeflow cluster</a>.</p>
+are the same as in <a href="../deploy-cli#environment-variables">Deploy Kubeflow cluster</a>.</p>
 </li>
 <li>
 <p>The <code>${KF_DIR}</code> environment variable contains the path to
@@ -1859,7 +1859,7 @@ Kubeflow Pipelines can authenticate to Google Cloud and manage resources in your
 <ul>
 <li>If you followed instructions in <a href="https://cloud.google.com/ai-platform/pipelines/docs/setting-up">Setting up AI Platform Pipelines</a> and checked <code>Allow access to the following Cloud APIs</code>, your cluster is already using Compute Engine default service account.</li>
 <li>In Google Cloud Console UI, you can enable it in <code>Create a Kubernetes cluster -&gt; default-pool -&gt; Security -&gt; Access Scopes -&gt; Allow full access to all Cloud APIs</code> like the following:
-<img src="/docs/images/pipelines/v1/gke-allow-full-access.png"></li>
+<img src="../../images/pipelines/v1/gke-allow-full-access.png"></li>
 <li>Using <code>gcloud</code> CLI, you can enable it with <code>--scopes cloud-platform</code> like the following:</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcloud container clusters create &lt;cluster-name&gt; <span class="se">\
@@ -1894,7 +1894,7 @@ You can also continue to use <code>use_gcp_secret</code> in a cluster with Workl
 <ul>
 <li>
 <p>In Google Cloud Console UI, you can enable Workload Identity in <code>Create a Kubernetes cluster -&gt; Security -&gt; Enable Workload Identity</code> like the following:
-<img src="/docs/images/pipelines/v1/gke-enable-workload-identity.png"></p>
+<img src="../../images/pipelines/v1/gke-enable-workload-identity.png"></p>
 </li>
 <li>
 <p>Using <code>gcloud</code> CLI, you can enable it with:</p>

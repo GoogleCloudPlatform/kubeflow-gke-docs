@@ -382,7 +382,7 @@ Kubeflow Pipelines can authenticate to Google Cloud and manage resources in your
 <ul>
 <li>If you followed instructions in <a href="https://cloud.google.com/ai-platform/pipelines/docs/setting-up">Setting up AI Platform Pipelines</a> and checked <code>Allow access to the following Cloud APIs</code>, your cluster is already using Compute Engine default service account.</li>
 <li>In Google Cloud Console UI, you can enable it in <code>Create a Kubernetes cluster -&gt; default-pool -&gt; Security -&gt; Access Scopes -&gt; Allow full access to all Cloud APIs</code> like the following:
-<img src="/docs/images/pipelines/v1/gke-allow-full-access.png"></li>
+<img src="../../images/pipelines/v1/gke-allow-full-access.png"></li>
 <li>Using <code>gcloud</code> CLI, you can enable it with <code>--scopes cloud-platform</code> like the following:</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcloud container clusters create &lt;cluster-name&gt; <span class="se">\
@@ -417,7 +417,7 @@ You can also continue to use <code>use_gcp_secret</code> in a cluster with Workl
 <ul>
 <li>
 <p>In Google Cloud Console UI, you can enable Workload Identity in <code>Create a Kubernetes cluster -&gt; Security -&gt; Enable Workload Identity</code> like the following:
-<img src="/docs/images/pipelines/v1/gke-enable-workload-identity.png"></p>
+<img src="../../images/pipelines/v1/gke-enable-workload-identity.png"></p>
 </li>
 <li>
 <p>Using <code>gcloud</code> CLI, you can enable it with:</p>
