@@ -1,0 +1,132 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubeflow on Google Cloud Platform – Kubeflow on Google Cloud</title>
+    <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/</link>
+    <description>Recent content in Kubeflow on Google Cloud on Kubeflow on Google Cloud Platform</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>News: Kubeflow applied to CNCF incubating</title>
+      <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/1/01/01/kubeflow-applied-to-cncf-incubating/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/1/01/01/kubeflow-applied-to-cncf-incubating/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;strong&gt;Source:&lt;/strong&gt; &lt;a href=&#34;https://blog.kubeflow.org/kubeflow-applied-cncf-incubating/&#34;&gt;Kubeflow&amp;rsquo;s blog&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;kubeflows-cncf-incubating-application&#34;&gt;Kubeflow&amp;rsquo;s CNCF incubating application&lt;/h2&gt;
+&lt;p&gt;With support from the Kubeflow Project Steering Group, Google has just &lt;a href=&#34;https://opensource.googleblog.com/2022/10/kubeflow-applies-to-become-a-cncf-incubating-project.html&#34;&gt;announced&lt;/a&gt; the application for Kubeflow to become an incubating project in the Cloud Native Computing Foundation (CNCF).&lt;/p&gt;
+&lt;p&gt;We in the &lt;a href=&#34;https://www.kubeflow.org/&#34;&gt;Kubeflow&lt;/a&gt; community are excited about how far the project has come since &lt;a href=&#34;https://kubernetes.io/blog/2017/12/introducing-kubeflow-composable/&#34;&gt;its inception&lt;/a&gt; in 2017, and are blown away by the diverse community of contributors and users we have built together. Today, Kubeflow has close to 200 contributors from over 30 organizations. Over the past five years, the project has seen almost 20,000 &lt;a href=&#34;https://github.com/kubeflow&#34;&gt;GitHub&lt;/a&gt; stars, tens of thousands of commits, and hosted several user and contributor gatherings across the world.&lt;/p&gt;
+&lt;h2 id=&#34;whats-next&#34;&gt;What’s Next&lt;/h2&gt;
+&lt;p&gt;The &lt;a href=&#34;https://github.com/cncf/toc/pull/950&#34;&gt;pull request&lt;/a&gt; we’ve opened today to join CNCF as an incubating project is only the first step. Google and the Kubeflow community will work with the CNCF and their Technical Oversight Committee (TOC), to meet the incubation stage requirements. While the due diligence and eventual TOC decision will take some time, the Kubeflow project will continue developing and releasing throughout this process.&lt;/p&gt;
+&lt;p&gt;If Kubeflow is accepted into CNCF, the project will transfer to the CNCF its source code, trademark, website, and other collaboration assets and social media accounts. As part of the donation, we will also work with the Kubeflow community to update the project governance to ensure diverse representation of the broader community. Open source comes with the responsibility to contribute, sustain, and improve the projects to make our ecosystem better. We at Google will continue to support Kubeflow and participate in the Kubeflow community as project maintainers, contributors, and users.&lt;/p&gt;
+&lt;p&gt;A huge thank you to everyone who has contributed to Kubeflow over the years! We are excited for what lays ahead.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;By Thea Lamkin, Senior Program Manager, Google, on behalf of the Kubeflow Project Steering Group&lt;/em&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>News: Kubeflow on Google Cloud v1.6.1</title>
+      <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/1/01/01/kubeflow-on-google-cloud-v1.6.1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/1/01/01/kubeflow-on-google-cloud-v1.6.1/</guid>
+      <description>
+        
+        
+        &lt;p&gt;A new version of Kubeflow on Google Cloud has been released! See the updated instructions on how to &lt;a href=&#34;https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/&#34;&gt;deploy&lt;/a&gt; to a new cluster and &lt;a href=&#34;https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/upgrade/&#34;&gt;upgrade&lt;/a&gt; an existing deployment.&lt;/p&gt;
+&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;🔼 Upgraded upstream &lt;code&gt;Manifests&lt;/code&gt; to &lt;code&gt;v1.6.1&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;🔼 Upgraded &lt;code&gt;pipelines&lt;/code&gt; to &lt;code&gt;v2.0.0-alpha.6&lt;/code&gt; (fixes &lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/392&#34;&gt;#392&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;🔼 Updated &lt;code&gt;MySQL&lt;/code&gt; to &lt;code&gt;8.0&lt;/code&gt; (&lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/391&#34;&gt;#391&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;🔨 Fixed &lt;code&gt;ASM&lt;/code&gt; deployment issue (&lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/389&#34;&gt;#389&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;🔨 Minor improvements of deployment process.&lt;/li&gt;
+&lt;li&gt;🧪 Validated deployment using &lt;code&gt;GKE 1.22&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>News: Kubeflow on Google Cloud v1.6.0</title>
+      <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/1/01/01/kubeflow-on-google-cloud-v1.6.0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/1/01/01/kubeflow-on-google-cloud-v1.6.0/</guid>
+      <description>
+        
+        
+        &lt;p&gt;A new version of Kubeflow on Google Cloud has been released! See the updated instructions on how to &lt;a href=&#34;https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/&#34;&gt;deploy&lt;/a&gt; to a new cluster and &lt;a href=&#34;https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/upgrade/&#34;&gt;upgrade&lt;/a&gt; an existing deployment.&lt;/p&gt;
+&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;🔼 Upgraded upstream &lt;code&gt;Manifests&lt;/code&gt; to &lt;code&gt;v1.6.0&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;🔼 Upgraded &lt;code&gt;ASM&lt;/code&gt; to &lt;code&gt;v1.14&lt;/code&gt; (&lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/385&#34;&gt;#385&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;🔼 Upgraded &lt;code&gt;Knative&lt;/code&gt; to &lt;code&gt;v1.2&lt;/code&gt; (&lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/373&#34;&gt;#373&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;🔼 Upgraded &lt;code&gt;cert-manager&lt;/code&gt; to &lt;code&gt;v1.5&lt;/code&gt; (&lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/372&#34;&gt;#372&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;🔼 Upgraded &lt;code&gt;pipelines&lt;/code&gt; to &lt;code&gt;v2.0.0-alpha.4&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;🔼 Upgraded APIs to support &lt;code&gt;GKE 1.22&lt;/code&gt; (&lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/349&#34;&gt;#349&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;🔨 Improved deployment stability (&lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/371&#34;&gt;#371&lt;/a&gt;, &lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/376&#34;&gt;#376&lt;/a&gt;, &lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/384&#34;&gt;#384&lt;/a&gt;, &lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/386&#34;&gt;#386&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;🚚 Removed deprecated &lt;code&gt;kfserving&lt;/code&gt;, &lt;code&gt;cloud-endpoints&lt;/code&gt;, and &lt;code&gt;application&lt;/code&gt; manifests (&lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/375&#34;&gt;#375&lt;/a&gt;, &lt;a href=&#34;https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/377&#34;&gt;#377&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;🧪 Validated deployment using &lt;code&gt;GKE 1.21&lt;/code&gt; and &lt;code&gt;GKE 1.22&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>News: Kubeflow on Google Cloud v1.5.1</title>
+      <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/1/01/01/kubeflow-on-google-cloud-v1.5.1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/1/01/01/kubeflow-on-google-cloud-v1.5.1/</guid>
+      <description>
+        
+        
+        &lt;p&gt;A new version of Kubeflow on Google Cloud has been released! See the updated instructions on how to &lt;a href=&#34;https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/&#34;&gt;deploy&lt;/a&gt; to a new cluster and &lt;a href=&#34;https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/upgrade/&#34;&gt;upgrade&lt;/a&gt; an existing deployment.&lt;/p&gt;
+&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;🔼 Upgraded &lt;code&gt;ASM&lt;/code&gt; to &lt;code&gt;v1.13&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;🔨 Fixed &lt;code&gt;KServe&lt;/code&gt; issues with dashboard (&lt;a href=&#34;(https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/362)&#34;&gt;#362&lt;/a&gt; and directory(&lt;a href=&#34;(https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/361)&#34;&gt;#361&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;🚚 Increased the maximum length of Kubeflow cluster name (&lt;a href=&#34;(https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/359)&#34;&gt;#359&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;🚚 Moved RequestAuthentication policy creation to &lt;code&gt;iap-enabler&lt;/code&gt; to improve GitOps friendliness (&lt;a href=&#34;(https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/364)&#34;&gt;#364&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;🧪 Validated deployment using &lt;code&gt;GKE 1.21.11&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>News: Kubeflow on Google Cloud v1.5.0</title>
+      <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/1/01/01/kubeflow-on-google-cloud-v1.5.0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/1/01/01/kubeflow-on-google-cloud-v1.5.0/</guid>
+      <description>
+        
+        
+        &lt;p&gt;A new version of Kubeflow on Google Cloud has been released! See the updated instructions on how to &lt;a href=&#34;https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/&#34;&gt;deploy&lt;/a&gt; to a new cluster and &lt;a href=&#34;https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/upgrade/&#34;&gt;upgrade&lt;/a&gt; an existing deployment.&lt;/p&gt;
+&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;🔼 Upgrade Kubeflow components versions as listed in components versions table&lt;/li&gt;
+&lt;li&gt;🚀 Integrated with &lt;code&gt;Config Controller&lt;/code&gt;, simplified management cluster maintenance cost, there is no need to manually upgrade &lt;code&gt;Config Connector&lt;/code&gt; CRD.&lt;/li&gt;
+&lt;li&gt;🚚 Switch from &lt;code&gt;kfserving&lt;/code&gt; to &lt;code&gt;KServe&lt;/code&gt; as default serving component, you can switch back to &lt;code&gt;kfserving&lt;/code&gt; in &lt;code&gt;config.yaml&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;🔨 Fixed &lt;code&gt;cloudsqlproxy&lt;/code&gt; issue with &lt;code&gt;livenessProbe&lt;/code&gt; configuration.&lt;/li&gt;
+&lt;li&gt;🧪 Validated deployment using &lt;code&gt;GKE 1.20.12&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
