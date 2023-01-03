@@ -3,13 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/1/01/01/kubeflow-applied-to-cncf-incubating/</loc>
+    <lastmod>2023-01-03T01:55:32+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/deploy/overview/</loc>
     <lastmod>2022-12-29T22:11:17+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/1/01/01/kubeflow-on-google-cloud-v1.6.1/</loc>
+    <lastmod>2023-01-03T01:55:32+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/deploy/project-setup/</loc>
     <lastmod>2023-01-02T22:56:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/1/01/01/kubeflow-on-google-cloud-v1.6.0/</loc>
+    <lastmod>2023-01-03T01:55:32+00:00</lastmod>
   </url>
   
   <url>
@@ -23,8 +38,18 @@
   </url>
   
   <url>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/1/01/01/kubeflow-on-google-cloud-v1.5.1/</loc>
+    <lastmod>2023-01-03T01:55:32+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/deploy/deploy-cli/</loc>
     <lastmod>2023-01-02T22:56:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/1/01/01/kubeflow-on-google-cloud-v1.5.0/</loc>
+    <lastmod>2023-01-03T01:55:32+00:00</lastmod>
   </url>
   
   <url>
@@ -48,6 +73,11 @@
   </url>
   
   <url>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/2022/</loc>
+    <lastmod>2023-01-03T01:55:32+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/pipelines/</loc>
     <lastmod>2022-11-09T21:46:30+00:00</lastmod>
   </url>
@@ -68,43 +98,13 @@
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/2022/</loc>
-    <lastmod>2023-01-03T01:30:59+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/2023/</loc>
-    <lastmod>2023-01-03T01:30:59+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/</loc>
-    <lastmod>2023-01-03T01:30:59+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/1/01/01/kubeflow-applied-to-cncf-incubating/</loc>
-    <lastmod>2023-01-03T01:22:11+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/custom-domain/</loc>
     <lastmod>2023-01-02T22:56:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/1/01/01/kubeflow-on-google-cloud-v1.6.1/</loc>
-    <lastmod>2023-01-03T01:22:11+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/authentication/</loc>
     <lastmod>2023-01-02T22:56:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/1/01/01/kubeflow-on-google-cloud-v1.6.0/</loc>
-    <lastmod>2023-01-03T01:22:11+00:00</lastmod>
   </url>
   
   <url>
@@ -115,11 +115,6 @@
   <url>
     <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/pipelines/upgrade/</loc>
     <lastmod>2023-01-02T22:56:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/1/01/01/kubeflow-on-google-cloud-v1.5.1/</loc>
-    <lastmod>2023-01-03T01:22:11+00:00</lastmod>
   </url>
   
   <url>
@@ -143,8 +138,13 @@
   </url>
   
   <url>
-    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/1/01/01/kubeflow-on-google-cloud-v1.5.0/</loc>
-    <lastmod>2023-01-03T01:22:11+00:00</lastmod>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/2023/</loc>
+    <lastmod>2023-01-03T01:55:32+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/news/</loc>
+    <lastmod>2023-01-03T01:55:32+00:00</lastmod>
   </url>
   
   <url>
