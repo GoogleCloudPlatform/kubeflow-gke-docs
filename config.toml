@@ -28,6 +28,11 @@ pygmentsStyle = "tango"
 # Relative urls:
 # relativeURLs = true
 
+# Deprecated or inactive
+ignoreFiles = [
+  "content/en/news/*",
+]
+
 # Image processing configuration.
 [imaging]
   resampleFilter = "CatmullRom"
@@ -37,11 +42,6 @@ pygmentsStyle = "tango"
 # Configure how URLs look like per section.
 [permalinks]
   news = "/:section/:year/:month/:day/:slug/"
-
-# Deprecated or inactive
-ignoreFiles = [
-  "content/en/news/*"
-]
 
 ##########################################################
 # Goldmark markdown parser
