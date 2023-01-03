@@ -279,12 +279,12 @@ with automatic resizing of the node pool.</li>
 <li><a href="https://cloud.google.com/logging/docs/">Cloud Logging</a> for easy debugging and troubleshooting.</li>
 <li>Other managed services offered by Google Cloud, such as <a href="https://cloud.google.com/storage">Cloud Storage</a>, <a href="https://cloud.google.com/sql">Cloud SQL</a>, <a href="https://cloud.google.com/anthos/service-mesh">Anthos Service Mesh</a>, <a href="https://cloud.google.com/iam">Identity and Access Management (IAM)</a>, <a href="https://cloud.google.com/anthos-config-management/docs/concepts/config-controller-overview">Config Controller</a>, and so on.</li>
 </ol>
-<p><img src="../../images/gke/full-kf-home.png" alt="Kubeflow on Google Cloud: central dashboard">
-<strong>Figure 1.</strong> User interface of full-fledged Kubeflow deployment on Google Cloud.</p>
+<p><img src="../../images/gke/full-kf-home.png" alt="Kubeflow on Google Cloud: central dashboard"></p>
+<p><strong>Figure 1.</strong> User interface of full-fledged Kubeflow deployment on Google Cloud.</p>
 <h2 id="management-cluster">Management cluster</h2>
 <p>Kubeflow on Google Cloud employs a management cluster, which lets you manage Google Cloud resources via <a href="https://cloud.google.com/anthos-config-management/docs/concepts/config-controller-overview">Config Controller</a>. The management cluster is independent from the Kubeflow cluster and manages Kubeflow clusters. You can also use a management cluster from a different Google Cloud project, by assigning owner permissions to the associated service account.</p>
-<p><img src="../../images/gke/full-deployment-structure.png" alt="Kubeflow on Google Cloud: clusters hierarchy">
-<strong>Figure 2.</strong> Example of Kubeflow on Google Cloud deployment.</p>
+<p><img src="../../images/gke/full-deployment-structure.png" alt="Kubeflow on Google Cloud: clusters hierarchy"></p>
+<p><strong>Figure 2.</strong> Example of Kubeflow on Google Cloud deployment.</p>
 <h2 id="deployment-process">Deployment process</h2>
 <p>To set up a Kubeflow environment on Google Cloud, complete these steps:</p>
 <ol>
@@ -410,12 +410,12 @@ be needed for projects that haven&rsquo;t had a cluster set up beforehand.</li>
 cluster for you.</p>
 <h2 id="next-steps">Next steps</h2>
 <ul>
-<li><a href="./docs/deploy/oauth-setup">Set up an OAuth credential</a> to use
+<li><a href="../oauth-setup">Set up an OAuth credential</a> to use
 <a href="https://cloud.google.com/iap/docs/">Cloud Identity-Aware Proxy (Cloud IAP)</a>.
 Cloud IAP is recommended for production deployments or deployments with access
 to sensitive data.</li>
-<li><a href="./docs/deploy/management-setup">Set up Management Cluster</a> to deploy and manage Kubeflow clusters.</li>
-<li><a href="./docs/deploy/deploy-cli">Deploy Kubeflow</a> using kubectl, kustomize and kpt.</li>
+<li><a href="../management-setup">Set up Management Cluster</a> to deploy and manage Kubeflow clusters.</li>
+<li><a href="../deploy-cli">Deploy Kubeflow</a> using kubectl, kustomize and kpt.</li>
 </ul>
 
 </div>
@@ -474,12 +474,12 @@ need to set.</li>
 <p>Click <strong>Save</strong>.</p>
 </li>
 <li>
-<p>Here&rsquo;s an example of the completed form:<br>
-<img src="/docs/images/consent-screen.png" 
-alt="OAuth consent screen"
-class="mt-3 mb-3 p-3 border border-info rounded"></p>
+<p>Here&rsquo;s an example of the completed form:</p>
 </li>
 </ul>
+<p><img src="../../images/gke/consent-screen.png" 
+alt="OAuth consent screen"
+class="mt-3 mb-3 p-3 border border-info rounded"></p>
 </li>
 <li>
 <p>On the <a href="https://console.cloud.google.com/apis/credentials">credentials screen</a>:</p>
@@ -493,7 +493,7 @@ just a way to help you identify the OAuth client ID.</li>
 </li>
 <li>
 <p>Click <strong>Create</strong>. A dialog box appears, like the one below:</p>
-<p><img src="/docs/images/new-oauth.png" 
+<p><img src="../../images/gke/new-oauth.png" 
 alt="OAuth consent screen"
 class="mt-3 mb-3 p-3 border border-info rounded"></p>
 </li>
@@ -504,7 +504,7 @@ ID in the next step.</p>
 <li>
 <p>On the <strong>Create credentials</strong> screen, find your newly created OAuth
 credential and click the pencil icon to edit it:</p>
-<p><img src="/docs/images/oauth-edit.png" 
+<p><img src="../../images/gke/oauth-edit.png" 
 alt="OAuth consent screen"
 class="mt-3 mb-3 p-3 border border-info rounded"></p>
 </li>
@@ -524,8 +524,8 @@ need to modify the redirect URIs.</li>
 <p>Press <strong>Enter/Return</strong> to add the URI. Check that the URI now appears as
 a confirmed item under <strong>Authorized redirect URIs</strong>. (The URI should no longer be
 editable.)</p>
-<p>Here&rsquo;s an example of the completed form:
-<img src="/docs/images/oauth-credential.png" 
+<p>Here&rsquo;s an example of the completed form:</p>
+<p><img src="../../images/gke/oauth-credential.png"
 alt="OAuth credentials"
 class="mt-3 mb-3 p-3 border border-info rounded"></p>
 </li>
@@ -679,7 +679,7 @@ Note that you can create only one Management cluster within a Google Cloud proje
 <p><code>config-control</code> is the default namespace which is installed while creating Management cluster, you have granted the default service account (like <code>service-&lt;management-project-id&gt;@gcp-sa-yakima.iam.gserviceaccount.com</code>)
 within this project to manage Config Connector. It is the prerequisite for managing resources in other Google Cloud projects.</p>
 <p><code>namespace with the same name as your Kubeflow clusters' Google Cloud project name</code> is the resource pool for Kubeflow cluster&rsquo;s Google Cloud project.
-For each Kubeflow Google Cloud project, you will have service account with pattern <code>kcc-&lt;kf-project-name&gt;@&lt;management-project-name&gt;.iam.gserviceaccount.com</code> in <code>config-control</code> namespace, and it needs to have owner permission to <code>${KF_PROJECT}</code>, you will perform this step during <a href="./docs/deploy/deploy-cli/">Deploy Kubeflow cluster</a>. After setup, your Google Cloud resources in Kubeflow cluster project will be deployed to the namespace with name <code>${KF_PROJECT}</code> in the management cluster.</p>
+For each Kubeflow Google Cloud project, you will have service account with pattern <code>kcc-&lt;kf-project-name&gt;@&lt;management-project-name&gt;.iam.gserviceaccount.com</code> in <code>config-control</code> namespace, and it needs to have owner permission to <code>${KF_PROJECT}</code>, you will perform this step during <a href="../deploy-cli/">Deploy Kubeflow cluster</a>. After setup, your Google Cloud resources in Kubeflow cluster project will be deployed to the namespace with name <code>${KF_PROJECT}</code> in the management cluster.</p>
 <p>Your management cluster directory contains the following file:</p>
 <ul>
 <li><strong>Makefile</strong> is a file that defines rules to automate deployment process. You can refer to <a href="https://www.gnu.org/software/make/manual/make.html#Introduction">GNU make documentation</a> for more introduction. The Makefile we provide is designed to be user maintainable. You are encouraged to read, edit and maintain it to suit your own deployment customization needs.</li>
@@ -706,7 +706,7 @@ Learn more with <a href="https://cloud.google.com/config-connector/docs/how-to/m
 <p>For a more detailed explanation of the drastic changes happened in Kubeflow v1.1 on Google Cloud, read <a href="https://github.com/googlecloudplatform/kubeflow-distribution/issues/123">googlecloudplatform/kubeflow-distribution #123</a>.</p>
 <h2 id="next-steps">Next steps</h2>
 <ul>
-<li><a href="./docs/deploy/deploy-cli">Deploy Kubeflow</a> using kubectl, kustomize and kpt.</li>
+<li><a href="../deploy-cli">Deploy Kubeflow</a> using kubectl, kustomize and kpt.</li>
 </ul>
 
 </div>
@@ -735,7 +735,7 @@ deploy Kubeflow on Google Cloud.</p>
 <p>You must have created a management cluster and installed Config Connector.</p>
 <ul>
 <li>
-<p>If you don&rsquo;t have a management cluster follow the <a href="./docs/deploy/management-setup/">instructions</a></p>
+<p>If you don&rsquo;t have a management cluster follow the <a href="../management-setup/">instructions</a></p>
 </li>
 <li>
 <p>Your management cluster will need a namespace setup to administer the Google Cloud project where Kubeflow will be deployed. This step will be included in later step of current page.</p>
@@ -747,11 +747,11 @@ deploy Kubeflow on Google Cloud.</p>
 </li>
 <li>
 <p>Make sure that your Google Cloud project meets the minimum requirements
-described in the <a href="./docs/deploy/project-setup/">project setup guide</a>.</p>
+described in the <a href="../project-setup/">project setup guide</a>.</p>
 </li>
 <li>
 <p>Follow the guide
-<a href="./docs/deploy/oauth-setup/">setting up OAuth credentials</a>
+<a href="../oauth-setup/">setting up OAuth credentials</a>
 to create OAuth credentials for <a href="https://cloud.google.com/iap/docs/">Cloud Identity-Aware Proxy (Cloud
 IAP)</a>.</p>
 <ul>
@@ -830,7 +830,7 @@ current values by running the following commands:</p>
 </span></span><span class="line"><span class="cl">kpt fn <span class="nb">eval</span> -i list-setters:v0.1 ./common
 </span></span></code></pre></div><p>You can learn more about <code>list-setters</code> in <a href="https://catalog.kpt.dev/list-setters/v0.1/">kpt documentation</a>.</p>
 <h4 id="authorize-cloud-config-connector-for-each-kubeflow-project">Authorize Cloud Config Connector for each Kubeflow project</h4>
-<p>In the <a href="./docs/deploy/management-setup/">Management cluster deployment</a> we created the Google Cloud service account <strong>serviceAccount:kcc-${KF_PROJECT}@${MGMT_PROJECT}.iam.gserviceaccount.com</strong>
+<p>In the <a href="../management-setup/">Management cluster deployment</a> we created the Google Cloud service account <strong>serviceAccount:kcc-${KF_PROJECT}@${MGMT_PROJECT}.iam.gserviceaccount.com</strong>
 this is the service account that Config Connector will use to create any Google Cloud resources in <code>${KF_PROJECT}</code>. You need to grant this Google Cloud service account sufficient privileges to create the desired resources in Kubeflow project.
 You only need to perform steps below once for each Kubeflow project, but make sure to do it even when KF_PROJECT and MGMT_PROJECT are the same project.</p>
 <p>The easiest way to do this is to grant the Google Cloud service account owner permissions on one or more projects.</p>
@@ -959,17 +959,17 @@ account has the minimal permissions needed to send metrics and logs to
 <a href="https://cloud.google.com/stackdriver/">Stackdriver</a>.</li>
 </ul>
 <h2 id="upgrade-kubeflow">Upgrade Kubeflow</h2>
-<p>Refer to <a href="./docs/deploy/upgrade#upgrading-kubeflow-cluster">Upgrading Kubeflow cluster</a>.</p>
+<p>Refer to <a href="../upgrade#upgrading-kubeflow-cluster">Upgrading Kubeflow cluster</a>.</p>
 <h2 id="next-steps">Next steps</h2>
 <ul>
 <li>Run a full ML workflow on Kubeflow, using the
 <a href="https://github.com/kubeflow/examples/blob/master/mnist/mnist_gcp.ipynb">end-to-end MNIST tutorial</a> or the
 <a href="https://github.com/kubeflow/examples/tree/master/github_issue_summarization/pipelines">GitHub issue summarization Pipelines
 example</a>.</li>
-<li>Learn how to <a href="./docs/deploy/delete-cli/">delete your Kubeflow deployment using the CLI</a>.</li>
-<li>To add users to Kubeflow, go to <a href="./docs/customizing-gke/#add-users-to-kubeflow">a dedicated section in Customizing Kubeflow on Google Cloud</a>.</li>
-<li>To taylor your Kubeflow deployment on Google Cloud, go to <a href="./docs/customizing-gke/">Customizing Kubeflow on Google Cloud</a>.</li>
-<li>For troubleshooting Kubeflow deployments on Google Cloud, go to the <a href="./docs/troubleshooting-gke/">Troubleshooting deployments</a> guide.</li>
+<li>Learn how to <a href="../delete-cli/">delete your Kubeflow deployment using the CLI</a>.</li>
+<li>To add users to Kubeflow, go to <a href="../../customizing/#add-users-to-kubeflow">a dedicated section in Customizing Kubeflow on Google Cloud</a>.</li>
+<li>To taylor your Kubeflow deployment on Google Cloud, go to <a href="../../customizing/">Customizing Kubeflow on Google Cloud</a>.</li>
+<li>For troubleshooting Kubeflow deployments on Google Cloud, go to the <a href="../../troubleshooting/">Troubleshooting deployments</a> guide.</li>
 </ul>
 
 </div>
@@ -991,15 +991,15 @@ example</a>.</li>
 	<h2 id="before-you-start">Before you start</h2>
 <p>To better understand upgrade process, you should read the following sections first:</p>
 <ul>
-<li><a href="./docs/deploy/management-setup#understanding-the-deployment-process">Understanding the deployment process for management cluster</a></li>
-<li><a href="./docs/deploy/deploy-cli#understanding-the-deployment-process">Understanding the deployment process for Kubeflow cluster</a></li>
+<li><a href="../management-setup#understanding-the-deployment-process">Understanding the deployment process for management cluster</a></li>
+<li><a href="../deploy-cli#understanding-the-deployment-process">Understanding the deployment process for Kubeflow cluster</a></li>
 </ul>
 <p>This guide assumes the following settings:</p>
 <ul>
 <li>The <code>${MGMT_DIR}</code> and <code>${MGMT_NAME}</code> environment variables
-are the same as in <a href="./docs/deploy/management-setup#configure-environment-variables">Management cluster setup</a>.</li>
+are the same as in <a href="../management-setup#configure-environment-variables">Management cluster setup</a>.</li>
 <li>The <code>${KF_NAME}</code>, <code>${CLIENT_ID}</code> and <code>${CLIENT_SECRET}</code> environment variables
-are the same as in <a href="./docs/deploy/deploy-cli#environment-variables">Deploy using kubectl and kpt</a>.</li>
+are the same as in <a href="../deploy-cli#environment-variables">Deploy using kubectl and kpt</a>.</li>
 <li>The <code>${KF_DIR}</code> environment variable contains the path to
 your Kubeflow application directory, which holds your Kubeflow configuration
 files. For example, <code>/opt/kubeflow-distribution/kubeflow/</code>.</li>
@@ -1305,7 +1305,7 @@ deployment from outside the cluster, when running Kubeflow on Google Cloud.</p>
 is available, and to debugging problems that may cause the endpoint to be
 unavailable.</p>
 <h2 id="introduction">Introduction</h2>
-<p>When deploying Kubeflow using the <a href="./docs/deploy/deploy-cli/">command-line interface</a>,
+<p>When deploying Kubeflow using the <a href="../deploy-cli/">command-line interface</a>,
 you choose the authentication method you want to use. One of the options is
 Cloud IAP. This document assumes that you have already deployed Kubeflow.</p>
 <p>Kubeflow uses the <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/managed-certs">Google-managed certificate</a>
@@ -1390,7 +1390,7 @@ traffic. (31380 is the default port of the service <code>istio-ingressgateway</c
 <li><code>kubectl get pods -n istio-system</code></li>
 <li>The <code>istio-ingressgateway-XX</code> pods should be running</li>
 <li>Check the logs of pod <code>backend-updater-0</code>, <code>iap-enabler-XX</code> to see if there is any error</li>
-<li>Follow the steps <a href="./docs/troubleshooting/#502-server-error">here</a> to check the load balancer and backend service on Google Cloud.</li>
+<li>Follow the steps <a href="../../troubleshooting/#502-server-error">here</a> to check the load balancer and backend service on Google Cloud.</li>
 </ul>
 </li>
 <li>
@@ -1412,13 +1412,13 @@ relevant links:</p>
 </span></span></code></pre></div><p>Follow the link in the error message to find the OAuth credential being used
 and add the redirect URI listed in the error message to the list of 
 authorized URIs. For more information, read the guide to 
-<a href="./docs/deploy/oauth-setup/">setting up OAuth for Cloud IAP</a>.</p>
+<a href="../oauth-setup/">setting up OAuth for Cloud IAP</a>.</p>
 </li>
 </ol>
 <h2 id="next-steps">Next steps</h2>
 <ul>
-<li>The <a href="./docs/troubleshooting/">Google Kubernetes Engine troubleshooting guide</a> for Kubeflow.</li>
-<li>Guide to <a href="./docs/components/multi-tenancy/getting-started">sharing cluster access</a>.</li>
+<li>The <a href="../../troubleshooting/">Google Kubernetes Engine troubleshooting guide</a> for Kubeflow.</li>
+<li>How to <a href="../../customizing/">customize Kubeflow cluster</a> and <a href="../../customizing/#add-users-to-kubeflow">add users to the cluster</a>.</li>
 <li>Google Cloud guide to <a href="https://cloud.google.com/iap/docs/">Cloud IAP</a>.</li>
 </ul>
 
