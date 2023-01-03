@@ -103,9 +103,9 @@ cluster for you.
 
 ## Next steps
 
-* [Set up an OAuth credential](./docs/deploy/oauth-setup) to use 
+* [Set up an OAuth credential](../oauth-setup) to use 
   [Cloud Identity-Aware Proxy (Cloud IAP)](https://cloud.google.com/iap/docs/).
   Cloud IAP is recommended for production deployments or deployments with access 
   to sensitive data.
-* [Set up Management Cluster](./docs/deploy/management-setup) to deploy and manage Kubeflow clusters.
-* [Deploy Kubeflow](./docs/deploy/deploy-cli) using kubectl, kustomize and kpt.
+* [Set up Management Cluster](../management-setup) to deploy and manage Kubeflow clusters.
+* [Deploy Kubeflow](../deploy-cli) using kubectl, kustomize and kpt.
