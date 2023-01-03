@@ -16,7 +16,7 @@ Google Kubernetes Engine (GKE) and Google Cloud.
 
 This guide covers troubleshooting specifically for [Kubeflow deployments on Google Cloud](../deploy/).
 
-For more help, search for resolved issues on GitHub or create a new one in the [Kubeflow on Google Cloud repository](https://github.com/GoogleCloudPlatform/kubeflow-gke-docs/issues).
+For more help, search for resolved issues on GitHub or create a new one in the [Kubeflow on Google Cloud repository](https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues).
 
 This guide assumes the following settings:
 
@@ -85,7 +85,7 @@ as an authorized redirect URI for the OAUTH credentials used to create the deplo
 * If using IAP: see the guide to
   [monitoring your Cloud IAP setup](../deploy/monitor-iap-setup/).
 * See the sections below for troubleshooting specific problems.
-* Please [report a bug](https://github.com/kubeflow/kubeflow/issues/new?template=bug_report.md) if you can't resolve the problem by following the above steps.
+* Please [report a bug](https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/new) if you can't resolve the problem by following the above steps.
 
 ### DNS name not registered
 
