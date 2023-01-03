@@ -84,7 +84,8 @@ address to verify the user's identity.
   editable.)
 
     Here's an example of the completed form:
-    <img src="../../images/gke/oauth-credential.png" 
+
+    <img src="../../images/gke/oauth-credential.png"
       alt="OAuth credentials"
       class="mt-3 mb-3 p-3 border border-info rounded">
 
