@@ -5,12 +5,12 @@ weight = 20
 +++
 
 This guide describes how to connect to your Kubeflow Pipelines cluster on Google
-Cloud using [the Kubeflow Pipelines SDK](./docs/components/pipelines/sdk/sdk-overview/).
+Cloud using [the Kubeflow Pipelines SDK](https://www.kubeflow.org/docs/components/pipelines/overview/).
 
 ## Before you begin
 
-- You need a Kubeflow Pipelines deployment on Google Cloud using one of the [installation options](./docs/components/pipelines/installation/overview/).
-- [Install the Kubeflow Pipelines SDK](./docs/components/pipelines/sdk/install-sdk/).
+- You need a Kubeflow Pipelines deployment on Google Cloud using one of the [installation options](https://www.kubeflow.org/docs/components/pipelines/installation/overview/).
+- [Install the Kubeflow Pipelines SDK](https://www.kubeflow.org/docs/components/pipelines/sdk/install-sdk/).
 
 ## How SDK connects to Kubeflow Pipelines API
 
@@ -52,7 +52,7 @@ both Kubeflow Pipelines standalone and AI Platform Pipelines.
 
 Kubeflow Pipelines standalone deployments also show up in [AI Platform Pipelines](https://console.cloud.google.com/ai-platform/pipelines/clusters). They have the
 name "pipeline" by default, but you can customize the name by overriding
-[the `appName` parameter in `params.env`](https://github.com/kubeflow/pipelines/blob/sdk/release-1.8/manifests/kustomize/sample/params.env#L1) when [deploying Kubeflow Pipelines standalone](./docs/components/pipelines/installation/standalone-deployment/).
+[the `appName` parameter in `params.env`](https://github.com/kubeflow/pipelines/blob/sdk/release-1.8/manifests/kustomize/sample/params.env#L1) when [deploying Kubeflow Pipelines standalone](https://www.kubeflow.org/docs/components/pipelines/installation/standalone-deployment/).
 
 ## Connecting to Kubeflow Pipelines in a full Kubeflow deployment
 
@@ -62,7 +62,7 @@ authentication through IAP.
 
 1.  Find out your IAP OAuth 2.0 client ID.
 
-    You or your cluster admin followed [Set up OAuth for Cloud IAP](./docs/deploy/oauth-setup/)
+    You or your cluster admin followed [Set up OAuth for Cloud IAP](../../deploy/oauth-setup/)
     to deploy your full Kubeflow deployment on Google Cloud. You need the OAuth client
     ID created in that step.
 
@@ -108,5 +108,5 @@ authentication through IAP.
 
   However, it fails authorization checks for Kubeflow Pipelines with multi-user
   isolation in the full Kubeflow deployment starting from Kubeflow 1.1.
-  Multi-user isolation requires all API access to authenticate as a user. Refer to [Kubeflow Pipelines Multi-user isolation documentation](./docs/components/pipelines/overview/multi-user/#in-cluster-request-authentication)
+  Multi-user isolation requires all API access to authenticate as a user. Refer to [Kubeflow Pipelines Multi-user isolation documentation](https://www.kubeflow.org/docs/components/pipelines/overview/multi-user/)
   for more details.

@@ -39,7 +39,7 @@ address to verify the user's identity.
           need to set.        
    * Click **Save**.
    * Here's an example of the completed form:   
-    <img src="../../images/consent-screen.png" 
+    <img src="../../images/gke/consent-screen.png" 
       alt="OAuth consent screen"
       class="mt-3 mb-3 p-3 border border-info rounded">
 
@@ -52,7 +52,7 @@ address to verify the user's identity.
 
 1. Click **Create**. A dialog box appears, like the one below:
 
-     <img src="../../images/new-oauth.png" 
+     <img src="../../images/gke/new-oauth.png" 
       alt="OAuth consent screen"
       class="mt-3 mb-3 p-3 border border-info rounded">
 
@@ -62,7 +62,7 @@ address to verify the user's identity.
 1. On the **Create credentials** screen, find your newly created OAuth 
   credential and click the pencil icon to edit it:
    
-    <img src="../../images/oauth-edit.png" 
+    <img src="../../images/gke/oauth-edit.png" 
      alt="OAuth consent screen"
      class="mt-3 mb-3 p-3 border border-info rounded">
 
@@ -84,7 +84,7 @@ address to verify the user's identity.
   editable.)
 
     Here's an example of the completed form:
-    <img src="../../images/oauth-credential.png" 
+    <img src="../../images/gke/oauth-credential.png" 
       alt="OAuth credentials"
       class="mt-3 mb-3 p-3 border border-info rounded">
 

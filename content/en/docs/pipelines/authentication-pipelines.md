@@ -81,7 +81,7 @@ You can also continue to use `use_gcp_secret` in a cluster with Workload Identit
 
 Starting from Kubeflow 1.1, Kubeflow Pipelines supports multi-user isolation. Therefore, pipeline runs are executed in user namespaces using the `default-editor` KSA. The `default-editor` KSA is auto-bound to the GSA specified in the user profile, which defaults to a shared GSA `${KFNAME}-user@${PROJECT}.iam.gserviceaccount.com`.
 
-If you want to bind the `default-editor` KSA with a different GSA for a specific namespace, refer to the [In-cluster authentication to Google Cloud](./docs/authentication/#in-cluster-authentication) guide.
+If you want to bind the `default-editor` KSA with a different GSA for a specific namespace, refer to the [In-cluster authentication to Google Cloud](../../authentication/#in-cluster-authentication) guide.
 
 Additionally, the Kubeflow Pipelines UI, visualization, and TensorBoard server instances are deployed in your user namespace using the `default-editor` KSA. Therefore, to visualize results in the Pipelines UI, they can fetch artifacts in Google Cloud Storage using permissions of the same GSA you configured for this namespace.
 
