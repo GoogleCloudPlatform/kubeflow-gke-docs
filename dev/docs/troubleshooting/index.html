@@ -28,7 +28,7 @@
       "datePublished": "0001-01-01 00:00:00 \u002b0000 UTC",
       "dateModified" : "0001-01-01 00:00:00 \u002b0000 UTC",
       "url" : "https:\/\/googlecloudplatform.github.io\/kubeflow-gke-docs\/dev\/docs\/troubleshooting\/",
-      "wordCount" : "2352",
+      "wordCount" : "2364",
       "keywords" : [ "Kubeflow on GCP" ]
   }
   </script>
@@ -49,12 +49,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/troubleshooting/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2023-01-02T22:56:34+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+<meta property="article:modified_time" content="2023-01-03T18:58:56+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
 
 <meta itemprop="name" content="Troubleshooting Deployments on Google Cloud">
 <meta itemprop="description" content="Help fixing problems on Google Kubernetes Engine and Google Cloud">
-<meta itemprop="dateModified" content="2023-01-02T22:56:34+00:00" />
-<meta itemprop="wordCount" content="2352">
+<meta itemprop="dateModified" content="2023-01-03T18:58:56+00:00" />
+<meta itemprop="wordCount" content="2364">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Troubleshooting Deployments on Google Cloud"/>
 <meta name="twitter:description" content="Help fixing problems on Google Kubernetes Engine and Google Cloud"/>
@@ -373,10 +373,8 @@ needs to be updated for Kubeflow 1.1.
 <p>This guide helps diagnose and fix issues you may encounter with Kubeflow on
 Google Kubernetes Engine (GKE) and Google Cloud.</p>
 <h2 id="before-you-start">Before you start</h2>
-<p>This guide covers troubleshooting specifically for
-<a href="./docs/gke/deploy/">Kubeflow deployments on Google Cloud</a>.</p>
-<p>For more help, try the
-<a href="./docs/other-guides/troubleshooting">general Kubeflow troubleshooting guide</a>.</p>
+<p>This guide covers troubleshooting specifically for <a href="../deploy/">Kubeflow deployments on Google Cloud</a>.</p>
+<p>For more help, search for resolved issues on GitHub or create a new one in the <a href="https://github.com/GoogleCloudPlatform/kubeflow-gke-docs/issues">Kubeflow on Google Cloud repository</a>.</p>
 <p>This guide assumes the following settings:</p>
 <ul>
 <li>
@@ -411,7 +409,7 @@ Kubeflow resources are deployed.</p>
 </span></span></code></pre></div></li>
 <li>
 <p>For further background about the above settings, see the guide to
-<a href="./docs/gke/deploy/deploy-cli">deploying Kubeflow with the CLI</a>.</p>
+<a href="../deploy/deploy-cli">deploying Kubeflow with the CLI</a>.</p>
 </li>
 </ul>
 <h2 id="troubleshooting-kubeflow-deployment-on-google-cloud">Troubleshooting Kubeflow deployment on Google Cloud</h2>
@@ -429,10 +427,10 @@ Kubeflow resources are deployed.</p>
 <li>If endpoint entry doesn&rsquo;t exist, check <code>kubectl describe cloudendpoint -n istio-system</code></li>
 </ul>
 </li>
-<li>If using IAP: make sure you <a href="./docs/gke/deploy/oauth-setup/">added</a> <code>https://&lt;deployment&gt;.endpoints.&lt;project&gt;.cloud.goog/_gcp_gatekeeper/authenticate</code>
+<li>If using IAP: make sure you <a href="../deploy/oauth-setup/">added</a> <code>https://&lt;deployment&gt;.endpoints.&lt;project&gt;.cloud.goog/_gcp_gatekeeper/authenticate</code>
 as an authorized redirect URI for the OAUTH credentials used to create the deployment.</li>
 <li>If using IAP: see the guide to
-<a href="./docs/gke/deploy/monitor-iap-setup/">monitoring your Cloud IAP setup</a>.</li>
+<a href="../deploy/monitor-iap-setup/">monitoring your Cloud IAP setup</a>.</li>
 <li>See the sections below for troubleshooting specific problems.</li>
 <li>Please <a href="https://github.com/kubeflow/kubeflow/issues/new?template=bug_report.md">report a bug</a> if you can&rsquo;t resolve the problem by following the above steps.</li>
 </ul>
@@ -711,7 +709,7 @@ generated.</p>
 <h3 id="problems-with-ssl-certificate-from-lets-encrypt">Problems with SSL certificate from Let&rsquo;s Encrypt</h3>
 <p>As of Kubeflow 1.0, Kubeflow should be using Google Kubernetes Engine Managed Certificates and no longer using Let&rsquo;s Encrypt.</p>
 <p>See the guide to
-<a href="./docs/gke/deploy/monitor-iap-setup/">monitoring your Cloud IAP setup</a>.</p>
+<a href="../deploy/monitor-iap-setup/">monitoring your Cloud IAP setup</a>.</p>
 <h2 id="envoy-pods-crash-looping-root-cause-is-backend-quota-exceeded">Envoy pods crash-looping: root cause is backend quota exceeded</h2>
 <p>If your logs show the
 <a href="https://istio.io/docs/concepts/what-is-istio/#envoy">Envoy</a> pods crash-looping,
@@ -770,7 +768,6 @@ deploying Kubeflow.</p>
 </span></span></code></pre></div><!-- ## CPU platform unavailable in requested zone
 
 By default, we set minCpuPlatform to `Intel Haswell` to make sure AVX2 is supported.
-See [troubleshooting](./docs/other-guides/troubleshooting/) for more details.
 
 If you encounter this `CPU platform unavailable` error (might manifest as
 `Cluster is currently being created, deleted, updated or repaired and cannot be updated.`),
