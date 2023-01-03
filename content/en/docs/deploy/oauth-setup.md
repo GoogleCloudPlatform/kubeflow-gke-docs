@@ -39,7 +39,7 @@ address to verify the user's identity.
           need to set.        
    * Click **Save**.
    * Here's an example of the completed form:   
-    <img src="/docs/images/consent-screen.png" 
+    <img src="../../images/consent-screen.png" 
       alt="OAuth consent screen"
       class="mt-3 mb-3 p-3 border border-info rounded">
 
@@ -52,7 +52,7 @@ address to verify the user's identity.
 
 1. Click **Create**. A dialog box appears, like the one below:
 
-     <img src="/docs/images/new-oauth.png" 
+     <img src="../../images/new-oauth.png" 
       alt="OAuth consent screen"
       class="mt-3 mb-3 p-3 border border-info rounded">
 
@@ -62,7 +62,7 @@ address to verify the user's identity.
 1. On the **Create credentials** screen, find your newly created OAuth 
   credential and click the pencil icon to edit it:
    
-    <img src="/docs/images/oauth-edit.png" 
+    <img src="../../images/oauth-edit.png" 
      alt="OAuth consent screen"
      class="mt-3 mb-3 p-3 border border-info rounded">
 
@@ -84,7 +84,7 @@ address to verify the user's identity.
   editable.)
 
     Here's an example of the completed form:
-    <img src="/docs/images/oauth-credential.png" 
+    <img src="../../images/oauth-credential.png" 
       alt="OAuth credentials"
       class="mt-3 mb-3 p-3 border border-info rounded">
 
@@ -95,5 +95,5 @@ address to verify the user's identity.
   **client secret** later when you're ready to enable Cloud IAP.
   
 ## Next steps
-* [Set up your management cluster](./docs/deploy/management-setup/).
+* [Set up your management cluster](../management-setup/).
 * [Grant your users the IAP-secured Web App User IAM role](https://cloud.google.com/iam/docs/granting-changing-revoking-access#granting-console) so they can access the Kubeflow console through IAP.
