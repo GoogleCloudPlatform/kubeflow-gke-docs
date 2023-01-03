@@ -1,4 +1,3 @@
-
 +++
 title = "Kubeflow applied to CNCF incubating"
 description = "Kubeflow has applied to become a CNCF incubating project"
