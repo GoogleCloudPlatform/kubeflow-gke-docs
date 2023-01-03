@@ -28,7 +28,7 @@
       "datePublished": "0001-01-01 00:00:00 \u002b0000 UTC",
       "dateModified" : "0001-01-01 00:00:00 \u002b0000 UTC",
       "url" : "https:\/\/googlecloudplatform.github.io\/kubeflow-gke-docs\/v1.5\/docs\/deploy\/monitor-iap-setup\/",
-      "wordCount" : "745",
+      "wordCount" : "751",
       "keywords" : [ "Kubeflow on GCP" ]
   }
   </script>
@@ -49,12 +49,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.5/docs/deploy/monitor-iap-setup/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2023-01-02T22:56:34+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+<meta property="article:modified_time" content="2023-01-03T18:58:56+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
 
 <meta itemprop="name" content="Monitoring Cloud IAP Setup">
 <meta itemprop="description" content="Instructions for monitoring and troubleshooting Cloud IAP">
-<meta itemprop="dateModified" content="2023-01-02T22:56:34+00:00" />
-<meta itemprop="wordCount" content="745">
+<meta itemprop="dateModified" content="2023-01-03T18:58:56+00:00" />
+<meta itemprop="wordCount" content="751">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Monitoring Cloud IAP Setup"/>
 <meta name="twitter:description" content="Instructions for monitoring and troubleshooting Cloud IAP"/>
@@ -376,7 +376,7 @@ deployment from outside the cluster, when running Kubeflow on Google Cloud.</p>
 is available, and to debugging problems that may cause the endpoint to be
 unavailable.</p>
 <h2 id="introduction">Introduction</h2>
-<p>When deploying Kubeflow using the <a href="./docs/deploy/deploy-cli/">command-line interface</a>,
+<p>When deploying Kubeflow using the <a href="../deploy-cli/">command-line interface</a>,
 you choose the authentication method you want to use. One of the options is
 Cloud IAP. This document assumes that you have already deployed Kubeflow.</p>
 <p>Kubeflow uses the <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/managed-certs">Google-managed certificate</a>
@@ -461,7 +461,7 @@ traffic. (31380 is the default port of the service <code>istio-ingressgateway</c
 <li><code>kubectl get pods -n istio-system</code></li>
 <li>The <code>istio-ingressgateway-XX</code> pods should be running</li>
 <li>Check the logs of pod <code>backend-updater-0</code>, <code>iap-enabler-XX</code> to see if there is any error</li>
-<li>Follow the steps <a href="./docs/troubleshooting/#502-server-error">here</a> to check the load balancer and backend service on Google Cloud.</li>
+<li>Follow the steps <a href="../../troubleshooting/#502-server-error">here</a> to check the load balancer and backend service on Google Cloud.</li>
 </ul>
 </li>
 <li>
@@ -483,13 +483,13 @@ relevant links:</p>
 </span></span></code></pre></div><p>Follow the link in the error message to find the OAuth credential being used
 and add the redirect URI listed in the error message to the list of 
 authorized URIs. For more information, read the guide to 
-<a href="./docs/deploy/oauth-setup/">setting up OAuth for Cloud IAP</a>.</p>
+<a href="../oauth-setup/">setting up OAuth for Cloud IAP</a>.</p>
 </li>
 </ol>
 <h2 id="next-steps">Next steps</h2>
 <ul>
-<li>The <a href="./docs/troubleshooting/">Google Kubernetes Engine troubleshooting guide</a> for Kubeflow.</li>
-<li>Guide to <a href="./docs/components/multi-tenancy/getting-started">sharing cluster access</a>.</li>
+<li>The <a href="../../troubleshooting/">Google Kubernetes Engine troubleshooting guide</a> for Kubeflow.</li>
+<li>How to <a href="../../customizing/">customize Kubeflow cluster</a> and <a href="../../customizing/#add-users-to-kubeflow">add users to the cluster</a>.</li>
 <li>Google Cloud guide to <a href="https://cloud.google.com/iap/docs/">Cloud IAP</a>.</li>
 </ul>
 
