@@ -39,7 +39,6 @@ address to verify the user's identity.
           need to set.        
    * Click **Save**.
    * Here's an example of the completed form:   
-  
     <img src="../../images/gke/consent-screen.png" 
       alt="OAuth consent screen"
       class="mt-3 mb-3 p-3 border border-info rounded">
@@ -97,5 +96,5 @@ address to verify the user's identity.
   **client secret** later when you're ready to enable Cloud IAP.
   
 ## Next steps
-* [Set up your management cluster](./docs/deploy/management-setup/).
+* [Set up your management cluster](../management-setup/).
 * [Grant your users the IAP-secured Web App User IAM role](https://cloud.google.com/iam/docs/granting-changing-revoking-access#granting-console) so they can access the Kubeflow console through IAP.
