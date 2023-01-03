@@ -28,11 +28,6 @@ pygmentsStyle = "tango"
 # Relative urls:
 # relativeURLs = true
 
-# Deprecated or inactive
-ignoreFiles = [
-  "content/en/news/*",
-]
-
 # Image processing configuration.
 [imaging]
   resampleFilter = "CatmullRom"
@@ -110,11 +105,6 @@ ignoreFiles = [
     weight = -101
     #pre = "<i class='fa-solid fa-books pr-2'></i>"
     url = "./docs/"
-  [[menu.main]]
-    name = "News"
-    weight = -100
-    #pre = "<i class='fa-solid fa-rss pr-2'></i>"
-    url = "./news/"
   [[menu.main]]
     name = "Manifests"
     weight = -99
