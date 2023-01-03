@@ -21,6 +21,7 @@ Kubeflow deployed on Google Cloud includes the following:
 1. Other managed services offered by Google Cloud, such as [Cloud Storage](https://cloud.google.com/storage), [Cloud SQL](https://cloud.google.com/sql), [Anthos Service Mesh](https://cloud.google.com/anthos/service-mesh), [Identity and Access Management (IAM)](https://cloud.google.com/iam), [Config Controller](https://cloud.google.com/anthos-config-management/docs/concepts/config-controller-overview), and so on.
 
 ![Kubeflow on Google Cloud: central dashboard](../../images/gke/full-kf-home.png)
+
 **Figure 1.** User interface of full-fledged Kubeflow deployment on Google Cloud.
 
 ## Management cluster
@@ -28,6 +29,7 @@ Kubeflow deployed on Google Cloud includes the following:
 Kubeflow on Google Cloud employs a management cluster, which lets you manage Google Cloud resources via [Config Controller](https://cloud.google.com/anthos-config-management/docs/concepts/config-controller-overview). The management cluster is independent from the Kubeflow cluster and manages Kubeflow clusters. You can also use a management cluster from a different Google Cloud project, by assigning owner permissions to the associated service account.
 
 ![Kubeflow on Google Cloud: clusters hierarchy](../../images/gke/full-deployment-structure.png)
+
 **Figure 2.** Example of Kubeflow on Google Cloud deployment.
 
 ## Deployment process
