@@ -28,11 +28,6 @@ pygmentsStyle = "tango"
 # Relative urls:
 # relativeURLs = true
 
-# Deprecated or inactive
-ignoreFiles = [
-  "content/en/news/*",
-]
-
 # Image processing configuration.
 [imaging]
   resampleFilter = "CatmullRom"
