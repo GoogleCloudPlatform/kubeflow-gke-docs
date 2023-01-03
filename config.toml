@@ -38,11 +38,6 @@ pygmentsStyle = "tango"
 [permalinks]
   news = "/:section/:year/:month/:day/:slug/"
 
-# Deprecated or inactive
-ignoreFiles = [
-  "content/en/news/*"
-]
-
 ##########################################################
 # Goldmark markdown parser
 ##########################################################
