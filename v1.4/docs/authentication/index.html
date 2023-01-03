@@ -49,11 +49,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.4/docs/authentication/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2023-01-02T22:56:34+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+<meta property="article:modified_time" content="2023-01-03T18:58:56+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
 
 <meta itemprop="name" content="Authenticating Kubeflow to Google Cloud">
 <meta itemprop="description" content="Authentication and authorization to Google Cloud">
-<meta itemprop="dateModified" content="2023-01-02T22:56:34+00:00" />
+<meta itemprop="dateModified" content="2023-01-03T18:58:56+00:00" />
 <meta itemprop="wordCount" content="1212">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Authenticating Kubeflow to Google Cloud"/>
@@ -448,7 +448,7 @@ As a result, any user who can create a profile can get access to any service acc
 <h3 id="authentication-from-kubeflow-pipelines">Authentication from Kubeflow Pipelines</h3>
 <p>Starting from Kubeflow v1.1, Kubeflow Pipelines supports multi-user isolation. Therefore, pipeline runs are executed in user namespaces also using the <code>default-editor</code> KSA.</p>
 <p>Additionally, the Kubeflow Pipelines UI, visualization, and TensorBoard server instances are deployed in your user namespace using the <code>default-editor</code> KSA. Therefore, to visualize results in the Pipelines UI, they can fetch artifacts in Google Cloud Storage using permissions of the same GSA you configured for this namespace.</p>
-<p>For more details, refer to <a href="./docs/pipelines/authentication-pipelines/">Authenticating Pipelines to Google Cloud</a>.</p>
+<p>For more details, refer to <a href="../pipelines/authentication-pipelines/">Authenticating Pipelines to Google Cloud</a>.</p>
 <hr>
 <h2 id="local-authentication">Local authentication</h2>
 <h3 id="gcloud">gcloud</h3>
@@ -535,7 +535,7 @@ Kubernetes resources.</p>
 <p>You can find more information in the
 <a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/#role-and-clusterrole">Kubernetes docs</a>.</p>
 <h2 id="next-steps">Next steps</h2>
-<p>See the <a href="./docs/troubleshooting/">troubleshooting guide</a> for help with diagnosing and fixing issues you may encounter with Kubeflow on Google Cloud</p>
+<p>See the <a href="../troubleshooting/">troubleshooting guide</a> for help with diagnosing and fixing issues you may encounter with Kubeflow on Google Cloud</p>
 
 	
 		<style>

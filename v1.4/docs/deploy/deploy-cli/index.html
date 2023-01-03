@@ -49,11 +49,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.4/docs/deploy/deploy-cli/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2023-01-02T22:56:34+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+<meta property="article:modified_time" content="2023-01-03T18:58:56+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
 
 <meta itemprop="name" content="Deploying Kubeflow cluster">
 <meta itemprop="description" content="Instructions for using kubectl and kpt to deploy Kubeflow on Google Cloud">
-<meta itemprop="dateModified" content="2023-01-02T22:56:34+00:00" />
+<meta itemprop="dateModified" content="2023-01-03T18:58:56+00:00" />
 <meta itemprop="wordCount" content="1520">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Deploying Kubeflow cluster"/>
@@ -397,7 +397,7 @@ deploy Kubeflow on Google Cloud.</p>
 <p>You must have created a management cluster and installed Config Connector.</p>
 <ul>
 <li>
-<p>If you don&rsquo;t have a management cluster follow the <a href="./docs/deploy/management-setup/">instructions</a></p>
+<p>If you don&rsquo;t have a management cluster follow the <a href="../management-setup/">instructions</a></p>
 </li>
 <li>
 <p>Your management cluster will need a namespace setup to administer the Google Cloud project where Kubeflow will be deployed. This step will be included in later step of current page.</p>
@@ -409,11 +409,11 @@ deploy Kubeflow on Google Cloud.</p>
 </li>
 <li>
 <p>Make sure that your Google Cloud project meets the minimum requirements
-described in the <a href="./docs/deploy/project-setup/">project setup guide</a>.</p>
+described in the <a href="../project-setup/">project setup guide</a>.</p>
 </li>
 <li>
 <p>Follow the guide
-<a href="./docs/deploy/oauth-setup/">setting up OAuth credentials</a>
+<a href="../oauth-setup/">setting up OAuth credentials</a>
 to create OAuth credentials for <a href="https://cloud.google.com/iap/docs/">Cloud Identity-Aware Proxy (Cloud
 IAP)</a>.</p>
 <ul>
@@ -492,7 +492,7 @@ current values by running the following commands:</p>
 </span></span><span class="line"><span class="cl">kpt fn <span class="nb">eval</span> -i list-setters:v0.1 ./common
 </span></span></code></pre></div><p>You can learn more about <code>list-setters</code> in <a href="https://catalog.kpt.dev/list-setters/v0.1/">kpt documentation</a>.</p>
 <h4 id="authorize-cloud-config-connector-for-each-kubeflow-project">Authorize Cloud Config Connector for each Kubeflow project</h4>
-<p>In the <a href="./docs/deploy/management-setup/">Management cluster deployment</a> we created the Google Cloud service account <strong>serviceAccount:kcc-${KF_PROJECT}@${MGMT_PROJECT}.iam.gserviceaccount.com</strong>
+<p>In the <a href="../management-setup/">Management cluster deployment</a> we created the Google Cloud service account <strong>serviceAccount:kcc-${KF_PROJECT}@${MGMT_PROJECT}.iam.gserviceaccount.com</strong>
 this is the service account that Config Connector will use to create any Google Cloud resources in <code>${KF_PROJECT}</code>. You need to grant this Google Cloud service account sufficient privileges to create the desired resources in Kubeflow project.
 You only need to perform steps below once for each Kubeflow project, but make sure to do it even when KF_PROJECT and MGMT_PROJECT are the same project.</p>
 <p>The easiest way to do this is to grant the Google Cloud service account owner permissions on one or more projects.</p>
@@ -621,17 +621,17 @@ account has the minimal permissions needed to send metrics and logs to
 <a href="https://cloud.google.com/stackdriver/">Stackdriver</a>.</li>
 </ul>
 <h2 id="upgrade-kubeflow">Upgrade Kubeflow</h2>
-<p>Refer to <a href="./docs/deploy/upgrade#upgrading-kubeflow-cluster">Upgrading Kubeflow cluster</a>.</p>
+<p>Refer to <a href="../upgrade#upgrading-kubeflow-cluster">Upgrading Kubeflow cluster</a>.</p>
 <h2 id="next-steps">Next steps</h2>
 <ul>
 <li>Run a full ML workflow on Kubeflow, using the
 <a href="https://github.com/kubeflow/examples/blob/master/mnist/mnist_gcp.ipynb">end-to-end MNIST tutorial</a> or the
 <a href="https://github.com/kubeflow/examples/tree/master/github_issue_summarization/pipelines">GitHub issue summarization Pipelines
 example</a>.</li>
-<li>Learn how to <a href="./docs/deploy/delete-cli/">delete your Kubeflow deployment using the CLI</a>.</li>
-<li>To add users to Kubeflow, go to <a href="./docs/customizing-gke/#add-users-to-kubeflow">a dedicated section in Customizing Kubeflow on Google Cloud</a>.</li>
-<li>To taylor your Kubeflow deployment on Google Cloud, go to <a href="./docs/customizing-gke/">Customizing Kubeflow on Google Cloud</a>.</li>
-<li>For troubleshooting Kubeflow deployments on Google Cloud, go to the <a href="./docs/troubleshooting-gke/">Troubleshooting deployments</a> guide.</li>
+<li>Learn how to <a href="../delete-cli/">delete your Kubeflow deployment using the CLI</a>.</li>
+<li>To add users to Kubeflow, go to <a href="../../customizing/#add-users-to-kubeflow">a dedicated section in Customizing Kubeflow on Google Cloud</a>.</li>
+<li>To taylor your Kubeflow deployment on Google Cloud, go to <a href="../../customizing/">Customizing Kubeflow on Google Cloud</a>.</li>
+<li>For troubleshooting Kubeflow deployments on Google Cloud, go to the <a href="../../troubleshooting/">Troubleshooting deployments</a> guide.</li>
 </ul>
 
 	
