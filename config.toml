@@ -155,9 +155,6 @@ ignoreFiles = [
   # Set this flag to "true" if you want to display the banner.
   # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
   archived_version = false
-  # Uncomment this if your GitHub repo does not have "main" as the default branch,
-  # or specify a new value if you want to reference another branch in your GitHub links
-  github_branch= "v1.6-release"
   # The version number for the version of the docs represented in this doc set.
   # Used in the "version-banner" partial to display a version number for the 
   # current doc set.
@@ -170,6 +167,28 @@ ignoreFiles = [
   # point people to the main doc site.
   url_latest_version = "https://googlecloudplatform.github.io/kubeflow-gke-docs/docs"
   
+  # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
+  github_repo = "https://github.com/googlecloudplatform/kubeflow-gke-docs"
+  
+  # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
+  github_branch= "v1.6-release"
+  # github_subdir = ""
+
+  # Google Custom Search Engine ID. Remove or comment out to disable search.
+  gcs_engine_id = "37be36edbefe142f6"
+
+  # An optional link to a related project repo. For example, the sibling repository where your product code lives.
+  github_project_repo = "https://github.com/GoogleCloudPlatform/kubeflow-distribution"
+
+  # Enable Algolia DocSearch
+  algolia_docsearch = false
+
+  # Enable Lunr.js offline search
+  offlineSearch = false
+
+  # Enable syntax highlighting and copy buttons on code blocks with Prism
+  prism_syntax_highlighting = true
+
   # These entries appear in the drop-down menu at the top of the website.
   [[params.versions]]
     # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
@@ -188,27 +207,6 @@ ignoreFiles = [
     version = "dev"
     githubbranch = "main"
     url = "https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs"
-
-  # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-  github_repo = "https://github.com/googlestaging/kubeflow-gke-docs"
-  # Specify a value here if your content directory is not in your repo's root directory
-  # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
-  # github_subdir = ""
-
-  # Google Custom Search Engine ID. Remove or comment out to disable search.
-  gcs_engine_id = "37be36edbefe142f6"
-
-  # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-  github_project_repo = "https://github.com/GoogleCloudPlatform/kubeflow-distribution"
-
-  # Enable Algolia DocSearch
-  algolia_docsearch = false
-
-  # Enable Lunr.js offline search
-  offlineSearch = false
-
-  # Enable syntax highlighting and copy buttons on code blocks with Prism
-  prism_syntax_highlighting = true
 
   # User interface configuration
   [params.ui]
