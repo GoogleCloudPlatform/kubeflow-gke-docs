@@ -13,6 +13,7 @@ defaultContentLanguageInSubdir = false
 enableMissingTranslationPlaceholders = true
 
 enableRobotsTXT = true
+canonifyURLs = true
 
 # Will give values to .Lastmod etc.
 enableGitInfo = true
@@ -109,12 +110,12 @@ ignoreFiles = [
     name = "Docs"
     weight = -101
     #pre = "<i class='fa-solid fa-books pr-2'></i>"
-    url = "./docs/"
+    url = "docs/"
 #  [[menu.main]]
 #    name = "News"
 #    weight = -100
 #    #pre = "<i class='fa-solid fa-rss pr-2'></i>"
-#    url = "./news/"
+#    url = "news/"
   [[menu.main]]
     name = "Manifests"
     weight = -99
@@ -195,7 +196,7 @@ ignoreFiles = [
   # github_subdir = "v1.4"
 
   # Google Custom Search Engine ID. Remove or comment out to disable search.
-  gcs_engine_id = "b698ddb9e4f3e4c92"
+  gcs_engine_id = "37be36edbefe142f6"
 
   # An optional link to a related project repo. For example, the sibling repository where your product code lives.
   github_project_repo = "https://github.com/googlecloudplatform/kubeflow-distribution"
