@@ -106,6 +106,12 @@ Apply the nodepool patch file above by running:
 kubectl --context=${MGMTCTXT} --namespace=${KF_PROJECT} apply -f <path-to-nodepool-file>/preemptible-nodepool.yaml
 ```
 
+Apply the most recent NVIDIA driver daemonset from the GCP container-engine-accelerators repository if your GPU nodepool nvidia-plugin-* pods don't run:
+
+```bash
+kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/container-engine-accelerators/master/nvidia-driver-installer/cos/daemonset-preloaded.yaml
+````
+
 #### For Kubeflow Pipelines standalone only
 
 Alternatively, if you are on Kubeflow Pipelines standalone, or AI Platform Pipelines, you can run this command to create node pool:
