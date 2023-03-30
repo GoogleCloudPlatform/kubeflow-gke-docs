@@ -121,7 +121,9 @@ if (!doNotTrack) {
 </a>
 <div class="dropdown-menu dropdown-menu-md-right dropdown-menu-lg-left" aria-labelledby="navbarDropdownMenuLink">
 	
-	<a class="dropdown-item" href="https://googlecloudplatform.github.io/kubeflow-gke-docs/docs">v1.6 (latest)</a>
+	<a class="dropdown-item" href="https://googlecloudplatform.github.io/kubeflow-gke-docs/docs">v1.7 (latest)</a>
+	
+	<a class="dropdown-item" href="https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs">v1.6</a>
 	
 	<a class="dropdown-item" href="https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.5/docs">v1.5</a>
 	
@@ -583,13 +585,13 @@ to manage Google Cloud infrastructure using GitOps.</p>
 <p>The management cluster manifests live in GitHub repository <a href="https://github.com/googlecloudplatform/kubeflow-distribution/">googlecloudplatform/kubeflow-distribution</a>, use the following commands to pull Kubeflow manifests:</p>
 <ol>
 <li>
-<p>Clone the GitHub repository and check out the v1.6.1 tag:</p>
+<p>Clone the GitHub repository and check out the latest manifests:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/googlecloudplatform/kubeflow-distribution.git 
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> kubeflow-distribution
-</span></span><span class="line"><span class="cl">git checkout tags/v1.6.1 -b v1.6.1
+</span></span><span class="line"><span class="cl">git checkout master
 </span></span></code></pre></div><p>Alternatively, you can get the package by using <code>kpt</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check out Kubeflow v1.6.1 blueprints</span>
-</span></span><span class="line"><span class="cl">kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@v1.6.1 kubeflow-distribution
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check out the latest Kubeflow</span>
+</span></span><span class="line"><span class="cl">kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@master kubeflow-distribution
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> kubeflow-distribution
 </span></span></code></pre></div></li>
 <li>
@@ -779,13 +781,13 @@ currently doesn&rsquo;t support creating <a href="https://cloud.google.com/iap/d
 <ol>
 <li>
 <p>If you have already installed Management cluster, you have <code>googlecloudplatform/kubeflow-distribution</code> locally. You just need to run <code>cd kubeflow</code> to access Kubeflow cluster manifests. Otherwise, you can run the following commands:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check out Kubeflow v1.6.1 blueprints</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check out the latest Kubeflow</span>
 </span></span><span class="line"><span class="cl">git clone https://github.com/googlecloudplatform/kubeflow-distribution.git 
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> kubeflow-distribution
-</span></span><span class="line"><span class="cl">git checkout tags/v1.6.1 -b v1.6.1
+</span></span><span class="line"><span class="cl">git checkout master
 </span></span></code></pre></div><p>Alternatively, you can get the package by using <code>kpt</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check out Kubeflow v1.6.1 blueprints</span>
-</span></span><span class="line"><span class="cl">kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@v1.6.1 kubeflow-distribution
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check out the latest Kubeflow</span>
+</span></span><span class="line"><span class="cl">kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@master kubeflow-distribution
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> kubeflow-distribution
 </span></span></code></pre></div></li>
 <li>
