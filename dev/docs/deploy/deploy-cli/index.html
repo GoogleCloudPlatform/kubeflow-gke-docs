@@ -28,7 +28,7 @@
       "datePublished": "0001-01-01 00:00:00 \u002b0000 UTC",
       "dateModified" : "0001-01-01 00:00:00 \u002b0000 UTC",
       "url" : "https:\/\/googlecloudplatform.github.io\/kubeflow-gke-docs\/dev\/docs\/deploy\/deploy-cli\/",
-      "wordCount" : "1518",
+      "wordCount" : "1520",
       "keywords" : [ "Kubeflow on GCP" ]
   }
   </script>
@@ -49,12 +49,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/deploy/deploy-cli/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2023-03-30T01:06:03+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+<meta property="article:modified_time" content="2023-01-03T18:58:56+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
 
 <meta itemprop="name" content="Deploying Kubeflow cluster">
 <meta itemprop="description" content="Instructions for using kubectl and kpt to deploy Kubeflow on Google Cloud">
-<meta itemprop="dateModified" content="2023-03-30T01:06:03+00:00" />
-<meta itemprop="wordCount" content="1518">
+<meta itemprop="dateModified" content="2023-01-03T18:58:56+00:00" />
+<meta itemprop="wordCount" content="1520">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Deploying Kubeflow cluster"/>
 <meta name="twitter:description" content="Instructions for using kubectl and kpt to deploy Kubeflow on Google Cloud"/>
@@ -124,9 +124,7 @@ if (!doNotTrack) {
 </a>
 <div class="dropdown-menu dropdown-menu-md-right dropdown-menu-lg-left" aria-labelledby="navbarDropdownMenuLink">
 	
-	<a class="dropdown-item" href="https://googlecloudplatform.github.io/kubeflow-gke-docs/docs">v1.7 (latest)</a>
-	
-	<a class="dropdown-item" href="https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs">v1.6</a>
+	<a class="dropdown-item" href="https://googlecloudplatform.github.io/kubeflow-gke-docs/docs">v1.6 (latest)</a>
 	
 	<a class="dropdown-item" href="https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.5/docs">v1.5</a>
 	
@@ -429,13 +427,13 @@ currently doesn&rsquo;t support creating <a href="https://cloud.google.com/iap/d
 <ol>
 <li>
 <p>If you have already installed Management cluster, you have <code>googlecloudplatform/kubeflow-distribution</code> locally. You just need to run <code>cd kubeflow</code> to access Kubeflow cluster manifests. Otherwise, you can run the following commands:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check out the latest Kubeflow</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check out Kubeflow v1.6.1 blueprints</span>
 </span></span><span class="line"><span class="cl">git clone https://github.com/googlecloudplatform/kubeflow-distribution.git 
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> kubeflow-distribution
-</span></span><span class="line"><span class="cl">git checkout master
+</span></span><span class="line"><span class="cl">git checkout tags/v1.6.1 -b v1.6.1
 </span></span></code></pre></div><p>Alternatively, you can get the package by using <code>kpt</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check out the latest Kubeflow</span>
-</span></span><span class="line"><span class="cl">kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@master kubeflow-distribution
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check out Kubeflow v1.6.1 blueprints</span>
+</span></span><span class="line"><span class="cl">kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@v1.6.1 kubeflow-distribution
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> kubeflow-distribution
 </span></span></code></pre></div></li>
 <li>
@@ -690,7 +688,7 @@ example</a>.</li>
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
-  Last modified March 30, 2023: <a href="https://github.com/googlecloudplatform/kubeflow-gke-docs/commit/c4b8cba50959346f239720bf9110f2746fd323c7">Fix latest-version shortcode (c4b8cba)</a>
+  Last modified January 3, 2023: <a href="https://github.com/googlecloudplatform/kubeflow-gke-docs/commit/8c0f3b4f2cd7e3e0023137f96c8b57195777e9d1">Fix hyper-links (8c0f3b4)</a>
 </div>
 
 </div>
