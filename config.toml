@@ -149,7 +149,7 @@ ignoreFiles = [
   # Menu title if your navbar has a versions selector to access old versions of your site.
   # This menu appears only if you have at least one [params.versions] set.
   # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
-  version_menu = "v1.7"
+  version_menu = "v1.7 (latest)"
   # Flag used in the "version-banner" partial to decide whether to display a 
   # banner on every page indicating that this is an archived version of the docs.
   # Set this flag to "true" if you want to display the banner.
