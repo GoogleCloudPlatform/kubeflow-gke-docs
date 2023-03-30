@@ -4,6 +4,22 @@ description = "Kubeflow on Google Cloud Changelog"
 weight = 300
 +++
 
+## 1.7.0
+
+[Release notes](https://github.com/googlecloudplatform/kubeflow-distribution/releases/tag/v1.7.0)
+
+### Changes:
+
+- 🔼 Upgraded upstream `Manifests` to `v1.7.0`.
+- 🔼 Upgraded `Kubeflow Pipelines` to `v2.0.0-alpha.7`.
+- 🔼 Upgraded `KNative` to `v1.8.5` ([#404](https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/404)).
+- 🔼 Upgraded `cert-manager` to `v1.10.2` ([#405](https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/405)).
+- 🔼 Upgraded `ASM` to `v1.16.2` ([#406](https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/406)).
+- 🔼 Upgraded `KServe` to `v0.10` ([#408](https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/408)).
+- 🔨 Fixed `ASM` deployment issue ([#413](https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/413), [#419](https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/419))
+- 🔨 Fixed user header issue in `KServe`  web-app ([#414](https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/414))
+- 🧪 Validated deployment using `GKE 1.23`, `GKE 1.24`, `GKE 1.25`, and `GKE 1.26`.
+
 ## 1.6.1
 
 [Release notes](https://github.com/googlecloudplatform/kubeflow-distribution/releases/tag/v1.6.1)
