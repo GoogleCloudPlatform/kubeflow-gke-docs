@@ -111,17 +111,19 @@ if (!doNotTrack) {
 				
 				
 				
-				<a class="nav-link" href="https://github.com/GoogleCloudPlatform/kubeflow-distribution" target="_blank" ><i class='fa-brands fa-github pr-2'></i><span>Manifests</span></a>
+				<a class="nav-link" href="https://github.com/googlecloudplatform/kubeflow-distribution" target="_blank" ><i class='fa-brands fa-github pr-2'></i><span>Manifests</span></a>
 			</li>
 			
 			
 			<li class="nav-item dropdown mt-1 mt-lg-0 mr-2">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	v1.6 (latest)
+	v1.7 (latest)
 </a>
 <div class="dropdown-menu dropdown-menu-md-right dropdown-menu-lg-left" aria-labelledby="navbarDropdownMenuLink">
 	
-	<a class="dropdown-item" href="https://googlecloudplatform.github.io/kubeflow-gke-docs/docs">v1.6 (latest)</a>
+	<a class="dropdown-item" href="https://googlecloudplatform.github.io/kubeflow-gke-docs/docs">v1.7 (latest)</a>
+	
+	<a class="dropdown-item" href="https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs">v1.6</a>
 	
 	<a class="dropdown-item" href="https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.5/docs">v1.5</a>
 	
@@ -753,13 +755,13 @@ to manage Google Cloud infrastructure using GitOps.</p>
 <p>The management cluster manifests live in GitHub repository <a href="https://github.com/googlecloudplatform/kubeflow-distribution/">googlecloudplatform/kubeflow-distribution</a>, use the following commands to pull Kubeflow manifests:</p>
 <ol>
 <li>
-<p>Clone the GitHub repository and check out the v1.6.1 tag:</p>
+<p>Clone the GitHub repository and check out the v1.7.0 tag:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/googlecloudplatform/kubeflow-distribution.git 
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> kubeflow-distribution
-</span></span><span class="line"><span class="cl">git checkout tags/v1.6.1 -b v1.6.1
+</span></span><span class="line"><span class="cl">git checkout tags/v1.7.0 -b v1.7.0
 </span></span></code></pre></div><p>Alternatively, you can get the package by using <code>kpt</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check out Kubeflow v1.6.1 blueprints</span>
-</span></span><span class="line"><span class="cl">kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@v1.6.1 kubeflow-distribution
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check out Kubeflow v1.7.0 blueprints</span>
+</span></span><span class="line"><span class="cl">kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@v1.7.0 kubeflow-distribution
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> kubeflow-distribution
 </span></span></code></pre></div></li>
 <li>
@@ -949,13 +951,13 @@ currently doesn&rsquo;t support creating <a href="https://cloud.google.com/iap/d
 <ol>
 <li>
 <p>If you have already installed Management cluster, you have <code>googlecloudplatform/kubeflow-distribution</code> locally. You just need to run <code>cd kubeflow</code> to access Kubeflow cluster manifests. Otherwise, you can run the following commands:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check out Kubeflow v1.6.1 blueprints</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check out Kubeflow v1.7.0 blueprints</span>
 </span></span><span class="line"><span class="cl">git clone https://github.com/googlecloudplatform/kubeflow-distribution.git 
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> kubeflow-distribution
-</span></span><span class="line"><span class="cl">git checkout tags/v1.6.1 -b v1.6.1
+</span></span><span class="line"><span class="cl">git checkout tags/v1.7.0 -b v1.7.0
 </span></span></code></pre></div><p>Alternatively, you can get the package by using <code>kpt</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check out Kubeflow v1.6.1 blueprints</span>
-</span></span><span class="line"><span class="cl">kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@v1.6.1 kubeflow-distribution
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check out Kubeflow v1.7.0 blueprints</span>
+</span></span><span class="line"><span class="cl">kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@v1.7.0 kubeflow-distribution
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> kubeflow-distribution
 </span></span></code></pre></div></li>
 <li>
@@ -3469,9 +3471,23 @@ to the GitHub issue <a href="https://github.com/googlecloudplatform/kubeflow-dis
     
 	<h1 id="pg-d9ec0777c4f7a8a41476a65f2ecca6f7">9 - Changelog</h1>
     <div class="lead">Kubeflow on Google Cloud Changelog</div>
-	<h2 id="161">1.6.1</h2>
-<p><a href="https://github.com/googlecloudplatform/kubeflow-distribution/releases/tag/v1.6.1">Release notes</a></p>
+	<h2 id="170">1.7.0</h2>
+<p><a href="https://github.com/googlecloudplatform/kubeflow-distribution/releases/tag/v1.7.0">Release notes</a></p>
 <h3 id="changes">Changes:</h3>
+<ul>
+<li>🔼 Upgraded upstream <code>Manifests</code> to <code>v1.7.0</code>.</li>
+<li>🔼 Upgraded <code>Kubeflow Pipelines</code> to <code>v2.0.0-alpha.7</code>.</li>
+<li>🔼 Upgraded <code>KNative</code> to <code>v1.8.5</code> (<a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/404">#404</a>).</li>
+<li>🔼 Upgraded <code>cert-manager</code> to <code>v1.10.2</code> (<a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/405">#405</a>).</li>
+<li>🔼 Upgraded <code>ASM</code> to <code>v1.16.2</code> (<a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/406">#406</a>).</li>
+<li>🔼 Upgraded <code>KServe</code> to <code>v0.10</code> (<a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/408">#408</a>).</li>
+<li>🔨 Fixed <code>ASM</code> deployment issue (<a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/413">#413</a>, <a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/419">#419</a>)</li>
+<li>🔨 Fixed user header issue in <code>KServe</code>  web-app (<a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/414">#414</a>)</li>
+<li>🧪 Validated deployment using <code>GKE 1.23</code>, <code>GKE 1.24</code>, <code>GKE 1.25</code>, and <code>GKE 1.26</code>.</li>
+</ul>
+<h2 id="161">1.6.1</h2>
+<p><a href="https://github.com/googlecloudplatform/kubeflow-distribution/releases/tag/v1.6.1">Release notes</a></p>
+<h3 id="changes-1">Changes:</h3>
 <ul>
 <li>🔼 Upgraded upstream <code>Manifests</code> to <code>v1.6.1</code>.</li>
 <li>🔼 Upgraded <code>pipelines</code> to <code>v2.0.0-alpha.6</code> (fixes <a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/392">#392</a>).</li>
@@ -3482,7 +3498,7 @@ to the GitHub issue <a href="https://github.com/googlecloudplatform/kubeflow-dis
 </ul>
 <h2 id="160">1.6.0:</h2>
 <p><a href="https://github.com/googlecloudplatform/kubeflow-distribution/releases/tag/v1.6.0">Release notes</a></p>
-<h3 id="changes-1">Changes:</h3>
+<h3 id="changes-2">Changes:</h3>
 <ul>
 <li>🔼 Upgraded upstream <code>Manifests</code> to <code>v1.6.0</code>.</li>
 <li>🔼 Upgraded <code>ASM</code> to <code>v1.14</code> (<a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/385">#385</a>).</li>
@@ -3496,7 +3512,7 @@ to the GitHub issue <a href="https://github.com/googlecloudplatform/kubeflow-dis
 </ul>
 <h2 id="151">1.5.1</h2>
 <p><a href="https://github.com/googlecloudplatform/kubeflow-distribution/releases/tag/v1.5.1">Release notes</a></p>
-<h3 id="changes-2">Changes:</h3>
+<h3 id="changes-3">Changes:</h3>
 <ul>
 <li>🔼 Upgraded <code>ASM</code> to <code>v1.13</code>.</li>
 <li>🔨 Fixed <code>KServe</code> issues with dashboard (<a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/362">#362</a>) and directory (<a href="https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/361">#361</a>).</li>
@@ -3506,7 +3522,7 @@ to the GitHub issue <a href="https://github.com/googlecloudplatform/kubeflow-dis
 </ul>
 <h2 id="150">1.5.0:</h2>
 <p><a href="https://github.com/googlecloudplatform/kubeflow-distribution/releases/tag/v1.5.0">Release notes</a></p>
-<h3 id="changes-3">Changes:</h3>
+<h3 id="changes-4">Changes:</h3>
 <ul>
 <li>🔼 Upgrade Kubeflow components versions as listed in components versions table</li>
 <li>🚀 Integrated with <code>Config Controller</code>, simplified management cluster maintenance cost, there is no need to manually upgrade <code>Config Connector</code> CRD.</li>
@@ -3516,7 +3532,7 @@ to the GitHub issue <a href="https://github.com/googlecloudplatform/kubeflow-dis
 </ul>
 <h2 id="141">1.4.1</h2>
 <p><a href="https://github.com/googlecloudplatform/kubeflow-distribution/releases/tag/v1.4.1">Release notes</a></p>
-<h3 id="changes-4">Changes:</h3>
+<h3 id="changes-5">Changes:</h3>
 <p>Changes on top of v1.4.0:</p>
 <ul>
 <li>🔼 Upgrade: Integrate with Kubeflow <code>1.4.1</code> manifests (<a href="https://github.com/kubeflow/manifests/issues/2084">kubeflow/manifests#2084</a>)</li>
@@ -3525,7 +3541,7 @@ to the GitHub issue <a href="https://github.com/googlecloudplatform/kubeflow-dis
 </ul>
 <h2 id="140">1.4.0:</h2>
 <p><a href="https://github.com/googlecloudplatform/kubeflow-distribution/releases/tag/v1.4.0">Release notes</a></p>
-<h3 id="changes-5">Changes:</h3>
+<h3 id="changes-6">Changes:</h3>
 <ul>
 <li>🔼 Upgrade Kubeflow components versions as listed in components versions table</li>
 <li>🚢 Removed <code>GKE 1.18</code> image version and k8s runtime pin, now GKE version is default to <code>STABLE</code> channel.</li>
@@ -3617,7 +3633,7 @@ to the GitHub issue <a href="https://github.com/googlecloudplatform/kubeflow-dis
 <ul class="list-inline mb-0">
   
   <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
-    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/GoogleCloudPlatform/kubeflow-distribution" aria-label="GitHub">
+    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/googlecloudplatform/kubeflow-distribution" aria-label="GitHub">
       <i class="fab fa-github"></i>
     </a>
   </li>
