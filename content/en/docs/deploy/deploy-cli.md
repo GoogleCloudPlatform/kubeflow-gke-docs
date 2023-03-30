@@ -53,17 +53,17 @@ Before installing Kubeflow on the command line:
 1. If you have already installed Management cluster, you have `googlecloudplatform/kubeflow-distribution` locally. You just need to run `cd kubeflow` to access Kubeflow cluster manifests. Otherwise, you can run the following commands:
 
     ```bash
-    # Check out Kubeflow v{{% latest-version %}} blueprints
+    # Check out the latest Kubeflow
     git clone https://github.com/googlecloudplatform/kubeflow-distribution.git 
     cd kubeflow-distribution
-    git checkout tags/v{{% latest-version %}} -b v{{% latest-version %}}
+    git checkout master
     ```
 
     Alternatively, you can get the package by using `kpt`:
 
     ```bash
-    # Check out Kubeflow v{{% latest-version %}} blueprints
-    kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@v{{% latest-version %}} kubeflow-distribution
+    # Check out the latest Kubeflow
+    kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@master kubeflow-distribution
     cd kubeflow-distribution
     ```
 

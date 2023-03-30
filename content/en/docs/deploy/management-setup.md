@@ -35,19 +35,19 @@ to manage Google Cloud infrastructure using GitOps.
 
 The management cluster manifests live in GitHub repository [googlecloudplatform/kubeflow-distribution](https://github.com/googlecloudplatform/kubeflow-distribution/), use the following commands to pull Kubeflow manifests:
 
-1. Clone the GitHub repository and check out the v{{% latest-version %}} tag:
+1. Clone the GitHub repository and check out the latest manifests:
 
     ```bash
     git clone https://github.com/googlecloudplatform/kubeflow-distribution.git 
     cd kubeflow-distribution
-    git checkout tags/v{{% latest-version %}} -b v{{% latest-version %}}
+    git checkout master
     ```
 
     Alternatively, you can get the package by using `kpt`:
 
     ```bash
-    # Check out Kubeflow v{{% latest-version %}} blueprints
-    kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@v{{% latest-version %}} kubeflow-distribution
+    # Check out the latest Kubeflow
+    kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@master kubeflow-distribution
     cd kubeflow-distribution
     ```
 
