@@ -1,7 +1,7 @@
 # Base configuration
 ##########################################################
 # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version
-baseURL = "https://googlecloudplatform.github.io/kubeflow-gke-docs"
+baseURL = "https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6"
 title = "Kubeflow on Google Cloud Platform"
 description = "Open-source machine learning platform running on Google Kubernetes Engine"
 
@@ -149,12 +149,12 @@ ignoreFiles = [
   # Menu title if your navbar has a versions selector to access old versions of your site.
   # This menu appears only if you have at least one [params.versions] set.
   # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
-  version_menu = "v1.6 (latest)"
+  version_menu = "v1.6"
   # Flag used in the "version-banner" partial to decide whether to display a 
   # banner on every page indicating that this is an archived version of the docs.
   # Set this flag to "true" if you want to display the banner.
   # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
-  archived_version = false
+  archived_version = true
   # The version number for the version of the docs represented in this doc set.
   # Used in the "version-banner" partial to display a version number for the 
   # current doc set.
@@ -192,9 +192,13 @@ ignoreFiles = [
   # These entries appear in the drop-down menu at the top of the website.
   [[params.versions]]
     # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
-    version = "v1.6 (latest)"
-    githubbranch = "v1.6-release"
+    version = "v1.7 (latest)"
+    githubbranch = "v1.7-release"
     url = "https://googlecloudplatform.github.io/kubeflow-gke-docs/docs"
+  [[params.versions]]
+    version = "v1.6"
+    githubbranch = "v1.6-release"
+    url = "https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs"
   [[params.versions]]
     version = "v1.5"
     githubbranch = "v1.5-release"
