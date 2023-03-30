@@ -28,7 +28,7 @@
       "datePublished": "0001-01-01 00:00:00 \u002b0000 UTC",
       "dateModified" : "0001-01-01 00:00:00 \u002b0000 UTC",
       "url" : "https:\/\/googlecloudplatform.github.io\/kubeflow-gke-docs\/dev\/docs\/deploy\/management-setup\/",
-      "wordCount" : "1152",
+      "wordCount" : "1150",
       "keywords" : [ "Kubeflow on GCP" ]
   }
   </script>
@@ -49,12 +49,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/docs/deploy/management-setup/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2023-01-03T18:58:56+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
+<meta property="article:modified_time" content="2023-03-30T01:01:42+00:00" /><meta property="og:site_name" content="Kubeflow on Google Cloud Platform" />
 
 <meta itemprop="name" content="Deploying Management cluster">
 <meta itemprop="description" content="Setting up a management cluster on Google Cloud">
-<meta itemprop="dateModified" content="2023-01-03T18:58:56+00:00" />
-<meta itemprop="wordCount" content="1152">
+<meta itemprop="dateModified" content="2023-03-30T01:01:42+00:00" />
+<meta itemprop="wordCount" content="1150">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Deploying Management cluster"/>
 <meta name="twitter:description" content="Setting up a management cluster on Google Cloud"/>
@@ -124,7 +124,9 @@ if (!doNotTrack) {
 </a>
 <div class="dropdown-menu dropdown-menu-md-right dropdown-menu-lg-left" aria-labelledby="navbarDropdownMenuLink">
 	
-	<a class="dropdown-item" href="https://googlecloudplatform.github.io/kubeflow-gke-docs/docs">v1.6 (latest)</a>
+	<a class="dropdown-item" href="https://googlecloudplatform.github.io/kubeflow-gke-docs/docs">v1.7 (latest)</a>
+	
+	<a class="dropdown-item" href="https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs">v1.6</a>
 	
 	<a class="dropdown-item" href="https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.5/docs">v1.5</a>
 	
@@ -394,13 +396,13 @@ to manage Google Cloud infrastructure using GitOps.</p>
 <p>The management cluster manifests live in GitHub repository <a href="https://github.com/googlecloudplatform/kubeflow-distribution/">googlecloudplatform/kubeflow-distribution</a>, use the following commands to pull Kubeflow manifests:</p>
 <ol>
 <li>
-<p>Clone the GitHub repository and check out the v1.6.1 tag:</p>
+<p>Clone the GitHub repository and check out the latest manifests:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/googlecloudplatform/kubeflow-distribution.git 
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> kubeflow-distribution
-</span></span><span class="line"><span class="cl">git checkout tags/v1.6.1 -b v1.6.1
+</span></span><span class="line"><span class="cl">git checkout master
 </span></span></code></pre></div><p>Alternatively, you can get the package by using <code>kpt</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check out Kubeflow v1.6.1 blueprints</span>
-</span></span><span class="line"><span class="cl">kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@v1.6.1 kubeflow-distribution
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check out the latest Kubeflow</span>
+</span></span><span class="line"><span class="cl">kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@master kubeflow-distribution
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> kubeflow-distribution
 </span></span></code></pre></div></li>
 <li>
@@ -588,7 +590,7 @@ Learn more with <a href="https://cloud.google.com/config-connector/docs/how-to/m
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
-  Last modified January 3, 2023: <a href="https://github.com/googlecloudplatform/kubeflow-gke-docs/commit/8c0f3b4f2cd7e3e0023137f96c8b57195777e9d1">Fix hyper-links (8c0f3b4)</a>
+  Last modified March 30, 2023: <a href="https://github.com/googlecloudplatform/kubeflow-gke-docs/commit/2b737323a73b73ac997fd95d7bf9beaf25dab351">Fix tag for dev (2b73732)</a>
 </div>
 
 </div>
