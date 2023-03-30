@@ -56,14 +56,14 @@ Before installing Kubeflow on the command line:
     # Check out Kubeflow v{{% latest-version %}} blueprints
     git clone https://github.com/googlecloudplatform/kubeflow-distribution.git 
     cd kubeflow-distribution
-    git checkout tags/v{{% latest-version %}} -b v{{% latest-version %}}
+    git checkout master
     ```
 
     Alternatively, you can get the package by using `kpt`:
 
     ```bash
-    # Check out Kubeflow v{{% latest-version %}} blueprints
-    kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@v{{% latest-version %}} kubeflow-distribution
+    # Check out the latest Kubeflow
+    kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@master kubeflow-distribution
     cd kubeflow-distribution
     ```
 
