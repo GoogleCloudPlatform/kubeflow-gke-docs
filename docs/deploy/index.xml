@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kubeflow on Google Cloud Platform – Deployment</title>
-    <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/</link>
+    <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs/deploy/</link>
     <description>Recent content in Deployment on Kubeflow on Google Cloud Platform</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs/deploy/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: Overview</title>
-      <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/overview/</link>
+      <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs/deploy/overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/overview/</guid>
+      <guid>https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs/deploy/overview/</guid>
       <description>
         
         
@@ -63,10 +63,10 @@ and debugging approaches. If the issue isn’t included in the list of commonly 
     
     <item>
       <title>Docs: Setting up GCP Project</title>
-      <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/project-setup/</link>
+      <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs/deploy/project-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/project-setup/</guid>
+      <guid>https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs/deploy/project-setup/</guid>
       <description>
         
         
@@ -176,10 +176,10 @@ to sensitive data.&lt;/li&gt;
     
     <item>
       <title>Docs: Setting up OAuth client</title>
-      <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/oauth-setup/</link>
+      <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs/deploy/oauth-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/oauth-setup/</guid>
+      <guid>https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs/deploy/oauth-setup/</guid>
       <description>
         
         
@@ -298,10 +298,10 @@ section of the Google Cloud Console. You need to retrieve the &lt;strong&gt;clie
     
     <item>
       <title>Docs: Deploying Management cluster</title>
-      <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/management-setup/</link>
+      <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs/deploy/management-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/management-setup/</guid>
+      <guid>https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs/deploy/management-setup/</guid>
       <description>
         
         
@@ -327,13 +327,13 @@ to manage Google Cloud infrastructure using GitOps.&lt;/p&gt;
 &lt;p&gt;The management cluster manifests live in GitHub repository &lt;a href=&#34;https://github.com/googlecloudplatform/kubeflow-distribution/&#34;&gt;googlecloudplatform/kubeflow-distribution&lt;/a&gt;, use the following commands to pull Kubeflow manifests:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;Clone the GitHub repository and check out the v1.7.0 tag:&lt;/p&gt;
+&lt;p&gt;Clone the GitHub repository and check out the v1.6.1 tag:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/googlecloudplatform/kubeflow-distribution.git 
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; kubeflow-distribution
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout tags/v1.7.0 -b v1.7.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout tags/v1.6.1 -b v1.6.1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Alternatively, you can get the package by using &lt;code&gt;kpt&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Check out Kubeflow v1.7.0 blueprints&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@v1.7.0 kubeflow-distribution
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Check out Kubeflow v1.6.1 blueprints&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@v1.6.1 kubeflow-distribution
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; kubeflow-distribution
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
@@ -459,10 +459,10 @@ Learn more with &lt;a href=&#34;https://cloud.google.com/config-connector/docs/h
     
     <item>
       <title>Docs: Deploying Kubeflow cluster</title>
-      <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/deploy-cli/</link>
+      <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs/deploy/deploy-cli/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/deploy-cli/</guid>
+      <guid>https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs/deploy/deploy-cli/</guid>
       <description>
         
         
@@ -519,13 +519,13 @@ currently doesn&amp;rsquo;t support creating &lt;a href=&#34;https://cloud.googl
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;If you have already installed Management cluster, you have &lt;code&gt;googlecloudplatform/kubeflow-distribution&lt;/code&gt; locally. You just need to run &lt;code&gt;cd kubeflow&lt;/code&gt; to access Kubeflow cluster manifests. Otherwise, you can run the following commands:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Check out Kubeflow v1.7.0 blueprints&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Check out Kubeflow v1.6.1 blueprints&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/googlecloudplatform/kubeflow-distribution.git 
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; kubeflow-distribution
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout tags/v1.7.0 -b v1.7.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout tags/v1.6.1 -b v1.6.1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Alternatively, you can get the package by using &lt;code&gt;kpt&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Check out Kubeflow v1.7.0 blueprints&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@v1.7.0 kubeflow-distribution
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Check out Kubeflow v1.6.1 blueprints&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kpt pkg get https://github.com/googlecloudplatform/kubeflow-distribution.git@v1.6.1 kubeflow-distribution
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; kubeflow-distribution
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
@@ -718,10 +718,10 @@ example&lt;/a&gt;.&lt;/li&gt;
     
     <item>
       <title>Docs: Upgrade Kubeflow</title>
-      <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/upgrade/</link>
+      <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs/deploy/upgrade/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/upgrade/</guid>
+      <guid>https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs/deploy/upgrade/</guid>
       <description>
         
         
@@ -1024,10 +1024,10 @@ of &lt;code&gt;.build&lt;/code&gt; with a historic version with tools like &lt;c
     
     <item>
       <title>Docs: Monitoring Cloud IAP Setup</title>
-      <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/monitor-iap-setup/</link>
+      <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs/deploy/monitor-iap-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/monitor-iap-setup/</guid>
+      <guid>https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs/deploy/monitor-iap-setup/</guid>
       <description>
         
         
@@ -1160,10 +1160,10 @@ authorized URIs. For more information, read the guide to
     
     <item>
       <title>Docs: Deleting Kubeflow</title>
-      <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/delete-cli/</link>
+      <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs/deploy/delete-cli/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://googlecloudplatform.github.io/kubeflow-gke-docs/docs/deploy/delete-cli/</guid>
+      <guid>https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.6/docs/deploy/delete-cli/</guid>
       <description>
         
         
