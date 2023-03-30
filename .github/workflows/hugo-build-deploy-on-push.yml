@@ -3,7 +3,7 @@ name: hugo-build-deploy-on-push
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main", "v1.4-release", "v1.5-release", "v1.6-release"]
+    branches: ["main", "v1.4-release", "v1.5-release", "v1.6-release", "v1.7-release"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -53,7 +53,7 @@ jobs:
       - name: Prepare GitHub Pages
         shell: bash
         run: |
-          echo "VERSION_NAME=$(echo ${GITHUB_REF#refs/heads/} | sed 's/-.*//' | sed 's/main/dev/' | sed 's/v1.6/./')" >> $GITHUB_OUTPUT
+          echo "VERSION_NAME=$(echo ${GITHUB_REF#refs/heads/} | sed 's/-.*//' | sed 's/main/dev/' | sed 's/v1.7/./')" >> $GITHUB_OUTPUT
         id: prepare_gh_pages
 
       - name: Deploy
