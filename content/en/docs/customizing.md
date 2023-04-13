@@ -159,7 +159,7 @@ command:
 gcloud compute accelerator-types list
 ```
  
-Create the [ContainerNodePool](https://cloud.google.com/config-connector/docs/reference/resource-docs/container/containernodepool) resource adopting GPU, for exmaple, create a new file `containernodepool-gpu.yaml` file and fulfill the value `KUBEFLOW-NAME`, `KF-PROJECT`, `LOCATION` based on your [Kubeflow deployment](../deploy/deploy-cli/#environment-variables):
+Create the [ContainerNodePool](https://cloud.google.com/config-connector/docs/reference/resource-docs/container/containernodepool) resource adopting GPU, for example, create a new file `containernodepool-gpu.yaml` file and fulfill the value `KUBEFLOW-NAME`, `KF-PROJECT`, `LOCATION` based on your [Kubeflow deployment](../deploy/deploy-cli/#environment-variables):
 
 ```
 apiVersion: container.cnrm.cloud.google.com/v1beta1
