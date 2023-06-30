@@ -269,7 +269,7 @@ Starting from Kubeflow v1.6.0:
 
 In Kubeflow v1.5.1 we use ASM v1.13. See [how to upgrade ASM](#upgrade-asm-anthos-service-mesh). To use ASM versions prior to 1.11, follow [the legacy instructions](https://github.com/googlecloudplatform/kubeflow-distribution/blob/master/kubeflow/asm/deprecated/README.md).
 
-Starting from Kubeflow v1.5, Kubeflow manifests have included KServe as an independent component from kfserving, Google Cloud distribution has switched over from kfserving to KServe for default installed components. If you want to upgrade Kubeflow while keeping kfsering, you can comment KServe and uncomment kfserving in `kubeflow-distribution/kubeflow/config.yaml` file. If you want to upgrade to KServe, follow the [KServe Migration guide](https://github.com/kserve/kserve/tree/master/hack/kserve_migration).
+Starting from Kubeflow v1.5, Kubeflow manifests have included KServe as an independent component from kfserving, Google Cloud distribution has switched over from kfserving to KServe for default installed components. If you want to upgrade Kubeflow while keeping kfserving, you can comment KServe and uncomment kfserving in `kubeflow-distribution/kubeflow/config.yaml` file. If you want to upgrade to KServe, follow the [KServe Migration guide](https://github.com/kserve/kserve/tree/master/hack/kserve_migration).
 
 ### Upgrade Kubeflow cluster to v1.3
 
