@@ -4,6 +4,15 @@ description = "Kubeflow on Google Cloud Changelog"
 weight = 300
 +++
 
+## 1.7.1
+
+[Release notes](https://github.com/GoogleCloudPlatform/kubeflow-distribution/releases/tag/v1.7.1)
+
+### Changes:
+
+- 🔨 Fixed `make apply` deployment issue ([#425](https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/425), [#426](https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/426), [#427](https://github.com/GoogleCloudPlatform/kubeflow-distribution/issues/427)).
+- 🧪 Validated deployment using `GKE 1.25.8`.
+
 ## 1.7.0
 
 [Release notes](https://github.com/googlecloudplatform/kubeflow-distribution/releases/tag/v1.7.0)
