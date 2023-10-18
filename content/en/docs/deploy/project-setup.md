@@ -44,7 +44,7 @@ Follow these steps to set up your Google Cloud project:
       endpoints.googleapis.com \
       cloudbuild.googleapis.com
     ```
-  Alternatively, you can these APIs can be enabled via Google Cloud Console:
+  Alternatively, these APIs can be enabled via Google Cloud Console:
 
     * [Service Usage API](https://cloud.google.com/service-usage/docs/reference/rest)
     * [Compute Engine API](https://console.cloud.google.com/apis/library/compute.googleapis.com)
