@@ -192,7 +192,11 @@ ignoreFiles = [
   # These entries appear in the drop-down menu at the top of the website.
   [[params.versions]]
     # <<<<<<<<<<<<<<<<< Update the line below when RELEASING a new minor version 
-    version = "v1.7 (latest)"
+    version = "v1.8 (latest)"
+    githubbranch = "v1.8-release"
+    url = "https://googlecloudplatform.github.io/kubeflow-gke-docs/docs"
+  [[params.versions]]
+    version = "v1.7"
     githubbranch = "v1.7-release"
     url = "https://googlecloudplatform.github.io/kubeflow-gke-docs/docs"
   [[params.versions]]
