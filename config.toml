@@ -198,7 +198,7 @@ ignoreFiles = [
   [[params.versions]]
     version = "v1.7"
     githubbranch = "v1.7-release"
-    url = "https://googlecloudplatform.github.io/kubeflow-gke-docs/docs"
+    url = "https://googlecloudplatform.github.io/kubeflow-gke-docs/v1.7/docs"
   [[params.versions]]
     version = "v1.6"
     githubbranch = "v1.6-release"
