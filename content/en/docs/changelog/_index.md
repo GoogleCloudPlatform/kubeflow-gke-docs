@@ -3,6 +3,13 @@ title = "Changelog"
 description = "Kubeflow on Google Cloud Changelog"
 weight = 300
 +++
+## 1.8.0
+
+[Release notes](https://github.com/GoogleCloudPlatform/kubeflow-distribution/releases/tag/v1.8.0)
+
+### Changes:
+
+- 🔼 Upgraded upstream `Manifests` to `v1.8.0`.
 
 ## 1.7.1
 
