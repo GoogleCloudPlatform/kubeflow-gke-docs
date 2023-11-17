@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kubeflow on Google Cloud Platform – Categories</title>
-    <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/categories/</link>
+    <link>https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/categories/</link>
     <description>Recent content in Categories on Kubeflow on Google Cloud Platform</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="https://googlecloudplatform.github.io/kubeflow-gke-docs/categories/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://googlecloudplatform.github.io/kubeflow-gke-docs/dev/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
       
