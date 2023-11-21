@@ -110,7 +110,7 @@ owner role for the project in order to deploy Kubeflow.&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  cloudbuild.googleapis.com
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Alternatively, you can these APIs can be enabled via Google Cloud Console:&lt;/p&gt;
+&lt;p&gt;Alternatively, these APIs can be enabled via Google Cloud Console:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;* [Service Usage API](https://cloud.google.com/service-usage/docs/reference/rest)
 * [Compute Engine API](https://console.cloud.google.com/apis/library/compute.googleapis.com)
 * [Kubernetes Engine API](https://console.cloud.google.com/apis/library/container.googleapis.com)
