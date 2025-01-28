@@ -42,7 +42,8 @@ Follow these steps to set up your Google Cloud project:
       krmapihosting.googleapis.com \
       servicecontrol.googleapis.com \
       endpoints.googleapis.com \
-      cloudbuild.googleapis.com
+      cloudbuild.googleapis.com \
+      anthos.googleapis.com
     ```
   Alternatively, you can these APIs can be enabled via Google Cloud Console:
 
